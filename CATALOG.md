@@ -9,12 +9,12 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 ## Active Directory Identity Security
 
+- [EmpireProject/Empire](https://github.com/EmpireProject/Empire) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ARCHIVED` · aliases: PowerShellEmpire/Empire — adversary-emulation framework
 - [fortra/impacket](https://github.com/fortra/impacket) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Python network protocols used heavily in AD/security research
 - [GhostPack/Rubeus](https://github.com/GhostPack/Rubeus) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Kerberos security research/adversary simulation
 - [GhostPack/Seatbelt](https://github.com/GhostPack/Seatbelt) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Windows host situational-awareness collection
 - [ly4k/Certipy](https://github.com/ly4k/Certipy) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Active Directory Certificate Services security assessment
 - [NetSPI/PowerUpSQL](https://github.com/NetSPI/PowerUpSQL) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — SQL Server security assessment and AD-adjacent attack-path research
-- [PowerShellEmpire/Empire](https://github.com/PowerShellEmpire/Empire) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `RENAMED` — adversary-emulation framework
 - [SpecterOps/BloodHound-Legacy](https://github.com/SpecterOps/BloodHound-Legacy) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — historically important BloodHound codebase; legacy naming is explicit
 
 ## Ai Llm Security
@@ -305,7 +305,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 ## Smart Contract Blockchain Security
 
-- [Consensys/mythril](https://github.com/Consensys/mythril) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `RENAMED` — Ethereum smart-contract security analysis
+- [ConsenSysDiligence/mythril](https://github.com/ConsenSysDiligence/mythril) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` · aliases: Consensys/mythril — Ethereum smart-contract security analysis
 - [crytic/echidna](https://github.com/crytic/echidna) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — smart-contract property-based fuzzer
 - [crytic/slither](https://github.com/crytic/slither) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Solidity static analyzer
 - [OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — security-focused smart-contract library
