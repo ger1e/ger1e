@@ -1,4 +1,4 @@
-name: remove-banner-bottom-line
+name: set-banner-kiriakou-quote
 
 on:
   issues:
@@ -9,8 +9,8 @@ permissions:
   issues: read
 
 jobs:
-  remove:
-    if: github.event.issue.user.login == 'ger1e' && github.event.issue.title == '[banner-maintenance] remove bottom signal line'
+  replace:
+    if: github.event.issue.user.login == 'ger1e' && github.event.issue.title == '[banner-maintenance] set Kiriakou quote'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -18,22 +18,29 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-      - name: Remove bottom signal text
+      - name: Set John Kiriakou quote
         run: |
           python - <<'PY'
           from pathlib import Path
           p = Path('assets/profile-banner.svg')
           s = p.read_text(encoding='utf-8')
-          target = '    <text x="0" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="11" letter-spacing="2.2" fill="#80938e">EVIDENCE &gt; ASSUMPTION  /  SIGNAL &gt; VOLUME</text>\n'
-          if target not in s:
-              raise SystemExit('target bottom signal line not found')
-          p.write_text(s.replace(target, '', 1), encoding='utf-8')
+          old = '    <text x="0" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="11" letter-spacing="2.2" fill="#80938e">EVIDENCE &gt; ASSUMPTION  /  SIGNAL &gt; VOLUME</text>\n'
+          new = '    <text x="0" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="11" letter-spacing="1.7" fill="#80938e">“ANYBODY WHO SHEDS LIGHT ON THE DARKNESS IS THE ENEMY.” — JOHN KIRIAKOU</text>\n'
+          if old in s:
+              s = s.replace(old, new, 1)
+          elif 'JOHN KIRIAKOU' not in s:
+              anchor = '    <text x="0" y="168" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="16" font-weight="700" letter-spacing="3.4" fill="#63f5d0">THREAT HUNTER // CTI // DETECTION ENGINEERING<animate attributeName="opacity" values="1;1;.36;1;1;.58;1" keyTimes="0;.31;.33;.35;.72;.74;1" dur="1.66s" repeatCount="indefinite"/></text>\n'
+              if anchor not in s:
+                  raise SystemExit('banner telemetry anchor not found')
+              s = s.replace(anchor, anchor + new, 1)
+          p.write_text(s, encoding='utf-8')
           PY
+          grep -q 'JOHN KIRIAKOU' assets/profile-banner.svg
           ! grep -q 'EVIDENCE &gt; ASSUMPTION' assets/profile-banner.svg
       - name: Commit
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/profile-banner.svg
-          git commit -m 'style: remove banner bottom signal line'
+          git commit -m 'style: add John Kiriakou banner quote'
           git push
