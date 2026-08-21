@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "ransomware_live",
+      "name": "Ransomware.live",
+      "base_url": "https://api-pro.ransomware.live",
+      "auth": {
+        "type": "header",
+        "header": "X-API-KEY",
+        "env": "RANSOMWARE_LIVE_API_KEY"
+      },
+      "roles": [
+        "ransomware-victimology",
+        "ransomware-groups",
+        "cyberattack-enrichment"
+      ],
+      "handling": {
+        "claim_source": true,
+        "auto_block": false,
+        "corroboration_required_for_escalation": true
+      }
+    },
+    {
+      "id": "ransomlook",
+      "name": "RansomLook",
+      "base_url": "https://www.ransomlook.io/api",
+      "auth": {
+        "type": "none",
+        "scope": "public-read"
+      },
+      "roles": [
+        "ransomware-victimology",
+        "dls-monitoring",
+        "ransomware-groups",
+        "threat-actor-enrichment",
+        "mirror-health",
+        "search-and-comparison"
+      ],
+      "handling": {
+        "claim_source": true,
+        "auto_block": false,
+        "corroboration_required_for_escalation": true,
+        "bulk_export_not_used": true
+      }
+    },
+    {
+      "id": "tweetfeed",
+      "name": "TweetFeed.live",
+      "base_url": "https://api.tweetfeed.live",
+      "auth": {
+        "type": "none"
+      },
+      "roles": [
+        "community-ioc-discovery",
+        "ioc-enrichment",
+        "campaign-context",
+        "trend-analysis"
+      ],
+      "incremental": {
+        "route": "/v1/since/{ISO8601}/{filter1}/{filter2}",
+        "conditional_headers": [
+          "ETag",
+          "Last-Modified"
+        ]
+      },
+      "handling": {
+        "claim_source": false,
+        "community_generated": true,
+        "auto_block": false,
+        "corroboration_required_for_promotion": true
+      }
+    }
+  ]
+}
