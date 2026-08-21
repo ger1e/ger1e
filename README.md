@@ -1,35 +1,59 @@
-# ム乇 尺 1 乇 // ger1e
+<h1 align="center">ム乇 尺 1 乇</h1>
+<p align="center"><strong>THREAT HUNTER // CTI // DETECTION ENGINEERING</strong></p>
+<p align="center"><code>behavior → evidence → signal</code></p>
 
-Threat Hunter · Cyber Threat Intelligence · Detection Engineering
+```text
+┌─ GER1E // ONLINE
+│
+├─ HUNT     adversary behavior · endpoint · identity · network
+├─ INTEL    campaigns · infrastructure · malware · vulnerabilities
+├─ DETECT   KQL · analytics · ATT&CK · detection engineering
+└─ BUILD    Python · automation · enrichment · analyst tooling
+```
 
-I hunt behavior, correlate threat intelligence, and build practical detection workflows around Microsoft security telemetry, endpoint activity, identity, infrastructure, and attacker tradecraft.
+I hunt attacker behavior, correlate threat intelligence, and turn evidence into practical detections and investigation workflows. The work sits mostly where telemetry, adversary tradecraft, automation, and analyst judgment collide.
 
-## Focus
+## Current focus
 
-- Threat hunting and hypothesis-driven investigation
-- Cyber threat intelligence and adversary tracking
-- Detection engineering and KQL
-- Malware analysis and reverse engineering
-- Security automation and enrichment pipelines
-- OSINT and infrastructure correlation
+- Hypothesis-driven threat hunting and incident investigation
+- Cyber threat intelligence, infrastructure correlation, and adversary tracking
+- Microsoft Defender XDR / Sentinel hunting and detection engineering
+- KQL analytics, tuning, false-positive reduction, and coverage analysis
+- Malware analysis, reverse engineering, and behavioral extraction
+- CTI enrichment pipelines, OSINT, and security automation
+
+## Stack
+
+| Area | Working set |
+| --- | --- |
+| Hunting / Detection | Microsoft Defender XDR · Microsoft Sentinel · KQL · MITRE ATT&CK |
+| Endpoint / Identity | EDR telemetry · process / network / file behavior · authentication telemetry |
+| CTI / OSINT | Threat-intelligence APIs · infrastructure enrichment · IOC / TTP correlation |
+| Analysis | Malware triage · reverse engineering · behavioral analysis · lineage / similarity |
+| Build / Automate | Python · PowerShell · Bash · GitHub Actions · REST APIs |
 
 ## Selected work
 
-### personal-site-lp
-Canonical personal site and public landing page.
+### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
+Canonical personal landing page. Static, dependency-light, hardened with structural QA and CI rather than framework cargo cult.
 
-https://github.com/ger1e/personal-site-lp
+### `cti-enrichment-gateway`
+Private CTI enrichment and normalization workbench for combining multiple intelligence sources into a consistent analyst workflow.
 
-### cti-enrichment-gateway
-Private CTI enrichment and normalization workbench integrating multiple threat-intelligence sources into a consistent investigation workflow.
+### [`landing-pages`](https://github.com/ger1e/landing-pages)
+Experimental and historical interface work. The lab, not the production altar.
 
-## Operating style
+## Operating principles
 
-Evidence over indicators. Behavior over noise. Original telemetry over recycled IOC lists. Automate what is repeatable; keep analyst judgment where context matters.
+```text
+EVIDENCE > ASSUMPTION
+BEHAVIOR > IOC CHURN
+SIGNAL   > VOLUME
+CONTEXT  > AUTOMATION FOR ITS OWN SAKE
+```
 
-Primary platforms and tooling include Microsoft Defender XDR, Microsoft Sentinel, KQL, Python, GitHub Actions, OSINT/CTI APIs, and malware-analysis tooling.
+Detection without telemetry is a wish. Intelligence without provenance is a rumor. Automation without analyst context is just a faster way to be wrong.
 
-## Elsewhere
+## Links
 
-- Site: https://github.com/ger1e/personal-site-lp
-- Experiments/archive: https://github.com/ger1e/landing-pages
+[`GITHUB`](https://github.com/ger1e) · [`PERSONAL SITE REPO`](https://github.com/ger1e/personal-site-lp) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
