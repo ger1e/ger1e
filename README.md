@@ -25,7 +25,7 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 </p>
 
 <p align="center">
-  <a href="https://ine.com/security/certifications/ecthp-certification"><img src="https://assets.ine.com/els-static/els-certs/ecthpv2.png" alt="INE Certified Threat Hunting Professional (eCTHP)" width="150"></a>
+  <a href="https://ine.com/security/certifications/ecthp-certification"><img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/output=format:png/cmcc3k3loazi006k52vly6jlo" alt="INE Certified Threat Hunting Professional (eCTHP)" width="150"></a>
 </p>
 
 ## Signal stack
