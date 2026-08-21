@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
   <title id="title">GER1E — glitch signal node</title>
-  <desc id="desc">Black cyberpunk banner with a neon faux-Japanese GER1E wordmark, glitch offsets, scan lines, and threat-hunting telemetry labels.</desc>
+  <desc id="desc">Black cyberpunk banner with a neon GER1E wordmark, fast Matrix rain, glitch offsets, scan lines, and threat-hunting telemetry.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#010303"/>
@@ -12,6 +12,11 @@
       <stop offset=".48" stop-color="#35d8e8" stop-opacity=".045"/>
       <stop offset="1" stop-color="#35d8e8" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="rainFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8fff8" stop-opacity=".76"/>
+      <stop offset=".18" stop-color="#63f5d0" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#63f5d0" stop-opacity="0"/>
+    </linearGradient>
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
       <path d="M0 3.5H4" stroke="#d8fff8" stroke-opacity=".035" stroke-width=".7"/>
     </pattern>
@@ -29,74 +34,58 @@
     <clipPath id="clipA"><rect x="56" y="76" width="1088" height="29"/></clipPath>
     <clipPath id="clipB"><rect x="56" y="112" width="1088" height="22"/></clipPath>
     <clipPath id="clipC"><rect x="56" y="142" width="1088" height="33"/></clipPath>
+    <clipPath id="frame"><rect x="14" y="14" width="1172" height="272" rx="5"/></clipPath>
   </defs>
 
   <rect width="1200" height="300" fill="url(#bg)"/>
   <rect width="1200" height="300" fill="url(#aura)"/>
   <rect width="1200" height="300" fill="url(#grid)"/>
+
+  <g clip-path="url(#frame)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="12" letter-spacing="1.5" fill="url(#rainFade)" opacity=".46">
+    <g transform="translate(42 -260)"><text>1<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">7</tspan><tspan x="0" dy="16">A</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">F</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">3</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">0</tspan></text><animateTransform attributeName="transform" type="translate" values="42 -260;42 330" dur="1.05s" repeatCount="indefinite"/></g>
+    <g transform="translate(116 -180)"><text>0<tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">9</tspan><tspan x="0" dy="16">D</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">4</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan></text><animateTransform attributeName="transform" type="translate" values="116 -180;116 330" dur=".82s" repeatCount="indefinite"/></g>
+    <g transform="translate(198 -320)"><text>8<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">C</tspan><tspan x="0" dy="16">5</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">E</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan></text><animateTransform attributeName="transform" type="translate" values="198 -320;198 330" dur="1.18s" repeatCount="indefinite"/></g>
+    <g transform="translate(286 -230)"><text>0<tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">B</tspan><tspan x="0" dy="16">7</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">2</tspan><tspan x="0" dy="16">0</tspan></text><animateTransform attributeName="transform" type="translate" values="286 -230;286 330" dur=".94s" repeatCount="indefinite"/></g>
+    <g transform="translate(374 -300)"><text>F<tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">6</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">D</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan></text><animateTransform attributeName="transform" type="translate" values="374 -300;374 330" dur="1.11s" repeatCount="indefinite"/></g>
+    <g transform="translate(462 -210)"><text>1<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">A</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">3</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">9</tspan></text><animateTransform attributeName="transform" type="translate" values="462 -210;462 330" dur=".88s" repeatCount="indefinite"/></g>
+    <g transform="translate(548 -350)"><text>C<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">7</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">E</tspan><tspan x="0" dy="16">4</tspan><tspan x="0" dy="16">0</tspan></text><animateTransform attributeName="transform" type="translate" values="548 -350;548 330" dur="1.26s" repeatCount="indefinite"/></g>
+    <g transform="translate(636 -240)"><text>0<tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">5</tspan><tspan x="0" dy="16">F</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">8</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan></text><animateTransform attributeName="transform" type="translate" values="636 -240;636 330" dur=".9s" repeatCount="indefinite"/></g>
+    <g transform="translate(724 -310)"><text>9<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">B</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">2</tspan><tspan x="0" dy="16">D</tspan><tspan x="0" dy="16">0</tspan></text><animateTransform attributeName="transform" type="translate" values="724 -310;724 330" dur="1.16s" repeatCount="indefinite"/></g>
+    <g transform="translate(812 -200)"><text>1<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">E</tspan><tspan x="0" dy="16">6</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">A</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan></text><animateTransform attributeName="transform" type="translate" values="812 -200;812 330" dur=".84s" repeatCount="indefinite"/></g>
+    <g transform="translate(900 -340)"><text>D<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">4</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">F</tspan><tspan x="0" dy="16">8</tspan><tspan x="0" dy="16">0</tspan></text><animateTransform attributeName="transform" type="translate" values="900 -340;900 330" dur="1.22s" repeatCount="indefinite"/></g>
+    <g transform="translate(988 -220)"><text>0<tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">7</tspan><tspan x="0" dy="16">C</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">3</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan></text><animateTransform attributeName="transform" type="translate" values="988 -220;988 330" dur=".86s" repeatCount="indefinite"/></g>
+    <g transform="translate(1076 -290)"><text>A<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">9</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">E</tspan><tspan x="0" dy="16">5</tspan><tspan x="0" dy="16">0</tspan></text><animateTransform attributeName="transform" type="translate" values="1076 -290;1076 330" dur="1.02s" repeatCount="indefinite"/></g>
+    <g transform="translate(1154 -190)"><text>1<tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">B</tspan><tspan x="0" dy="16">4</tspan><tspan x="0" dy="16">0</tspan><tspan x="0" dy="16">1</tspan><tspan x="0" dy="16">D</tspan><tspan x="0" dy="16">0</tspan></text><animateTransform attributeName="transform" type="translate" values="1154 -190;1154 330" dur=".8s" repeatCount="indefinite"/></g>
+  </g>
+
   <rect width="1200" height="300" fill="url(#scan)"/>
   <rect x="14" y="14" width="1172" height="272" rx="5" fill="none" stroke="#63f5d0" stroke-opacity=".12"/>
 
   <g opacity=".55" fill="none">
     <path d="M20 42h156l13 8h118l17-12h119" stroke="#63f5d0" stroke-opacity=".23"/>
     <path d="M766 42h94l12 8h121l19-12h169" stroke="#35d8e8" stroke-opacity=".18"/>
-    <path d="M20 255h212l15-10h177l14 8h124" stroke="#35d8e8" stroke-opacity=".16"/>
-    <path d="M778 257h111l13-12h96l12 8h171" stroke="#b7ff52" stroke-opacity=".16"/>
   </g>
 
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" letter-spacing="2">
     <text x="50" y="45" font-size="10" fill="#63f5d0">NODE://GER1E</text>
     <text x="1150" y="45" text-anchor="end" font-size="10" fill="#718782">SIGNAL LOCK / 01</text>
-    <text x="50" y="267" font-size="10" fill="#718782">HUNT · ENRICH · CORRELATE · DETECT</text>
-    <text x="1150" y="267" text-anchor="end" font-size="10" fill="#63f5d0">ONLINE</text>
   </g>
 
   <g transform="translate(64 52)">
-    <text x="8" y="116" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif"
-          font-size="108" font-weight="900" letter-spacing="-3" fill="#35d8e8" fill-opacity=".22">ム乇 尺1乇
-      <animateTransform attributeName="transform" type="translate"
-        values="0 0;4 0;-3 1;0 0;0 0;2 -1;0 0" dur="1.9s" repeatCount="indefinite"/>
-    </text>
-    <text x="-7" y="112" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif"
-          font-size="108" font-weight="900" letter-spacing="-3" fill="#b7ff52" fill-opacity=".19">ム乇 尺1乇
-      <animateTransform attributeName="transform" type="translate"
-        values="0 0;-5 0;3 -1;0 0;0 0;-2 1;0 0" dur="1.45s" repeatCount="indefinite"/>
-    </text>
-    <text x="0" y="114" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif"
-          font-size="108" font-weight="900" letter-spacing="-3" fill="#eefefa" filter="url(#glow)">ム乇 尺1乇</text>
+    <text x="8" y="116" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#35d8e8" fill-opacity=".22">ム乇 尺1乇<animateTransform attributeName="transform" type="translate" values="0 0;4 0;-3 1;0 0;0 0;2 -1;0 0" dur="1.9s" repeatCount="indefinite"/></text>
+    <text x="-7" y="112" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#b7ff52" fill-opacity=".19">ム乇 尺1乇<animateTransform attributeName="transform" type="translate" values="0 0;-5 0;3 -1;0 0;0 0;-2 1;0 0" dur="1.45s" repeatCount="indefinite"/></text>
+    <text x="0" y="114" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#eefefa" filter="url(#glow)">ム乇 尺1乇</text>
 
-    <g clip-path="url(#clipA)" transform="translate(-64 -52)">
-      <text x="64" y="166" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif"
-            font-size="108" font-weight="900" letter-spacing="-3" fill="#63f5d0">ム乇 尺1乇
-        <animateTransform attributeName="transform" type="translate"
-          values="0 0;12 0;-8 0;0 0;0 0" keyTimes="0;.06;.1;.14;1" dur="2.6s" repeatCount="indefinite"/>
-      </text>
-    </g>
-    <g clip-path="url(#clipB)" transform="translate(-64 -52)">
-      <text x="64" y="166" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif"
-            font-size="108" font-weight="900" letter-spacing="-3" fill="#ff4fd8" fill-opacity=".55">ム乇 尺1乇
-        <animateTransform attributeName="transform" type="translate"
-          values="0 0;-14 0;9 0;0 0;0 0" keyTimes="0;.04;.09;.13;1" dur="3.1s" repeatCount="indefinite"/>
-      </text>
-    </g>
-    <g clip-path="url(#clipC)" transform="translate(-64 -52)">
-      <text x="64" y="166" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif"
-            font-size="108" font-weight="900" letter-spacing="-3" fill="#35d8e8" fill-opacity=".72">ム乇 尺1乇
-        <animateTransform attributeName="transform" type="translate"
-          values="0 0;9 0;-6 0;0 0;0 0" keyTimes="0;.05;.1;.15;1" dur="2.2s" repeatCount="indefinite"/>
-      </text>
-    </g>
+    <g clip-path="url(#clipA)" transform="translate(-64 -52)"><text x="64" y="166" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#63f5d0">ム乇 尺1乇<animateTransform attributeName="transform" type="translate" values="0 0;12 0;-8 0;0 0;0 0" keyTimes="0;.06;.1;.14;1" dur="2.6s" repeatCount="indefinite"/></text></g>
+    <g clip-path="url(#clipB)" transform="translate(-64 -52)"><text x="64" y="166" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#ff4fd8" fill-opacity=".55">ム乇 尺1乇<animateTransform attributeName="transform" type="translate" values="0 0;-14 0;9 0;0 0;0 0" keyTimes="0;.04;.09;.13;1" dur="3.1s" repeatCount="indefinite"/></text></g>
+    <g clip-path="url(#clipC)" transform="translate(-64 -52)"><text x="64" y="166" font-family="'Arial Unicode MS','Noto Sans JP','Noto Sans',Impact,sans-serif" font-size="108" font-weight="900" letter-spacing="-3" fill="#35d8e8" fill-opacity=".72">ム乇 尺1乇<animateTransform attributeName="transform" type="translate" values="0 0;9 0;-6 0;0 0;0 0" keyTimes="0;.05;.1;.15;1" dur="2.2s" repeatCount="indefinite"/></text></g>
 
-    <rect x="0" y="132" width="384" height="4" fill="#63f5d0" filter="url(#microglow)">
-      <animate attributeName="width" values="384;96;510;384" dur="2.8s" repeatCount="indefinite"/>
-    </rect>
+    <rect x="0" y="132" width="384" height="4" fill="#63f5d0" filter="url(#microglow)"><animate attributeName="width" values="384;96;510;384" dur="2.8s" repeatCount="indefinite"/></rect>
     <rect x="394" y="132" width="178" height="4" fill="#35d8e8" fill-opacity=".26"/>
     <rect x="580" y="132" width="44" height="4" fill="#ff4fd8" fill-opacity=".38"/>
 
-    <text x="0" y="168" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace"
-          font-size="16" font-weight="700" letter-spacing="3.4" fill="#63f5d0">THREAT HUNTER // CTI // DETECTION ENGINEERING</text>
-    <text x="0" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace"
-          font-size="11" letter-spacing="2.2" fill="#80938e">BEHAVIOR &gt; IOC CHURN  /  EVIDENCE &gt; ASSUMPTION  /  SIGNAL &gt; VOLUME</text>
+    <text x="0" y="168" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="16" font-weight="700" letter-spacing="3.4" fill="#63f5d0">THREAT HUNTER // CTI // DETECTION ENGINEERING</text>
+    <text x="0" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="11" letter-spacing="2.2" fill="#80938e">BEHAVIOR &gt; IOC CHURN  /  EVIDENCE &gt; ASSUMPTION  /  SIGNAL &gt; VOLUME</text>
   </g>
 
   <g transform="translate(938 92)" fill="none">
@@ -104,14 +93,10 @@
     <circle cx="88" cy="58" r="36" stroke="#35d8e8" stroke-opacity=".18"/>
     <circle cx="88" cy="58" r="18" stroke="#b7ff52" stroke-opacity=".22"/>
     <path d="M24 58h128M88-6v128" stroke="#63f5d0" stroke-opacity=".09"/>
-    <path d="M88 58l39-30" stroke="#b7ff52" stroke-opacity=".68">
-      <animateTransform attributeName="transform" type="rotate" from="0 88 58" to="360 88 58" dur="7.5s" repeatCount="indefinite"/>
-    </path>
+    <path d="M88 58l39-30" stroke="#b7ff52" stroke-opacity=".68"><animateTransform attributeName="transform" type="rotate" from="0 88 58" to="360 88 58" dur="7.5s" repeatCount="indefinite"/></path>
     <circle cx="127" cy="28" r="3.2" fill="#b7ff52" stroke="none" filter="url(#microglow)"/>
     <circle cx="59" cy="86" r="2.4" fill="#35d8e8" stroke="none"/>
   </g>
 
-  <rect x="24" y="-8" width="1152" height="8" fill="#63f5d0" fill-opacity=".08">
-    <animate attributeName="y" values="-8;300" dur="4.2s" repeatCount="indefinite"/>
-  </rect>
+  <rect x="24" y="-8" width="1152" height="8" fill="#63f5d0" fill-opacity=".08"><animate attributeName="y" values="-8;300" dur="4.2s" repeatCount="indefinite"/></rect>
 </svg>
