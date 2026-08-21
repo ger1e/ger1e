@@ -176,7 +176,8 @@ def render_catalog(catalog: dict) -> str:
         for item in sorted(groups[category], key=lambda x: x["repo"].lower()):
             meta = f"`{item['provenance']}` · `{item['risk']}` · `{item['status']}`"
             desc = f" — {item['description']}" if item.get("description") else ""
-            lines.append(f"- [{item['repo']}]({item['url']}) — {meta}{desc}")
+            aliases = f" · aliases: {', '.join(item['aliases'])}" if item.get("aliases") else ""
+            lines.append(f"- [{item['repo']}]({item['url']}) — {meta}{aliases}{desc}")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
@@ -197,6 +198,21 @@ def github_repo_state(repo: str, token: str | None):
     if data.get("private"):
         status = "PRIVATE"
     return {"status": status, "full_name": data.get("full_name") or repo, "default_branch": data.get("default_branch"), "archived": bool(data.get("archived")), "html_url": data.get("html_url")}
+
+
+def apply_repo_state(item: dict, state: dict):
+    updated = dict(item)
+    old_name = updated.get("repo", "")
+    canonical = state.get("full_name") or old_name
+    if canonical and canonical.lower() != old_name.lower():
+        aliases = set(updated.get("aliases", []))
+        if old_name:
+            aliases.add(old_name)
+        updated["aliases"] = sorted(aliases, key=str.lower)
+        updated["repo"] = canonical
+        updated["url"] = state.get("html_url") or f"https://github.com/{canonical}"
+    updated["status"] = state.get("status", "UNKNOWN")
+    return updated
 
 
 def render_health(catalog: dict, checked: list[dict]) -> str:
@@ -256,13 +272,17 @@ def cmd_health(args):
     catalog = load_catalog(path)
     catalog["last_verified"] = dt.date.today().isoformat()
     checked = []
+    refreshed = []
     for item in catalog.get("repositories", []):
         state = github_repo_state(item["repo"], args.token)
-        status = state["status"]
-        if state.get("full_name") and state["full_name"].lower() != item["repo"].lower():
-            status = "RENAMED"
-        item["status"] = status
-        checked.append({"repo": item["repo"], "status": status})
+        updated = apply_repo_state(item, state)
+        refreshed.append(updated)
+        checked.append({"repo": updated["repo"], "status": updated["status"]})
+    catalog["repositories"] = sorted(refreshed, key=lambda x: (x["category"], x["repo"].lower()))
+    errors = validate_catalog(catalog)
+    if errors:
+        print("\n".join(errors), file=sys.stderr)
+        return 1
     if args.write:
         write_catalog(path, catalog)
         Path(args.report).write_text(render_health(catalog, checked), encoding="utf-8")

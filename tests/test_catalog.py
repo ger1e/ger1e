@@ -1,6 +1,6 @@
 import unittest
 
-from tools.catalog import classify_risk, extract_repositories, merge_entries, normalize_repo_url, validate_catalog
+from tools.catalog import apply_repo_state, classify_risk, extract_repositories, merge_entries, normalize_repo_url, validate_catalog
 
 
 class CatalogTests(unittest.TestCase):
@@ -31,6 +31,15 @@ class CatalogTests(unittest.TestCase):
         errors = validate_catalog(catalog)
         self.assertTrue(any('duplicate repo' in e for e in errors))
         self.assertTrue(any('invalid provenance' in e for e in errors))
+
+    def test_apply_repo_state_follows_transfer_and_preserves_alias(self):
+        item = {'repo':'Consensys/mythril','url':'https://github.com/Consensys/mythril','status':'ACTIVE'}
+        state = {'status':'ACTIVE','full_name':'ConsenSysDiligence/mythril','html_url':'https://github.com/ConsenSysDiligence/mythril'}
+        applied = apply_repo_state(item, state)
+        self.assertEqual(applied['repo'], 'ConsenSysDiligence/mythril')
+        self.assertEqual(applied['url'], 'https://github.com/ConsenSysDiligence/mythril')
+        self.assertEqual(applied['aliases'], ['Consensys/mythril'])
+        self.assertEqual(applied['status'], 'ACTIVE')
 
 
 if __name__ == '__main__':
