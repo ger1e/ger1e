@@ -45,7 +45,9 @@ Experimental and historical interface work. The lab, not the production altar.
 
 ## Security repository atlas
 
-[`SECURITY-REPOS.md`](SECURITY-REPOS.md) — expanded high-signal atlas spanning hunting/detection, Microsoft Sentinel/KQL, CTI, DFIR, malware/RE, exploitation/fuzzing, offensive security, AD/identity, AppSec, mobile, cloud/Kubernetes, DevSecOps/supply chain, OSINT, privacy/hardening, AI/LLM security, smart-contract security, labs, and legacy references.
+- [`SECURITY-REPOS.md`](SECURITY-REPOS.md) — expanded high-signal atlas spanning hunting/detection, Microsoft Sentinel/KQL, CTI, DFIR, malware/RE, exploitation/fuzzing, offensive security, AD/identity, AppSec, mobile, cloud/Kubernetes, DevSecOps/supply chain, OSINT, privacy/hardening, AI/LLM security, smart-contract security, labs, and legacy references.
+- [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) — exact 18-repository set extracted and deduplicated from the SOC Analyst Field Guide.
+- [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md) — provider SDKs, CTI/API projects, data repositories, and clearly labeled community integrations for the API-driven security stack.
 
 ## Operating principles
 
@@ -60,4 +62,4 @@ Detection without telemetry is a wish. Intelligence without provenance is a rumo
 
 ## Links
 
-[`GITHUB`](https://github.com/ger1e) · [`SECURITY REPOS`](SECURITY-REPOS.md) · [`PERSONAL SITE REPO`](https://github.com/ger1e/personal-site-lp) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
+[`GITHUB`](https://github.com/ger1e) · [`SECURITY REPOS`](SECURITY-REPOS.md) · [`SOC MANUAL REPOS`](SOC-MANUAL-REPOS.md) · [`API TOOL REPOS`](API-TOOLS-REPOS.md) · [`PERSONAL SITE REPO`](https://github.com/ger1e/personal-site-lp) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
