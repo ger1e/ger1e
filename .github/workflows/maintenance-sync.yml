@@ -58,10 +58,10 @@ jobs:
           esac
           curl --fail --location --retry 3 --retry-delay 2 "$image_url" --output assets/badges/sal2.png
           test "$(file --brief --mime-type assets/badges/sal2.png)" = 'image/png'
-      - name: Fetch eCTHP from INE
+      - name: Fetch eCTHP PNG from current INE certification page asset
         run: |
           curl --fail --location --retry 3 --retry-delay 2 \
-            'https://assets.ine.com/els-static/els-certs/ecthpv2.png' \
+            'https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/output=format:png/cmcc3k3loazi006k52vly6jlo' \
             --output assets/badges/ecthp.png
           test "$(file --brief --mime-type assets/badges/ecthp.png)" = 'image/png'
       - name: Final validation
