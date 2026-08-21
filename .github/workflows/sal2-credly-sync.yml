@@ -1,0 +1,147 @@
+name: sal2-credly-sync
+
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sync:
+    if: github.event_name == 'workflow_dispatch' || (github.event.issue.user.login == 'ger1e' && github.event.issue.title == '[credential-sync] sal2')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Resolve TryHackMe SAL2 strictly from Credly
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/badges
+          page='https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2'
+          curl --fail --location --retry 3 --retry-delay 2 "$page" --output /tmp/sal2.html
+          grep -qi 'Security Analyst Level 2' /tmp/sal2.html
+          grep -qi 'TryHackMe' /tmp/sal2.html
+          python - <<'PY'
+          from html import unescape
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import re
+
+          source = Path('/tmp/sal2.html').read_text(encoding='utf-8', errors='replace')
+
+          class Collector(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.urls = []
+              def handle_starttag(self, tag, attrs):
+                  a = {k.lower(): v for k, v in attrs if k and v}
+                  for key in ('src', 'href', 'content'):
+                      value = a.get(key, '')
+                      if 'images.credly.com' in value:
+                          self.urls.append(value)
+
+          parser = Collector()
+          parser.feed(source)
+          urls = list(parser.urls)
+          urls.extend(re.findall(r'https:(?:\\u002[fF]|\\/|/){2}images\.credly\.com[^"\'<>\s]+', source))
+
+          normalized = []
+          for raw in urls:
+              url = unescape(raw).replace('\\u002F', '/').replace('\\u002f', '/').replace('\\/', '/')
+              url = url.rstrip('\\')
+              if url.startswith('https://images.credly.com/') and url not in normalized:
+                  normalized.append(url)
+
+          ids = []
+          for url in normalized:
+              m = re.search(r'/images/([0-9a-fA-F-]{36})(?:/|$)', url)
+              if m and m.group(1).lower() not in ids:
+                  ids.append(m.group(1).lower())
+
+          candidates = []
+          for asset_id in ids:
+              candidates += [
+                  f'https://images.credly.com/size/680x680/images/{asset_id}/image.png',
+                  f'https://images.credly.com/size/340x340/images/{asset_id}/image.png',
+                  f'https://images.credly.com/images/{asset_id}/image.png',
+                  f'https://images.credly.com/images/{asset_id}/blob',
+              ]
+          for url in normalized:
+              if url not in candidates:
+                  candidates.append(url)
+
+          if not candidates:
+              raise SystemExit('No Credly image candidates found in SAL2 page source')
+          Path('/tmp/sal2-candidates').write_text('\n'.join(candidates) + '\n', encoding='utf-8')
+          PY
+
+          found=0
+          while IFS= read -r candidate; do
+            rm -f /tmp/candidate
+            if ! curl --fail --location --retry 2 --retry-delay 1 "$candidate" --output /tmp/candidate; then
+              continue
+            fi
+            mime="$(file --brief --mime-type /tmp/candidate)"
+            case "$mime" in
+              image/png|image/jpeg|image/webp) ;;
+              *) continue ;;
+            esac
+            if ! python - <<'PY'
+          from pathlib import Path
+          import struct
+          p = Path('/tmp/candidate').read_bytes()
+          w = h = 0
+          if p[:8] == b'\x89PNG\r\n\x1a\n' and p[12:16] == b'IHDR':
+              w, h = struct.unpack('>II', p[16:24])
+          elif p[:2] == b'\xff\xd8':
+              i = 2
+              while i + 9 < len(p):
+                  if p[i] != 0xff:
+                      i += 1; continue
+                  marker = p[i+1]
+                  if marker in (0xd8, 0xd9):
+                      i += 2; continue
+                  length = int.from_bytes(p[i+2:i+4], 'big')
+                  if marker in range(0xc0, 0xc4):
+                      h = int.from_bytes(p[i+5:i+7], 'big'); w = int.from_bytes(p[i+7:i+9], 'big'); break
+                  i += 2 + length
+          elif p[:4] == b'RIFF' and p[8:12] == b'WEBP':
+              # Credly normally serves square badge assets; accept WebP only if a decoder is available later.
+              raise SystemExit(1)
+          if not w or w != h or w < 200:
+              raise SystemExit(1)
+          PY
+            then
+              continue
+            fi
+            cp /tmp/candidate /tmp/sal2-source-image
+            printf '%s\n' "$candidate" > assets/badges/sal2.source.txt
+            found=1
+            break
+          done < /tmp/sal2-candidates
+          test "$found" -eq 1
+
+          python - <<'PY'
+          from pathlib import Path
+          src = Path('/tmp/sal2-source-image').read_bytes()
+          if src[:8] == b'\x89PNG\r\n\x1a\n':
+              Path('assets/badges/sal2.png').write_bytes(src)
+          else:
+              raise SystemExit('Credly candidate is not PNG; refusing non-PNG local mirror')
+          PY
+          test "$(file --brief --mime-type assets/badges/sal2.png)" = 'image/png'
+      - name: Commit SAL2 Credly PNG
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/badges/sal2.png assets/badges/sal2.source.txt
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'chore: add SAL2 Credly badge PNG'
+          git push
