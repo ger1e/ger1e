@@ -1,0 +1,25 @@
+{
+  "schema": "ger1e-security-catalog/v1",
+  "last_verified": null,
+  "bootstrap_sources": [
+    {"id": "atlas", "file": "SECURITY-REPOS.md"},
+    {"id": "soc-manual", "file": "SOC-MANUAL-REPOS.md"},
+    {"id": "api-tools", "file": "API-TOOLS-REPOS.md"}
+  ],
+  "overrides": {
+    "ytisf/theZoo": {"provenance": "CANONICAL", "risk": "LIVE-MALWARE"},
+    "juice-shop/juice-shop": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
+    "WebGoat/WebGoat": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
+    "digininja/DVWA": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
+    "madhuakula/kubernetes-goat": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
+    "rapid7/metasploit-framework": {"risk": "OFFENSIVE-DUAL-USE"},
+    "gentilkiwi/mimikatz": {"risk": "OFFENSIVE-DUAL-USE"},
+    "GhostPack/Rubeus": {"risk": "OFFENSIVE-DUAL-USE"},
+    "BishopFox/sliver": {"risk": "OFFENSIVE-DUAL-USE"},
+    "HavocFramework/Havoc": {"risk": "OFFENSIVE-DUAL-USE"},
+    "its-a-feature/Mythic": {"risk": "OFFENSIVE-DUAL-USE"},
+    "MaltegoTech/maltego-trx": {"provenance": "LEGACY", "status": "ARCHIVED"},
+    "RIPE-NCC/ripestat-text": {"provenance": "LEGACY", "status": "ARCHIVED"}
+  },
+  "repositories": []
+}

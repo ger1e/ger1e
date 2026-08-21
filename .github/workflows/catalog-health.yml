@@ -1,0 +1,69 @@
+name: security-catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 4 * * 1'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: security-catalog-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: PR bootstrap parser check
+        if: github.event_name == 'pull_request'
+        run: python tools/catalog.py bootstrap > /dev/null
+      - name: Bootstrap canonical catalog once
+        if: github.event_name != 'pull_request'
+        run: |
+          python - <<'PY'
+          import json, pathlib, subprocess
+          p = pathlib.Path('catalog/repos.yaml')
+          data = json.loads(p.read_text())
+          if not data.get('repositories'):
+              subprocess.run(['python','tools/catalog.py','bootstrap','--write'], check=True)
+          PY
+      - name: Validate and generate catalog
+        if: github.event_name != 'pull_request'
+        run: |
+          python tools/catalog.py validate
+          python tools/catalog.py build
+      - name: Refresh repository health
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/catalog.py health --token "$GH_TOKEN" --write
+      - name: Final validation
+        run: |
+          python -m py_compile tools/catalog.py
+          python -c "import json; json.load(open('catalog/repos.yaml', encoding='utf-8'))"
+          git diff --check
+      - name: Commit refreshed catalog
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add catalog/repos.yaml CATALOG.md LAST-VERIFIED.md
+          git commit -m 'chore: refresh security catalog'
+          git push

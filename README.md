@@ -1,4 +1,7 @@
-<h1 align="center">ム乇 尺 1 乇</h1>
+<p align="center">
+  <img src="assets/profile-banner.svg" alt="GER1E — threat hunting, CTI, detection engineering" width="100%">
+</p>
+
 <p align="center"><strong>THREAT HUNTER // CTI // DETECTION ENGINEERING</strong></p>
 <p align="center"><code>behavior → evidence → signal</code></p>
 
@@ -22,9 +25,9 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 - Malware analysis, reverse engineering, and behavioral extraction
 - CTI enrichment pipelines, OSINT, and security automation
 
-## Stack
+## Working set
 
-| Area | Working set |
+| Area | Stack |
 | --- | --- |
 | Hunting / Detection | Microsoft Defender XDR · Microsoft Sentinel · KQL · MITRE ATT&CK |
 | Endpoint / Identity | EDR telemetry · process / network / file behavior · authentication telemetry |
@@ -32,22 +35,25 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 | Analysis | Malware triage · reverse engineering · behavioral analysis · lineage / similarity |
 | Build / Automate | Python · PowerShell · Bash · GitHub Actions · REST APIs |
 
-## Selected work
+## Original work
 
 ### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
-Canonical personal landing page. Static, dependency-light, hardened with structural QA and CI rather than framework cargo cult.
+Canonical personal landing page. Static, dependency-light, regression-tested, CSP-hardened, and accessibility-aware.
 
-### `cti-enrichment-gateway`
-Private CTI enrichment and normalization workbench for combining multiple intelligence sources into a consistent analyst workflow.
+### [`Threat hunting lab`](lab/README.md)
+Sanitized KQL hunts, CTI normalization schema, and investigation methodology. No customer telemetry or private infrastructure.
 
 ### [`landing-pages`](https://github.com/ger1e/landing-pages)
 Experimental and historical interface work. The lab, not the production altar.
 
-## Security repository atlas
+## Security intelligence catalog
 
-- [`SECURITY-REPOS.md`](SECURITY-REPOS.md) — expanded high-signal atlas spanning hunting/detection, Microsoft Sentinel/KQL, CTI, DFIR, malware/RE, exploitation/fuzzing, offensive security, AD/identity, AppSec, mobile, cloud/Kubernetes, DevSecOps/supply chain, OSINT, privacy/hardening, AI/LLM security, smart-contract security, labs, and legacy references.
-- [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) — exact 18-repository set extracted and deduplicated from the SOC Analyst Field Guide.
-- [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md) — provider SDKs, CTI/API projects, data repositories, and clearly labeled community integrations for the API-driven security stack.
+- [`CATALOG.md`](CATALOG.md) — generated consolidated repository catalog with provenance, risk, and lifecycle status.
+- [`catalog/repos.yaml`](catalog/repos.yaml) — machine-readable canonical catalog.
+- [`LAST-VERIFIED.md`](LAST-VERIFIED.md) — automated repository-health snapshot.
+- [`SECURITY-REPOS.md`](SECURITY-REPOS.md) — broad curated security atlas.
+- [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) — repository set extracted from the SOC Analyst Field Guide.
+- [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md) — API/CTI provider SDKs, upstream projects, and labeled community integrations.
 
 ## Operating principles
 
@@ -62,4 +68,4 @@ Detection without telemetry is a wish. Intelligence without provenance is a rumo
 
 ## Links
 
-[`GITHUB`](https://github.com/ger1e) · [`SECURITY REPOS`](SECURITY-REPOS.md) · [`SOC MANUAL REPOS`](SOC-MANUAL-REPOS.md) · [`API TOOL REPOS`](API-TOOLS-REPOS.md) · [`PERSONAL SITE REPO`](https://github.com/ger1e/personal-site-lp) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
+[`GITHUB`](https://github.com/ger1e) · [`SECURITY CATALOG`](CATALOG.md) · [`HUNTING LAB`](lab/README.md) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
