@@ -162,8 +162,8 @@
       "sources": [
         "atlas"
       ],
-      "provenance": "TRAINING-LAB",
-      "risk": "VULNERABLE-LAB",
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
     {
@@ -198,7 +198,7 @@
       "sources": [
         "atlas"
       ],
-      "provenance": "TRAINING-LAB",
+      "provenance": "CANONICAL",
       "risk": "VULNERABLE-LAB",
       "status": "ACTIVE"
     },
@@ -306,7 +306,7 @@
       "sources": [
         "atlas"
       ],
-      "provenance": "TRAINING-LAB",
+      "provenance": "CANONICAL",
       "risk": "VULNERABLE-LAB",
       "status": "ACTIVE"
     },
@@ -655,7 +655,7 @@
         "api-tools",
         "atlas"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -789,7 +789,7 @@
         "api-tools",
         "atlas"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -1210,7 +1210,7 @@
         "api-tools",
         "atlas"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1800,7 +1800,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1812,7 +1812,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1824,7 +1824,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1836,7 +1836,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1848,7 +1848,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1872,7 +1872,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -1896,7 +1896,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -1908,7 +1908,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -1968,7 +1968,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1992,7 +1992,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2004,7 +2004,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2016,7 +2016,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2040,7 +2040,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2052,7 +2052,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2064,7 +2064,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2076,7 +2076,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2136,7 +2136,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2148,7 +2148,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2160,7 +2160,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2208,7 +2208,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2268,7 +2268,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2280,7 +2280,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2292,7 +2292,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2304,7 +2304,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2316,7 +2316,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2328,7 +2328,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2340,7 +2340,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2352,7 +2352,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "OFFICIAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2968,7 +2968,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "COMMUNITY",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -2980,7 +2980,7 @@
       "sources": [
         "api-tools"
       ],
-      "provenance": "CANONICAL",
+      "provenance": "COMMUNITY",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -2989,6 +2989,18 @@
       "url": "https://github.com/kristuff/abuseipdb-cli",
       "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
       "description": "community CLI/API client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OpenCTI-Platform/connectors",
+      "url": "https://github.com/OpenCTI-Platform/connectors",
+      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
+      "description": "OpenCTI internal-enrichment connector for Modat Magnify; verified present in the upstream connector repository on 2026-08-22",
       "sources": [
         "api-tools"
       ],

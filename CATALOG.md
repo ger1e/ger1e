@@ -2,7 +2,7 @@
 
 Generated from `catalog/repos.yaml`. Do not hand-edit this file.
 
-**Repositories:** 251
+**Repositories:** 252
 **Last verified:** 2026-08-21
 
 Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/ACTIVE-SECURITY-TOOL/OFFENSIVE-DUAL-USE/LIVE-MALWARE/VULNERABLE-LAB`.
@@ -27,10 +27,10 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 ## Application Security Web Api Security
 
-- [digininja/DVWA](https://github.com/digininja/DVWA) — `TRAINING-LAB` · `VULNERABLE-LAB` · `ACTIVE` — Damn Vulnerable Web Application
+- [digininja/DVWA](https://github.com/digininja/DVWA) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Damn Vulnerable Web Application
 - [ffuf/ffuf](https://github.com/ffuf/ffuf) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — fast web fuzzer
 - [github/codeql](https://github.com/github/codeql) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — semantic code analysis and security queries
-- [juice-shop/juice-shop](https://github.com/juice-shop/juice-shop) — `TRAINING-LAB` · `VULNERABLE-LAB` · `ACTIVE` — deliberately vulnerable modern web application
+- [juice-shop/juice-shop](https://github.com/juice-shop/juice-shop) — `CANONICAL` · `VULNERABLE-LAB` · `ACTIVE` — deliberately vulnerable modern web application
 - [OJ/gobuster](https://github.com/OJ/gobuster) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — directory/DNS/vhost enumeration
 - [OWASP/ASVS](https://github.com/OWASP/ASVS) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — application security verification standard
 - [OWASP/CheatSheetSeries](https://github.com/OWASP/CheatSheetSeries) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — application-security guidance
@@ -39,7 +39,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [semgrep/semgrep](https://github.com/semgrep/semgrep) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — static analysis and code security scanning
 - [shieldfy/API-Security-Checklist](https://github.com/shieldfy/API-Security-Checklist) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — API-security checklist
 - [sqlmapproject/sqlmap](https://github.com/sqlmapproject/sqlmap) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — SQL injection testing framework
-- [WebGoat/WebGoat](https://github.com/WebGoat/WebGoat) — `TRAINING-LAB` · `VULNERABLE-LAB` · `ACTIVE` — deliberately insecure app for learning web security
+- [WebGoat/WebGoat](https://github.com/WebGoat/WebGoat) — `CANONICAL` · `VULNERABLE-LAB` · `ACTIVE` — deliberately insecure app for learning web security
 - [zaproxy/zaproxy](https://github.com/zaproxy/zaproxy) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — OWASP ZAP web application security scanner
 
 ## Binary Exploitation Fuzzing
@@ -80,7 +80,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [elceef/dnstwist](https://github.com/elceef/dnstwist) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — domain permutation, typosquatting, and phishing reconnaissance
 - [hslatman/awesome-threat-intelligence](https://github.com/hslatman/awesome-threat-intelligence) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — mature CTI reference index
 - [intelowlproject/IntelOwl](https://github.com/intelowlproject/IntelOwl) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — scalable IOC/threat-intelligence enrichment
-- [MISP/MISP](https://github.com/MISP/MISP) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — threat-intelligence sharing and correlation platform
+- [MISP/MISP](https://github.com/MISP/MISP) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — threat-intelligence sharing and correlation platform
 - [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — MITRE ATT&CK STIX data
 - [OpenCTI-Platform/opencti](https://github.com/OpenCTI-Platform/opencti) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — cyber threat-intelligence knowledge platform
 
@@ -97,7 +97,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [bridgecrewio/checkov](https://github.com/bridgecrewio/checkov) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — IaC and cloud configuration security scanning
 - [getsops/sops](https://github.com/getsops/sops) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — encrypted secrets/configuration management
 - [gitleaks/gitleaks](https://github.com/gitleaks/gitleaks) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — secret scanning for Git and filesystems
-- [google/osv-scanner](https://github.com/google/osv-scanner) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — vulnerability scanning backed by OSV
+- [google/osv-scanner](https://github.com/google/osv-scanner) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — vulnerability scanning backed by OSV
 - [ossf/scorecard](https://github.com/ossf/scorecard) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — open-source project security-health checks
 - [sottlmarek/DevSecOps](https://github.com/sottlmarek/DevSecOps) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — DevSecOps tools and references
 - [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — secret discovery and verification
@@ -147,7 +147,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [radareorg/radare2](https://github.com/radareorg/radare2) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — reverse-engineering framework
 - [rizinorg/cutter](https://github.com/rizinorg/cutter) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — graphical reverse-engineering platform
 - [rshipp/awesome-malware-analysis](https://github.com/rshipp/awesome-malware-analysis) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — malware-analysis reference index
-- [VirusTotal/yara](https://github.com/VirusTotal/yara) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — YARA pattern-matching engine
+- [VirusTotal/yara](https://github.com/VirusTotal/yara) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — YARA pattern-matching engine
 - [WerWolv/ImHex](https://github.com/WerWolv/ImHex) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — hex editor for reverse engineering and binary analysis
 - [x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Windows debugger
 - [ytisf/theZoo](https://github.com/ytisf/theZoo) — `CANONICAL` · `LIVE-MALWARE` · `ACTIVE` — live-malware research repository; isolated-lab handling only
@@ -214,53 +214,53 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 ## Official Canonical Provider Repositories
 
-- [0xDanielLopez/TweetFeed](https://github.com/0xDanielLopez/TweetFeed) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — TweetFeed IOC project
-- [0xDanielLopez/TweetFeed_code](https://github.com/0xDanielLopez/TweetFeed_code) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — associated TweetFeed code repository
-- [abusech/MalwareBazaar](https://github.com/abusech/MalwareBazaar) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — MalwareBazaar
-- [abusech/ThreatFox](https://github.com/abusech/ThreatFox) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — ThreatFox
-- [abusech/URLhaus](https://github.com/abusech/URLhaus) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — URLhaus
+- [0xDanielLopez/TweetFeed](https://github.com/0xDanielLopez/TweetFeed) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — TweetFeed IOC project
+- [0xDanielLopez/TweetFeed_code](https://github.com/0xDanielLopez/TweetFeed_code) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — associated TweetFeed code repository
+- [abusech/MalwareBazaar](https://github.com/abusech/MalwareBazaar) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — MalwareBazaar
+- [abusech/ThreatFox](https://github.com/abusech/ThreatFox) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — ThreatFox
+- [abusech/URLhaus](https://github.com/abusech/URLhaus) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — URLhaus
 - [achillean/shodan-python](https://github.com/achillean/shodan-python) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — canonical Shodan Python library and CLI
-- [AlienVault-OTX/OTX-Python-SDK](https://github.com/AlienVault-OTX/OTX-Python-SDK) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — OTX Python SDK
+- [AlienVault-OTX/OTX-Python-SDK](https://github.com/AlienVault-OTX/OTX-Python-SDK) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — OTX Python SDK
 - [anyrun/anyrun-sdk](https://github.com/anyrun/anyrun-sdk) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — official ANY.RUN SDK
-- [censys/censys-python](https://github.com/censys/censys-python) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — established Censys Python client
-- [censys/censys-sdk-python](https://github.com/censys/censys-sdk-python) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — current Censys Python SDK line
+- [censys/censys-python](https://github.com/censys/censys-python) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — established Censys Python client
+- [censys/censys-sdk-python](https://github.com/censys/censys-sdk-python) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — current Censys Python SDK line
 - [cisagov/kev-data](https://github.com/cisagov/kev-data) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — official CISA KEV data repository
 - [cloudflare/cloudflare-python](https://github.com/cloudflare/cloudflare-python) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — current official Cloudflare Python API SDK; useful for Cloudflare API automation, including supported Radar endpoints exposed through the API
 - [CrowdStrike/falconpy](https://github.com/CrowdStrike/falconpy) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — official CrowdStrike Python SDK; contains FalconX Sandbox API endpoints and samples relevant to Falcon Sandbox / Hybrid Analysis workflows
 - [FIRSTdotorg/epss](https://github.com/FIRSTdotorg/epss) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — official EPSS repository
-- [FIRSTdotorg/epss-vendors](https://github.com/FIRSTdotorg/epss-vendors) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — EPSS vendor/product mapping support
+- [FIRSTdotorg/epss-vendors](https://github.com/FIRSTdotorg/epss-vendors) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — EPSS vendor/product mapping support
 - [getsentry/sentry-python](https://github.com/getsentry/sentry-python) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — official Python SDK
-- [google/osv.dev](https://github.com/google/osv.dev) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — OSV.dev service and ecosystem
-- [GreyNoise-Intelligence/api.greynoise.io](https://github.com/GreyNoise-Intelligence/api.greynoise.io) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — GreyNoise API repository
-- [GreyNoise-Intelligence/GNQL](https://github.com/GreyNoise-Intelligence/GNQL) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — GreyNoise Query Language resources
+- [google/osv.dev](https://github.com/google/osv.dev) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — OSV.dev service and ecosystem
+- [GreyNoise-Intelligence/api.greynoise.io](https://github.com/GreyNoise-Intelligence/api.greynoise.io) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — GreyNoise API repository
+- [GreyNoise-Intelligence/GNQL](https://github.com/GreyNoise-Intelligence/GNQL) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — GreyNoise Query Language resources
 - [GreyNoise-Intelligence/greynoise-mcp-server](https://github.com/GreyNoise-Intelligence/greynoise-mcp-server) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — official MCP integration
-- [GreyNoise-Intelligence/pygreynoise](https://github.com/GreyNoise-Intelligence/pygreynoise) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python SDK / CLI for GreyNoise
-- [hashlookup/hashlookup-forensic-analyser](https://github.com/hashlookup/hashlookup-forensic-analyser) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — forensic-analysis client/tooling
-- [hashlookup/hashlookup-server](https://github.com/hashlookup/hashlookup-server) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — hashlookup server/API implementation
-- [hashlookup/PyHashlookup](https://github.com/hashlookup/PyHashlookup) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python client
+- [GreyNoise-Intelligence/pygreynoise](https://github.com/GreyNoise-Intelligence/pygreynoise) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python SDK / CLI for GreyNoise
+- [hashlookup/hashlookup-forensic-analyser](https://github.com/hashlookup/hashlookup-forensic-analyser) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — forensic-analysis client/tooling
+- [hashlookup/hashlookup-server](https://github.com/hashlookup/hashlookup-server) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — hashlookup server/API implementation
+- [hashlookup/PyHashlookup](https://github.com/hashlookup/PyHashlookup) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python client
 - [hatching/triage](https://github.com/hatching/triage) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — official Triage command-line/API tooling
 - [intelthreat/attackcti](https://github.com/intelthreat/attackcti) — `COMMUNITY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — widely used Python ATT&CK client built around STIX/TAXII data access; community-maintained rather than a MITRE upstream
 - [ipinfo/python](https://github.com/ipinfo/python) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — official Python client
 - [JMousqueton/ransomware.live](https://github.com/JMousqueton/ransomware.live) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — canonical ransomware.live project/data repository
-- [malpedia/malpedia-flossed](https://github.com/malpedia/malpedia-flossed) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — FLOSS-derived Malpedia dataset tooling
-- [malpedia/malpediaclient](https://github.com/malpedia/malpediaclient) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Malpedia API client
-- [malpedia/signator-rules](https://github.com/malpedia/signator-rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Malpedia Signator rules
+- [malpedia/malpedia-flossed](https://github.com/malpedia/malpedia-flossed) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — FLOSS-derived Malpedia dataset tooling
+- [malpedia/malpediaclient](https://github.com/malpedia/malpediaclient) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Malpedia API client
+- [malpedia/signator-rules](https://github.com/malpedia/signator-rules) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — Malpedia Signator rules
 - [MaltegoTech/maltego-trx](https://github.com/MaltegoTech/maltego-trx) — `LEGACY` · `ACTIVE-SECURITY-TOOL` · `ARCHIVED` — official TRX framework; **archived/legacy**, retained because it is directly relevant to existing transform workflows
 - [MaltegoTech/maltego-trx-examples](https://github.com/MaltegoTech/maltego-trx-examples) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — official transform examples
 - [MISP/PyMISP](https://github.com/MISP/PyMISP) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — official Python API client
-- [RansomLook/doc](https://github.com/RansomLook/doc) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — RansomLook documentation repository
+- [RansomLook/doc](https://github.com/RansomLook/doc) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — RansomLook documentation repository
 - [RansomLook/RansomLook](https://github.com/RansomLook/RansomLook) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — canonical RansomLook project
 - [RIPE-NCC/ripestat-text](https://github.com/RIPE-NCC/ripestat-text) — `LEGACY` · `ACTIVE-SECURITY-TOOL` · `ARCHIVED` — official RIPE NCC RIPEstat text client; **archived/legacy**
 - [urlscan/urlscan-cli](https://github.com/urlscan/urlscan-cli) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — official CLI
 - [urlscan/urlscan-python](https://github.com/urlscan/urlscan-python) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — official Python client
-- [VirusTotal/vt-cli](https://github.com/VirusTotal/vt-cli) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — VirusTotal command-line client
-- [VirusTotal/vt-py](https://github.com/VirusTotal/vt-py) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python client for the VirusTotal API
-- [vulnerability-lookup/PyVulnerabilityLookup](https://github.com/vulnerability-lookup/PyVulnerabilityLookup) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python client
-- [vulnerability-lookup/vulnerability-lookup](https://github.com/vulnerability-lookup/vulnerability-lookup) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Vulnerability-Lookup platform
-- [vulnerability-lookup/VulnMCP](https://github.com/vulnerability-lookup/VulnMCP) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — MCP integration
-- [webamon-org/MISP-Connector](https://github.com/webamon-org/MISP-Connector) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Webamon MISP integration
-- [webamon-org/webamon](https://github.com/webamon-org/webamon) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Webamon project
-- [webamon-org/webamon-cli](https://github.com/webamon-org/webamon-cli) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Webamon CLI
+- [VirusTotal/vt-cli](https://github.com/VirusTotal/vt-cli) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — VirusTotal command-line client
+- [VirusTotal/vt-py](https://github.com/VirusTotal/vt-py) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python client for the VirusTotal API
+- [vulnerability-lookup/PyVulnerabilityLookup](https://github.com/vulnerability-lookup/PyVulnerabilityLookup) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Python client
+- [vulnerability-lookup/vulnerability-lookup](https://github.com/vulnerability-lookup/vulnerability-lookup) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Vulnerability-Lookup platform
+- [vulnerability-lookup/VulnMCP](https://github.com/vulnerability-lookup/VulnMCP) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — MCP integration
+- [webamon-org/MISP-Connector](https://github.com/webamon-org/MISP-Connector) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — Webamon MISP integration
+- [webamon-org/webamon](https://github.com/webamon-org/webamon) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — Webamon project
+- [webamon-org/webamon-cli](https://github.com/webamon-org/webamon-cli) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Webamon CLI
 
 ## Osint Reconnaissance Attack Surface Discovery
 
@@ -329,9 +329,10 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 ## Useful Community Clients Integrations Where No Official Provider Sdk Was Verified
 
-- [fortinet-fortisoar/connector-pulsedive](https://github.com/fortinet-fortisoar/connector-pulsedive) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — FortiSOAR connector
-- [hakluke/haktrails](https://github.com/hakluke/haktrails) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — established SecurityTrails-powered reconnaissance CLI
+- [fortinet-fortisoar/connector-pulsedive](https://github.com/fortinet-fortisoar/connector-pulsedive) — `COMMUNITY` · `SAFE-REFERENCE` · `ACTIVE` — FortiSOAR connector
+- [hakluke/haktrails](https://github.com/hakluke/haktrails) — `COMMUNITY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — established SecurityTrails-powered reconnaissance CLI
 - [kristuff/abuseipdb-cli](https://github.com/kristuff/abuseipdb-cli) — `COMMUNITY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — community CLI/API client
+- [OpenCTI-Platform/connectors](https://github.com/OpenCTI-Platform/connectors) — `COMMUNITY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — OpenCTI internal-enrichment connector for Modat Magnify; verified present in the upstream connector repository on 2026-08-22
 - [pberba/pulsedive-py](https://github.com/pberba/pulsedive-py) — `COMMUNITY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — community Python client
 - [secops4thewin/securitytrails-python](https://github.com/secops4thewin/securitytrails-python) — `COMMUNITY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — community Python client
 - [turbot/steampipe-plugin-hudsonrock](https://github.com/turbot/steampipe-plugin-hudsonrock) — `COMMUNITY` · `SAFE-REFERENCE` · `ACTIVE` — Steampipe plugin for Hudson Rock data; third-party integration

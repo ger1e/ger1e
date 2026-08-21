@@ -1,8 +1,8 @@
 # Repository health
 
 **Atlas verification:** 2026-08-21
-**Repositories checked:** 251
-**Healthy:** 237
+**Repositories checked:** 252
+**Healthy:** 238
 **Archived:** 14
 **Missing:** 0
 **Private:** 0
