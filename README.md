@@ -24,6 +24,10 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
   <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification — Credly" width="150"></a>
 </p>
 
+<p align="center">
+  <a href="https://ine.com/security/certifications/ecthp-certification"><img src="https://assets.ine.com/els-static/els-certs/ecthpv2.png" alt="INE Certified Threat Hunting Professional (eCTHP)" width="150"></a>
+</p>
+
 ## Signal stack
 
 | Function | Working set |
