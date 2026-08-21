@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner.svg" alt="GER1E — glitch signal node for threat hunting, CTI and detection engineering" width="100%">
+  <img src="assets/profile-banner.svg" alt="GER1E — Matrix signal banner for threat hunting, CTI and detection engineering" width="100%">
 </p>
 
 <p align="center"><code>ム乇 尺1乇 // SIGNAL NODE</code></p>
@@ -12,8 +12,6 @@
 ├─ INTEL    campaigns · infrastructure · malware · vulnerabilities
 ├─ DETECT   KQL · analytics · ATT&CK · detection engineering
 └─ BUILD    Python · automation · enrichment · analyst tooling
-
-   behavior > IOC churn    evidence > assumption    signal > volume
 ```
 
 I hunt attacker behavior, correlate threat intelligence, and turn evidence into detections and investigation workflows. The useful part is the collision point between telemetry, adversary tradecraft, automation, and analyst judgment.
@@ -28,6 +26,10 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
   <a href="https://ine.com/security/certifications/ecthp-certification"><img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/output=format:png/cmcc3k3loazi006k52vly6jlo" alt="INE Certified Threat Hunting Professional (eCTHP)" width="150"></a>
 </p>
 
+<p align="center">
+  <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><strong>TryHackMe Security Analyst Level 2 (SAL2) — Credly</strong></a>
+</p>
+
 ## Signal stack
 
 | Function | Working set |
@@ -40,17 +42,14 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 
 ## Original work
 
-### [`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)
-Sanitized, vendor-practical KQL hunts, a CTI normalization schema, and behavior-first methodology. No customer telemetry, private architecture, or production identifiers.
-
 ### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
-Canonical personal landing page: dependency-light, regression-tested, CSP-hardened, accessibility-aware, and deliberately hostile to generic portfolio-template energy.
+Personal landing page for `gergoilly.hu`: custom front-end, responsive layout, metadata, accessibility work, and production hardening.
 
 ### [`security intelligence catalog`](CATALOG.md)
 Curated security tooling and upstream project catalog with provenance, risk, lifecycle status, and automated health verification.
 
 ### [`landing-pages`](https://github.com/ger1e/landing-pages)
-Experimental and historical interface work. The lab, not production.
+Experimental and historical interface work.
 
 ## Catalog nodes
 
@@ -66,4 +65,4 @@ AUTOMATION WITHOUT CONTEXT   = FASTER WRONGNESS
 
 ## Exit nodes
 
-[`HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
+[`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
