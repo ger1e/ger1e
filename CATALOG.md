@@ -3,7 +3,7 @@
 Generated from `catalog/repos.yaml`. Do not hand-edit this file.
 
 **Repositories:** 251
-**Last verified:** not yet verified
+**Last verified:** 2026-08-21
 
 Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/ACTIVE-SECURITY-TOOL/OFFENSIVE-DUAL-USE/LIVE-MALWARE/VULNERABLE-LAB`.
 
@@ -14,16 +14,16 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [GhostPack/Seatbelt](https://github.com/GhostPack/Seatbelt) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Windows host situational-awareness collection
 - [ly4k/Certipy](https://github.com/ly4k/Certipy) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Active Directory Certificate Services security assessment
 - [NetSPI/PowerUpSQL](https://github.com/NetSPI/PowerUpSQL) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — SQL Server security assessment and AD-adjacent attack-path research
-- [PowerShellEmpire/Empire](https://github.com/PowerShellEmpire/Empire) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — adversary-emulation framework
+- [PowerShellEmpire/Empire](https://github.com/PowerShellEmpire/Empire) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `RENAMED` — adversary-emulation framework
 - [SpecterOps/BloodHound-Legacy](https://github.com/SpecterOps/BloodHound-Legacy) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — historically important BloodHound codebase; legacy naming is explicit
 
 ## Ai Llm Security
 
-- [Azure/PyRIT](https://github.com/Azure/PyRIT) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Python Risk Identification Tool for generative-AI red teaming
+- [Azure/PyRIT](https://github.com/Azure/PyRIT) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — Python Risk Identification Tool for generative-AI red teaming
 - [NVIDIA/garak](https://github.com/NVIDIA/garak) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — LLM vulnerability scanner/red-team evaluation framework
 - [openai/codex-security](https://github.com/openai/codex-security) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — security-oriented agentic/code security project
 - [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — LLM evals and red-team testing
-- [protectai/llm-guard](https://github.com/protectai/llm-guard) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — input/output security controls for LLM applications
+- [protectai/llm-guard](https://github.com/protectai/llm-guard) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — input/output security controls for LLM applications
 
 ## Application Security Web Api Security
 
@@ -54,7 +54,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 ## C2 Adversary Simulation
 
 - [BishopFox/sliver](https://github.com/BishopFox/sliver) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Sliver C2 framework
-- [HavocFramework/Havoc](https://github.com/HavocFramework/Havoc) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Havoc C2 framework
+- [HavocFramework/Havoc](https://github.com/HavocFramework/Havoc) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ARCHIVED` — Havoc C2 framework
 - [its-a-feature/Mythic](https://github.com/its-a-feature/Mythic) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Mythic C2 framework
 
 ## Cloud Kubernetes Container Security
@@ -120,12 +120,12 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 ## Historically Important Legacy References
 
-- [michenriksen/aquatone](https://github.com/michenriksen/aquatone) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — archived attack-surface visual reconnaissance tool
-- [michenriksen/gitrob](https://github.com/michenriksen/gitrob) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — archived GitHub reconnaissance/secret-discovery project
-- [Security-Onion-Solutions/security-onion](https://github.com/Security-Onion-Solutions/security-onion) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — archived legacy Security Onion repository; prefer the current `securityonion` repo
-- [sundowndev/hacker-roadmap](https://github.com/sundowndev/hacker-roadmap) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — archived but historically popular learning roadmap
-- [tenable/terrascan](https://github.com/tenable/terrascan) — `LEGACY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — archived IaC security scanner
-- [twintproject/twint](https://github.com/twintproject/twint) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — archived Twitter/X OSINT project
+- [michenriksen/aquatone](https://github.com/michenriksen/aquatone) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived attack-surface visual reconnaissance tool
+- [michenriksen/gitrob](https://github.com/michenriksen/gitrob) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived GitHub reconnaissance/secret-discovery project
+- [Security-Onion-Solutions/security-onion](https://github.com/Security-Onion-Solutions/security-onion) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived legacy Security Onion repository; prefer the current `securityonion` repo
+- [sundowndev/hacker-roadmap](https://github.com/sundowndev/hacker-roadmap) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived but historically popular learning roadmap
+- [tenable/terrascan](https://github.com/tenable/terrascan) — `LEGACY` · `ACTIVE-SECURITY-TOOL` · `ARCHIVED` — archived IaC security scanner
+- [twintproject/twint](https://github.com/twintproject/twint) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived Twitter/X OSINT project
 
 ## Identity Attack Paths
 
@@ -156,7 +156,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 - [FalconForceTeam/FalconFriday](https://github.com/FalconForceTeam/FalconFriday) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — behavior-oriented Microsoft Defender hunting content
 - [GossiTheDog/ThreatHunting](https://github.com/GossiTheDog/ThreatHunting) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Defender Advanced Hunting examples
-- [microsoft/Microsoft-365-Defender-Hunting-Queries](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Microsoft Defender hunting-query collection
+- [microsoft/Microsoft-365-Defender-Hunting-Queries](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — Microsoft Defender hunting-query collection
 - [reprise99/Sentinel-Queries](https://github.com/reprise99/Sentinel-Queries) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel query reference
 - [SlimKQL/Detections.AI](https://github.com/SlimKQL/Detections.AI) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — KQL detection collection referenced by the guide
 - [SlimKQL/Hunting-Queries-Detection-Rules](https://github.com/SlimKQL/Hunting-Queries-Detection-Rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel/Defender hunting and detection content
@@ -305,11 +305,11 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 
 ## Smart Contract Blockchain Security
 
-- [Consensys/mythril](https://github.com/Consensys/mythril) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Ethereum smart-contract security analysis
+- [Consensys/mythril](https://github.com/Consensys/mythril) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `RENAMED` — Ethereum smart-contract security analysis
 - [crytic/echidna](https://github.com/crytic/echidna) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — smart-contract property-based fuzzer
 - [crytic/slither](https://github.com/crytic/slither) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Solidity static analyzer
 - [OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — security-focused smart-contract library
-- [trailofbits/manticore](https://github.com/trailofbits/manticore) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — symbolic execution for binaries and smart contracts
+- [trailofbits/manticore](https://github.com/trailofbits/manticore) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — symbolic execution for binaries and smart contracts
 
 ## Threat Hunting Detection Engineering
 

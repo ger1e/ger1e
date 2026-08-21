@@ -8,6 +8,21 @@
   "last_verified": "2026-08-21",
   "repositories": [
     {
+      "repo": "EmpireProject/Empire",
+      "url": "https://github.com/EmpireProject/Empire",
+      "category": "active-directory-identity-security",
+      "description": "adversary-emulation framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ARCHIVED",
+      "aliases": [
+        "PowerShellEmpire/Empire"
+      ]
+    },
+    {
       "repo": "fortra/impacket",
       "url": "https://github.com/fortra/impacket",
       "category": "active-directory-identity-security",
@@ -66,18 +81,6 @@
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
-    },
-    {
-      "repo": "PowerShellEmpire/Empire",
-      "url": "https://github.com/PowerShellEmpire/Empire",
-      "category": "active-directory-identity-security",
-      "description": "adversary-emulation framework",
-      "sources": [
-        "atlas"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "OFFENSIVE-DUAL-USE",
-      "status": "RENAMED"
     },
     {
       "repo": "SpecterOps/BloodHound-Legacy",
@@ -2738,8 +2741,8 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "Consensys/mythril",
-      "url": "https://github.com/Consensys/mythril",
+      "repo": "ConsenSysDiligence/mythril",
+      "url": "https://github.com/ConsenSysDiligence/mythril",
       "category": "smart-contract-blockchain-security",
       "description": "Ethereum smart-contract security analysis",
       "sources": [
@@ -2747,7 +2750,10 @@
       ],
       "provenance": "CANONICAL",
       "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "RENAMED"
+      "status": "ACTIVE",
+      "aliases": [
+        "Consensys/mythril"
+      ]
     },
     {
       "repo": "crytic/echidna",
