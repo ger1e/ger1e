@@ -1,7 +1,118 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-<title id="title">GER1E threat hunting banner</title><desc id="desc">Dark terminal-style banner with a rotund cat operator, cyan-green monitor glow, and threat hunting text.</desc>
-<defs><radialGradient id="glow" cx="78%" cy="48%" r="38%"><stop offset="0" stop-color="#59ff9b" stop-opacity=".32"/><stop offset=".42" stop-color="#58dcff" stop-opacity=".12"/><stop offset="1" stop-color="#03050a" stop-opacity="0"/></radialGradient><filter id="neon"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<rect width="1200" height="300" fill="#03050a"/><rect width="1200" height="300" fill="url(#glow)"/>
-<g opacity=".15" stroke="#58dcff"><path d="M0 40H1200M0 80H1200M0 120H1200M0 160H1200M0 200H1200M0 240H1200M0 280H1200"/><path d="M40 0V300M100 0V300M160 0V300M220 0V300M280 0V300M340 0V300M400 0V300M460 0V300M520 0V300M580 0V300M640 0V300M700 0V300M760 0V300M820 0V300M880 0V300M940 0V300M1000 0V300M1060 0V300M1120 0V300M1180 0V300"/></g>
-<g transform="translate(875 34)"><rect x="120" y="50" width="164" height="112" rx="8" fill="#071019" stroke="#58dcff" stroke-opacity=".42"/><rect x="136" y="65" width="132" height="80" rx="3" fill="#07150f" stroke="#59ff9b" stroke-opacity=".42"/><path d="M150 81h72M150 96h96M150 111h61M150 126h82" stroke="#59ff9b" stroke-opacity=".58" stroke-width="4"/><ellipse cx="78" cy="168" rx="78" ry="62" fill="#111820" stroke="#58dcff" stroke-opacity=".3"/><circle cx="72" cy="91" r="50" fill="#151d25" stroke="#58dcff" stroke-opacity=".34"/><path d="M38 58L48 22l30 27M101 51l29-28 7 38" fill="#151d25" stroke="#58dcff" stroke-opacity=".34"/><circle cx="55" cy="88" r="5" fill="#59ff9b" filter="url(#neon)"/><circle cx="91" cy="88" r="5" fill="#59ff9b" filter="url(#neon)"/><path d="M69 101h9l-5 7zM60 115q13 10 27 0" stroke="#8b9ba8" fill="none" stroke-width="3"/><path d="M25 164q52-30 105 1v49H18z" fill="#111820"/></g>
-<g transform="translate(58 68)"><text x="0" y="60" fill="#eefcff" font-family="Impact,Arial Black,sans-serif" font-size="72" font-style="italic" letter-spacing="-3">ム乇 尺 1 乇</text><text x="4" y="102" fill="#58dcff" font-family="Courier New,monospace" font-size="18" letter-spacing="5">THREAT HUNTING // CTI // DETECTION ENGINEERING</text><text x="4" y="150" fill="#758795" font-family="Courier New,monospace" font-size="16" letter-spacing="2">BEHAVIOR &gt; IOC CHURN // EVIDENCE &gt; ASSUMPTION // SIGNAL &gt; VOLUME</text><text x="4" y="210" fill="#59ff9b" font-family="Courier New,monospace" font-size="15">GER1E // ONLINE</text></g></svg>
+  <title id="title">GER1E — threat hunting, CTI and detection engineering</title>
+  <desc id="desc">Dark technical banner with a bold GER1E wordmark, cyan-green telemetry lines, radar geometry and concise threat hunting identity text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020405"/>
+      <stop offset="0.55" stop-color="#05090b"/>
+      <stop offset="1" stop-color="#020607"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="76%" cy="46%" r="58%">
+      <stop offset="0" stop-color="#4de4ff" stop-opacity="0.14"/>
+      <stop offset="0.52" stop-color="#4de4ff" stop-opacity="0.045"/>
+      <stop offset="1" stop-color="#4de4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="20%" cy="55%" r="50%">
+      <stop offset="0" stop-color="#55ff9a" stop-opacity="0.11"/>
+      <stop offset="0.55" stop-color="#55ff9a" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#55ff9a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="scan" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M0 5.5H6" stroke="#d9fbff" stroke-opacity="0.026" stroke-width="1"/>
+    </pattern>
+    <pattern id="microgrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#65eaff" stroke-opacity="0.045" stroke-width="0.8"/>
+    </pattern>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tinyGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frameClip"><rect x="14" y="14" width="1172" height="272" rx="8"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#cyanGlow)"/>
+  <rect width="1200" height="300" fill="url(#greenGlow)"/>
+  <rect width="1200" height="300" fill="url(#scan)"/>
+  <rect x="14" y="14" width="1172" height="272" rx="8" fill="none" stroke="#8cf8ff" stroke-opacity="0.12"/>
+
+  <g clip-path="url(#frameClip)">
+    <g opacity="0.85">
+      <rect x="14" y="14" width="8" height="72" fill="#55ff9a"/>
+      <rect x="14" y="86" width="8" height="9" fill="#4de4ff"/>
+      <rect x="14" y="99" width="8" height="31" fill="#55ff9a" fill-opacity="0.35"/>
+      <rect x="1178" y="214" width="8" height="72" fill="#4de4ff"/>
+      <rect x="1178" y="196" width="8" height="12" fill="#55ff9a"/>
+    </g>
+
+    <g opacity="0.62">
+      <path d="M0 48H152l14 9h86l18-12h122" fill="none" stroke="#55ff9a" stroke-opacity="0.18"/>
+      <path d="M0 258h180l10-8h196l22 8h118" fill="none" stroke="#4de4ff" stroke-opacity="0.14"/>
+      <path d="M824 44h88l13 10h82l18-8h188" fill="none" stroke="#4de4ff" stroke-opacity="0.16"/>
+      <path d="M828 252h79l14-12h104l11 8h178" fill="none" stroke="#55ff9a" stroke-opacity="0.12"/>
+    </g>
+
+    <g transform="translate(650 18)">
+      <rect width="536" height="268" fill="url(#microgrid)" opacity="0.74"/>
+      <g transform="translate(404 132)" fill="none">
+        <circle r="108" stroke="#4de4ff" stroke-opacity="0.08"/>
+        <circle r="82" stroke="#55ff9a" stroke-opacity="0.10"/>
+        <circle r="55" stroke="#4de4ff" stroke-opacity="0.15"/>
+        <circle r="27" stroke="#55ff9a" stroke-opacity="0.22"/>
+        <path d="M-118 0H118M0-118V118" stroke="#4de4ff" stroke-opacity="0.08"/>
+        <path d="M-83-83L83 83M83-83L-83 83" stroke="#55ff9a" stroke-opacity="0.05"/>
+        <path d="M0 0L77-49" stroke="#55ff9a" stroke-opacity="0.46" stroke-width="1.5"/>
+        <circle cx="77" cy="-49" r="3.5" fill="#55ff9a" stroke="none" filter="url(#tinyGlow)"/>
+        <circle cx="-42" cy="63" r="2.5" fill="#4de4ff" stroke="none" filter="url(#tinyGlow)"/>
+        <circle cx="29" cy="-79" r="2" fill="#4de4ff" stroke="none"/>
+      </g>
+      <g stroke-linecap="square" fill="none">
+        <path d="M20 68h66l16-15h76l15 10h59" stroke="#55ff9a" stroke-opacity="0.33"/>
+        <path d="M20 81h43l10 9h111l12-13h81" stroke="#4de4ff" stroke-opacity="0.22"/>
+        <path d="M36 193h72l13-14h57l12 11h64l16-17h74" stroke="#4de4ff" stroke-opacity="0.24"/>
+        <path d="M70 209h83l11 8h90l13-12h55" stroke="#55ff9a" stroke-opacity="0.24"/>
+      </g>
+      <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="9" letter-spacing="1.6" fill="#8aa0a7">
+        <text x="24" y="34">TELEMETRY://LIVE</text>
+        <text x="24" y="244">CORRELATION MATRIX / 01</text>
+        <text x="404" y="16" text-anchor="middle" fill="#55ff9a" fill-opacity="0.52">SIGNAL</text>
+      </g>
+    </g>
+
+    <g transform="translate(61 45)">
+      <text x="4" y="75" font-family="Arial Black,Impact,Helvetica Neue,sans-serif" font-size="88" font-weight="900" letter-spacing="-5" fill="#4de4ff" fill-opacity="0.18">GER1E</text>
+      <text x="-2" y="70" font-family="Arial Black,Impact,Helvetica Neue,sans-serif" font-size="88" font-weight="900" letter-spacing="-5" fill="#55ff9a" fill-opacity="0.23">GER1E</text>
+      <text x="1" y="72" font-family="Arial Black,Impact,Helvetica Neue,sans-serif" font-size="88" font-weight="900" letter-spacing="-5" fill="#edfaff">GER1E</text>
+      <rect x="2" y="86" width="90" height="3" fill="#55ff9a" filter="url(#tinyGlow)"/>
+      <rect x="98" y="86" width="238" height="3" fill="#4de4ff" fill-opacity="0.25"/>
+
+      <text x="2" y="124" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="17" font-weight="700" letter-spacing="3.1" fill="#65eaff">THREAT HUNTER // CTI // DETECTION ENGINEERING</text>
+      <text x="2" y="155" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="12" letter-spacing="2.1" fill="#82959b">HUNT · ENRICH · CORRELATE · DETECT</text>
+
+      <g transform="translate(2 181)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="10.5" letter-spacing="1.5">
+        <rect x="0" y="0" width="168" height="28" rx="3" fill="#07100d" stroke="#55ff9a" stroke-opacity="0.22"/>
+        <text x="12" y="18" fill="#a6f8c8">EVIDENCE &gt; ASSUMPTION</text>
+        <rect x="178" y="0" width="133" height="28" rx="3" fill="#071013" stroke="#4de4ff" stroke-opacity="0.20"/>
+        <text x="190" y="18" fill="#9deeff">SIGNAL &gt; VOLUME</text>
+      </g>
+    </g>
+
+    <g transform="translate(52 263)" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,Liberation Mono,monospace" font-size="9.5" letter-spacing="2">
+      <text fill="#55ff9a">GER1E // ONLINE</text>
+      <text x="148" fill="#61737a">BEHAVIOR-FIRST SECURITY ENGINEERING</text>
+    </g>
+
+    <g opacity="0.8">
+      <rect x="309" y="31" width="84" height="2" fill="#4de4ff"/>
+      <rect x="350" y="35" width="64" height="2" fill="#55ff9a" fill-opacity="0.55"/>
+      <rect x="272" y="116" width="42" height="2" fill="#55ff9a"/>
+      <rect x="288" y="120" width="58" height="2" fill="#4de4ff" fill-opacity="0.55"/>
+      <rect x="494" y="235" width="76" height="2" fill="#4de4ff"/>
+      <rect x="518" y="239" width="38" height="2" fill="#55ff9a"/>
+    </g>
+  </g>
+</svg>
