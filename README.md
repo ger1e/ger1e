@@ -43,9 +43,9 @@ Private CTI enrichment and normalization workbench for combining multiple intell
 ### [`landing-pages`](https://github.com/ger1e/landing-pages)
 Experimental and historical interface work. The lab, not the production altar.
 
-## Security repository index
+## Security repository atlas
 
-[`SECURITY-REPOS.md`](SECURITY-REPOS.md) — curated high-signal repositories across threat hunting, detection engineering, CTI, DFIR, malware analysis, reverse engineering, offensive security, cloud/container security, mobile security, and OSINT.
+[`SECURITY-REPOS.md`](SECURITY-REPOS.md) — expanded high-signal atlas spanning hunting/detection, Microsoft Sentinel/KQL, CTI, DFIR, malware/RE, exploitation/fuzzing, offensive security, AD/identity, AppSec, mobile, cloud/Kubernetes, DevSecOps/supply chain, OSINT, privacy/hardening, AI/LLM security, smart-contract security, labs, and legacy references.
 
 ## Operating principles
 
