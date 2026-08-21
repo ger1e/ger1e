@@ -27,7 +27,7 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 </p>
 
 <p align="center">
-  <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><strong>TryHackMe Security Analyst Level 2 (SAL2) — Credly</strong></a>
+  <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2) — Credly" width="150"></a>
 </p>
 
 ## Signal stack
