@@ -1,25 +1,3030 @@
 {
   "schema": "ger1e-security-catalog/v1",
-  "last_verified": null,
-  "bootstrap_sources": [
-    {"id": "atlas", "file": "SECURITY-REPOS.md"},
-    {"id": "soc-manual", "file": "SOC-MANUAL-REPOS.md"},
-    {"id": "api-tools", "file": "API-TOOLS-REPOS.md"}
+  "generated_from": [
+    "atlas",
+    "soc-manual",
+    "api-tools"
   ],
-  "overrides": {
-    "ytisf/theZoo": {"provenance": "CANONICAL", "risk": "LIVE-MALWARE"},
-    "juice-shop/juice-shop": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
-    "WebGoat/WebGoat": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
-    "digininja/DVWA": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
-    "madhuakula/kubernetes-goat": {"provenance": "TRAINING-LAB", "risk": "VULNERABLE-LAB"},
-    "rapid7/metasploit-framework": {"risk": "OFFENSIVE-DUAL-USE"},
-    "gentilkiwi/mimikatz": {"risk": "OFFENSIVE-DUAL-USE"},
-    "GhostPack/Rubeus": {"risk": "OFFENSIVE-DUAL-USE"},
-    "BishopFox/sliver": {"risk": "OFFENSIVE-DUAL-USE"},
-    "HavocFramework/Havoc": {"risk": "OFFENSIVE-DUAL-USE"},
-    "its-a-feature/Mythic": {"risk": "OFFENSIVE-DUAL-USE"},
-    "MaltegoTech/maltego-trx": {"provenance": "LEGACY", "status": "ARCHIVED"},
-    "RIPE-NCC/ripestat-text": {"provenance": "LEGACY", "status": "ARCHIVED"}
-  },
-  "repositories": []
+  "last_verified": "2026-08-21",
+  "repositories": [
+    {
+      "repo": "fortra/impacket",
+      "url": "https://github.com/fortra/impacket",
+      "category": "active-directory-identity-security",
+      "description": "Python network protocols used heavily in AD/security research",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GhostPack/Rubeus",
+      "url": "https://github.com/GhostPack/Rubeus",
+      "category": "active-directory-identity-security",
+      "description": "Kerberos security research/adversary simulation",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GhostPack/Seatbelt",
+      "url": "https://github.com/GhostPack/Seatbelt",
+      "category": "active-directory-identity-security",
+      "description": "Windows host situational-awareness collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "ly4k/Certipy",
+      "url": "https://github.com/ly4k/Certipy",
+      "category": "active-directory-identity-security",
+      "description": "Active Directory Certificate Services security assessment",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "NetSPI/PowerUpSQL",
+      "url": "https://github.com/NetSPI/PowerUpSQL",
+      "category": "active-directory-identity-security",
+      "description": "SQL Server security assessment and AD-adjacent attack-path research",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "PowerShellEmpire/Empire",
+      "url": "https://github.com/PowerShellEmpire/Empire",
+      "category": "active-directory-identity-security",
+      "description": "adversary-emulation framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "RENAMED"
+    },
+    {
+      "repo": "SpecterOps/BloodHound-Legacy",
+      "url": "https://github.com/SpecterOps/BloodHound-Legacy",
+      "category": "active-directory-identity-security",
+      "description": "historically important BloodHound codebase; legacy naming is explicit",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "LEGACY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Azure/PyRIT",
+      "url": "https://github.com/Azure/PyRIT",
+      "category": "ai-llm-security",
+      "description": "Python Risk Identification Tool for generative-AI red teaming",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "NVIDIA/garak",
+      "url": "https://github.com/NVIDIA/garak",
+      "category": "ai-llm-security",
+      "description": "LLM vulnerability scanner/red-team evaluation framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "category": "ai-llm-security",
+      "description": "security-oriented agentic/code security project",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "promptfoo/promptfoo",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "category": "ai-llm-security",
+      "description": "LLM evals and red-team testing",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "protectai/llm-guard",
+      "url": "https://github.com/protectai/llm-guard",
+      "category": "ai-llm-security",
+      "description": "input/output security controls for LLM applications",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "digininja/DVWA",
+      "url": "https://github.com/digininja/DVWA",
+      "category": "application-security-web-api-security",
+      "description": "Damn Vulnerable Web Application",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "TRAINING-LAB",
+      "risk": "VULNERABLE-LAB",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "ffuf/ffuf",
+      "url": "https://github.com/ffuf/ffuf",
+      "category": "application-security-web-api-security",
+      "description": "fast web fuzzer",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "github/codeql",
+      "url": "https://github.com/github/codeql",
+      "category": "application-security-web-api-security",
+      "description": "semantic code analysis and security queries",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "juice-shop/juice-shop",
+      "url": "https://github.com/juice-shop/juice-shop",
+      "category": "application-security-web-api-security",
+      "description": "deliberately vulnerable modern web application",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "TRAINING-LAB",
+      "risk": "VULNERABLE-LAB",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OJ/gobuster",
+      "url": "https://github.com/OJ/gobuster",
+      "category": "application-security-web-api-security",
+      "description": "directory/DNS/vhost enumeration",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OWASP/ASVS",
+      "url": "https://github.com/OWASP/ASVS",
+      "category": "application-security-web-api-security",
+      "description": "application security verification standard",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OWASP/CheatSheetSeries",
+      "url": "https://github.com/OWASP/CheatSheetSeries",
+      "category": "application-security-web-api-security",
+      "description": "application-security guidance",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OWASP/mastg",
+      "url": "https://github.com/OWASP/mastg",
+      "category": "application-security-web-api-security",
+      "description": "mobile application security testing guide",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "qazbnm456/awesome-web-security",
+      "url": "https://github.com/qazbnm456/awesome-web-security",
+      "category": "application-security-web-api-security",
+      "description": "web-security reference collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "semgrep/semgrep",
+      "url": "https://github.com/semgrep/semgrep",
+      "category": "application-security-web-api-security",
+      "description": "static analysis and code security scanning",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "shieldfy/API-Security-Checklist",
+      "url": "https://github.com/shieldfy/API-Security-Checklist",
+      "category": "application-security-web-api-security",
+      "description": "API-security checklist",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "sqlmapproject/sqlmap",
+      "url": "https://github.com/sqlmapproject/sqlmap",
+      "category": "application-security-web-api-security",
+      "description": "SQL injection testing framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "WebGoat/WebGoat",
+      "url": "https://github.com/WebGoat/WebGoat",
+      "category": "application-security-web-api-security",
+      "description": "deliberately insecure app for learning web security",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "TRAINING-LAB",
+      "risk": "VULNERABLE-LAB",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "zaproxy/zaproxy",
+      "url": "https://github.com/zaproxy/zaproxy",
+      "category": "application-security-web-api-security",
+      "description": "OWASP ZAP web application security scanner",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "AFLplusplus/AFLplusplus",
+      "url": "https://github.com/AFLplusplus/AFLplusplus",
+      "category": "binary-exploitation-fuzzing",
+      "description": "modern AFL-family fuzzer",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "angr/angr",
+      "url": "https://github.com/angr/angr",
+      "category": "binary-exploitation-fuzzing",
+      "description": "binary analysis and symbolic-execution platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Gallopsled/pwntools",
+      "url": "https://github.com/Gallopsled/pwntools",
+      "category": "binary-exploitation-fuzzing",
+      "description": "CTF/exploit-development framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "google/honggfuzz",
+      "url": "https://github.com/google/honggfuzz",
+      "category": "binary-exploitation-fuzzing",
+      "description": "security-oriented fuzzer",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "google/oss-fuzz",
+      "url": "https://github.com/google/oss-fuzz",
+      "category": "binary-exploitation-fuzzing",
+      "description": "continuous fuzzing infrastructure for open source",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "shellphish/how2heap",
+      "url": "https://github.com/shellphish/how2heap",
+      "category": "binary-exploitation-fuzzing",
+      "description": "heap exploitation techniques and examples",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "BishopFox/sliver",
+      "url": "https://github.com/BishopFox/sliver",
+      "category": "c2-adversary-simulation",
+      "description": "Sliver C2 framework",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "HavocFramework/Havoc",
+      "url": "https://github.com/HavocFramework/Havoc",
+      "category": "c2-adversary-simulation",
+      "description": "Havoc C2 framework",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "its-a-feature/Mythic",
+      "url": "https://github.com/its-a-feature/Mythic",
+      "category": "c2-adversary-simulation",
+      "description": "Mythic C2 framework",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "aquasecurity/kube-bench",
+      "url": "https://github.com/aquasecurity/kube-bench",
+      "category": "cloud-kubernetes-container-security",
+      "description": "CIS Kubernetes benchmark checks",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "aquasecurity/kube-hunter",
+      "url": "https://github.com/aquasecurity/kube-hunter",
+      "category": "cloud-kubernetes-container-security",
+      "description": "Kubernetes security assessment",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "aquasecurity/trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "category": "cloud-kubernetes-container-security",
+      "description": "vulnerability, misconfiguration, secret, and SBOM scanning",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "bunkerity/bunkerweb",
+      "url": "https://github.com/bunkerity/bunkerweb",
+      "category": "cloud-kubernetes-container-security",
+      "description": "security-focused web server/WAF platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cilium/cilium",
+      "url": "https://github.com/cilium/cilium",
+      "category": "cloud-kubernetes-container-security",
+      "description": "eBPF networking, observability, and security enforcement",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cloud-custodian/cloud-custodian",
+      "url": "https://github.com/cloud-custodian/cloud-custodian",
+      "category": "cloud-kubernetes-container-security",
+      "description": "policy-as-code for cloud governance/security",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cloudquery/cloudquery",
+      "url": "https://github.com/cloudquery/cloudquery",
+      "category": "cloud-kubernetes-container-security",
+      "description": "cloud asset/configuration data extraction and security analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "falcosecurity/falco",
+      "url": "https://github.com/falcosecurity/falco",
+      "category": "cloud-kubernetes-container-security",
+      "description": "cloud-native runtime threat detection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "kubescape/kubescape",
+      "url": "https://github.com/kubescape/kubescape",
+      "category": "cloud-kubernetes-container-security",
+      "description": "Kubernetes security posture and risk assessment",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "madhuakula/kubernetes-goat",
+      "url": "https://github.com/madhuakula/kubernetes-goat",
+      "category": "cloud-kubernetes-container-security",
+      "description": "Kubernetes security training lab",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "TRAINING-LAB",
+      "risk": "VULNERABLE-LAB",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "projectcalico/calico",
+      "url": "https://github.com/projectcalico/calico",
+      "category": "cloud-kubernetes-container-security",
+      "description": "Kubernetes networking and network policy/security",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "prowler-cloud/prowler",
+      "url": "https://github.com/prowler-cloud/prowler",
+      "category": "cloud-kubernetes-container-security",
+      "description": "multi-cloud security posture assessment",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "toniblyx/my-arsenal-of-aws-security-tools",
+      "url": "https://github.com/toniblyx/my-arsenal-of-aws-security-tools",
+      "category": "cloud-kubernetes-container-security",
+      "description": "AWS security tooling index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "turbot/steampipe",
+      "url": "https://github.com/turbot/steampipe",
+      "category": "cloud-kubernetes-container-security",
+      "description": "SQL-based cloud/API querying useful for security posture analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "blackorbird/APT_REPORT",
+      "url": "https://github.com/blackorbird/APT_REPORT",
+      "category": "cyber-threat-intelligence",
+      "description": "large APT-report research collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "elceef/dnstwist",
+      "url": "https://github.com/elceef/dnstwist",
+      "category": "cyber-threat-intelligence",
+      "description": "domain permutation, typosquatting, and phishing reconnaissance",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hslatman/awesome-threat-intelligence",
+      "url": "https://github.com/hslatman/awesome-threat-intelligence",
+      "category": "cyber-threat-intelligence",
+      "description": "mature CTI reference index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "intelowlproject/IntelOwl",
+      "url": "https://github.com/intelowlproject/IntelOwl",
+      "category": "cyber-threat-intelligence",
+      "description": "scalable IOC/threat-intelligence enrichment",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "MISP/MISP",
+      "url": "https://github.com/MISP/MISP",
+      "category": "cyber-threat-intelligence",
+      "description": "threat-intelligence sharing and correlation platform",
+      "sources": [
+        "api-tools",
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "mitre-attack/attack-stix-data",
+      "url": "https://github.com/mitre-attack/attack-stix-data",
+      "category": "cyber-threat-intelligence",
+      "description": "MITRE ATT&CK STIX data",
+      "sources": [
+        "api-tools",
+        "atlas"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OpenCTI-Platform/opencti",
+      "url": "https://github.com/OpenCTI-Platform/opencti",
+      "category": "cyber-threat-intelligence",
+      "description": "cyber threat-intelligence knowledge platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "elastic/detection-rules",
+      "url": "https://github.com/elastic/detection-rules",
+      "category": "detection-engineering-cross-vendor-references",
+      "description": "Elastic detection rules",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "splunk/security_content",
+      "url": "https://github.com/splunk/security_content",
+      "category": "detection-engineering-cross-vendor-references",
+      "description": "Splunk Security Content",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "THORCollective/HEARTH",
+      "url": "https://github.com/THORCollective/HEARTH",
+      "category": "detection-engineering-cross-vendor-references",
+      "description": "HEARTH and the PEAK hunting template referenced by the guide",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "anchore/grype",
+      "url": "https://github.com/anchore/grype",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "vulnerability scanner for container images/filesystems/SBOMs",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "anchore/syft",
+      "url": "https://github.com/anchore/syft",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "SBOM generation",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "bridgecrewio/checkov",
+      "url": "https://github.com/bridgecrewio/checkov",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "IaC and cloud configuration security scanning",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "getsops/sops",
+      "url": "https://github.com/getsops/sops",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "encrypted secrets/configuration management",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "gitleaks/gitleaks",
+      "url": "https://github.com/gitleaks/gitleaks",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "secret scanning for Git and filesystems",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "google/osv-scanner",
+      "url": "https://github.com/google/osv-scanner",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "vulnerability scanning backed by OSV",
+      "sources": [
+        "api-tools",
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "ossf/scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "open-source project security-health checks",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "sottlmarek/DevSecOps",
+      "url": "https://github.com/sottlmarek/DevSecOps",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "DevSecOps tools and references",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "trufflesecurity/trufflehog",
+      "url": "https://github.com/trufflesecurity/trufflehog",
+      "category": "devsecops-software-supply-chain-secret-scanning",
+      "description": "secret discovery and verification",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "clong/DetectionLab",
+      "url": "https://github.com/clong/DetectionLab",
+      "category": "dfir-incident-response",
+      "description": "historically influential defensive detection lab; verify maintenance before deployment",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cugu/awesome-forensics",
+      "url": "https://github.com/cugu/awesome-forensics",
+      "category": "dfir-incident-response",
+      "description": "digital-forensics tooling/reference index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "google/grr",
+      "url": "https://github.com/google/grr",
+      "category": "dfir-incident-response",
+      "description": "remote live forensics and incident-response framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "google/timesketch",
+      "url": "https://github.com/google/timesketch",
+      "category": "dfir-incident-response",
+      "description": "collaborative forensic timeline analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "JPCERTCC/LogonTracer",
+      "url": "https://github.com/JPCERTCC/LogonTracer",
+      "category": "dfir-incident-response",
+      "description": "Windows logon-event analysis and visualization",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "log2timeline/plaso",
+      "url": "https://github.com/log2timeline/plaso",
+      "category": "dfir-incident-response",
+      "description": "forensic timeline generation",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "meirwah/awesome-incident-response",
+      "url": "https://github.com/meirwah/awesome-incident-response",
+      "category": "dfir-incident-response",
+      "description": "incident-response tooling/reference index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Velocidex/velociraptor",
+      "url": "https://github.com/Velocidex/velociraptor",
+      "category": "dfir-incident-response",
+      "description": "endpoint visibility, collection, DFIR, and threat hunting",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "volatilityfoundation/volatility3",
+      "url": "https://github.com/volatilityfoundation/volatility3",
+      "category": "dfir-incident-response",
+      "description": "memory forensics framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "magicsword-io/LOLDrivers",
+      "url": "https://github.com/magicsword-io/LOLDrivers",
+      "category": "driver-abuse-byovd",
+      "description": "vulnerable/malicious driver reference data",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "michenriksen/aquatone",
+      "url": "https://github.com/michenriksen/aquatone",
+      "category": "historically-important-legacy-references",
+      "description": "archived attack-surface visual reconnaissance tool",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "LEGACY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "michenriksen/gitrob",
+      "url": "https://github.com/michenriksen/gitrob",
+      "category": "historically-important-legacy-references",
+      "description": "archived GitHub reconnaissance/secret-discovery project",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "LEGACY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "Security-Onion-Solutions/security-onion",
+      "url": "https://github.com/Security-Onion-Solutions/security-onion",
+      "category": "historically-important-legacy-references",
+      "description": "archived legacy Security Onion repository; prefer the current `securityonion` repo",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "LEGACY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "sundowndev/hacker-roadmap",
+      "url": "https://github.com/sundowndev/hacker-roadmap",
+      "category": "historically-important-legacy-references",
+      "description": "archived but historically popular learning roadmap",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "LEGACY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "tenable/terrascan",
+      "url": "https://github.com/tenable/terrascan",
+      "category": "historically-important-legacy-references",
+      "description": "archived IaC security scanner",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "LEGACY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "twintproject/twint",
+      "url": "https://github.com/twintproject/twint",
+      "category": "historically-important-legacy-references",
+      "description": "archived Twitter/X OSINT project",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "LEGACY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "SpecterOps/BloodHound",
+      "url": "https://github.com/SpecterOps/BloodHound",
+      "category": "identity-attack-paths",
+      "description": "identity/Active Directory attack-path analysis",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SpecterOps/SharpHound",
+      "url": "https://github.com/SpecterOps/SharpHound",
+      "category": "identity-attack-paths",
+      "description": "BloodHound data collection",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "dnSpyEx/dnSpy",
+      "url": "https://github.com/dnSpyEx/dnSpy",
+      "category": "malware-analysis-reverse-engineering",
+      "description": ".NET debugger/decompiler",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "horsicq/Detect-It-Easy",
+      "url": "https://github.com/horsicq/Detect-It-Easy",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "file-type, packer, and compiler identification",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hugsy/gef",
+      "url": "https://github.com/hugsy/gef",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "enhanced GDB environment for RE/exploitation",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "lief-project/LIEF",
+      "url": "https://github.com/lief-project/LIEF",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "executable-format parsing and instrumentation library",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "mandiant/capa",
+      "url": "https://github.com/mandiant/capa",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "automated capability identification from executables",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "mandiant/flare-floss",
+      "url": "https://github.com/mandiant/flare-floss",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "automated string deobfuscation for malware analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "mandiant/flare-vm",
+      "url": "https://github.com/mandiant/flare-vm",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "Windows malware-analysis environment provisioning",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "mytechnotalent/Reverse-Engineering",
+      "url": "https://github.com/mytechnotalent/Reverse-Engineering",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "large reverse-engineering learning/reference repository",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "NationalSecurityAgency/ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "software reverse-engineering framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "pwndbg/pwndbg",
+      "url": "https://github.com/pwndbg/pwndbg",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "GDB extension for exploit development and RE",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "radareorg/radare2",
+      "url": "https://github.com/radareorg/radare2",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "reverse-engineering framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "rizinorg/cutter",
+      "url": "https://github.com/rizinorg/cutter",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "graphical reverse-engineering platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "rshipp/awesome-malware-analysis",
+      "url": "https://github.com/rshipp/awesome-malware-analysis",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "malware-analysis reference index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "VirusTotal/yara",
+      "url": "https://github.com/VirusTotal/yara",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "YARA pattern-matching engine",
+      "sources": [
+        "api-tools",
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "WerWolv/ImHex",
+      "url": "https://github.com/WerWolv/ImHex",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "hex editor for reverse engineering and binary analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "x64dbg/x64dbg",
+      "url": "https://github.com/x64dbg/x64dbg",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "Windows debugger",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "ytisf/theZoo",
+      "url": "https://github.com/ytisf/theZoo",
+      "category": "malware-analysis-reverse-engineering",
+      "description": "live-malware research repository; isolated-lab handling only",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "LIVE-MALWARE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "FalconForceTeam/FalconFriday",
+      "url": "https://github.com/FalconForceTeam/FalconFriday",
+      "category": "microsoft-kql-hunting",
+      "description": "behavior-oriented Microsoft Defender hunting content",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GossiTheDog/ThreatHunting",
+      "url": "https://github.com/GossiTheDog/ThreatHunting",
+      "category": "microsoft-kql-hunting",
+      "description": "Defender Advanced Hunting examples",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "microsoft/Microsoft-365-Defender-Hunting-Queries",
+      "url": "https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries",
+      "category": "microsoft-kql-hunting",
+      "description": "Microsoft Defender hunting-query collection",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "reprise99/Sentinel-Queries",
+      "url": "https://github.com/reprise99/Sentinel-Queries",
+      "category": "microsoft-kql-hunting",
+      "description": "Sentinel query reference",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SlimKQL/Detections.AI",
+      "url": "https://github.com/SlimKQL/Detections.AI",
+      "category": "microsoft-kql-hunting",
+      "description": "KQL detection collection referenced by the guide",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SlimKQL/Hunting-Queries-Detection-Rules",
+      "url": "https://github.com/SlimKQL/Hunting-Queries-Detection-Rules",
+      "category": "microsoft-kql-hunting",
+      "description": "Sentinel/Defender hunting and detection content",
+      "sources": [
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Azure/Azure-Sentinel",
+      "url": "https://github.com/Azure/Azure-Sentinel",
+      "category": "microsoft-security-sentinel-kql",
+      "description": "Microsoft Sentinel content, detections, hunting queries, workbooks, connectors, playbooks, and solutions",
+      "sources": [
+        "atlas",
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Azure/Azure-Sentinel-Notebooks",
+      "url": "https://github.com/Azure/Azure-Sentinel-Notebooks",
+      "category": "microsoft-security-sentinel-kql",
+      "description": "Sentinel investigation and hunting notebooks",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Bert-JanP/Hunting-Queries-Detection-Rules",
+      "url": "https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules",
+      "category": "microsoft-security-sentinel-kql",
+      "description": "practical Defender/Sentinel hunting and detection content",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cyb3rmik3/KQL-threat-hunting-queries",
+      "url": "https://github.com/cyb3rmik3/KQL-threat-hunting-queries",
+      "category": "microsoft-security-sentinel-kql",
+      "description": "KQL threat-hunting reference queries",
+      "sources": [
+        "atlas",
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "rod-trent/SentinelKQL",
+      "url": "https://github.com/rod-trent/SentinelKQL",
+      "category": "microsoft-security-sentinel-kql",
+      "description": "large Sentinel KQL reference collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "frida/frida",
+      "url": "https://github.com/frida/frida",
+      "category": "mobile-security",
+      "description": "dynamic instrumentation toolkit",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "iBotPeaches/Apktool",
+      "url": "https://github.com/iBotPeaches/Apktool",
+      "category": "mobile-security",
+      "description": "Android APK reverse engineering",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "MobSF/Mobile-Security-Framework-MobSF",
+      "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+      "category": "mobile-security",
+      "description": "automated mobile application security testing",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "sensepost/objection",
+      "url": "https://github.com/sensepost/objection",
+      "category": "mobile-security",
+      "description": "mobile runtime exploration powered by Frida",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "skylot/jadx",
+      "url": "https://github.com/skylot/jadx",
+      "category": "mobile-security",
+      "description": "Android DEX/APK decompiler",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "aircrack-ng/aircrack-ng",
+      "url": "https://github.com/aircrack-ng/aircrack-ng",
+      "category": "network-security-telemetry",
+      "description": "Wi-Fi security assessment suite",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "bettercap/bettercap",
+      "url": "https://github.com/bettercap/bettercap",
+      "category": "network-security-telemetry",
+      "description": "network reconnaissance and attack/defense framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GyulyVGC/sniffnet",
+      "url": "https://github.com/GyulyVGC/sniffnet",
+      "category": "network-security-telemetry",
+      "description": "network traffic monitoring and visualization",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "KismetWireless/kismet",
+      "url": "https://github.com/KismetWireless/kismet",
+      "category": "network-security-telemetry",
+      "description": "wireless network detector/sniffer/IDS",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "mitmproxy/mitmproxy",
+      "url": "https://github.com/mitmproxy/mitmproxy",
+      "category": "network-security-telemetry",
+      "description": "interactive TLS-capable HTTP proxy",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OISF/suricata",
+      "url": "https://github.com/OISF/suricata",
+      "category": "network-security-telemetry",
+      "description": "IDS/IPS and network security monitoring engine",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OpenVPN/openvpn",
+      "url": "https://github.com/OpenVPN/openvpn",
+      "category": "network-security-telemetry",
+      "description": "major open-source VPN implementation",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "slackhq/nebula",
+      "url": "https://github.com/slackhq/nebula",
+      "category": "network-security-telemetry",
+      "description": "overlay networking with certificate-based trust",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "wireshark/wireshark",
+      "url": "https://github.com/wireshark/wireshark",
+      "category": "network-security-telemetry",
+      "description": "packet analysis platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "zeek/zeek",
+      "url": "https://github.com/zeek/zeek",
+      "category": "network-security-telemetry",
+      "description": "network security monitoring and protocol telemetry",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "1N3/Sn1per",
+      "url": "https://github.com/1N3/Sn1per",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "automated security assessment framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "bee-san/RustScan",
+      "url": "https://github.com/bee-san/RustScan",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "fast port-scanning frontend",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "blacklanternsecurity/bbot",
+      "url": "https://github.com/blacklanternsecurity/bbot",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "recursive attack-surface and OSINT automation",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "danielmiessler/SecLists",
+      "url": "https://github.com/danielmiessler/SecLists",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "security-testing wordlists and payload data",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "gentilkiwi/mimikatz",
+      "url": "https://github.com/gentilkiwi/mimikatz",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "Windows credential-security research tool",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "gophish/gophish",
+      "url": "https://github.com/gophish/gophish",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "authorized phishing-simulation framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Hack-with-Github/Awesome-Hacking",
+      "url": "https://github.com/Hack-with-Github/Awesome-Hacking",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "broad offensive-security reference index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "HackTricks-wiki/hacktricks",
+      "url": "https://github.com/HackTricks-wiki/hacktricks",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "extensive pentesting/red-team technique reference",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "infosecn1nja/Red-Teaming-Toolkit",
+      "url": "https://github.com/infosecn1nja/Red-Teaming-Toolkit",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "red-team tooling reference index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "maurosoria/dirsearch",
+      "url": "https://github.com/maurosoria/dirsearch",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "web path discovery",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "projectdiscovery/httpx",
+      "url": "https://github.com/projectdiscovery/httpx",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "HTTP probing and asset enumeration",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "projectdiscovery/nuclei",
+      "url": "https://github.com/projectdiscovery/nuclei",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "template-driven vulnerability scanning",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "projectdiscovery/nuclei-templates",
+      "url": "https://github.com/projectdiscovery/nuclei-templates",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "maintained nuclei template ecosystem",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "projectdiscovery/subfinder",
+      "url": "https://github.com/projectdiscovery/subfinder",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "passive subdomain discovery",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "rapid7/metasploit-framework",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "penetration-testing and exploit-development framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "samratashok/nishang",
+      "url": "https://github.com/samratashok/nishang",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "PowerShell adversary-simulation framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "swisskyrepo/PayloadsAllTheThings",
+      "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "application-security payload/reference collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "urbanadventurer/WhatWeb",
+      "url": "https://github.com/urbanadventurer/WhatWeb",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "web technology fingerprinting",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "vanhauser-thc/thc-hydra",
+      "url": "https://github.com/vanhauser-thc/thc-hydra",
+      "category": "offensive-security-pentesting-adversary-simulation",
+      "description": "network authentication testing",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "0xDanielLopez/TweetFeed",
+      "url": "https://github.com/0xDanielLopez/TweetFeed",
+      "category": "official-canonical-provider-repositories",
+      "description": "TweetFeed IOC project",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "0xDanielLopez/TweetFeed_code",
+      "url": "https://github.com/0xDanielLopez/TweetFeed_code",
+      "category": "official-canonical-provider-repositories",
+      "description": "associated TweetFeed code repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "abusech/MalwareBazaar",
+      "url": "https://github.com/abusech/MalwareBazaar",
+      "category": "official-canonical-provider-repositories",
+      "description": "MalwareBazaar",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "abusech/ThreatFox",
+      "url": "https://github.com/abusech/ThreatFox",
+      "category": "official-canonical-provider-repositories",
+      "description": "ThreatFox",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "abusech/URLhaus",
+      "url": "https://github.com/abusech/URLhaus",
+      "category": "official-canonical-provider-repositories",
+      "description": "URLhaus",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "achillean/shodan-python",
+      "url": "https://github.com/achillean/shodan-python",
+      "category": "official-canonical-provider-repositories",
+      "description": "canonical Shodan Python library and CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "AlienVault-OTX/OTX-Python-SDK",
+      "url": "https://github.com/AlienVault-OTX/OTX-Python-SDK",
+      "category": "official-canonical-provider-repositories",
+      "description": "OTX Python SDK",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "anyrun/anyrun-sdk",
+      "url": "https://github.com/anyrun/anyrun-sdk",
+      "category": "official-canonical-provider-repositories",
+      "description": "official ANY.RUN SDK",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "censys/censys-python",
+      "url": "https://github.com/censys/censys-python",
+      "category": "official-canonical-provider-repositories",
+      "description": "established Censys Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "censys/censys-sdk-python",
+      "url": "https://github.com/censys/censys-sdk-python",
+      "category": "official-canonical-provider-repositories",
+      "description": "current Censys Python SDK line",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cisagov/kev-data",
+      "url": "https://github.com/cisagov/kev-data",
+      "category": "official-canonical-provider-repositories",
+      "description": "official CISA KEV data repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cloudflare/cloudflare-python",
+      "url": "https://github.com/cloudflare/cloudflare-python",
+      "category": "official-canonical-provider-repositories",
+      "description": "current official Cloudflare Python API SDK; useful for Cloudflare API automation, including supported Radar endpoints exposed through the API",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "CrowdStrike/falconpy",
+      "url": "https://github.com/CrowdStrike/falconpy",
+      "category": "official-canonical-provider-repositories",
+      "description": "official CrowdStrike Python SDK; contains FalconX Sandbox API endpoints and samples relevant to Falcon Sandbox / Hybrid Analysis workflows",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "FIRSTdotorg/epss",
+      "url": "https://github.com/FIRSTdotorg/epss",
+      "category": "official-canonical-provider-repositories",
+      "description": "official EPSS repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "FIRSTdotorg/epss-vendors",
+      "url": "https://github.com/FIRSTdotorg/epss-vendors",
+      "category": "official-canonical-provider-repositories",
+      "description": "EPSS vendor/product mapping support",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "getsentry/sentry-python",
+      "url": "https://github.com/getsentry/sentry-python",
+      "category": "official-canonical-provider-repositories",
+      "description": "official Python SDK",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "google/osv.dev",
+      "url": "https://github.com/google/osv.dev",
+      "category": "official-canonical-provider-repositories",
+      "description": "OSV.dev service and ecosystem",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/api.greynoise.io",
+      "url": "https://github.com/GreyNoise-Intelligence/api.greynoise.io",
+      "category": "official-canonical-provider-repositories",
+      "description": "GreyNoise API repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/GNQL",
+      "url": "https://github.com/GreyNoise-Intelligence/GNQL",
+      "category": "official-canonical-provider-repositories",
+      "description": "GreyNoise Query Language resources",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/greynoise-mcp-server",
+      "url": "https://github.com/GreyNoise-Intelligence/greynoise-mcp-server",
+      "category": "official-canonical-provider-repositories",
+      "description": "official MCP integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/pygreynoise",
+      "url": "https://github.com/GreyNoise-Intelligence/pygreynoise",
+      "category": "official-canonical-provider-repositories",
+      "description": "Python SDK / CLI for GreyNoise",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hashlookup/hashlookup-forensic-analyser",
+      "url": "https://github.com/hashlookup/hashlookup-forensic-analyser",
+      "category": "official-canonical-provider-repositories",
+      "description": "forensic-analysis client/tooling",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hashlookup/hashlookup-server",
+      "url": "https://github.com/hashlookup/hashlookup-server",
+      "category": "official-canonical-provider-repositories",
+      "description": "hashlookup server/API implementation",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hashlookup/PyHashlookup",
+      "url": "https://github.com/hashlookup/PyHashlookup",
+      "category": "official-canonical-provider-repositories",
+      "description": "Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hatching/triage",
+      "url": "https://github.com/hatching/triage",
+      "category": "official-canonical-provider-repositories",
+      "description": "official Triage command-line/API tooling",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "intelthreat/attackcti",
+      "url": "https://github.com/intelthreat/attackcti",
+      "category": "official-canonical-provider-repositories",
+      "description": "widely used Python ATT&CK client built around STIX/TAXII data access; community-maintained rather than a MITRE upstream",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "ipinfo/python",
+      "url": "https://github.com/ipinfo/python",
+      "category": "official-canonical-provider-repositories",
+      "description": "official Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "JMousqueton/ransomware.live",
+      "url": "https://github.com/JMousqueton/ransomware.live",
+      "category": "official-canonical-provider-repositories",
+      "description": "canonical ransomware.live project/data repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "malpedia/malpedia-flossed",
+      "url": "https://github.com/malpedia/malpedia-flossed",
+      "category": "official-canonical-provider-repositories",
+      "description": "FLOSS-derived Malpedia dataset tooling",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "malpedia/malpediaclient",
+      "url": "https://github.com/malpedia/malpediaclient",
+      "category": "official-canonical-provider-repositories",
+      "description": "Malpedia API client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "malpedia/signator-rules",
+      "url": "https://github.com/malpedia/signator-rules",
+      "category": "official-canonical-provider-repositories",
+      "description": "Malpedia Signator rules",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "MaltegoTech/maltego-trx",
+      "url": "https://github.com/MaltegoTech/maltego-trx",
+      "category": "official-canonical-provider-repositories",
+      "description": "official TRX framework; **archived/legacy**, retained because it is directly relevant to existing transform workflows",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "LEGACY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "MaltegoTech/maltego-trx-examples",
+      "url": "https://github.com/MaltegoTech/maltego-trx-examples",
+      "category": "official-canonical-provider-repositories",
+      "description": "official transform examples",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "MISP/PyMISP",
+      "url": "https://github.com/MISP/PyMISP",
+      "category": "official-canonical-provider-repositories",
+      "description": "official Python API client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "RansomLook/doc",
+      "url": "https://github.com/RansomLook/doc",
+      "category": "official-canonical-provider-repositories",
+      "description": "RansomLook documentation repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "RansomLook/RansomLook",
+      "url": "https://github.com/RansomLook/RansomLook",
+      "category": "official-canonical-provider-repositories",
+      "description": "canonical RansomLook project",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "RIPE-NCC/ripestat-text",
+      "url": "https://github.com/RIPE-NCC/ripestat-text",
+      "category": "official-canonical-provider-repositories",
+      "description": "official RIPE NCC RIPEstat text client; **archived/legacy**",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "LEGACY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "urlscan/urlscan-cli",
+      "url": "https://github.com/urlscan/urlscan-cli",
+      "category": "official-canonical-provider-repositories",
+      "description": "official CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "urlscan/urlscan-python",
+      "url": "https://github.com/urlscan/urlscan-python",
+      "category": "official-canonical-provider-repositories",
+      "description": "official Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "VirusTotal/vt-cli",
+      "url": "https://github.com/VirusTotal/vt-cli",
+      "category": "official-canonical-provider-repositories",
+      "description": "VirusTotal command-line client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "VirusTotal/vt-py",
+      "url": "https://github.com/VirusTotal/vt-py",
+      "category": "official-canonical-provider-repositories",
+      "description": "Python client for the VirusTotal API",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "vulnerability-lookup/PyVulnerabilityLookup",
+      "url": "https://github.com/vulnerability-lookup/PyVulnerabilityLookup",
+      "category": "official-canonical-provider-repositories",
+      "description": "Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "vulnerability-lookup/vulnerability-lookup",
+      "url": "https://github.com/vulnerability-lookup/vulnerability-lookup",
+      "category": "official-canonical-provider-repositories",
+      "description": "Vulnerability-Lookup platform",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "vulnerability-lookup/VulnMCP",
+      "url": "https://github.com/vulnerability-lookup/VulnMCP",
+      "category": "official-canonical-provider-repositories",
+      "description": "MCP integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "webamon-org/MISP-Connector",
+      "url": "https://github.com/webamon-org/MISP-Connector",
+      "category": "official-canonical-provider-repositories",
+      "description": "Webamon MISP integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "webamon-org/webamon",
+      "url": "https://github.com/webamon-org/webamon",
+      "category": "official-canonical-provider-repositories",
+      "description": "Webamon project",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "webamon-org/webamon-cli",
+      "url": "https://github.com/webamon-org/webamon-cli",
+      "category": "official-canonical-provider-repositories",
+      "description": "Webamon CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Datalux/Osintgram",
+      "url": "https://github.com/Datalux/Osintgram",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "Instagram-focused OSINT",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "edoardottt/awesome-hacker-search-engines",
+      "url": "https://github.com/edoardottt/awesome-hacker-search-engines",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "specialized security/search-engine index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "j3ssie/osmedeus",
+      "url": "https://github.com/j3ssie/osmedeus",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "automated reconnaissance framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "jivoi/awesome-osint",
+      "url": "https://github.com/jivoi/awesome-osint",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "broad OSINT reference index",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "laramies/theHarvester",
+      "url": "https://github.com/laramies/theHarvester",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "public-source reconnaissance",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "lockfale/OSINT-Framework",
+      "url": "https://github.com/lockfale/OSINT-Framework",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "OSINT resource navigator",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "megadose/holehe",
+      "url": "https://github.com/megadose/holehe",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "email-account discovery across services",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "mxrch/GHunt",
+      "url": "https://github.com/mxrch/GHunt",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "Google-account OSINT framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "owasp-amass/amass",
+      "url": "https://github.com/owasp-amass/amass",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "attack-surface mapping and asset discovery",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "qeeqbox/social-analyzer",
+      "url": "https://github.com/qeeqbox/social-analyzer",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "social-media account analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "s0md3v/Photon",
+      "url": "https://github.com/s0md3v/Photon",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "web crawler/OSINT collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "username discovery across services",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "six2dez/reconftw",
+      "url": "https://github.com/six2dez/reconftw",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "automated reconnaissance workflow",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "smicallef/spiderfoot",
+      "url": "https://github.com/smicallef/spiderfoot",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "automated OSINT collection and correlation",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "soxoj/maigret",
+      "url": "https://github.com/soxoj/maigret",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "username/account correlation across sites",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "sundowndev/phoneinfoga",
+      "url": "https://github.com/sundowndev/phoneinfoga",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "phone-number OSINT",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "yogeshojha/rengine",
+      "url": "https://github.com/yogeshojha/rengine",
+      "category": "osint-reconnaissance-attack-surface-discovery",
+      "description": "automated reconnaissance platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "drduh/macOS-Security-and-Privacy-Guide",
+      "url": "https://github.com/drduh/macOS-Security-and-Privacy-Guide",
+      "category": "privacy-hardening-defensive-engineering",
+      "description": "macOS hardening/privacy reference",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "imthenachoman/How-To-Secure-A-Linux-Server",
+      "url": "https://github.com/imthenachoman/How-To-Secure-A-Linux-Server",
+      "category": "privacy-hardening-defensive-engineering",
+      "description": "Linux server hardening reference",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "keepassxreboot/keepassxc",
+      "url": "https://github.com/keepassxreboot/keepassxc",
+      "category": "privacy-hardening-defensive-engineering",
+      "description": "open-source password manager",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "StevenBlack/hosts",
+      "url": "https://github.com/StevenBlack/hosts",
+      "category": "privacy-hardening-defensive-engineering",
+      "description": "consolidated hosts-file blocking lists",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "trimstray/nginx-admins-handbook",
+      "url": "https://github.com/trimstray/nginx-admins-handbook",
+      "category": "privacy-hardening-defensive-engineering",
+      "description": "NGINX operations/hardening reference",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "veeral-patel/how-to-secure-anything",
+      "url": "https://github.com/veeral-patel/how-to-secure-anything",
+      "category": "privacy-hardening-defensive-engineering",
+      "description": "broad security-hardening methodology",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "veracrypt/VeraCrypt",
+      "url": "https://github.com/veracrypt/VeraCrypt",
+      "category": "privacy-hardening-defensive-engineering",
+      "description": "disk/file-container encryption",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "apsdehal/awesome-ctf",
+      "url": "https://github.com/apsdehal/awesome-ctf",
+      "category": "security-education-reference-labs",
+      "description": "CTF resources and tooling",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "FallibleInc/security-guide-for-developers",
+      "url": "https://github.com/FallibleInc/security-guide-for-developers",
+      "category": "security-education-reference-labs",
+      "description": "secure-development reference",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "farhanashrafdev/90DaysOfCyberSecurity",
+      "url": "https://github.com/farhanashrafdev/90DaysOfCyberSecurity",
+      "category": "security-education-reference-labs",
+      "description": "structured cybersecurity learning roadmap",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Hacker0x01/hacker101",
+      "url": "https://github.com/Hacker0x01/hacker101",
+      "category": "security-education-reference-labs",
+      "description": "HackerOne security learning resources",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "sbilly/awesome-security",
+      "url": "https://github.com/sbilly/awesome-security",
+      "category": "security-education-reference-labs",
+      "description": "long-running security resource collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Tencent/secguide",
+      "url": "https://github.com/Tencent/secguide",
+      "category": "security-education-reference-labs",
+      "description": "secure coding/security engineering guidance",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "The-Art-of-Hacking/h4cker",
+      "url": "https://github.com/The-Art-of-Hacking/h4cker",
+      "category": "security-education-reference-labs",
+      "description": "security research and learning reference",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "trimstray/the-book-of-secret-knowledge",
+      "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+      "category": "security-education-reference-labs",
+      "description": "broad technical/security reference notes",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Consensys/mythril",
+      "url": "https://github.com/Consensys/mythril",
+      "category": "smart-contract-blockchain-security",
+      "description": "Ethereum smart-contract security analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "RENAMED"
+    },
+    {
+      "repo": "crytic/echidna",
+      "url": "https://github.com/crytic/echidna",
+      "category": "smart-contract-blockchain-security",
+      "description": "smart-contract property-based fuzzer",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "crytic/slither",
+      "url": "https://github.com/crytic/slither",
+      "category": "smart-contract-blockchain-security",
+      "description": "Solidity static analyzer",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OpenZeppelin/openzeppelin-contracts",
+      "url": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+      "category": "smart-contract-blockchain-security",
+      "description": "security-focused smart-contract library",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "trailofbits/manticore",
+      "url": "https://github.com/trailofbits/manticore",
+      "category": "smart-contract-blockchain-security",
+      "description": "symbolic execution for binaries and smart contracts",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "0x4D31/awesome-threat-detection",
+      "url": "https://github.com/0x4D31/awesome-threat-detection",
+      "category": "threat-hunting-detection-engineering",
+      "description": "detection-engineering reference collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "LOLBAS-Project/LOLBAS",
+      "url": "https://github.com/LOLBAS-Project/LOLBAS",
+      "category": "threat-hunting-detection-engineering",
+      "description": "Windows living-off-the-land binaries and scripts",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Neo23x0/Loki",
+      "url": "https://github.com/Neo23x0/Loki",
+      "category": "threat-hunting-detection-engineering",
+      "description": "IOC/YARA-based endpoint scanner",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Neo23x0/signature-base",
+      "url": "https://github.com/Neo23x0/signature-base",
+      "category": "threat-hunting-detection-engineering",
+      "description": "YARA and IOC signature collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "olafhartong/sysmon-modular",
+      "url": "https://github.com/olafhartong/sysmon-modular",
+      "category": "threat-hunting-detection-engineering",
+      "description": "modular Sysmon configuration",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "osquery/osquery",
+      "url": "https://github.com/osquery/osquery",
+      "category": "threat-hunting-detection-engineering",
+      "description": "endpoint instrumentation via SQL",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OTRF/ThreatHunter-Playbook",
+      "url": "https://github.com/OTRF/ThreatHunter-Playbook",
+      "category": "threat-hunting-detection-engineering",
+      "description": "threat-hunting playbooks and research",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Security-Onion-Solutions/securityonion",
+      "url": "https://github.com/Security-Onion-Solutions/securityonion",
+      "category": "threat-hunting-detection-engineering",
+      "description": "current Security Onion platform repository",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SigmaHQ/sigma",
+      "url": "https://github.com/SigmaHQ/sigma",
+      "category": "threat-hunting-detection-engineering",
+      "description": "vendor-agnostic detection and hunting rules",
+      "sources": [
+        "atlas",
+        "soc-manual"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SwiftOnSecurity/sysmon-config",
+      "url": "https://github.com/SwiftOnSecurity/sysmon-config",
+      "category": "threat-hunting-detection-engineering",
+      "description": "established Sysmon configuration baseline",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "wazuh/wazuh",
+      "url": "https://github.com/wazuh/wazuh",
+      "category": "threat-hunting-detection-engineering",
+      "description": "open-source security monitoring/XDR platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "WithSecureLabs/chainsaw",
+      "url": "https://github.com/WithSecureLabs/chainsaw",
+      "category": "threat-hunting-detection-engineering",
+      "description": "rapid Windows forensic artifact hunting",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "Yamato-Security/hayabusa",
+      "url": "https://github.com/Yamato-Security/hayabusa",
+      "category": "threat-hunting-detection-engineering",
+      "description": "Windows event-log hunting and timeline analysis",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "fortinet-fortisoar/connector-pulsedive",
+      "url": "https://github.com/fortinet-fortisoar/connector-pulsedive",
+      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
+      "description": "FortiSOAR connector",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hakluke/haktrails",
+      "url": "https://github.com/hakluke/haktrails",
+      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
+      "description": "established SecurityTrails-powered reconnaissance CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "kristuff/abuseipdb-cli",
+      "url": "https://github.com/kristuff/abuseipdb-cli",
+      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
+      "description": "community CLI/API client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "pberba/pulsedive-py",
+      "url": "https://github.com/pberba/pulsedive-py",
+      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
+      "description": "community Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "secops4thewin/securitytrails-python",
+      "url": "https://github.com/secops4thewin/securitytrails-python",
+      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
+      "description": "community Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "turbot/steampipe-plugin-hudsonrock",
+      "url": "https://github.com/turbot/steampipe-plugin-hudsonrock",
+      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
+      "description": "Steampipe plugin for Hudson Rock data; third-party integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    }
+  ]
 }
