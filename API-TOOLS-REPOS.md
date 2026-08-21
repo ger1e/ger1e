@@ -2,7 +2,7 @@
 
 GitHub upstreams for the API-driven security and CTI toolset. Vendor/canonical repositories are separated from community clients so provenance stays explicit.
 
-Checked against current GitHub discovery on **2026-08-21**. A service being in this file does not mean every endpoint is free or unauthenticated.
+Checked against current GitHub discovery on **2026-08-22**. A service being in this file does not mean every endpoint is free or unauthenticated.
 
 ## Official / canonical provider repositories
 
@@ -129,6 +129,10 @@ These are deliberately not presented as vendor-owned upstreams.
 ### Hudson Rock
 - [turbot/steampipe-plugin-hudsonrock](https://github.com/turbot/steampipe-plugin-hudsonrock) — Steampipe plugin for Hudson Rock data; third-party integration.
 
+### Modat Magnify
+- [OpenCTI-Platform/connectors — Modat enrichment](https://github.com/OpenCTI-Platform/connectors/tree/master/internal-enrichment/modat-enrichment) — OpenCTI internal-enrichment connector for Modat Magnify; verified present in the upstream connector repository on 2026-08-22.
+- Provider API: [Modat Magnify API](https://api.magnify.modat.io/) — authenticated host/service search, service history, passive DNS, CVE/fingerprint metadata, and bulk export. Use an API key in the `Authorization` header; treat Modat as internet-infrastructure / exposure intelligence rather than a generic IOC feed.
+
 ## Providers/services intentionally not mapped to an unverified repository
 
 No canonical provider-owned GitHub repository was verified in this pass for these API/data sources, so random similarly named repos are not added as if they were official:
@@ -137,6 +141,7 @@ No canonical provider-owned GitHub repository was verified in this pass for thes
 - Pulsedive provider backend/API
 - SecurityTrails provider backend/API
 - Hudson Rock provider backend/API
+- Modat Magnify provider backend/API
 - NVD API
 - ThreatMiner
 - DShield / SANS ISC
