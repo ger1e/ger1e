@@ -1,0 +1,164 @@
+{
+  "schema": "ger1e-provider-catalog/v1",
+  "last_verified": "2026-08-22",
+  "providers": [
+    {
+      "id": "greynoise",
+      "name": "GreyNoise",
+      "api_base_url": "https://api.greynoise.io/v3/",
+      "docs_url": "https://docs.greynoise.io/docs/using-the-greynoise-api",
+      "auth": "API_KEY_HEADER",
+      "env_var": "GREYNOISE_API_KEY",
+      "access": "MIXED",
+      "role": "internet-exposure-intelligence",
+      "capabilities": [
+        "IP context",
+        "internet scanner classification",
+        "GNQL",
+        "multi-IP enrichment"
+      ],
+      "official_repositories": [
+        "GreyNoise-Intelligence/pygreynoise",
+        "GreyNoise-Intelligence/GNQL"
+      ],
+      "community_integrations": [],
+      "provenance": "VENDOR-DOCS",
+      "last_verified": "2026-08-22"
+    },
+    {
+      "id": "virustotal",
+      "name": "VirusTotal",
+      "api_base_url": "https://www.virustotal.com/api/v3/",
+      "docs_url": "https://docs.virustotal.com/reference/overview",
+      "auth": "API_KEY_HEADER",
+      "env_var": "VT_API_KEY",
+      "access": "MIXED",
+      "role": "malware-artifact-intelligence",
+      "capabilities": [
+        "file hash enrichment",
+        "URL/domain/IP enrichment",
+        "analysis lookup",
+        "hunting and intelligence subject to tier"
+      ],
+      "official_repositories": [
+        "VirusTotal/vt-py",
+        "VirusTotal/vt-cli"
+      ],
+      "community_integrations": [],
+      "provenance": "VENDOR-DOCS",
+      "last_verified": "2026-08-22"
+    },
+    {
+      "id": "shodan",
+      "name": "Shodan",
+      "api_base_url": "https://api.shodan.io/",
+      "docs_url": "https://developer.shodan.io/api",
+      "auth": "API_KEY_QUERY",
+      "env_var": "SHODAN_API_KEY",
+      "access": "FREEMIUM",
+      "role": "internet-exposure-intelligence",
+      "capabilities": [
+        "host lookup",
+        "service/banner search",
+        "DNS data",
+        "historical data by tier"
+      ],
+      "official_repositories": [
+        "achillean/shodan-python"
+      ],
+      "community_integrations": [],
+      "provenance": "VENDOR-DOCS",
+      "last_verified": "2026-08-22"
+    },
+    {
+      "id": "censys",
+      "name": "Censys Platform",
+      "api_base_url": "https://api.platform.censys.io/v3/",
+      "docs_url": "https://docs.censys.com/reference/get-started",
+      "auth": "BEARER",
+      "env_var": "CENSYS_ACCESS_TOKEN",
+      "access": "FREEMIUM",
+      "role": "internet-exposure-intelligence",
+      "capabilities": [
+        "global host/service search",
+        "CenQL",
+        "collections",
+        "threat-hunting endpoints by entitlement"
+      ],
+      "official_repositories": [
+        "censys/censys-sdk-python"
+      ],
+      "community_integrations": [],
+      "provenance": "VENDOR-DOCS",
+      "last_verified": "2026-08-22"
+    },
+    {
+      "id": "abuseipdb",
+      "name": "AbuseIPDB",
+      "api_base_url": "https://api.abuseipdb.com/api/v2/",
+      "docs_url": "https://docs.abuseipdb.com/",
+      "auth": "API_KEY_HEADER",
+      "env_var": "ABUSEIPDB_API_KEY",
+      "access": "FREEMIUM",
+      "role": "reputation-abuse-intelligence",
+      "capabilities": [
+        "IP reputation",
+        "abuse reports",
+        "network block lookup",
+        "blacklist export by tier"
+      ],
+      "official_repositories": [],
+      "community_integrations": [
+        "kristuff/abuseipdb-cli"
+      ],
+      "provenance": "VENDOR-DOCS",
+      "last_verified": "2026-08-22"
+    },
+    {
+      "id": "urlscan-io",
+      "name": "urlscan.io",
+      "api_base_url": "https://urlscan.io/api/v1/",
+      "docs_url": "https://urlscan.io/docs/api/",
+      "auth": "API_KEY_HEADER",
+      "env_var": "URLSCAN_API_KEY",
+      "access": "FREEMIUM",
+      "role": "url-web-intelligence",
+      "capabilities": [
+        "URL submission",
+        "scan result retrieval",
+        "historical search",
+        "DOM/screenshot/resource retrieval"
+      ],
+      "official_repositories": [
+        "urlscan/urlscan-python",
+        "urlscan/urlscan-cli"
+      ],
+      "community_integrations": [],
+      "provenance": "VENDOR-DOCS",
+      "last_verified": "2026-08-22"
+    },
+    {
+      "id": "modat-magnify",
+      "name": "Modat Magnify",
+      "api_base_url": "https://api.magnify.modat.io/",
+      "docs_url": "https://api.magnify.modat.io/",
+      "auth": "TOKEN_HEADER",
+      "env_var": "MODAT_API_KEY",
+      "access": "PAID",
+      "role": "internet-exposure-intelligence",
+      "capabilities": [
+        "host/service search",
+        "service history",
+        "passive DNS",
+        "CVE/fingerprint metadata",
+        "bulk export"
+      ],
+      "official_repositories": [],
+      "community_integrations": [
+        "OpenCTI-Platform/connectors"
+      ],
+      "provenance": "VENDOR-DOCS",
+      "last_verified": "2026-08-22"
+    }
+  ]
+}
