@@ -38,28 +38,92 @@ jobs:
         run: python tools/catalog.py health --token "$GH_TOKEN" --write
       - name: Fetch CySA+ from Credly
         run: |
+          set -euo pipefail
           mkdir -p assets/badges
           curl --fail --location --retry 3 --retry-delay 2 \
             'https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob' \
             --output assets/badges/cysa-plus.png
           test "$(file --brief --mime-type assets/badges/cysa-plus.png)" = 'image/png'
-      - name: Resolve SAL2 from TryHackMe Credly badge page
+      - name: Resolve SAL2 strictly from Credly
         shell: bash
         run: |
           set -euo pipefail
           page='https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2'
-          html="$(curl --fail --location --retry 3 --retry-delay 2 "$page")"
-          printf '%s' "$html" | grep -qi 'Security Analyst Level 2'
-          image_url="$(printf '%s' "$html" | python -c 'import html,re,sys; s=sys.stdin.read(); patterns=[r"<meta[^>]+(?:property|name)=[\"'\"'](?:og:image|twitter:image)[\"'\"'][^>]+content=[\"'\"']([^\"'\"']+)",r"<meta[^>]+content=[\"'\"']([^\"'\"']+)[\"'\"'][^>]+(?:property|name)=[\"'\"'](?:og:image|twitter:image)[\"'\"']"]; m=next((re.search(p,s,re.I) for p in patterns if re.search(p,s,re.I)),None); print(html.unescape(m.group(1)) if m else "")')"
-          test -n "$image_url"
-          case "$image_url" in
-            https://images.credly.com/*) ;;
-            *) echo "Refusing non-Credly SAL2 image: $image_url" >&2; exit 1 ;;
-          esac
-          curl --fail --location --retry 3 --retry-delay 2 "$image_url" --output assets/badges/sal2.png
-          test "$(file --brief --mime-type assets/badges/sal2.png)" = 'image/png'
+          curl --fail --location --retry 3 --retry-delay 2 "$page" --output /tmp/sal2.html
+          grep -qi 'Security Analyst Level 2' /tmp/sal2.html
+          python - <<'PY'
+          from html import unescape
+          from html.parser import HTMLParser
+          from pathlib import Path
+          import re
+
+          source = Path('/tmp/sal2.html').read_text(encoding='utf-8', errors='replace')
+
+          class MetaImages(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.urls = []
+              def handle_starttag(self, tag, attrs):
+                  if tag.lower() != 'meta':
+                      return
+                  a = {k.lower(): v for k, v in attrs if k and v}
+                  key = (a.get('property') or a.get('name') or '').lower()
+                  value = a.get('content', '')
+                  if key in {'og:image', 'twitter:image'} and 'images.credly.com' in value:
+                      self.urls.append(value)
+
+          parser = MetaImages()
+          parser.feed(source)
+          urls = list(parser.urls)
+          urls.extend(re.findall(r'https:(?:\\u002[fF]|\\/|/){2}images\.credly\.com[^"\'<>\s]+', source))
+
+          ids = []
+          for raw in urls:
+              url = unescape(raw).replace('\\u002F', '/').replace('\\u002f', '/').replace('\\/', '/')
+              m = re.search(r'/images/([0-9a-fA-F-]{36})(?:/|$)', url)
+              if m and m.group(1).lower() not in ids:
+                  ids.append(m.group(1).lower())
+
+          if not ids:
+              raise SystemExit('No Credly CDN asset IDs found on SAL2 page')
+
+          Path('/tmp/sal2-candidates').write_text(
+              '\n'.join(f'https://images.credly.com/size/340x340/images/{asset_id}/image.png' for asset_id in ids) + '\n',
+              encoding='utf-8',
+          )
+          PY
+
+          found=0
+          while IFS= read -r candidate; do
+            rm -f /tmp/sal2-candidate.png
+            if ! curl --fail --location --retry 2 --retry-delay 1 "$candidate" --output /tmp/sal2-candidate.png; then
+              continue
+            fi
+            if [ "$(file --brief --mime-type /tmp/sal2-candidate.png)" != 'image/png' ]; then
+              continue
+            fi
+            if ! python - <<'PY'
+          from pathlib import Path
+          import struct
+          p = Path('/tmp/sal2-candidate.png').read_bytes()
+          if p[:8] != b'\x89PNG\r\n\x1a\n' or p[12:16] != b'IHDR':
+              raise SystemExit(1)
+          w, h = struct.unpack('>II', p[16:24])
+          if w != h or w < 200:
+              raise SystemExit(1)
+          PY
+            then
+              continue
+            fi
+            mv /tmp/sal2-candidate.png assets/badges/sal2.png
+            printf '%s\n' "$candidate" > assets/badges/sal2.source.txt
+            found=1
+            break
+          done < /tmp/sal2-candidates
+          test "$found" -eq 1
       - name: Fetch eCTHP PNG from current INE certification page asset
         run: |
+          set -euo pipefail
           curl --fail --location --retry 3 --retry-delay 2 \
             'https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/output=format:png/cmcc3k3loazi006k52vly6jlo' \
             --output assets/badges/ecthp.png
@@ -71,6 +135,7 @@ jobs:
           git diff --check
       - name: Commit generated state
         run: |
+          set -euo pipefail
           if git diff --quiet; then
             exit 0
           fi
