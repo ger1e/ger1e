@@ -1,71 +1,59 @@
 <p align="center">
-  <img src="assets/profile-banner.svg" alt="GER1E — threat hunting, CTI, detection engineering" width="100%">
+  <img src="assets/profile-banner.svg" alt="GER1E — glitch signal node for threat hunting, CTI and detection engineering" width="100%">
 </p>
 
-<p align="center"><strong>THREAT HUNTER // CTI // DETECTION ENGINEERING</strong></p>
-<p align="center"><code>behavior → evidence → signal</code></p>
+<p align="center"><code>ム乇 尺1乇 // SIGNAL NODE</code></p>
+<p align="center"><strong>THREAT HUNTING × CTI × DETECTION ENGINEERING</strong></p>
 
 ```text
-┌─ GER1E // ONLINE
+┌──[ GER1E // ONLINE ]
 │
 ├─ HUNT     adversary behavior · endpoint · identity · network
 ├─ INTEL    campaigns · infrastructure · malware · vulnerabilities
 ├─ DETECT   KQL · analytics · ATT&CK · detection engineering
 └─ BUILD    Python · automation · enrichment · analyst tooling
+
+   behavior > IOC churn    evidence > assumption    signal > volume
 ```
 
-I hunt attacker behavior, correlate threat intelligence, and turn evidence into practical detections and investigation workflows. The work sits mostly where telemetry, adversary tradecraft, automation, and analyst judgment collide.
+I hunt attacker behavior, correlate threat intelligence, and turn evidence into detections and investigation workflows. The useful part is the collision point between telemetry, adversary tradecraft, automation, and analyst judgment.
 
-## Current focus
+## Signal stack
 
-- Hypothesis-driven threat hunting and incident investigation
-- Cyber threat intelligence, infrastructure correlation, and adversary tracking
-- Microsoft Defender XDR / Sentinel hunting and detection engineering
-- KQL analytics, tuning, false-positive reduction, and coverage analysis
-- Malware analysis, reverse engineering, and behavioral extraction
-- CTI enrichment pipelines, OSINT, and security automation
-
-## Working set
-
-| Area | Stack |
+| Function | Working set |
 | --- | --- |
-| Hunting / Detection | Microsoft Defender XDR · Microsoft Sentinel · KQL · MITRE ATT&CK |
-| Endpoint / Identity | EDR telemetry · process / network / file behavior · authentication telemetry |
-| CTI / OSINT | Threat-intelligence APIs · infrastructure enrichment · IOC / TTP correlation |
-| Analysis | Malware triage · reverse engineering · behavioral analysis · lineage / similarity |
-| Build / Automate | Python · PowerShell · Bash · GitHub Actions · REST APIs |
+| Hunt / Detect | Microsoft Defender XDR · Microsoft Sentinel · KQL · MITRE ATT&CK |
+| Endpoint / Identity | process · network · file · authentication telemetry |
+| CTI / OSINT | API enrichment · infrastructure correlation · IOC / TTP context |
+| Analysis | malware triage · reverse engineering · behavioral extraction · lineage |
+| Build | Python · PowerShell · Bash · GitHub Actions · REST APIs |
 
 ## Original work
 
-### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
-Canonical personal landing page. Static, dependency-light, regression-tested, CSP-hardened, and accessibility-aware.
+### [`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)
+Sanitized, vendor-practical KQL hunts, a CTI normalization schema, and behavior-first methodology. No customer telemetry, private architecture, or production identifiers.
 
-### [`Threat hunting lab`](lab/README.md)
-Sanitized KQL hunts, CTI normalization schema, and investigation methodology. No customer telemetry or private infrastructure.
+### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
+Canonical personal landing page: dependency-light, regression-tested, CSP-hardened, accessibility-aware, and deliberately hostile to generic portfolio-template energy.
+
+### [`security intelligence catalog`](CATALOG.md)
+Curated security tooling and upstream project catalog with provenance, risk, lifecycle status, and automated health verification.
 
 ### [`landing-pages`](https://github.com/ger1e/landing-pages)
-Experimental and historical interface work. The lab, not the production altar.
+Experimental and historical interface work. The lab, not production.
 
-## Security intelligence catalog
+## Catalog nodes
 
-- [`CATALOG.md`](CATALOG.md) — generated consolidated repository catalog with provenance, risk, and lifecycle status.
-- [`catalog/repos.yaml`](catalog/repos.yaml) — machine-readable canonical catalog.
-- [`LAST-VERIFIED.md`](LAST-VERIFIED.md) — automated repository-health snapshot.
-- [`SECURITY-REPOS.md`](SECURITY-REPOS.md) — broad curated security atlas.
-- [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) — repository set extracted from the SOC Analyst Field Guide.
-- [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md) — API/CTI provider SDKs, upstream projects, and labeled community integrations.
+[`CATALOG.md`](CATALOG.md) · [`repos.yaml`](catalog/repos.yaml) · [`LAST-VERIFIED.md`](LAST-VERIFIED.md) · [`SECURITY-REPOS.md`](SECURITY-REPOS.md) · [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) · [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md)
 
-## Operating principles
+## Operating rules
 
 ```text
-EVIDENCE > ASSUMPTION
-BEHAVIOR > IOC CHURN
-SIGNAL   > VOLUME
-CONTEXT  > AUTOMATION FOR ITS OWN SAKE
+DETECTION WITHOUT TELEMETRY  = A WISH
+INTELLIGENCE WITHOUT PROVENANCE = A RUMOR
+AUTOMATION WITHOUT CONTEXT   = FASTER WRONGNESS
 ```
 
-Detection without telemetry is a wish. Intelligence without provenance is a rumor. Automation without analyst context is just a faster way to be wrong.
+## Exit nodes
 
-## Links
-
-[`GITHUB`](https://github.com/ger1e) · [`SECURITY CATALOG`](CATALOG.md) · [`HUNTING LAB`](lab/README.md) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
+[`HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
