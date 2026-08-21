@@ -21,15 +21,7 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 ## Credentials
 
 <p align="center">
-  <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+" width="150"></a>
-</p>
-
-<p align="center">
-  <a href="https://ine.com/security/certifications/ecthp-certification"><img src="https://assets.ine.com/els-static/els-certs/ecthpv2.png" alt="INE eCTHP" width="150"></a>
-</p>
-
-<p align="center">
-  <a href="https://tryhackme.com/path/outline/soclevel2"><img src="https://tryhackme.com/static/image/sal2-card.3660689e.png" alt="TryHackMe SAL2" width="150"></a>
+  <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification — Credly" width="150"></a>
 </p>
 
 ## Signal stack
