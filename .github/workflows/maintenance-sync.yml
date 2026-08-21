@@ -36,15 +36,34 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python tools/catalog.py health --token "$GH_TOKEN" --write
-      - name: Fetch CySA+ Credly badge PNG
+      - name: Fetch CySA+ from Credly
         run: |
           mkdir -p assets/badges
           curl --fail --location --retry 3 --retry-delay 2 \
             'https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob' \
             --output assets/badges/cysa-plus.png
           test "$(file --brief --mime-type assets/badges/cysa-plus.png)" = 'image/png'
-      - name: Remove non-Credly badge mirrors
-        run: rm -f assets/badges/ecthp.png assets/badges/sal2.png
+      - name: Resolve SAL2 from TryHackMe Credly badge page
+        shell: bash
+        run: |
+          set -euo pipefail
+          page='https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2'
+          html="$(curl --fail --location --retry 3 --retry-delay 2 "$page")"
+          printf '%s' "$html" | grep -qi 'Security Analyst Level 2'
+          image_url="$(printf '%s' "$html" | python -c 'import html,re,sys; s=sys.stdin.read(); patterns=[r"<meta[^>]+(?:property|name)=[\"'\"'](?:og:image|twitter:image)[\"'\"'][^>]+content=[\"'\"']([^\"'\"']+)",r"<meta[^>]+content=[\"'\"']([^\"'\"']+)[\"'\"'][^>]+(?:property|name)=[\"'\"'](?:og:image|twitter:image)[\"'\"']"]; m=next((re.search(p,s,re.I) for p in patterns if re.search(p,s,re.I)),None); print(html.unescape(m.group(1)) if m else "")')"
+          test -n "$image_url"
+          case "$image_url" in
+            https://images.credly.com/*) ;;
+            *) echo "Refusing non-Credly SAL2 image: $image_url" >&2; exit 1 ;;
+          esac
+          curl --fail --location --retry 3 --retry-delay 2 "$image_url" --output assets/badges/sal2.png
+          test "$(file --brief --mime-type assets/badges/sal2.png)" = 'image/png'
+      - name: Fetch eCTHP from INE
+        run: |
+          curl --fail --location --retry 3 --retry-delay 2 \
+            'https://assets.ine.com/els-static/els-certs/ecthpv2.png' \
+            --output assets/badges/ecthp.png
+          test "$(file --brief --mime-type assets/badges/ecthp.png)" = 'image/png'
       - name: Final validation
         run: |
           python -m py_compile tools/catalog.py
@@ -59,5 +78,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add catalog/repos.yaml catalog/providers.yaml CATALOG.md PROVIDERS.md LAST-VERIFIED.md
           git add -A assets/badges
-          git commit -m 'chore: reconcile catalogs and Credly assets'
+          git commit -m 'chore: reconcile catalogs and credential assets'
           git push
