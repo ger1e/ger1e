@@ -28,24 +28,24 @@ jobs:
           python-version: '3.12'
       - name: Unit tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
-      - name: PR bootstrap parser check
+      - name: Reconcile source Markdown into canonical repository catalog
+        if: github.event_name != 'pull_request'
+        run: python tools/catalog.py reconcile --write
+      - name: Parse reconciliation on pull requests
         if: github.event_name == 'pull_request'
-        run: python tools/catalog.py bootstrap > /dev/null
-      - name: Bootstrap canonical catalog once
-        if: github.event_name != 'pull_request'
-        run: |
-          python - <<'PY'
-          import json, pathlib, subprocess
-          p = pathlib.Path('catalog/repos.yaml')
-          data = json.loads(p.read_text())
-          if not data.get('repositories'):
-              subprocess.run(['python','tools/catalog.py','bootstrap','--write'], check=True)
-          PY
-      - name: Validate and generate catalog
-        if: github.event_name != 'pull_request'
+        run: python tools/catalog.py reconcile
+      - name: Validate and generate repository catalog
         run: |
           python tools/catalog.py validate
-          python tools/catalog.py build
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            python tools/catalog.py build
+          fi
+      - name: Validate and generate provider registry
+        run: |
+          python tools/catalog.py providers-validate
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            python tools/catalog.py providers-build
+          fi
       - name: Refresh repository health
         if: github.event_name != 'pull_request'
         env:
@@ -54,9 +54,9 @@ jobs:
       - name: Final validation
         run: |
           python -m py_compile tools/catalog.py
-          python -c "import json; json.load(open('catalog/repos.yaml', encoding='utf-8'))"
+          python -c "import json; json.load(open('catalog/repos.yaml', encoding='utf-8')); json.load(open('catalog/providers.yaml', encoding='utf-8'))"
           git diff --check
-      - name: Commit refreshed catalog
+      - name: Commit refreshed catalogs
         if: github.event_name != 'pull_request'
         run: |
           if git diff --quiet; then
@@ -64,6 +64,6 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add catalog/repos.yaml CATALOG.md LAST-VERIFIED.md
-          git commit -m 'chore: refresh security catalog'
+          git add catalog/repos.yaml catalog/providers.yaml CATALOG.md PROVIDERS.md LAST-VERIFIED.md
+          git commit -m 'chore: refresh security catalogs'
           git push
