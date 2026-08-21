@@ -43,6 +43,10 @@ Private CTI enrichment and normalization workbench for combining multiple intell
 ### [`landing-pages`](https://github.com/ger1e/landing-pages)
 Experimental and historical interface work. The lab, not the production altar.
 
+## Security repository index
+
+[`SECURITY-REPOS.md`](SECURITY-REPOS.md) — curated high-signal repositories across threat hunting, detection engineering, CTI, DFIR, malware analysis, reverse engineering, offensive security, cloud/container security, mobile security, and OSINT.
+
 ## Operating principles
 
 ```text
@@ -56,4 +60,4 @@ Detection without telemetry is a wish. Intelligence without provenance is a rumo
 
 ## Links
 
-[`GITHUB`](https://github.com/ger1e) · [`PERSONAL SITE REPO`](https://github.com/ger1e/personal-site-lp) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
+[`GITHUB`](https://github.com/ger1e) · [`SECURITY REPOS`](SECURITY-REPOS.md) · [`PERSONAL SITE REPO`](https://github.com/ger1e/personal-site-lp) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
