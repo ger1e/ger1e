@@ -5,7 +5,12 @@
   "required": ["source", "ingested_at", "confidence"],
   "properties": {
     "source": {"type": "string"},
+    "source_id": {"type": ["string", "null"]},
     "source_url": {"type": ["string", "null"], "format": "uri"},
+    "source_kind": {
+      "type": ["string", "null"],
+      "enum": ["ransomware-claim", "community-ioc", "vendor-intel", "government", "telemetry", "other", null]
+    },
     "first_seen": {"type": ["string", "null"], "format": "date-time"},
     "last_seen": {"type": ["string", "null"], "format": "date-time"},
     "ingested_at": {"type": "string", "format": "date-time"},
@@ -14,8 +19,35 @@
     "victim": {"type": ["string", "null"]},
     "sector": {"type": ["string", "null"]},
     "geography": {"type": ["string", "null"]},
-    "ioc": {"type": ["object", "null"], "properties": {"type": {"enum": ["ip", "domain", "url", "sha256", "sha1", "md5", "email", "other"]}, "value": {"type": "string"}}, "required": ["type", "value"], "additionalProperties": false},
+    "ioc": {
+      "type": ["object", "null"],
+      "properties": {
+        "type": {"enum": ["ip", "domain", "url", "sha256", "sha1", "md5", "email", "other"]},
+        "value": {"type": "string"}
+      },
+      "required": ["type", "value"],
+      "additionalProperties": false
+    },
     "context": {"type": ["string", "null"]},
+    "validation_status": {
+      "type": ["string", "null"],
+      "enum": ["unverified", "corroborated", "validated", "disputed", "false-positive", null]
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source"],
+        "properties": {
+          "source": {"type": "string"},
+          "source_url": {"type": ["string", "null"], "format": "uri"},
+          "observed_at": {"type": ["string", "null"], "format": "date-time"},
+          "statement": {"type": ["string", "null"]},
+          "independent_evidence": {"type": ["boolean", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
     "confidence": {"type": "integer", "minimum": 0, "maximum": 100}
   },
   "additionalProperties": false
