@@ -16,19 +16,16 @@
 
 I hunt attacker behavior, correlate threat intelligence, and turn evidence into detections and investigation workflows. The useful part is the collision point between telemetry, adversary tradecraft, automation, and analyst judgment.
 
-## Credentials
+## Public signal
 
-<p align="center">
-  <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification — Credly" width="150"></a>
-</p>
+### [`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)
+Sanitized Microsoft Defender XDR / Sentinel hunting examples with explicit hypotheses, telemetry requirements, ATT&CK context, false-positive analysis, tuning guidance, and CTI normalization.
 
-<p align="center">
-  <a href="https://ine.com/security/certifications/ecthp-certification"><img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/output=format:png/cmcc3k3loazi006k52vly6jlo" alt="INE Certified Threat Hunting Professional (eCTHP)" width="150"></a>
-</p>
+### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
+Personal landing page for [`gergoilly.hu`](https://gergoilly.hu/): custom front-end, responsive behavior, metadata, accessibility work, and production hardening.
 
-<p align="center">
-  <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2) — Credly" width="150"></a>
-</p>
+### [`security intelligence catalog`](CATALOG.md)
+Curated security tooling and upstream-project catalog with provenance, lifecycle state, provider mapping, and automated health verification.
 
 ## Signal stack
 
@@ -40,29 +37,39 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 | Analysis | malware triage · reverse engineering · behavioral extraction · lineage |
 | Build | Python · PowerShell · Bash · GitHub Actions · REST APIs |
 
-## Original work
+## Operating model
 
-### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
-Personal landing page for `gergoilly.hu`: custom front-end, responsive layout, metadata, accessibility work, and production hardening.
+```text
+HYPOTHESIS → TELEMETRY → QUERY → EVIDENCE → TUNING
+SOURCE     → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
+```
 
-### [`security intelligence catalog`](CATALOG.md)
-Curated security tooling and upstream project catalog with provenance, risk, lifecycle status, and automated health verification.
+- Behavior over indicator worship.
+- Evidence separated from inference.
+- Telemetry assumptions stated before conclusions.
+- Provenance preserved through enrichment.
+- Detection output optimized for analyst use, not query-golf aesthetics.
 
-### [`landing-pages`](https://github.com/ger1e/landing-pages)
-Experimental and historical interface work.
+## Credentials
 
-## Catalog nodes
+<p align="center">
+  <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification" width="140"></a>
+  &nbsp;&nbsp;
+  <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="140"></a>
+</p>
+
+## Intelligence catalog
 
 [`CATALOG.md`](CATALOG.md) · [`repos.yaml`](catalog/repos.yaml) · [`PROVIDERS.md`](PROVIDERS.md) · [`providers.yaml`](catalog/providers.yaml) · [`LAST-VERIFIED.md`](LAST-VERIFIED.md) · [`SECURITY-REPOS.md`](SECURITY-REPOS.md) · [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) · [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md)
 
-## Operating rules
+## Rules of engagement
 
 ```text
-DETECTION WITHOUT TELEMETRY  = A WISH
+DETECTION WITHOUT TELEMETRY     = A WISH
 INTELLIGENCE WITHOUT PROVENANCE = A RUMOR
-AUTOMATION WITHOUT CONTEXT   = FASTER WRONGNESS
+AUTOMATION WITHOUT CONTEXT      = FASTER WRONGNESS
 ```
 
 ## Exit nodes
 
-[`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
+[`THREAT HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
