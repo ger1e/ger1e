@@ -63,6 +63,8 @@ SOURCE     → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
 <p align="center">
   <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification" width="140"></a>
   &nbsp;&nbsp;
+  <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3k3loazi006k52vly6jlo" alt="INE eCTHP credential" width="140">
+  &nbsp;&nbsp;
   <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="140"></a>
 </p>
 
