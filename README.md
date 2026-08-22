@@ -6,6 +6,7 @@
 <p align="center"><strong>CYBER THREAT HUNTER // CTI // INCIDENT RESPONSE</strong></p>
 <p align="center"><code>MICROSOFT SENTINEL // DEFENDER XDR // AZURE DATA EXPLORER // KQL</code></p>
 <p align="center">
+  <a href="https://gergoilly.hu/">WEBSITE</a> ·
   <a href="https://www.linkedin.com/in/gergoilly">LINKEDIN</a> ·
   <a href="https://www.credly.com/users/gergoilly">CREDLY</a> ·
   <a href="https://github.com/ger1e/threat-hunting-lab">THREAT HUNTING LAB</a>
@@ -34,6 +35,8 @@ RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
 **[`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)** — sanitized Microsoft Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis, tuning guidance and CTI normalization.
 
 [`HUNTING METHODOLOGY`](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [`CTI NORMALIZATION`](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [`CONTRIBUTION CONTRACT`](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)
+
+**[`personal-site-lp`](https://github.com/ger1e/personal-site-lp)** — canonical source for [`gergoilly.hu`](https://gergoilly.hu/): a static-first personal security site with a deliberately small runtime surface, restrictive browser policy, custom HTTP error handling, accessibility/reduced-motion support and privacy-conscious telemetry.
 
 **[`security intelligence catalog`](CATALOG.md)** — curated security tooling and upstream-project intelligence with provenance, lifecycle state, provider mapping and automated health verification.
 
