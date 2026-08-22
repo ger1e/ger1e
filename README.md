@@ -9,27 +9,21 @@
   <img src="assets/signal-strip.svg" alt="GER1E public operating signal" width="100%">
 </p>
 
-```text
-┌──[ GER1E // ONLINE ]
-│
-├─ HUNT     adversary behavior · endpoint · identity · network
-├─ INTEL    campaigns · infrastructure · malware · vulnerabilities
-├─ DETECT   KQL · analytics · ATT&CK · detection engineering
-└─ BUILD    Python · automation · enrichment · analyst tooling
-```
+I hunt attacker behavior, correlate threat intelligence, and turn evidence into detections and investigation workflows. Telemetry first. Provenance preserved. Inference labeled.
 
-I hunt attacker behavior, correlate threat intelligence, and turn evidence into detections and investigation workflows. The useful part is the collision point between telemetry, adversary tradecraft, automation, and analyst judgment.
-
-## Public signal
+## Primary signal
 
 ### [`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)
-Sanitized Microsoft Defender XDR / Sentinel hunting examples with explicit hypotheses, telemetry requirements, ATT&CK context, false-positive analysis, tuning guidance, and CTI normalization.
+Sanitized Microsoft Defender XDR / Sentinel hunting work built around explicit hypotheses, telemetry requirements, ATT&CK context, false-positive analysis, tuning guidance, and CTI normalization.
 
-### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
-Personal landing page: custom front-end, responsive behavior, metadata, accessibility work, and production hardening.
+[`device-code follow-on`](https://github.com/ger1e/threat-hunting-lab/blob/main/hunts/device-code-follow-on.kql) · [`rare outbound beaconing`](https://github.com/ger1e/threat-hunting-lab/blob/main/hunts/rare-outbound-beaconing.kql) · [`encoded PowerShell`](https://github.com/ger1e/threat-hunting-lab/blob/main/hunts/suspicious-powershell-encoded-command.kql)
 
 ### [`security intelligence catalog`](CATALOG.md)
-Curated security tooling and upstream-project catalog with provenance, lifecycle state, provider mapping, and automated health verification.
+Curated security tooling and upstream-project intelligence with provenance, lifecycle state, provider mapping, and automated health verification.
+
+[`CATALOG`](CATALOG.md) · [`PROVIDERS`](PROVIDERS.md) · [`LAST VERIFIED`](LAST-VERIFIED.md)
+
+<sub>Other build surface: [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)</sub>
 
 ## Radar / signal fusion
 
@@ -37,9 +31,9 @@ Curated security tooling and upstream-project catalog with provenance, lifecycle
   <img src="assets/threat-radar.svg" alt="Slow cyan cobalt threat radar and signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
 </p>
 
-## Signal stack
+## Working set
 
-| Function | Working set |
+| Function | Stack |
 | --- | --- |
 | Hunt / Detect | Microsoft Defender XDR · Microsoft Sentinel · KQL · MITRE ATT&CK |
 | Endpoint / Identity | process · network · file · authentication telemetry |
@@ -47,18 +41,18 @@ Curated security tooling and upstream-project catalog with provenance, lifecycle
 | Analysis | malware triage · reverse engineering · behavioral extraction · lineage |
 | Build | Python · PowerShell · Bash · GitHub Actions · REST APIs |
 
-## Operating model
+## Operator doctrine
 
 ```text
 HYPOTHESIS → TELEMETRY → QUERY → EVIDENCE → TUNING
 SOURCE     → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
+
+BEHAVIOR > INDICATOR
+EVIDENCE > ASSUMPTION
+SIGNAL   > NOISE
 ```
 
-- Behavior over indicator worship.
-- Evidence separated from inference.
-- Telemetry assumptions stated before conclusions.
-- Provenance preserved through enrichment.
-- Detection output optimized for analyst use, not query-golf aesthetics.
+Queries should state the telemetry assumptions that make them meaningful. IOC matches are leads, not conclusions. Detection output should be useful to the analyst who has to investigate it.
 
 ## Credentials
 
@@ -71,18 +65,12 @@ SOURCE     → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
 </p>
 <p align="center"><sub>CompTIA CySA+ · INE eCTHP · TryHackMe SAL2</sub></p>
 
-## Intelligence catalog
+## Intelligence fabric
 
-[`CATALOG.md`](CATALOG.md) · [`repos.yaml`](catalog/repos.yaml) · [`PROVIDERS.md`](PROVIDERS.md) · [`providers.yaml`](catalog/providers.yaml) · [`LAST-VERIFIED.md`](LAST-VERIFIED.md) · [`SECURITY-REPOS.md`](SECURITY-REPOS.md) · [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) · [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md)
-
-## Rules of engagement
+[`repos.yaml`](catalog/repos.yaml) · [`providers.yaml`](catalog/providers.yaml) · [`SECURITY-REPOS.md`](SECURITY-REPOS.md) · [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) · [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md)
 
 ```text
 DETECTION WITHOUT TELEMETRY     = A WISH
 INTELLIGENCE WITHOUT PROVENANCE = A RUMOR
 AUTOMATION WITHOUT CONTEXT      = FASTER WRONGNESS
 ```
-
-## Exit nodes
-
-[`THREAT HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md)
