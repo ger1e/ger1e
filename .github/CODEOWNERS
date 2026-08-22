@@ -1,0 +1,20 @@
+# Public profile repository ownership
+* @ger1e
+
+# Profile surface and visual identity
+/README.md @ger1e
+/assets/ @ger1e
+
+# Security catalog and provider registry
+/catalog/ @ger1e
+/CATALOG.md @ger1e
+/PROVIDERS.md @ger1e
+/LAST-VERIFIED.md @ger1e
+/SECURITY-REPOS.md @ger1e
+/SOC-MANUAL-REPOS.md @ger1e
+/API-TOOLS-REPOS.md @ger1e
+
+# Automation and policy
+/.github/ @ger1e
+/tools/ @ger1e
+/SECURITY.md @ger1e
