@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner.svg" alt="GER1E — cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
+  <img src="assets/profile-banner-v2.svg" alt="GER1E — dense slow cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
 </p>
 
 <p align="center"><code>ム乇 尺1乇 // SIGNAL NODE</code></p>
