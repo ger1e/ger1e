@@ -33,6 +33,8 @@ RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
 
 **[`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)** — sanitized Microsoft Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis, tuning guidance and CTI normalization.
 
+[`HUNTING METHODOLOGY`](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [`CTI NORMALIZATION`](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [`CONTRIBUTION CONTRACT`](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)
+
 **[`security intelligence catalog`](CATALOG.md)** — curated security tooling and upstream-project intelligence with provenance, lifecycle state, provider mapping and automated health verification.
 
 [`CATALOG`](CATALOG.md) · [`PROVIDERS`](PROVIDERS.md) · [`LAST VERIFIED`](LAST-VERIFIED.md)
