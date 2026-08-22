@@ -31,9 +31,7 @@ RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
 
 ### `02` PUBLIC SIGNAL
 
-**[`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)** — sanitized Microsoft Defender XDR / Sentinel hunting work built around falsifiable hypotheses, telemetry requirements, ATT&CK context, false-positive analysis, tuning guidance and CTI normalization.
-
-[`device-code follow-on`](https://github.com/ger1e/threat-hunting-lab/blob/main/hunts/device-code-follow-on.kql) · [`rare outbound beaconing`](https://github.com/ger1e/threat-hunting-lab/blob/main/hunts/rare-outbound-beaconing.kql) · [`encoded PowerShell`](https://github.com/ger1e/threat-hunting-lab/blob/main/hunts/suspicious-powershell-encoded-command.kql)
+**[`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)** — sanitized Microsoft Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis, tuning guidance and CTI normalization.
 
 **[`security intelligence catalog`](CATALOG.md)** — curated security tooling and upstream-project intelligence with provenance, lifecycle state, provider mapping and automated health verification.
 
@@ -47,10 +45,11 @@ RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
 
 | Track | Investigation focus |
 | --- | --- |
-| **Identity & cloud abuse** | OAuth device-code phishing · AiTM · Conditional Access anomalies · mailbox / privileged-account misuse |
-| **Endpoint intrusion** | delivery · browser activity · script execution · PowerShell · persistence · outbound C2 |
-| **Threat exposure** | exploited CVEs · leaked credentials · ransomware access chains · malicious infrastructure |
-| **Detection enablement** | CTI / TTP translation · KQL hunts · coverage awareness · false-positive control |
+| **Identity & cloud abuse** | OAuth / AiTM / device-code abuse · Conditional Access anomalies · mailbox / privileged-account misuse |
+| **Endpoint intrusion** | delivery · browser activity · script execution · LOLBins · RMM · persistence · credential access · outbound C2 |
+| **Threat intelligence** | ransomware · APT · infostealers · exploited CVEs · adversary infrastructure · supply-chain exposure |
+| **Detection enablement** | CTI / TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive control |
+| **Incident response** | attack-path reconstruction · scoping · evidence correlation · confidence / limitations · remediation |
 
 ### `04` TECHNOLOGY & METHODS
 
