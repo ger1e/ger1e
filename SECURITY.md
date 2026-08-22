@@ -1,13 +1,9 @@
 # Security policy
 
-This repository is a public profile, security-reference catalog, and sanitized research lab. It contains no credentials, customer telemetry, proprietary incident data, private infrastructure, or exploit targets.
+This profile repository is public. It contains profile assets, public documentation, curated security references, and supporting catalog data. It must not contain credentials, API keys, customer data, private infrastructure, unpublished incident evidence, or other sensitive production material.
 
-## Reporting
+If you find a secret, sensitive identifier, unsafe artifact, or unintended private information in this repository, do not reproduce it in a public issue. Report the affected path and minimum identifying context through GitHub's private vulnerability reporting channel when available.
 
-For a security issue in code or automation maintained in this repository, use GitHub's private vulnerability reporting feature when available. Do not open a public issue containing secrets, live credentials, private indicators, or sensitive infrastructure details.
+For broken links, catalog metadata errors, documentation issues, or ordinary content corrections that contain no sensitive material, a public issue or pull request is appropriate.
 
-## Repository handling
-
-Links in the catalog point to third-party security projects. Treat repositories containing malware, exploit code, offensive tooling, credential tooling, or vulnerable labs as hostile or dual-use input. Validate provenance, signatures, licenses, dependencies, and current maintenance before use.
-
-No entry in the catalog is an endorsement or a statement that a repository is safe for production deployment.
+External repositories and providers listed in the catalog are references, not endorsements. Validate software, licenses, provenance, maintenance state, and operational risk before use.
