@@ -61,7 +61,7 @@ RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
 | Surface | Working set |
 | --- | --- |
 | **Microsoft security** | Sentinel · Defender XDR Advanced Hunting · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · Azure Data Explorer · Microsoft 365 security telemetry · Safe Links |
-| **CTI / OSINT** | IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · SOCRadar · LevelBlue OTX · **Maltego** · STIX/TAXII · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · TLS/certificate pivots · ASN/BGP enrichment |
+| **CTI / OSINT** | IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · SOCRadar · LevelBlue OTX · Maltego · STIX/TAXII · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · TLS/certificate pivots · ASN/BGP enrichment |
 | **Detection / investigation** | KQL · PowerShell · regex · YARA/Sigma interpretation · analytics rules · watchlists · workbooks · Wireshark/PCAP · sandbox analysis |
 | **Frameworks** | MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF |
 | **Prior / adjacent** | Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic Stack · Kibana · Lucene · Elasticsearch Query DSL · Tenable · Qualys · AWS · Linux · Windows · macOS |
