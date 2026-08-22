@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner.svg" alt="GER1E — Matrix signal banner for threat hunting, CTI and detection engineering" width="100%">
+  <img src="assets/profile-banner.svg" alt="GER1E — cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
 </p>
 
 <p align="center"><code>ム乇 尺1乇 // SIGNAL NODE</code></p>
@@ -26,7 +26,7 @@ I hunt attacker behavior, correlate threat intelligence, and turn evidence into 
 Sanitized Microsoft Defender XDR / Sentinel hunting examples with explicit hypotheses, telemetry requirements, ATT&CK context, false-positive analysis, tuning guidance, and CTI normalization.
 
 ### [`personal-site-lp`](https://github.com/ger1e/personal-site-lp)
-Personal landing page for [`gergoilly.hu`](https://gergoilly.hu/): custom front-end, responsive behavior, metadata, accessibility work, and production hardening.
+Personal landing page: custom front-end, responsive behavior, metadata, accessibility work, and production hardening.
 
 ### [`security intelligence catalog`](CATALOG.md)
 Curated security tooling and upstream-project catalog with provenance, lifecycle state, provider mapping, and automated health verification.
@@ -80,4 +80,4 @@ AUTOMATION WITHOUT CONTEXT      = FASTER WRONGNESS
 
 ## Exit nodes
 
-[`THREAT HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md)
+[`THREAT HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md)
