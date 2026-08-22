@@ -31,8 +31,10 @@ Personal landing page: custom front-end, responsive behavior, metadata, accessib
 ### [`security intelligence catalog`](CATALOG.md)
 Curated security tooling and upstream-project catalog with provenance, lifecycle state, provider mapping, and automated health verification.
 
+## Radar / signal fusion
+
 <p align="center">
-  <img src="assets/signal-map.svg" alt="Threat hunting signal map from behavior and telemetry through CTI correlation to analyst-grade detections" width="100%">
+  <img src="assets/threat-radar.svg" alt="Slow cyan cobalt threat radar and signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
 </p>
 
 ## Signal stack
@@ -67,6 +69,7 @@ SOURCE     → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
   &nbsp;&nbsp;
   <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="140"></a>
 </p>
+<p align="center"><sub>CompTIA CySA+ · INE eCTHP · TryHackMe SAL2</sub></p>
 
 ## Intelligence catalog
 
