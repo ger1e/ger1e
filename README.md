@@ -80,4 +80,4 @@ AUTOMATION WITHOUT CONTEXT      = FASTER WRONGNESS
 
 ## Exit nodes
 
-[`THREAT HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md) · [`EXPERIMENTS`](https://github.com/ger1e/landing-pages)
+[`THREAT HUNTING LAB`](https://github.com/ger1e/threat-hunting-lab) · [`PERSONAL SITE`](https://gergoilly.hu/) · [`SECURITY CATALOG`](CATALOG.md) · [`PROVIDER REGISTRY`](PROVIDERS.md)
