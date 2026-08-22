@@ -5,6 +5,10 @@
 <p align="center"><code>ム乇 尺1乇 // SIGNAL NODE</code></p>
 <p align="center"><strong>THREAT HUNTING × CTI × DETECTION ENGINEERING</strong></p>
 
+<p align="center">
+  <img src="assets/signal-strip.svg" alt="GER1E public operating signal" width="100%">
+</p>
+
 ```text
 ┌──[ GER1E // ONLINE ]
 │
@@ -26,6 +30,10 @@ Personal landing page for [`gergoilly.hu`](https://gergoilly.hu/): custom front-
 
 ### [`security intelligence catalog`](CATALOG.md)
 Curated security tooling and upstream-project catalog with provenance, lifecycle state, provider mapping, and automated health verification.
+
+<p align="center">
+  <img src="assets/signal-map.svg" alt="Threat hunting signal map from behavior and telemetry through CTI correlation to analyst-grade detections" width="100%">
+</p>
 
 ## Signal stack
 
