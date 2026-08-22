@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Validate public profile surface
         shell: bash
@@ -49,10 +49,15 @@ jobs:
             fi
           done
 
-          if grep -Fqi 'gergoilly.hu' README.md; then
-            echo '::error file=README.md::Public profile README must not contain the personal domain.'
+          grep -Fq 'https://gergoilly.hu/' README.md || {
+            echo '::error file=README.md::Profile must link the canonical personal site.'
             exit 1
-          fi
+          }
+
+          grep -Fq 'ger1e/personal-site-lp' README.md || {
+            echo '::error file=README.md::Canonical personal-site source must remain part of the public signal.'
+            exit 1
+          }
 
           if grep -Fq '/hunts/' README.md; then
             echo '::error file=README.md::Do not promote individual example hunts in the profile hierarchy.'
