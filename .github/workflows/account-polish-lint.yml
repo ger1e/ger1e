@@ -1,26 +1,97 @@
-name: account-polish-lint
+name: profile-quality-gates
 
 on:
   pull_request:
     paths:
-      - tools/pimp-github.ps1
-      - .github/workflows/account-polish-lint.yml
+      - README.md
+      - 'assets/**'
+      - '.github/CODEOWNERS'
+      - 'tools/pimp-github.ps1'
+      - '.github/workflows/account-polish-lint.yml'
   push:
     branches: [main]
     paths:
-      - tools/pimp-github.ps1
-      - .github/workflows/account-polish-lint.yml
+      - README.md
+      - 'assets/**'
+      - '.github/CODEOWNERS'
+      - 'tools/pimp-github.ps1'
+      - '.github/workflows/account-polish-lint.yml'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  syntax:
+  validate:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v7
+
+      - name: Validate public profile surface
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required=(
+            'README.md'
+            'assets/profile-banner-v2.svg'
+            'assets/signal-strip.svg'
+            'assets/operator-console.svg'
+            'assets/threat-radar.svg'
+            '.github/CODEOWNERS'
+          )
+
+          for file in "${required[@]}"; do
+            if [[ ! -s "$file" ]]; then
+              echo "::error file=$file::Required public-profile asset is missing or empty."
+              exit 1
+            fi
+          done
+
+          if grep -Fqi 'gergoilly.hu' README.md; then
+            echo '::error file=README.md::Public profile README must not contain the personal domain.'
+            exit 1
+          fi
+
+          if grep -Fq '/hunts/' README.md; then
+            echo '::error file=README.md::Do not promote individual example hunts in the profile hierarchy.'
+            exit 1
+          fi
+
+          grep -Fq 'threat-hunting-lab' README.md || {
+            echo '::error file=README.md::Threat-hunting lab must remain part of the public signal.'
+            exit 1
+          }
+
+          grep -Fq 'HUNTING-METHODOLOGY.md' README.md || {
+            echo '::error file=README.md::Profile must link the public hunting methodology.'
+            exit 1
+          }
+
+          grep -Fq 'CTI-NORMALIZATION.md' README.md || {
+            echo '::error file=README.md::Profile must link the public CTI normalization model.'
+            exit 1
+          }
+
+          echo 'Profile content contract: PASS'
+
+      - name: Validate SVG assets
+        shell: python
+        run: |
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          files = [
+              Path('assets/profile-banner-v2.svg'),
+              Path('assets/signal-strip.svg'),
+              Path('assets/operator-console.svg'),
+              Path('assets/threat-radar.svg'),
+          ]
+          for path in files:
+              ET.parse(path)
+              print(f'{path}: XML PASS')
+
       - name: Parse PowerShell without executing account writes
         shell: pwsh
         run: |
