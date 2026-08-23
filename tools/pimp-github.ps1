@@ -40,10 +40,7 @@ function Test-RepoArchived([string]$Repository) {
 function Set-Topics([string]$Repository, [string[]]$Topics) {
     $payload = @{ names = $Topics } | ConvertTo-Json -Compress
     Invoke-Checked "replace topics on $Repository -> $($Topics -join ', ')" {
-        $payload | gh api --method PUT \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2026-03-10' \
-            "repos/$Repository/topics" --input - | Out-Null
+        $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository/topics" --input - | Out-Null
     }
 }
 
@@ -54,9 +51,7 @@ function Set-Repo([string]$Repository, [string]$Description, [string]$Homepage, 
     }
 
     Invoke-Checked "set metadata on $Repository" {
-        $args = @('repo','edit',$Repository,'--description',$Description)
-        if ($Homepage) { $args += @('--homepage',$Homepage) }
-        & gh @args
+        & gh repo edit $Repository --description $Description --homepage $Homepage
     }
     Set-Topics $Repository $Topics
 }
@@ -74,21 +69,18 @@ function Archive-Repo([string]$Repository) {
 
 function Set-RepositoryPolicy([string]$Repository) {
     $payload = @{
-        allow_squash_merge    = $true
-        allow_merge_commit    = $false
-        allow_rebase_merge    = $false
-        allow_auto_merge      = $true
+        allow_squash_merge     = $true
+        allow_merge_commit     = $false
+        allow_rebase_merge     = $false
+        allow_auto_merge       = $true
         delete_branch_on_merge = $true
-        allow_update_branch   = $true
-        has_wiki              = $false
-        has_projects          = $false
+        allow_update_branch    = $true
+        has_wiki               = $false
+        has_projects           = $false
     } | ConvertTo-Json -Compress
 
     Invoke-Checked "normalize merge/features policy on $Repository" {
-        $payload | gh api --method PATCH \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2026-03-10' \
-            "repos/$Repository" --input - | Out-Null
+        $payload | gh api --method PATCH -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository" --input - | Out-Null
     }
 }
 
@@ -99,10 +91,7 @@ function Set-WorkflowPolicy([string]$Repository, [bool]$AllowPullRequestAutomati
     } | ConvertTo-Json -Compress
 
     Invoke-Checked "set least-privilege Actions defaults on $Repository" {
-        $payload | gh api --method PUT \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2026-03-10' \
-            "repos/$Repository/actions/permissions/workflow" --input - | Out-Null
+        $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository/actions/permissions/workflow" --input - | Out-Null
     }
 }
 
@@ -130,10 +119,7 @@ function Set-BranchProtection([string]$Repository, [string[]]$Contexts) {
     } | ConvertTo-Json -Depth 6 -Compress
 
     Invoke-Checked "protect $Repository/main -> $($Contexts -join ', ')" {
-        $payload | gh api --method PUT \
-            -H 'Accept: application/vnd.github+json' \
-            -H 'X-GitHub-Api-Version: 2026-03-10' \
-            "repos/$Repository/branches/main/protection" --input - | Out-Null
+        $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository/branches/main/protection" --input - | Out-Null
     }
 }
 
