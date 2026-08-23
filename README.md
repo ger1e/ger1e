@@ -20,15 +20,15 @@
   <img src="assets/operator-console-v8.svg" alt="Public cobalt operator console showing experience, investigation surfaces, operating model and core stack" width="100%">
 </p>
 
-Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operations and incident response. I turn threat intelligence and behavioral hypotheses into bounded hunts, evidence-backed detections, attack-path reconstruction and remediation decisions across identity, email, endpoint, cloud and network telemetry.
+Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operations and incident response. I translate threat intelligence and behavioral hypotheses into falsifiable hunts, evidence-backed detections, attack-path reconstruction and defensible remediation decisions across identity, email, endpoint, cloud and network telemetry.
 
 <strong>HUNT</strong> — intelligence-led · behavioral · retrospective  
-<strong>OUTPUT</strong> — hunts · detections · scoping · hardening  
-<strong>STANDARD</strong> — telemetry first · provenance preserved · inference labeled
+<strong>OUTPUT</strong> — hunts · detections · scoping · remediation  
+<strong>STANDARD</strong> — telemetry first · provenance preserved · inference explicit
 
 <p><strong>02 // PUBLIC SIGNAL</strong></p>
 
-**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway built around fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures and fail-closed egress.
+**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway using fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures and fail-closed egress.
 
 [ARCHITECTURE](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/cti-enrichment-gateway/blob/main/SECURITY.md)
 
@@ -51,13 +51,13 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 </details>
 
-**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
+**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting work built around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
 
 [HUNTING METHODOLOGY](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [CTI NORMALIZATION](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [CONTRIBUTION CONTRACT](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)
 
-**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): static-first, restrictive browser policy, custom HTTP error handling, accessibility/reduced-motion support and privacy-conscious telemetry.
+**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): static-first, restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
 
-**[security intelligence catalog](CATALOG.md)** — curated security tooling and upstream-project intelligence with provenance, lifecycle state, provider mapping and automated health verification.
+**[security intelligence catalog](CATALOG.md)** — curated index of security tooling and upstream projects with provenance, lifecycle state, provider mapping and automated health checks.
 
 [CATALOG](CATALOG.md) · [PROVIDERS](PROVIDERS.md) · [LAST VERIFIED](LAST-VERIFIED.md)
 
@@ -73,23 +73,23 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **ENDPOINT** — delivery and execution · LOLBins and RMM · persistence · credential access · outbound C2.
 
-**THREAT INTELLIGENCE** — ransomware · APTs · infostealers · exploited CVEs · adversary infrastructure · supply-chain exposure.
+**INTELLIGENCE** — ransomware · APTs · infostealers · exploited CVEs · adversary infrastructure · supply-chain exposure.
 
-**DETECTION ENABLEMENT** — CTI/TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive control.
+**DETECTION ENABLEMENT** — CTI/TTP translation · KQL hunts · telemetry readiness · coverage analysis · false-positive control.
 
 **INCIDENT RESPONSE** — attack-path reconstruction · scoping · evidence correlation · confidence and limitations · remediation.
 
 <p><strong>04 // TECHNOLOGY & METHODS</strong></p>
 
-**PRIMARY SECURITY STACK** — Microsoft Sentinel · Defender XDR · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · KQL.
+**PRIMARY STACK** — Microsoft Sentinel · Defender XDR · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · KQL.
 
-**INTELLIGENCE** — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · SOCRadar · LevelBlue OTX · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · TLS/certificate/ASN pivots.
+**INTELLIGENCE** — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · certificate/ASN pivots.
 
-**DETECTION / INVESTIGATION** — PowerShell · regex · YARA/Sigma interpretation · analytics rules · workbooks · Wireshark/PCAP · sandbox analysis.
+**DETECTION / INVESTIGATION** — PowerShell · regex · YARA/Sigma · analytics rules · workbooks · Wireshark/PCAP · sandbox analysis.
 
 **FRAMEWORKS** — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.
 
-**ADJACENT** — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic · Tenable · Qualys · AWS · Linux · Windows · macOS.
+**ADJACENT EXPERIENCE** — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic · Tenable · Qualys · AWS · Linux · Windows · macOS.
 
 <p align="center"><img src="assets/signal-divider-v7.svg" alt="" width="100%"></p>
 
@@ -101,9 +101,10 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
   <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="112"></a>
 </p>
 
-**Selected credentials:** INE eCTHP · TryHackMe SAL2 · INE ICCA · CompTIA CySA+ · MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.
+**Core credentials:** INE eCTHP · CompTIA CySA+ · TryHackMe SAL2 · INE ICCA.  
+**Additional:** MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.
 
-**Recognition:** TryHackMe SAL2 Founding Operator · IBM Mentor · Credly Top Badge Earner · TryHackMe Top 1%.
+**Recognition:** TryHackMe SAL2 Founding Operator · TryHackMe Top 1% · IBM Mentor · Credly Top Badge Earner.
 
 <p><strong>06 // CAREER VECTOR</strong></p>
 
@@ -115,7 +116,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 <p><strong>07 // INTELLIGENCE FABRIC</strong></p>
 
-[REPO CATALOG](catalog/repos.yaml) · [PROVIDER MAP](catalog/providers.yaml) · [SECURITY REPOS](SECURITY-REPOS.md) · [SOC MANUAL REPOS](SOC-MANUAL-REPOS.md) · [API TOOL REPOS](API-TOOLS-REPOS.md)
+[REPO CATALOG](catalog/repos.yaml) · [PROVIDER MAP](catalog/providers.yaml) · [SECURITY REPOS](SECURITY-REPOS.md) · [SOC MANUAL](SOC-MANUAL-REPOS.md) · [API TOOL REPOS](API-TOOLS-REPOS.md)
 
 <strong>HYPOTHESIS</strong> → TELEMETRY → QUERY → EVIDENCE → TUNING  
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
