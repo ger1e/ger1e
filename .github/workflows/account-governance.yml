@@ -1,0 +1,79 @@
+name: account-governance
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Preview only; do not change repository settings'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  govern:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout profile control plane
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Validate account admin token
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ secrets.ACCOUNT_ADMIN_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$GH_TOKEN" ]; then
+            echo '::error::Repository secret ACCOUNT_ADMIN_TOKEN is missing. Use a fine-grained PAT with Administration: write for the selected portfolio repositories.'
+            exit 1
+          fi
+          test "$(gh api user --jq .login)" = 'ger1e'
+
+      - name: Preview MAXX account governance
+        if: ${{ inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          ./tools/pimp-github.ps1 -DryRun -FollowRelevantProfiles:$false
+
+      - name: Apply MAXX account governance
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ secrets.ACCOUNT_ADMIN_TOKEN }}
+        shell: pwsh
+        run: |
+          ./tools/pimp-github.ps1 -FollowRelevantProfiles:$false
+
+      - name: Enable repository security surfaces
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ secrets.ACCOUNT_ADMIN_TOKEN }}
+        run: |
+          set -euo pipefail
+          repos=(
+            ger1e/ger1e
+            ger1e/cti-enrichment-gateway
+            ger1e/personal-site-lp
+            ger1e/threat-hunting-lab
+          )
+          for repo in "${repos[@]}"; do
+            echo "Hardening $repo"
+            gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$repo/vulnerability-alerts" >/dev/null
+            gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$repo/automated-security-fixes" >/dev/null
+            gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$repo/private-vulnerability-reporting" >/dev/null
+          done
+
+      - name: Read back portfolio state
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ secrets.ACCOUNT_ADMIN_TOKEN }}
+        run: |
+          set -euo pipefail
+          for repo in ger1e/ger1e ger1e/cti-enrichment-gateway ger1e/personal-site-lp ger1e/threat-hunting-lab ger1e/landing-pages ger1e/godot ger1e/learning-bash-scripting-3212393; do
+            gh api -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$repo" --jq '{repo:.full_name,archived,visibility,allow_merge_commit,allow_rebase_merge,allow_squash_merge,allow_auto_merge,allow_update_branch,delete_branch_on_merge}'
+          done
