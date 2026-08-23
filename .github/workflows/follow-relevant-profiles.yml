@@ -1,0 +1,40 @@
+name: follow-relevant-profiles
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Preview only; do not follow accounts'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  follow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+
+      - name: Validate follow token
+        if: ${{ !inputs.dry_run }}
+        env:
+          FOLLOW_TOKEN: ${{ secrets.FOLLOW_TOKEN }}
+        run: |
+          if [ -z "$FOLLOW_TOKEN" ]; then
+            echo '::error::Repository secret FOLLOW_TOKEN is missing. Add a fine-grained PAT with Followers: write, or a classic PAT with user:follow.'
+            exit 1
+          fi
+
+      - name: Preview relevant profiles
+        if: ${{ inputs.dry_run }}
+        run: python3 tools/follow_relevant_profiles.py --dry-run
+
+      - name: Follow relevant profiles
+        if: ${{ !inputs.dry_run }}
+        env:
+          FOLLOW_TOKEN: ${{ secrets.FOLLOW_TOKEN }}
+        run: python3 tools/follow_relevant_profiles.py
