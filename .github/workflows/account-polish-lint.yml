@@ -2,12 +2,6 @@ name: profile-quality-gates
 
 on:
   pull_request:
-    paths:
-      - README.md
-      - 'assets/**'
-      - '.github/CODEOWNERS'
-      - '.github/workflows/**'
-      - 'tools/pimp-github.ps1'
   push:
     branches: [main]
     paths:
