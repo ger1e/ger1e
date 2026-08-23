@@ -9,6 +9,7 @@
   <a href="https://gergoilly.hu/">WEBSITE</a> ·
   <a href="https://www.linkedin.com/in/gergoilly">LINKEDIN</a> ·
   <a href="https://www.credly.com/users/gergoilly">CREDLY</a> ·
+  <a href="https://github.com/ger1e/cti-enrichment-gateway">CTI GATEWAY</a> ·
   <a href="https://github.com/ger1e/threat-hunting-lab">THREAT HUNTING LAB</a>
 </p>
 
@@ -31,6 +32,10 @@ RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
 ```
 
 ### `02` PUBLIC SIGNAL
+
+**[`cti-enrichment-gateway`](https://github.com/ger1e/cti-enrichment-gateway)** — bounded read-only CTI enrichment gateway with fixed provider workflows, evidence-v2 provenance, typed correlation, STIX 2.1 export, Maltego transforms, deterministic offline reporting, explicit coverage failures and a fail-closed egress/security model.
+
+[`ARCHITECTURE`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/ARCHITECTURE.md) · [`THREAT MODEL`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/THREAT-MODEL.md) · [`PROVIDERS`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/PROVIDERS.md) · [`SECURITY`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/SECURITY.md)
 
 **[`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)** — sanitized Microsoft Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis, tuning guidance and CTI normalization.
 
