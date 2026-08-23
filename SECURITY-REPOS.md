@@ -267,6 +267,40 @@ These remain worth knowing but should not be mistaken for the preferred current 
 - [michenriksen/aquatone](https://github.com/michenriksen/aquatone) — archived attack-surface visual reconnaissance tool.
 - [twintproject/twint](https://github.com/twintproject/twint) — archived Twitter/X OSINT project.
 
+## SOC Analyst Field Guide source set
+
+The following repositories were extracted from embedded GitHub links in `SOC_Analyst_Field_Guide_IBM_FutureNow_ULTIMATE_FINAL_PRO_MASTER_v15_LOGO_TRULY_UNIFORM.pdf`. The source contained 18 unique repository roots. Three were already present elsewhere in this atlas (`Azure/Azure-Sentinel`, `SigmaHQ/sigma`, and `cyb3rmik3/KQL-threat-hunting-queries`); the 15 additional roots are consolidated here without duplication.
+
+### Microsoft / KQL / hunting
+
+- [SlimKQL/Hunting-Queries-Detection-Rules](https://github.com/SlimKQL/Hunting-Queries-Detection-Rules) — Sentinel/Defender hunting and detection content referenced by the field guide.
+- [SlimKQL/Detections.AI](https://github.com/SlimKQL/Detections.AI) — KQL detection collection referenced by the field guide.
+- [GossiTheDog/ThreatHunting](https://github.com/GossiTheDog/ThreatHunting) — Defender Advanced Hunting examples.
+- [FalconForceTeam/FalconFriday](https://github.com/FalconForceTeam/FalconFriday) — behavior-oriented Microsoft Defender hunting content.
+- [reprise99/Sentinel-Queries](https://github.com/reprise99/Sentinel-Queries) — Sentinel query reference.
+- [microsoft/Microsoft-365-Defender-Hunting-Queries](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries) — Microsoft Defender hunting-query collection.
+
+### Detection engineering / cross-vendor
+
+- [elastic/detection-rules](https://github.com/elastic/detection-rules) — Elastic detection rules.
+- [splunk/security_content](https://github.com/splunk/security_content) — Splunk Security Content.
+- [THORCollective/HEARTH](https://github.com/THORCollective/HEARTH) — HEARTH and the PEAK hunting template referenced by the field guide.
+
+### C2 / adversary simulation
+
+- [BishopFox/sliver](https://github.com/BishopFox/sliver) — Sliver C2 framework.
+- [HavocFramework/Havoc](https://github.com/HavocFramework/Havoc) — Havoc C2 framework.
+- [its-a-feature/Mythic](https://github.com/its-a-feature/Mythic) — Mythic C2 framework.
+
+### Identity / attack paths
+
+- [SpecterOps/BloodHound](https://github.com/SpecterOps/BloodHound) — current BloodHound identity and Active Directory attack-path platform.
+- [SpecterOps/SharpHound](https://github.com/SpecterOps/SharpHound) — BloodHound data collection.
+
+### Driver abuse / BYOVD
+
+- [magicsword-io/LOLDrivers](https://github.com/magicsword-io/LOLDrivers) — vulnerable and malicious driver reference data.
+
 ## Handling notes
 
 - Prefer upstream repositories over forks.
