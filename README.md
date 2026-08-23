@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner-v7.svg" alt="GER1E — threat hunting, CTI and incident response signal banner with Matrix rain and John Kiriakou quote" width="100%">
+  <img src="assets/profile-banner-v8.svg" alt="GER1E — threat hunting, CTI, incident response and detection engineering signal banner with Matrix rain and John Kiriakou quote" width="100%">
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
   <img src="assets/operator-console-v9.svg" alt="Public cobalt operator console showing experience, investigation surfaces, operating model and core stack" width="100%">
 </p>
 
-Cyber Threat Hunter with eight years spanning enterprise security, IAM, SOC operations and incident response. I translate threat intelligence and behavioral hypotheses into falsifiable hunts, evidence-backed detections, attack-path reconstruction and defensible remediation guidance across identity, email, endpoint, cloud and network telemetry.
+Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operations and incident response. I turn threat intelligence and behavioral hypotheses into falsifiable hunts, evidence-backed detections, attack-path reconstruction and remediation guidance across identity, email, endpoint, cloud and network telemetry.
 
 <strong>HUNT</strong> — intelligence-led · behavioral · retrospective  
 <strong>OUTPUT</strong> — hunts · detections · scoping · remediation  
@@ -28,7 +28,7 @@ Cyber Threat Hunter with eight years spanning enterprise security, IAM, SOC oper
 
 <p><strong>02 // PUBLIC SIGNAL</strong></p>
 
-**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway with fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures and fail-closed egress.
+**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway with fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures, and fail-closed egress.
 
 [ARCHITECTURE](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/cti-enrichment-gateway/blob/main/SECURITY.md)
 
@@ -77,7 +77,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **DETECTION ENGINEERING** — CTI/TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive tuning.
 
-**INCIDENT RESPONSE** — attack-path reconstruction · scoping · evidence correlation · confidence and limitations · remediation.
+**INCIDENT RESPONSE** — attack-path reconstruction · scoping · evidence correlation · confidence bounds · remediation.
 
 <p><strong>04 // TECHNOLOGY & METHODS</strong></p>
 
@@ -85,7 +85,9 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **INTELLIGENCE** — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · certificate/ASN pivots.
 
-**DETECTION ENGINEERING / INVESTIGATION** — PowerShell · regex · YARA/Sigma · analytics rules · workbooks · Wireshark/PCAP · sandbox analysis.
+**DETECTION ENGINEERING** — KQL · analytics rules · workbooks · YARA/Sigma · PowerShell · regex.
+
+**INVESTIGATION** — Wireshark/PCAP · sandbox analysis · endpoint, identity, email and cloud correlation.
 
 **FRAMEWORKS** — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.
 
