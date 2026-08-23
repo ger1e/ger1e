@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="t d">
+<title id="t">GER1E mobile profile banner</title><desc id="d">Mobile-first cyan cobalt banner for threat hunting, CTI and incident response.</desc>
+<defs><radialGradient id="bg" cx="50%" cy="34%" r="85%"><stop stop-color="#0b2345"/><stop offset=".5" stop-color="#04101f"/><stop offset="1" stop-color="#000207"/></radialGradient><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#78f1ff"/><stop offset="1" stop-color="#2d72ff"/></linearGradient><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#78a9ff" stroke-opacity=".045"/></pattern><filter id="gl"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><style>.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.s{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}</style></defs>
+<rect width="720" height="520" rx="18" fill="url(#bg)"/><rect width="720" height="520" rx="18" fill="url(#grid)"/><rect x="2" y="2" width="716" height="516" rx="18" fill="none" stroke="#58dfff" stroke-opacity=".28"/>
+<g class="m" font-size="18" letter-spacing="2.5" fill="#76a9ce"><text x="34" y="50">NODE://GER1E</text><text x="686" y="50" text-anchor="end">PUBLIC SIGNAL</text></g>
+<path d="M34 72H686" stroke="#45dfff" stroke-opacity=".26"/>
+<g transform="translate(360 175)"><circle r="72" fill="none" stroke="#4fe5ff" stroke-opacity=".18"/><circle r="48" fill="none" stroke="#4fe5ff" stroke-opacity=".25"/><circle r="10" fill="#8ef7ff" filter="url(#gl)"/><path d="M0 0L66 -26" stroke="url(#g)" stroke-width="3" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/></path></g>
+<text x="360" y="294" text-anchor="middle" class="s" font-size="54" font-weight="900" letter-spacing="8" fill="#f2f7ff">GERGŐ ILLY</text>
+<text x="360" y="340" text-anchor="middle" class="m" font-size="23" font-weight="800" letter-spacing="2.4" fill="#7cecff">CYBER THREAT HUNTER</text>
+<text x="360" y="379" text-anchor="middle" class="m" font-size="20" letter-spacing="2" fill="#8daac5">CTI // INCIDENT RESPONSE</text>
+<g class="m" font-size="17" fill="#b9d7ef" text-anchor="middle"><text x="360" y="434">SENTINEL // DEFENDER XDR // ADX // KQL</text><text x="360" y="468" fill="#6ecfff">EVIDENCE FIRST // PROVENANCE PRESERVED</text></g>
+<rect x="34" y="494" width="652" height="3" fill="#1e6fff" opacity=".22"/><rect x="34" y="494" width="150" height="3" fill="url(#g)" filter="url(#gl)"><animate attributeName="x" values="34;536;34" dur="14s" repeatCount="indefinite"/></rect>
+</svg>
