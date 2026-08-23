@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner-v4.svg" alt="GER1E — threat hunting, CTI and incident response signal banner with Matrix rain and John Kiriakou quote" width="100%">
+  <img src="assets/profile-banner-v6.svg" alt="GER1E — threat hunting, CTI and incident response signal banner with Matrix rain and John Kiriakou quote" width="100%">
 </p>
 
 <p align="center">
@@ -11,16 +11,13 @@
 </p>
 
 <p align="center">
-  <img src="assets/signal-strip-mobile.svg" alt="GER1E public operating signal" width="100%">
+  <img src="assets/signal-strip-v6.svg" alt="GER1E public operating signal" width="100%">
 </p>
 
 <p><code>01</code> <strong>OPERATOR PROFILE</strong></p>
 
 <p align="center">
-  <picture>
-    <source media="(min-width: 601px)" srcset="assets/operator-console.svg">
-    <img src="assets/operator-console-mobile.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
-  </picture>
+  <img src="assets/operator-console-v6.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
 </p>
 
 Cyber Threat Hunter with eight years across managed security services, incident response, enterprise IAM and secure cloud platforms. I run intelligence-led, behavioral and retrospective hunts; reconstruct identity, email, endpoint and cloud attack paths; translate external intelligence into hunt and detection candidates; and report evidence, confidence, limitations and remediation.
@@ -67,10 +64,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 <p><code>03</code> <strong>RADAR / INVESTIGATION SURFACE</strong></p>
 
 <p align="center">
-  <picture>
-    <source media="(min-width: 601px)" srcset="assets/threat-radar.svg">
-    <img src="assets/threat-radar-mobile-v2.svg" alt="Slow cyan cobalt threat radar and bounded signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
-  </picture>
+  <img src="assets/threat-radar-v6.svg" alt="Slow cyan cobalt threat radar and bounded signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
 </p>
 
 **IDENTITY + CLOUD** — OAuth, AiTM and device-code abuse; Conditional Access anomalies; mailbox and privileged-account misuse.
