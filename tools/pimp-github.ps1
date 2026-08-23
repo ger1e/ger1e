@@ -5,7 +5,8 @@ param(
     [bool]$ArchiveOldBashTraining = $true,
     [bool]$ArchiveGodot = $true,
     [bool]$ArchiveLandingPages = $true,
-    [bool]$ConfigureGovernance = $true
+    [bool]$ConfigureGovernance = $true,
+    [bool]$FollowRelevantProfiles = $true
 )
 
 $ErrorActionPreference = 'Stop'
@@ -120,6 +121,84 @@ function Set-BranchProtection([string]$Repository, [string[]]$Contexts) {
 
     Invoke-Checked "protect $Repository/main -> $($Contexts -join ', ')" {
         $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository/branches/main/protection" --input - | Out-Null
+    }
+}
+
+function Add-RepositoryOwner([System.Collections.Generic.HashSet[string]]$Owners, [string]$Repository) {
+    if ([string]::IsNullOrWhiteSpace($Repository)) { return }
+    if ($Repository -match '^([^/]+)/[^/]+$') {
+        [void]$Owners.Add($Matches[1])
+    }
+}
+
+function Get-RelevantProfileLogins([string]$Root) {
+    $owners = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+
+    $repoCatalogPath = Join-Path $Root 'catalog/repos.yaml'
+    if (-not (Test-Path $repoCatalogPath)) {
+        throw "Missing repository catalog: $repoCatalogPath"
+    }
+    $repoCatalog = Get-Content -Raw -Path $repoCatalogPath | ConvertFrom-Json
+    foreach ($entry in @($repoCatalog.repositories)) {
+        if ($entry.status -ne 'ACTIVE') { continue }
+        if ($entry.provenance -in @('LEGACY','TRAINING-LAB')) { continue }
+        Add-RepositoryOwner $owners ([string]$entry.repo)
+    }
+
+    $providerCatalogPath = Join-Path $Root 'catalog/providers.yaml'
+    if (Test-Path $providerCatalogPath) {
+        $providerCatalog = Get-Content -Raw -Path $providerCatalogPath | ConvertFrom-Json
+        foreach ($provider in @($providerCatalog.providers)) {
+            foreach ($repo in @($provider.official_repositories)) {
+                Add-RepositoryOwner $owners ([string]$repo)
+            }
+            foreach ($repo in @($provider.community_integrations)) {
+                Add-RepositoryOwner $owners ([string]$repo)
+            }
+        }
+    }
+
+    [void]$owners.Remove('ger1e')
+    return @($owners | Sort-Object)
+}
+
+function Follow-GitHubProfile([string]$Login) {
+    if ($DryRun) {
+        Write-Host "[DRY] follow GitHub profile $Login"
+        return
+    }
+
+    $identity = gh api -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "users/$Login" | ConvertFrom-Json
+    if ($LASTEXITCODE -ne 0) {
+        throw "Failed to resolve GitHub profile $Login"
+    }
+
+    switch ([string]$identity.type) {
+        'User' {
+            Invoke-Checked "follow user $Login" {
+                gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "user/following/$Login" | Out-Null
+            }
+        }
+        'Organization' {
+            $organizationId = [string]$identity.node_id
+            if ([string]::IsNullOrWhiteSpace($organizationId)) {
+                throw "Organization $Login has no GraphQL node ID"
+            }
+            Invoke-Checked "follow organization $Login" {
+                gh api graphql -f query='mutation($id:ID!){followOrganization(input:{organizationId:$id}){organization{login}}}' -F id=$organizationId | Out-Null
+            }
+        }
+        default {
+            Write-Host "[SKIP] unsupported GitHub profile type '$($identity.type)' for $Login"
+        }
+    }
+}
+
+function Follow-RelevantGitHubProfiles([string]$Root) {
+    $targets = @(Get-RelevantProfileLogins $Root)
+    Write-Host "Relevant GitHub profiles selected from canonical catalogs: $($targets.Count)"
+    foreach ($login in $targets) {
+        Follow-GitHubProfile $login
     }
 }
 
@@ -248,8 +327,13 @@ if ($ConfigureGovernance) {
     Set-BranchProtection 'ger1e/threat-hunting-lab' @('validate')
 }
 
+if ($FollowRelevantProfiles) {
+    Follow-RelevantGitHubProfiles $root
+}
+
 Write-Host ''
 Write-Host 'MAXX GitHub account finalization complete.'
 Write-Host 'Recommended profile pins: cti-enrichment-gateway, threat-hunting-lab, personal-site-lp, ger1e.'
+Write-Host 'Relevant GitHub profiles are derived from active canonical catalog entries and provider integration repositories.'
 Write-Host 'Legacy repositories should remain archived and unpinned.'
 Write-Host 'Profile: https://github.com/ger1e'
