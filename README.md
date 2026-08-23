@@ -17,7 +17,7 @@
 <p><strong>01 // OPERATOR PROFILE</strong></p>
 
 <p align="center">
-  <img src="assets/operator-console-v8.svg" alt="Public cobalt operator console showing experience, investigation surfaces, operating model and core stack" width="100%">
+  <img src="assets/operator-console-v9.svg" alt="Public cobalt operator console showing experience, investigation surfaces, operating model and core stack" width="100%">
 </p>
 
 Cyber Threat Hunter with eight years spanning enterprise security, IAM, SOC operations and incident response. I translate threat intelligence and behavioral hypotheses into falsifiable hunts, evidence-backed detections, attack-path reconstruction and defensible remediation guidance across identity, email, endpoint, cloud and network telemetry.
@@ -66,7 +66,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 <p><strong>03 // RADAR / INVESTIGATION SURFACE</strong></p>
 
 <p align="center">
-  <img src="assets/threat-radar-v6.svg" alt="Slow cyan cobalt threat radar and bounded signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
+  <img src="assets/threat-radar-v7.svg" alt="Slow cyan cobalt threat radar and bounded signal-fusion path from telemetry and CTI to hunting and detection engineering" width="100%">
 </p>
 
 **IDENTITY + CLOUD** — OAuth, AiTM and device-code abuse · Conditional Access anomalies · mailbox and privileged-account misuse.
@@ -75,7 +75,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **INTELLIGENCE** — ransomware · APTs · infostealers · exploited CVEs · adversary infrastructure · supply-chain exposure.
 
-**DETECTION ENABLEMENT** — CTI/TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive tuning.
+**DETECTION ENGINEERING** — CTI/TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive tuning.
 
 **INCIDENT RESPONSE** — attack-path reconstruction · scoping · evidence correlation · confidence and limitations · remediation.
 
@@ -85,7 +85,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **INTELLIGENCE** — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · certificate/ASN pivots.
 
-**DETECTION / INVESTIGATION** — PowerShell · regex · YARA/Sigma · analytics rules · workbooks · Wireshark/PCAP · sandbox analysis.
+**DETECTION ENGINEERING / INVESTIGATION** — PowerShell · regex · YARA/Sigma · analytics rules · workbooks · Wireshark/PCAP · sandbox analysis.
 
 **FRAMEWORKS** — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.
 
@@ -122,5 +122,5 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
 
 <p align="center">
-  <img src="assets/footer-terminal-v7.svg" alt="Detection without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Ad Astra Per Aspera." width="100%">
+  <img src="assets/footer-terminal-v8.svg" alt="Detection engineering without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Ad Astra Per Aspera." width="100%">
 </p>
