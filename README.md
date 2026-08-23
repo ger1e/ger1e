@@ -116,7 +116,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 <p><strong>07 // INTELLIGENCE FABRIC</strong></p>
 
-[REPO CATALOG](catalog/repos.yaml) · [PROVIDER MAP](catalog/providers.yaml) · [SECURITY REPOS](SECURITY-REPOS.md) · [SOC MANUAL](SOC-MANUAL-REPOS.md) · [API TOOL REPOS](API-TOOLS-REPOS.md)
+[REPO CATALOG](catalog/repos.yaml) · [PROVIDER MAP](catalog/providers.yaml) · [SECURITY REPOS](SECURITY-REPOS.md) · [API TOOL REPOS](API-TOOLS-REPOS.md)
 
 <strong>HYPOTHESIS</strong> → TELEMETRY → QUERY → EVIDENCE → TUNING  
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
