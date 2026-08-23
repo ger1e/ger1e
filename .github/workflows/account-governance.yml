@@ -75,5 +75,5 @@ jobs:
         run: |
           set -euo pipefail
           for repo in ger1e/ger1e ger1e/cti-enrichment-gateway ger1e/personal-site-lp ger1e/threat-hunting-lab ger1e/landing-pages ger1e/godot ger1e/learning-bash-scripting-3212393; do
-            gh repo view "$repo" --json nameWithOwner,isArchived,visibility,mergeCommitAllowed,rebaseMergeAllowed,squashMergeAllowed,deleteBranchOnMerge --jq '{repo:.nameWithOwner,archived:.isArchived,visibility,merge:.mergeCommitAllowed,rebase:.rebaseMergeAllowed,squash:.squashMergeAllowed,deleteBranchOnMerge}'
+            gh api -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$repo" --jq '{repo:.full_name,archived,visibility,allow_merge_commit,allow_rebase_merge,allow_squash_merge,allow_auto_merge,allow_update_branch,delete_branch_on_merge}'
           done
