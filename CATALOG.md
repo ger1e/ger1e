@@ -3,7 +3,7 @@
 Generated from `catalog/repos.yaml`. Do not hand-edit this file.
 
 **Repositories:** 252
-**Last verified:** 2026-08-22
+**Last verified:** 2026-08-23
 
 Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/ACTIVE-SECURITY-TOOL/OFFENSIVE-DUAL-USE/LIVE-MALWARE/VULNERABLE-LAB`.
 
