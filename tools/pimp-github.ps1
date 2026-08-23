@@ -2,7 +2,10 @@
 param(
     [switch]$DryRun,
     [bool]$CreateThreatHuntingLab = $true,
-    [bool]$ArchiveOldBashTraining = $true
+    [bool]$ArchiveOldBashTraining = $true,
+    [bool]$ArchiveGodot = $true,
+    [bool]$ArchiveLandingPages = $true,
+    [bool]$ConfigureGovernance = $true
 )
 
 $ErrorActionPreference = 'Stop'
@@ -26,20 +29,98 @@ function Invoke-Checked([string]$Label, [scriptblock]$Action) {
     }
 }
 
+function Test-RepoArchived([string]$Repository) {
+    $value = (& gh repo view $Repository --json isArchived --jq '.isArchived').Trim()
+    if ($LASTEXITCODE -ne 0) {
+        throw "Failed to read archive state for $Repository"
+    }
+    return ($value -eq 'true')
+}
+
 function Set-Topics([string]$Repository, [string[]]$Topics) {
     $payload = @{ names = $Topics } | ConvertTo-Json -Compress
     Invoke-Checked "replace topics on $Repository -> $($Topics -join ', ')" {
-        $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' "repos/$Repository/topics" --input - | Out-Null
+        $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository/topics" --input - | Out-Null
     }
 }
 
 function Set-Repo([string]$Repository, [string]$Description, [string]$Homepage, [string[]]$Topics) {
+    if (Test-RepoArchived $Repository) {
+        Write-Host "[SKIP] metadata on archived repository $Repository"
+        return
+    }
+
     Invoke-Checked "set metadata on $Repository" {
-        $args = @('repo','edit',$Repository,'--description',$Description)
-        if ($Homepage) { $args += @('--homepage',$Homepage) }
-        & gh @args
+        & gh repo edit $Repository --description $Description --homepage $Homepage
     }
     Set-Topics $Repository $Topics
+}
+
+function Archive-Repo([string]$Repository) {
+    if (Test-RepoArchived $Repository) {
+        Write-Host "[SKIP] $Repository is already archived"
+        return
+    }
+
+    Invoke-Checked "archive $Repository" {
+        gh repo archive $Repository --yes
+    }
+}
+
+function Set-RepositoryPolicy([string]$Repository) {
+    $payload = @{
+        allow_squash_merge     = $true
+        allow_merge_commit     = $false
+        allow_rebase_merge     = $false
+        allow_auto_merge       = $true
+        delete_branch_on_merge = $true
+        allow_update_branch    = $true
+        has_wiki               = $false
+        has_projects           = $false
+    } | ConvertTo-Json -Compress
+
+    Invoke-Checked "normalize merge/features policy on $Repository" {
+        $payload | gh api --method PATCH -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository" --input - | Out-Null
+    }
+}
+
+function Set-WorkflowPolicy([string]$Repository, [bool]$AllowPullRequestAutomation) {
+    $payload = @{
+        default_workflow_permissions = 'read'
+        can_approve_pull_request_reviews = $AllowPullRequestAutomation
+    } | ConvertTo-Json -Compress
+
+    Invoke-Checked "set least-privilege Actions defaults on $Repository" {
+        $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository/actions/permissions/workflow" --input - | Out-Null
+    }
+}
+
+function Set-BranchProtection([string]$Repository, [string[]]$Contexts) {
+    $payload = @{
+        required_status_checks = @{
+            strict = $true
+            contexts = $Contexts
+        }
+        enforce_admins = $true
+        required_pull_request_reviews = @{
+            dismiss_stale_reviews = $true
+            require_code_owner_reviews = $false
+            required_approving_review_count = 0
+            require_last_push_approval = $false
+        }
+        restrictions = $null
+        required_linear_history = $true
+        allow_force_pushes = $false
+        allow_deletions = $false
+        block_creations = $false
+        required_conversation_resolution = $true
+        lock_branch = $false
+        allow_fork_syncing = $true
+    } | ConvertTo-Json -Depth 6 -Compress
+
+    Invoke-Checked "protect $Repository/main -> $($Contexts -join ', ')" {
+        $payload | gh api --method PUT -H 'Accept: application/vnd.github+json' -H 'X-GitHub-Api-Version: 2026-03-10' "repos/$Repository/branches/main/protection" --input - | Out-Null
+    }
 }
 
 Require-Command gh
@@ -71,8 +152,13 @@ Set-Repo 'ger1e/ger1e' `
     'https://gergoilly.hu/' `
     @('threat-hunting','cti','detection-engineering','kql','microsoft-sentinel','defender-xdr','cybersecurity')
 
+Set-Repo 'ger1e/cti-enrichment-gateway' `
+    'Bounded read-only CTI enrichment gateway with evidence-v2 provenance, STIX 2.1, Maltego and deterministic reporting.' `
+    'https://gergoilly.hu/' `
+    @('cybersecurity','cti','threat-intelligence','threat-hunting','osint','stix','maltego','detection-engineering','nodejs','vercel')
+
 Set-Repo 'ger1e/personal-site-lp' `
-    'Cyberpunk threat-hunting and CTI landing page with the rotund operator cat.' `
+    'Static-first security portfolio for threat hunting, CTI and detection engineering — gergoilly.hu.' `
     'https://gergoilly.hu/' `
     @('personal-site','cybersecurity','threat-hunting','cti','static-site','vercel','cyberpunk')
 
@@ -80,25 +166,6 @@ Set-Repo 'ger1e/landing-pages' `
     'Experimental and historical landing-page lab; non-production.' `
     '' `
     @('web-design','cyberpunk','experiments','archive')
-
-Set-Repo 'ger1e/godot' `
-    'Personal fork of Godot Engine; upstream-derived and not a portfolio project.' `
-    '' `
-    @('fork','godot')
-
-Set-Repo 'ger1e/learning-bash-scripting-3212393' `
-    'LinkedIn Learning Bash course exercises; training history, not portfolio work.' `
-    '' `
-    @('bash','training','archive')
-
-if ($ArchiveOldBashTraining) {
-    $archived = gh repo view 'ger1e/learning-bash-scripting-3212393' --json isArchived --jq '.isArchived'
-    if ($archived -ne 'true') {
-        Invoke-Checked 'archive old Bash training repository' {
-            gh repo archive 'ger1e/learning-bash-scripting-3212393' --yes
-        }
-    }
-}
 
 if ($CreateThreatHuntingLab) {
     gh repo view 'ger1e/threat-hunting-lab' --json nameWithOwner *> $null
@@ -149,13 +216,40 @@ The KQL examples are starting points for authorized defensive analysis; validate
     if ($labExists -or -not $DryRun) {
         Set-Repo 'ger1e/threat-hunting-lab' `
             'Sanitized KQL threat hunts, CTI schema, and evidence-first investigation methodology.' `
-            '' `
+            'https://gergoilly.hu/' `
             @('threat-hunting','kql','microsoft-defender','microsoft-sentinel','cti','detection-engineering','blue-team')
     }
 }
 
+if ($ArchiveLandingPages) { Archive-Repo 'ger1e/landing-pages' }
+if ($ArchiveGodot) { Archive-Repo 'ger1e/godot' }
+if ($ArchiveOldBashTraining) { Archive-Repo 'ger1e/learning-bash-scripting-3212393' }
+
+if ($ConfigureGovernance) {
+    $activeRepos = @(
+        'ger1e/ger1e',
+        'ger1e/cti-enrichment-gateway',
+        'ger1e/personal-site-lp',
+        'ger1e/threat-hunting-lab'
+    )
+
+    foreach ($repo in $activeRepos) {
+        Set-RepositoryPolicy $repo
+    }
+
+    Set-WorkflowPolicy 'ger1e/ger1e' $true
+    Set-WorkflowPolicy 'ger1e/cti-enrichment-gateway' $false
+    Set-WorkflowPolicy 'ger1e/personal-site-lp' $false
+    Set-WorkflowPolicy 'ger1e/threat-hunting-lab' $false
+
+    Set-BranchProtection 'ger1e/ger1e' @('validate','catalog')
+    Set-BranchProtection 'ger1e/cti-enrichment-gateway' @('Tooling smoke')
+    Set-BranchProtection 'ger1e/personal-site-lp' @('static-site-qa')
+    Set-BranchProtection 'ger1e/threat-hunting-lab' @('validate')
+}
+
 Write-Host ''
-Write-Host 'Account-level metadata normalization complete.'
-Write-Host 'GitHub user-profile pins are currently configured through Customize your pins in the GitHub UI.'
-Write-Host 'Recommended pins: threat-hunting-lab, personal-site-lp, ger1e. Leave forks/training unpinned.'
+Write-Host 'MAXX GitHub account finalization complete.'
+Write-Host 'Recommended profile pins: cti-enrichment-gateway, threat-hunting-lab, personal-site-lp, ger1e.'
+Write-Host 'Legacy repositories should remain archived and unpinned.'
 Write-Host 'Profile: https://github.com/ger1e'
