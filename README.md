@@ -14,7 +14,7 @@
   <img src="assets/signal-strip-mobile.svg" alt="GER1E public operating signal" width="100%">
 </p>
 
-#### `01` OPERATOR PROFILE
+<p><code>01</code> <strong>OPERATOR PROFILE</strong></p>
 
 <p align="center">
   <picture>
@@ -29,7 +29,7 @@ Cyber Threat Hunter with eight years across managed security services, incident 
 `OUTPUT → HUNTS · DETECTIONS · SCOPING · HARDENING`  
 `RULE → TELEMETRY FIRST · PROVENANCE PRESERVED · INFERENCE LABELED`
 
-#### `02` PUBLIC SIGNAL
+<p><code>02</code> <strong>PUBLIC SIGNAL</strong></p>
 
 **[`cti-enrichment-gateway`](https://github.com/ger1e/cti-enrichment-gateway)** — bounded read-only CTI enrichment gateway with fixed provider workflows, evidence-v2 provenance, typed correlation, STIX 2.1 export, Maltego transforms, deterministic offline reporting, explicit coverage failures and a fail-closed egress/security model.
 
@@ -64,63 +64,63 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 [`CATALOG`](CATALOG.md) · [`PROVIDERS`](PROVIDERS.md) · [`LAST VERIFIED`](LAST-VERIFIED.md)
 
-#### `03` RADAR / INVESTIGATION SURFACE
+<p><code>03</code> <strong>RADAR / INVESTIGATION SURFACE</strong></p>
 
 <p align="center">
   <picture>
     <source media="(min-width: 601px)" srcset="assets/threat-radar.svg">
-    <img src="assets/threat-radar-mobile.svg" alt="Slow cyan cobalt threat radar and signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
+    <img src="assets/threat-radar-mobile-v2.svg" alt="Slow cyan cobalt threat radar and bounded signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
   </picture>
 </p>
 
-| Track | Investigation focus |
-| --- | --- |
-| **Identity & cloud abuse** | OAuth / AiTM / device-code abuse · Conditional Access anomalies · mailbox / privileged-account misuse |
-| **Endpoint intrusion** | delivery · browser activity · script execution · LOLBins · RMM · persistence · credential access · outbound C2 |
-| **Threat intelligence** | ransomware · APT · infostealers · exploited CVEs · adversary infrastructure · supply-chain exposure |
-| **Detection enablement** | CTI / TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive control |
-| **Incident response** | attack-path reconstruction · scoping · evidence correlation · confidence / limitations · remediation |
+**IDENTITY + CLOUD** — OAuth, AiTM and device-code abuse; Conditional Access anomalies; mailbox and privileged-account misuse.
 
-#### `04` TECHNOLOGY & METHODS
+**ENDPOINT** — delivery, browser activity, script execution, LOLBins, RMM, persistence, credential access and outbound C2.
 
-| Surface | Working set |
-| --- | --- |
-| **Microsoft security** | Sentinel · Defender XDR Advanced Hunting · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · Azure Data Explorer · Microsoft 365 security telemetry · Safe Links |
-| **CTI / OSINT** | IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · SOCRadar · LevelBlue OTX · Maltego · STIX/TAXII · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · TLS/certificate pivots · ASN/BGP enrichment |
-| **Detection / investigation** | KQL · PowerShell · regex · YARA/Sigma interpretation · analytics rules · watchlists · workbooks · Wireshark/PCAP · sandbox analysis |
-| **Frameworks** | MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF |
-| **Prior / adjacent** | Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic Stack · Kibana · Lucene · Elasticsearch Query DSL · Tenable · Qualys · AWS · Linux · Windows · macOS |
+**THREAT INTELLIGENCE** — ransomware, APT, infostealers, exploited CVEs, adversary infrastructure and supply-chain exposure.
 
-#### `05` CERTIFICATIONS & RECOGNITION
+**DETECTION ENABLEMENT** — CTI/TTP translation, KQL hunting, telemetry readiness, coverage analysis and false-positive control.
+
+**INCIDENT RESPONSE** — attack-path reconstruction, scoping, evidence correlation, confidence and limitations, remediation.
+
+<p><code>04</code> <strong>TECHNOLOGY & METHODS</strong></p>
+
+**MICROSOFT SECURITY** — Sentinel · Defender XDR Advanced Hunting · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · Azure Data Explorer · Microsoft 365 security telemetry · Safe Links.
+
+**CTI / OSINT** — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · SOCRadar · LevelBlue OTX · Maltego · STIX/TAXII · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · TLS/certificate pivots · ASN/BGP enrichment.
+
+**DETECTION / INVESTIGATION** — KQL · PowerShell · regex · YARA/Sigma interpretation · analytics rules · watchlists · workbooks · Wireshark/PCAP · sandbox analysis.
+
+**FRAMEWORKS** — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.
+
+**PRIOR / ADJACENT** — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic Stack · Kibana · Lucene · Elasticsearch Query DSL · Tenable · Qualys · AWS · Linux · Windows · macOS.
+
+<p><code>05</code> <strong>CERTIFICATIONS & RECOGNITION</strong></p>
 
 <p align="center">
-  <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification" width="132"></a>
-  <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3k3loazi006k52vly6jlo" alt="INE eCTHP credential" width="132">
-  <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="132"></a>
+  <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification" width="112"></a>
+  <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3k3loazi006k52vly6jlo" alt="INE eCTHP credential" width="112">
+  <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="112"></a>
 </p>
 
-**Selected:** INE eCTHP · TryHackMe SAL2 · INE ICCA · CompTIA CySA+ · MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2
+**Selected:** INE eCTHP · TryHackMe SAL2 · INE ICCA · CompTIA CySA+ · MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.
 
-**Recognition:** TryHackMe SAL2 Founding Operator · IBM Mentor · Credly Top Badge Earner · TryHackMe Top 1%
+**Recognition:** TryHackMe SAL2 Founding Operator · IBM Mentor · Credly Top Badge Earner · TryHackMe Top 1%.
 
-#### `06` CAREER VECTOR
+<p><code>06</code> <strong>CAREER VECTOR</strong></p>
 
-```text
-2025 → NOW   CYBERSECURITY CONSULTANT / CYBER THREAT HUNTER   IBM CONSULTING
-2024 → 2025  CYBERSECURITY SPECIALIST / SOC ANALYST L2        IBM CONSULTING
-2021 → 2023  TECHNICAL SUCCESS SPECIALIST                     PIX SYSTEM / X2X MEDIA GROUP
-2018 → 2021  INFORMATION SECURITY ANALYST / CISO GIAM         CITIBANK EUROPE
-```
+**2025 → NOW** — Cybersecurity Consultant / Cyber Threat Hunter · IBM Consulting  
+**2024 → 2025** — Cybersecurity Specialist / SOC Analyst L2 · IBM Consulting  
+**2021 → 2023** — Technical Success Specialist · PIX System / X2X Media Group  
+**2018 → 2021** — Information Security Analyst / CISO GIAM · Citibank Europe
 
-#### `07` INTELLIGENCE FABRIC
+<p><code>07</code> <strong>INTELLIGENCE FABRIC</strong></p>
 
 [`repos.yaml`](catalog/repos.yaml) · [`providers.yaml`](catalog/providers.yaml) · [`SECURITY-REPOS.md`](SECURITY-REPOS.md) · [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) · [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md)
 
-```text
-HYPOTHESIS → TELEMETRY → QUERY → EVIDENCE → TUNING
-SOURCE     → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
+`HYPOTHESIS → TELEMETRY → QUERY → EVIDENCE → TUNING`  
+`SOURCE → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE`
 
-DETECTION WITHOUT TELEMETRY     = A WISH
-INTELLIGENCE WITHOUT PROVENANCE = A RUMOR
-AUTOMATION WITHOUT CONTEXT      = FASTER WRONGNESS
-```
+**DETECTION WITHOUT TELEMETRY = A WISH**  
+**INTELLIGENCE WITHOUT PROVENANCE = A RUMOR**  
+**AUTOMATION WITHOUT CONTEXT = FASTER WRONGNESS**
