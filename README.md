@@ -20,7 +20,7 @@
   <img src="assets/operator-console-v8.svg" alt="Public cobalt operator console showing experience, investigation surfaces, operating model and core stack" width="100%">
 </p>
 
-Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operations and incident response. I translate threat intelligence and behavioral hypotheses into falsifiable hunts, evidence-backed detections, attack-path reconstruction and defensible remediation decisions across identity, email, endpoint, cloud and network telemetry.
+Cyber Threat Hunter with eight years spanning enterprise security, IAM, SOC operations and incident response. I translate threat intelligence and behavioral hypotheses into falsifiable hunts, evidence-backed detections, attack-path reconstruction and defensible remediation guidance across identity, email, endpoint, cloud and network telemetry.
 
 <strong>HUNT</strong> — intelligence-led · behavioral · retrospective  
 <strong>OUTPUT</strong> — hunts · detections · scoping · remediation  
@@ -28,7 +28,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <p><strong>02 // PUBLIC SIGNAL</strong></p>
 
-**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway using fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures and fail-closed egress.
+**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway with fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures and fail-closed egress.
 
 [ARCHITECTURE](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/cti-enrichment-gateway/blob/main/SECURITY.md)
 
@@ -47,15 +47,15 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 **Ransomware intelligence:** RansomLook · Ransomware.live API-PRO
 
-Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR. Provider execution is controlled by fixed fast, standard and full profiles rather than caller-selected upstreams.
+Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR. Fixed fast, standard and full profiles control provider execution; callers cannot select arbitrary upstreams.
 
 </details>
 
-**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting work built around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
+**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting content built around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
 
 [HUNTING METHODOLOGY](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [CTI NORMALIZATION](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [CONTRIBUTION CONTRACT](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)
 
-**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): static-first, restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
+**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): a static-first personal security site with restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
 
 **[security intelligence catalog](CATALOG.md)** — curated index of security tooling and upstream projects with provenance, lifecycle state, provider mapping and automated health checks.
 
@@ -75,7 +75,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **INTELLIGENCE** — ransomware · APTs · infostealers · exploited CVEs · adversary infrastructure · supply-chain exposure.
 
-**DETECTION ENABLEMENT** — CTI/TTP translation · KQL hunts · telemetry readiness · coverage analysis · false-positive control.
+**DETECTION ENABLEMENT** — CTI/TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive tuning.
 
 **INCIDENT RESPONSE** — attack-path reconstruction · scoping · evidence correlation · confidence and limitations · remediation.
 
@@ -101,10 +101,10 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
   <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="112"></a>
 </p>
 
-**Core credentials:** INE eCTHP · CompTIA CySA+ · TryHackMe SAL2 · INE ICCA.  
-**Additional:** MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.
+**CORE CREDENTIALS** — INE eCTHP · CompTIA CySA+ · TryHackMe SAL2 · INE ICCA.  
+**ADDITIONAL CREDENTIALS** — MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.
 
-**Recognition:** TryHackMe SAL2 Founding Operator · TryHackMe Top 1% · IBM Mentor · Credly Top Badge Earner.
+**RECOGNITION** — TryHackMe SAL2 Founding Operator · TryHackMe Top 1% · IBM Mentor · Credly Top Badge Earner.
 
 <p><strong>06 // CAREER VECTOR</strong></p>
 
@@ -116,7 +116,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 <p><strong>07 // INTELLIGENCE FABRIC</strong></p>
 
-[REPO CATALOG](catalog/repos.yaml) · [PROVIDER MAP](catalog/providers.yaml) · [SECURITY REPOS](SECURITY-REPOS.md) · [API TOOL REPOS](API-TOOLS-REPOS.md)
+[REPO CATALOG](catalog/repos.yaml) · [PROVIDER MAP](catalog/providers.yaml) · [SECURITY ATLAS](SECURITY-REPOS.md) · [API TOOL INDEX](API-TOOLS-REPOS.md)
 
 <strong>HYPOTHESIS</strong> → TELEMETRY → QUERY → EVIDENCE → TUNING  
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
