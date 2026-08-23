@@ -37,6 +37,25 @@ RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
 
 [`ARCHITECTURE`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/ARCHITECTURE.md) · [`THREAT MODEL`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/THREAT-MODEL.md) · [`PROVIDERS`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/PROVIDERS.md) · [`SECURITY`](https://github.com/ger1e/cti-enrichment-gateway/blob/main/SECURITY.md)
 
+<details>
+<summary><strong>CTI Gateway coverage — 6 API endpoints / 37 active providers</strong></summary>
+
+**Gateway endpoints:** `GET /api/meta` · `GET /api/health` · `GET /api/status` · `POST /api/enrich` · `POST /api/batch` · `POST /api/stix`
+
+**Network identity, routing & exposure:** IPinfo · RDAP · RIPEstat · Shodan · Censys · Modat Magnify · Cloudflare Radar · Tor Exit List · Spamhaus DROP / ASN-DROP
+
+**Threat reputation & IOC context:** DShield · Feodo Tracker · ThreatMiner · CIRCL MISP OSINT · Botvrij MISP OSINT · GreyNoise · AbuseIPDB · VirusTotal · AlienVault / LevelBlue OTX · ThreatFox · urlscan.io · Webamon · Pulsedive · OpenPhish · URLhaus · TweetFeed.live
+
+**File & malware intelligence:** CIRCL Hashlookup · MalwareBazaar · Malpedia · Hybrid Analysis
+
+**Vulnerability & ATT&CK knowledge:** CISA KEV · FIRST EPSS · CIRCL Vulnerability-Lookup · NVD · OSV · MITRE ATT&CK TAXII
+
+**Ransomware intelligence:** RansomLook · Ransomware.live API-PRO
+
+Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR. Provider execution is controlled by fixed `fast`, `standard`, and `full` profiles rather than caller-selected upstreams.
+
+</details>
+
 **[`threat-hunting-lab`](https://github.com/ger1e/threat-hunting-lab)** — sanitized Microsoft Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis, tuning guidance and CTI normalization.
 
 [`HUNTING METHODOLOGY`](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [`CTI NORMALIZATION`](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [`CONTRIBUTION CONTRACT`](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)
