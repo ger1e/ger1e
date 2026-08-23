@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner-v8.svg" alt="GER1E — threat hunting, CTI, incident response and detection engineering signal banner with Matrix rain and John Kiriakou quote" width="100%">
+  <img src="assets/profile-banner-v9.svg" alt="GER1E — threat hunting, CTI, incident response and detection engineering signal banner with Matrix rain, centered rotund cat vector, and John Kiriakou quote" width="100%">
 </p>
 
 <p align="center">
