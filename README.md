@@ -17,18 +17,18 @@
 <p><strong>01 // OPERATOR PROFILE</strong></p>
 
 <p align="center">
-  <img src="assets/operator-console-v7.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
+  <img src="assets/operator-console-v8.svg" alt="Public cobalt operator console showing experience, investigation surfaces, operating model and core stack" width="100%">
 </p>
 
-Cyber Threat Hunter with eight years across managed security services, incident response, enterprise IAM and secure cloud platforms. I run intelligence-led, behavioral and retrospective hunts; reconstruct identity, email, endpoint and cloud attack paths; translate external intelligence into hunt and detection candidates; and report evidence, confidence, limitations and remediation.
+Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operations and incident response. I turn threat intelligence and behavioral hypotheses into bounded hunts, evidence-backed detections, attack-path reconstruction and remediation decisions across identity, email, endpoint, cloud and network telemetry.
 
 <strong>HUNT</strong> — intelligence-led · behavioral · retrospective  
 <strong>OUTPUT</strong> — hunts · detections · scoping · hardening  
-<strong>RULE</strong> — telemetry first · provenance preserved · inference labeled
+<strong>STANDARD</strong> — telemetry first · provenance preserved · inference labeled
 
 <p><strong>02 // PUBLIC SIGNAL</strong></p>
 
-**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — bounded read-only CTI enrichment gateway with fixed provider workflows, evidence-v2 provenance, typed correlation, STIX 2.1 export, Maltego transforms, deterministic offline reporting, explicit coverage failures and a fail-closed egress/security model.
+**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway built around fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures and fail-closed egress.
 
 [ARCHITECTURE](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/cti-enrichment-gateway/blob/main/SECURITY.md)
 
@@ -51,11 +51,11 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 </details>
 
-**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Microsoft Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis, tuning guidance and CTI normalization.
+**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting work organized around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
 
 [HUNTING METHODOLOGY](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [CTI NORMALIZATION](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [CONTRIBUTION CONTRACT](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)
 
-**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): a static-first personal security site with a deliberately small runtime surface, restrictive browser policy, custom HTTP error handling, accessibility/reduced-motion support and privacy-conscious telemetry.
+**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): static-first, restrictive browser policy, custom HTTP error handling, accessibility/reduced-motion support and privacy-conscious telemetry.
 
 **[security intelligence catalog](CATALOG.md)** — curated security tooling and upstream-project intelligence with provenance, lifecycle state, provider mapping and automated health verification.
 
@@ -69,27 +69,27 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
   <img src="assets/threat-radar-v6.svg" alt="Slow cyan cobalt threat radar and bounded signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
 </p>
 
-**IDENTITY + CLOUD** — OAuth, AiTM and device-code abuse; Conditional Access anomalies; mailbox and privileged-account misuse.
+**IDENTITY + CLOUD** — OAuth, AiTM and device-code abuse · Conditional Access anomalies · mailbox and privileged-account misuse.
 
-**ENDPOINT** — delivery, browser activity, script execution, LOLBins, RMM, persistence, credential access and outbound C2.
+**ENDPOINT** — delivery and execution · LOLBins and RMM · persistence · credential access · outbound C2.
 
-**THREAT INTELLIGENCE** — ransomware, APT, infostealers, exploited CVEs, adversary infrastructure and supply-chain exposure.
+**THREAT INTELLIGENCE** — ransomware · APTs · infostealers · exploited CVEs · adversary infrastructure · supply-chain exposure.
 
-**DETECTION ENABLEMENT** — CTI/TTP translation, KQL hunting, telemetry readiness, coverage analysis and false-positive control.
+**DETECTION ENABLEMENT** — CTI/TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive control.
 
-**INCIDENT RESPONSE** — attack-path reconstruction, scoping, evidence correlation, confidence and limitations, remediation.
+**INCIDENT RESPONSE** — attack-path reconstruction · scoping · evidence correlation · confidence and limitations · remediation.
 
 <p><strong>04 // TECHNOLOGY & METHODS</strong></p>
 
-**MICROSOFT SECURITY** — Sentinel · Defender XDR Advanced Hunting · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · Azure Data Explorer · Microsoft 365 security telemetry · Safe Links.
+**PRIMARY SECURITY STACK** — Microsoft Sentinel · Defender XDR · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · KQL.
 
-**CTI / OSINT** — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · SOCRadar · LevelBlue OTX · Maltego · STIX/TAXII · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · TLS/certificate pivots · ASN/BGP enrichment.
+**INTELLIGENCE** — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · SOCRadar · LevelBlue OTX · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · TLS/certificate/ASN pivots.
 
-**DETECTION / INVESTIGATION** — KQL · PowerShell · regex · YARA/Sigma interpretation · analytics rules · watchlists · workbooks · Wireshark/PCAP · sandbox analysis.
+**DETECTION / INVESTIGATION** — PowerShell · regex · YARA/Sigma interpretation · analytics rules · workbooks · Wireshark/PCAP · sandbox analysis.
 
 **FRAMEWORKS** — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.
 
-**PRIOR / ADJACENT** — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic Stack · Kibana · Lucene · Elasticsearch Query DSL · Tenable · Qualys · AWS · Linux · Windows · macOS.
+**ADJACENT** — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic · Tenable · Qualys · AWS · Linux · Windows · macOS.
 
 <p align="center"><img src="assets/signal-divider-v7.svg" alt="" width="100%"></p>
 
@@ -101,7 +101,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
   <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="112"></a>
 </p>
 
-**Selected:** INE eCTHP · TryHackMe SAL2 · INE ICCA · CompTIA CySA+ · MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.
+**Selected credentials:** INE eCTHP · TryHackMe SAL2 · INE ICCA · CompTIA CySA+ · MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.
 
 **Recognition:** TryHackMe SAL2 Founding Operator · IBM Mentor · Credly Top Badge Earner · TryHackMe Top 1%.
 
@@ -115,7 +115,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 <p><strong>07 // INTELLIGENCE FABRIC</strong></p>
 
-[repos.yaml](catalog/repos.yaml) · [providers.yaml](catalog/providers.yaml) · [SECURITY-REPOS.md](SECURITY-REPOS.md) · [SOC-MANUAL-REPOS.md](SOC-MANUAL-REPOS.md) · [API-TOOLS-REPOS.md](API-TOOLS-REPOS.md)
+[REPO CATALOG](catalog/repos.yaml) · [PROVIDER MAP](catalog/providers.yaml) · [SECURITY REPOS](SECURITY-REPOS.md) · [SOC MANUAL REPOS](SOC-MANUAL-REPOS.md) · [API TOOL REPOS](API-TOOLS-REPOS.md)
 
 <strong>HYPOTHESIS</strong> → TELEMETRY → QUERY → EVIDENCE → TUNING  
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
