@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner-v6.svg" alt="GER1E — threat hunting, CTI and incident response signal banner with Matrix rain and John Kiriakou quote" width="100%">
+  <img src="assets/profile-banner-v7.svg" alt="GER1E — threat hunting, CTI and incident response signal banner with Matrix rain and John Kiriakou quote" width="100%">
 </p>
 
 <p align="center">
@@ -61,6 +61,8 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 [CATALOG](CATALOG.md) · [PROVIDERS](PROVIDERS.md) · [LAST VERIFIED](LAST-VERIFIED.md)
 
+<p align="center"><img src="assets/signal-divider-v7.svg" alt="" width="100%"></p>
+
 <p><strong>03 // RADAR / INVESTIGATION SURFACE</strong></p>
 
 <p align="center">
@@ -89,6 +91,8 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **PRIOR / ADJACENT** — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic Stack · Kibana · Lucene · Elasticsearch Query DSL · Tenable · Qualys · AWS · Linux · Windows · macOS.
 
+<p align="center"><img src="assets/signal-divider-v7.svg" alt="" width="100%"></p>
+
 <p><strong>05 // CERTIFICATIONS & RECOGNITION</strong></p>
 
 <p align="center">
@@ -103,10 +107,11 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 <p><strong>06 // CAREER VECTOR</strong></p>
 
-**2025 → NOW** — Cybersecurity Consultant / Cyber Threat Hunter · IBM Consulting  
-**2024 → 2025** — Cybersecurity Specialist / SOC Analyst L2 · IBM Consulting  
-**2021 → 2023** — Technical Success Specialist · PIX System / X2X Media Group  
-**2018 → 2021** — Information Security Analyst / CISO GIAM · Citibank Europe
+<p align="center">
+  <img src="assets/career-vector-v7.svg" alt="Vertical career timeline from Citibank Europe to IBM Consulting" width="100%">
+</p>
+
+<p align="center"><img src="assets/signal-divider-v7.svg" alt="" width="100%"></p>
 
 <p><strong>07 // INTELLIGENCE FABRIC</strong></p>
 
@@ -115,8 +120,6 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 <strong>HYPOTHESIS</strong> → TELEMETRY → QUERY → EVIDENCE → TUNING  
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE
 
-**DETECTION WITHOUT TELEMETRY = A WISH**  
-**INTELLIGENCE WITHOUT PROVENANCE = A RUMOR**  
-**AUTOMATION WITHOUT CONTEXT = FASTER WRONGNESS**
-
-<p align="center"><strong><em>AD ASTRA PER ASPERA</em></strong></p>
+<p align="center">
+  <img src="assets/footer-terminal-v7.svg" alt="Detection without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Ad Astra Per Aspera." width="100%">
+</p>
