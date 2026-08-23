@@ -1,31 +1,20 @@
 <p align="center">
-  <picture>
-    <source media="(min-width: 601px)" srcset="assets/profile-banner-v2.svg">
-    <img src="assets/profile-banner-mobile-v3.svg" alt="GER1E — dense slow cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
-  </picture>
+  <img src="assets/profile-banner-v4.svg" alt="GER1E — threat hunting, CTI and incident response signal banner with Matrix rain and John Kiriakou quote" width="100%">
 </p>
 
-<h1 align="center">GERGŐ ILLY</h1>
-<p align="center"><strong>CYBER THREAT HUNTER // CTI // INCIDENT RESPONSE</strong></p>
-<p align="center"><code>MICROSOFT SENTINEL // DEFENDER XDR // AZURE DATA EXPLORER // KQL</code></p>
 <p align="center">
-  <a href="https://gergoilly.hu/">WEBSITE</a> ·
-  <a href="https://www.linkedin.com/in/gergoilly">LINKEDIN</a> ·
+  <a href="https://gergoilly.hu/">SITE</a> ·
+  <a href="https://www.linkedin.com/in/gergoilly">LI</a> ·
   <a href="https://www.credly.com/users/gergoilly">CREDLY</a> ·
-  <a href="https://github.com/ger1e/cti-enrichment-gateway">CTI GATEWAY</a> ·
-  <a href="https://github.com/ger1e/threat-hunting-lab">THREAT HUNTING LAB</a>
+  <a href="https://github.com/ger1e/cti-enrichment-gateway">CTI</a> ·
+  <a href="https://github.com/ger1e/threat-hunting-lab">LAB</a>
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(min-width: 601px)" srcset="assets/signal-strip.svg">
-    <img src="assets/signal-strip-mobile.svg" alt="GER1E public operating signal" width="100%">
-  </picture>
+  <img src="assets/signal-strip-mobile.svg" alt="GER1E public operating signal" width="100%">
 </p>
 
-### `01` OPERATOR PROFILE
-
-Cyber Threat Hunter with eight years across managed security services, incident response, enterprise IAM and secure cloud platforms. I run intelligence-led, behavioral and retrospective hunts, reconstruct identity/email/endpoint/cloud attack paths, turn external intelligence into high-signal hunts and detection candidates, and deliver evidence-backed findings with practical remediation.
+#### `01` OPERATOR PROFILE
 
 <p align="center">
   <picture>
@@ -34,13 +23,13 @@ Cyber Threat Hunter with eight years across managed security services, incident 
   </picture>
 </p>
 
-```text
-OPERATING MODEL   INTELLIGENCE-LED / BEHAVIORAL / RETROSPECTIVE
-OUTPUT            HUNTS / DETECTIONS / SCOPING / REPORTING / HARDENING
-RULE              TELEMETRY FIRST // PROVENANCE PRESERVED // INFERENCE LABELED
-```
+Cyber Threat Hunter with eight years across managed security services, incident response, enterprise IAM and secure cloud platforms. I run intelligence-led, behavioral and retrospective hunts; reconstruct identity, email, endpoint and cloud attack paths; translate external intelligence into hunt and detection candidates; and report evidence, confidence, limitations and remediation.
 
-### `02` PUBLIC SIGNAL
+`HUNT → INTELLIGENCE-LED · BEHAVIORAL · RETROSPECTIVE`  
+`OUTPUT → HUNTS · DETECTIONS · SCOPING · HARDENING`  
+`RULE → TELEMETRY FIRST · PROVENANCE PRESERVED · INFERENCE LABELED`
+
+#### `02` PUBLIC SIGNAL
 
 **[`cti-enrichment-gateway`](https://github.com/ger1e/cti-enrichment-gateway)** — bounded read-only CTI enrichment gateway with fixed provider workflows, evidence-v2 provenance, typed correlation, STIX 2.1 export, Maltego transforms, deterministic offline reporting, explicit coverage failures and a fail-closed egress/security model.
 
@@ -75,7 +64,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 [`CATALOG`](CATALOG.md) · [`PROVIDERS`](PROVIDERS.md) · [`LAST VERIFIED`](LAST-VERIFIED.md)
 
-### `03` RADAR / INVESTIGATION SURFACE
+#### `03` RADAR / INVESTIGATION SURFACE
 
 <p align="center">
   <picture>
@@ -92,7 +81,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 | **Detection enablement** | CTI / TTP translation · KQL hunting · telemetry readiness · coverage analysis · false-positive control |
 | **Incident response** | attack-path reconstruction · scoping · evidence correlation · confidence / limitations · remediation |
 
-### `04` TECHNOLOGY & METHODS
+#### `04` TECHNOLOGY & METHODS
 
 | Surface | Working set |
 | --- | --- |
@@ -102,7 +91,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 | **Frameworks** | MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF |
 | **Prior / adjacent** | Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic Stack · Kibana · Lucene · Elasticsearch Query DSL · Tenable · Qualys · AWS · Linux · Windows · macOS |
 
-### `05` CERTIFICATIONS & RECOGNITION
+#### `05` CERTIFICATIONS & RECOGNITION
 
 <p align="center">
   <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification" width="132"></a>
@@ -114,7 +103,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 **Recognition:** TryHackMe SAL2 Founding Operator · IBM Mentor · Credly Top Badge Earner · TryHackMe Top 1%
 
-### `06` CAREER VECTOR
+#### `06` CAREER VECTOR
 
 ```text
 2025 → NOW   CYBERSECURITY CONSULTANT / CYBER THREAT HUNTER   IBM CONSULTING
@@ -123,7 +112,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 2018 → 2021  INFORMATION SECURITY ANALYST / CISO GIAM         CITIBANK EUROPE
 ```
 
-### `07` INTELLIGENCE FABRIC
+#### `07` INTELLIGENCE FABRIC
 
 [`repos.yaml`](catalog/repos.yaml) · [`providers.yaml`](catalog/providers.yaml) · [`SECURITY-REPOS.md`](SECURITY-REPOS.md) · [`SOC-MANUAL-REPOS.md`](SOC-MANUAL-REPOS.md) · [`API-TOOLS-REPOS.md`](API-TOOLS-REPOS.md)
 
