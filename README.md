@@ -17,7 +17,7 @@
 <p><strong>01 // OPERATOR PROFILE</strong></p>
 
 <p align="center">
-  <img src="assets/operator-console-v6.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
+  <img src="assets/operator-console-v7.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
 </p>
 
 Cyber Threat Hunter with eight years across managed security services, incident response, enterprise IAM and secure cloud platforms. I run intelligence-led, behavioral and retrospective hunts; reconstruct identity, email, endpoint and cloud attack paths; translate external intelligence into hunt and detection candidates; and report evidence, confidence, limitations and remediation.
