@@ -8,10 +8,11 @@ on:
 permissions:
   contents: write
   issues: read
+  pull-requests: write
 
 jobs:
   sync:
-    if: github.event.issue.user.login == 'ger1e' && github.event.issue.title == '[maintenance-sync] refresh generated assets'
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'issues' && github.event.issue.user.login == 'ger1e' && github.event.issue.title == '[maintenance-sync] refresh generated assets')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -133,15 +134,27 @@ jobs:
           python -m py_compile tools/catalog.py
           python -c "import json; json.load(open('catalog/repos.yaml', encoding='utf-8')); json.load(open('catalog/providers.yaml', encoding='utf-8'))"
           git diff --check
-      - name: Commit generated state
+      - name: Open maintenance refresh PR
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           if git diff --quiet; then
+            echo 'Generated state and credential assets already current.'
             exit 0
           fi
+
+          branch="automation/maintenance-refresh-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add catalog/repos.yaml catalog/providers.yaml CATALOG.md PROVIDERS.md LAST-VERIFIED.md
           git add -A assets/badges
           git commit -m 'chore: reconcile catalogs and credential assets'
-          git push
+          git push --set-upstream origin "$branch"
+
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title 'chore: reconcile catalogs and credential assets' \
+            --body 'Automated maintenance refresh. Review and merge through the normal protected-branch path.'
