@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/profile-banner-mobile.svg">
-    <img src="assets/profile-banner-v2.svg" alt="GER1E — dense slow cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
+    <source media="(min-width: 601px)" srcset="assets/profile-banner-v2.svg">
+    <img src="assets/profile-banner-mobile-v3.svg" alt="GER1E — dense slow cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
   </picture>
 </p>
 
@@ -18,8 +18,8 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/signal-strip-mobile.svg">
-    <img src="assets/signal-strip.svg" alt="GER1E public operating signal" width="100%">
+    <source media="(min-width: 601px)" srcset="assets/signal-strip.svg">
+    <img src="assets/signal-strip-mobile.svg" alt="GER1E public operating signal" width="100%">
   </picture>
 </p>
 
@@ -29,8 +29,8 @@ Cyber Threat Hunter with eight years across managed security services, incident 
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/operator-console-mobile.svg">
-    <img src="assets/operator-console.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
+    <source media="(min-width: 601px)" srcset="assets/operator-console.svg">
+    <img src="assets/operator-console-mobile.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
   </picture>
 </p>
 
@@ -79,8 +79,8 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/threat-radar-mobile.svg">
-    <img src="assets/threat-radar.svg" alt="Slow cyan cobalt threat radar and signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
+    <source media="(min-width: 601px)" srcset="assets/threat-radar.svg">
+    <img src="assets/threat-radar-mobile.svg" alt="Slow cyan cobalt threat radar and signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
   </picture>
 </p>
 
