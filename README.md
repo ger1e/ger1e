@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/profile-banner-v2.svg" alt="GER1E — dense slow cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/profile-banner-mobile.svg">
+    <img src="assets/profile-banner-v2.svg" alt="GER1E — dense slow cyan cobalt signal banner for threat hunting, CTI and detection engineering" width="100%">
+  </picture>
 </p>
 
 <h1 align="center">GERGŐ ILLY</h1>
@@ -14,7 +17,10 @@
 </p>
 
 <p align="center">
-  <img src="assets/signal-strip.svg" alt="GER1E public operating signal" width="100%">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/signal-strip-mobile.svg">
+    <img src="assets/signal-strip.svg" alt="GER1E public operating signal" width="100%">
+  </picture>
 </p>
 
 ### `01` OPERATOR PROFILE
@@ -22,7 +28,10 @@
 Cyber Threat Hunter with eight years across managed security services, incident response, enterprise IAM and secure cloud platforms. I run intelligence-led, behavioral and retrospective hunts, reconstruct identity/email/endpoint/cloud attack paths, turn external intelligence into high-signal hunts and detection candidates, and deliver evidence-backed findings with practical remediation.
 
 <p align="center">
-  <img src="assets/operator-console.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/operator-console-mobile.svg">
+    <img src="assets/operator-console.svg" alt="Public cobalt operator console showing experience, investigation surfaces, methods and credentials" width="100%">
+  </picture>
 </p>
 
 ```text
@@ -69,7 +78,10 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 ### `03` RADAR / INVESTIGATION SURFACE
 
 <p align="center">
-  <img src="assets/threat-radar.svg" alt="Slow cyan cobalt threat radar and signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/threat-radar-mobile.svg">
+    <img src="assets/threat-radar.svg" alt="Slow cyan cobalt threat radar and signal-fusion path from telemetry and CTI to hunting and detection" width="100%">
+  </picture>
 </p>
 
 | Track | Investigation focus |
@@ -94,9 +106,7 @@ Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CID
 
 <p align="center">
   <a href="https://www.credly.com/org/comptia/badge/comptia-cysa-ce-certification"><img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CompTIA CySA+ ce Certification" width="132"></a>
-  &nbsp;&nbsp;
   <img src="https://us-east-1.graphassets.com/AwCYQkwjSUCbfkm08Ct1Mz/cmcc3k3loazi006k52vly6jlo" alt="INE eCTHP credential" width="132">
-  &nbsp;&nbsp;
   <a href="https://www.credly.com/org/tryhackme/badge/security-analyst-level-2-sal2"><img src="assets/badges/sal2.png" alt="TryHackMe Security Analyst Level 2 (SAL2)" width="132"></a>
 </p>
 
