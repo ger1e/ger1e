@@ -17,7 +17,6 @@ VALID_RISK = {"SAFE-REFERENCE", "ACTIVE-SECURITY-TOOL", "OFFENSIVE-DUAL-USE", "L
 VALID_STATUS = {"ACTIVE", "ARCHIVED", "MISSING", "PRIVATE", "RENAMED", "UNKNOWN"}
 SOURCE_FILES = (
     {"id": "atlas", "file": "SECURITY-REPOS.md"},
-    {"id": "soc-manual", "file": "SOC-MANUAL-REPOS.md"},
     {"id": "api-tools", "file": "API-TOOLS-REPOS.md"},
 )
 VALID_PROVIDER_AUTH = {"NONE", "API_KEY_HEADER", "API_KEY_QUERY", "BEARER", "TOKEN_HEADER", "MIXED", "UNKNOWN"}
