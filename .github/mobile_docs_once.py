@@ -49,7 +49,7 @@ for path in TARGETS:
 catalog_path = Path("tools/catalog.py")
 catalog = catalog_path.read_text(encoding="utf-8")
 replacements = [
-    ('if line.startswith("## "):\n            category = slugify(line[3:].strip())', 'if line.startswith("#### "):\n            category = slugify(line[5:].strip())'),
+    ('if line.startswith("## "):\n            category = slugify(line[3:].strip())\n            continue', 'if line.startswith("## "):\n            category = slugify(line[3:].strip())\n            continue\n        if line.startswith("#### "):\n            category = slugify(line[5:].strip())\n            continue'),
     ('"# Security repository catalog"', '"### Security repository catalog"'),
     ('lines += [f"## {category.replace(\'-\', \' \').title()}", ""]', 'lines += [f"#### {category.replace(\'-\', \' \').title()}", ""]'),
     ('"# API / intelligence provider registry"', '"### API / intelligence provider registry"'),
