@@ -1,4 +1,4 @@
-# eCTHP badge asset source
+### eCTHP badge asset source
 
 Source page: https://ine.com/security/certifications/ecthp-certification
 

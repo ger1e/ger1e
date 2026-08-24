@@ -17,7 +17,6 @@ VALID_RISK = {"SAFE-REFERENCE", "ACTIVE-SECURITY-TOOL", "OFFENSIVE-DUAL-USE", "L
 VALID_STATUS = {"ACTIVE", "ARCHIVED", "MISSING", "PRIVATE", "RENAMED", "UNKNOWN"}
 SOURCE_FILES = (
     {"id": "atlas", "file": "SECURITY-REPOS.md"},
-    {"id": "soc-manual", "file": "SOC-MANUAL-REPOS.md"},
     {"id": "api-tools", "file": "API-TOOLS-REPOS.md"},
 )
 VALID_PROVIDER_AUTH = {"NONE", "API_KEY_HEADER", "API_KEY_QUERY", "BEARER", "TOKEN_HEADER", "MIXED", "UNKNOWN"}
@@ -80,6 +79,9 @@ def extract_repositories(markdown: str, source: str):
         line = raw.strip()
         if line.startswith("## "):
             category = slugify(line[3:].strip())
+            continue
+        if line.startswith("#### "):
+            category = slugify(line[5:].strip())
             continue
         match = LINK_RE.search(line)
         if not match:
@@ -209,7 +211,7 @@ def render_catalog(catalog: dict) -> str:
     for item in catalog.get("repositories", []):
         groups[item["category"]].append(item)
     lines = [
-        "# Security repository catalog",
+        "### Security repository catalog",
         "",
         "Generated from `catalog/repos.yaml`. Do not hand-edit this file.",
         "",
@@ -220,7 +222,7 @@ def render_catalog(catalog: dict) -> str:
         "",
     ]
     for category in sorted(groups):
-        lines += [f"## {category.replace('-', ' ').title()}", ""]
+        lines += [f"#### {category.replace('-', ' ').title()}", ""]
         for item in sorted(groups[category], key=lambda x: x["repo"].lower()):
             meta = f"`{item['provenance']}` · `{item['risk']}` · `{item['status']}`"
             desc = f" — {item['description']}" if item.get("description") else ""
@@ -266,7 +268,7 @@ def render_provider_catalog(catalog: dict) -> str:
     for item in catalog.get("providers", []):
         groups[item.get("role", "uncategorized")].append(item)
     lines = [
-        "# API / intelligence provider registry",
+        "### API / intelligence provider registry",
         "",
         "Generated from `catalog/providers.yaml`. Provider metadata is kept separate from GitHub repository provenance.",
         "",
@@ -275,9 +277,9 @@ def render_provider_catalog(catalog: dict) -> str:
         "",
     ]
     for role in sorted(groups):
-        lines += [f"## {role.replace('-', ' ').title()}", ""]
+        lines += [f"#### {role.replace('-', ' ').title()}", ""]
         for item in sorted(groups[role], key=lambda x: x["name"].lower()):
-            lines.append(f"### {item['name']}")
+            lines.append(f"##### {item['name']}")
             lines.append(f"- API: {item.get('api_base_url') or 'not separately published'}")
             lines.append(f"- Docs: {item.get('docs_url') or 'not separately published'}")
             lines.append(f"- Auth: `{item['auth']}`" + (f" · env `{item['env_var']}`" if item.get("env_var") else ""))
@@ -342,7 +344,7 @@ def render_health(catalog: dict, checked: list[dict]) -> str:
         counts[row["status"]] += 1
     date = catalog.get("last_verified") or dt.date.today().isoformat()
     lines = [
-        "# Repository health",
+        "### Repository health",
         "",
         f"**Atlas verification:** {date}",
         f"**Repositories checked:** {len(checked)}",
@@ -356,7 +358,7 @@ def render_health(catalog: dict, checked: list[dict]) -> str:
     ]
     exceptions = [r for r in checked if r["status"] != "ACTIVE"]
     if exceptions:
-        lines += ["## Exceptions", ""]
+        lines += ["#### Exceptions", ""]
         for row in exceptions:
             lines.append(f"- `{row['repo']}` — `{row['status']}`")
         lines.append("")

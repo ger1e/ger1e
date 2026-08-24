@@ -1,4 +1,4 @@
-# GitHub account polish
+### GitHub account polish
 
 Most profile/site work in this repository is automated through GitHub Actions. A few account-level mutations are not exposed by the connected GitHub integration used to maintain this repository.
 
@@ -11,7 +11,7 @@ Most profile/site work in this repository is automated through GitHub Actions. A
 - refuses to run from a clone located under Windows `System32`;
 - verifies the authenticated GitHub account and repository origin before writing.
 
-## Run
+#### Run
 
 From a normal clone of `ger1e/ger1e` outside `System32`:
 
@@ -26,7 +26,7 @@ To keep the old Bash training repository unarchived:
 pwsh -NoProfile -File .\tools\pimp-github.ps1 -ArchiveOldBashTraining:$false
 ```
 
-## Pins
+#### Pins
 
 GitHub documents user-profile pins as a profile UI setting. After the script finishes, open `https://github.com/ger1e`, choose **Customize your pins**, and pin:
 
