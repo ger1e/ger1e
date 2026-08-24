@@ -51,12 +51,6 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [google/oss-fuzz](https://github.com/google/oss-fuzz) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — continuous fuzzing infrastructure for open source
 - [shellphish/how2heap](https://github.com/shellphish/how2heap) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — heap exploitation techniques and examples
 
-#### C2 Adversary Simulation
-
-- [BishopFox/sliver](https://github.com/BishopFox/sliver) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Sliver C2 framework
-- [HavocFramework/Havoc](https://github.com/HavocFramework/Havoc) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ARCHIVED` — Havoc C2 framework
-- [its-a-feature/Mythic](https://github.com/its-a-feature/Mythic) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Mythic C2 framework
-
 #### Cloud Kubernetes Container Security
 
 - [aquasecurity/kube-bench](https://github.com/aquasecurity/kube-bench) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — CIS Kubernetes benchmark checks
@@ -84,12 +78,6 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — MITRE ATT&CK STIX data
 - [OpenCTI-Platform/opencti](https://github.com/OpenCTI-Platform/opencti) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — cyber threat-intelligence knowledge platform
 
-#### Detection Engineering Cross Vendor References
-
-- [elastic/detection-rules](https://github.com/elastic/detection-rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Elastic detection rules
-- [splunk/security_content](https://github.com/splunk/security_content) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Splunk Security Content
-- [THORCollective/HEARTH](https://github.com/THORCollective/HEARTH) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — HEARTH and the PEAK hunting template referenced by the guide
-
 #### Devsecops Software Supply Chain Secret Scanning
 
 - [anchore/grype](https://github.com/anchore/grype) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — vulnerability scanner for container images/filesystems/SBOMs
@@ -114,10 +102,6 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [Velocidex/velociraptor](https://github.com/Velocidex/velociraptor) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — endpoint visibility, collection, DFIR, and threat hunting
 - [volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — memory forensics framework
 
-#### Driver Abuse Byovd
-
-- [magicsword-io/LOLDrivers](https://github.com/magicsword-io/LOLDrivers) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — vulnerable/malicious driver reference data
-
 #### Historically Important Legacy References
 
 - [michenriksen/aquatone](https://github.com/michenriksen/aquatone) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived attack-surface visual reconnaissance tool
@@ -126,11 +110,6 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [sundowndev/hacker-roadmap](https://github.com/sundowndev/hacker-roadmap) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived but historically popular learning roadmap
 - [tenable/terrascan](https://github.com/tenable/terrascan) — `LEGACY` · `ACTIVE-SECURITY-TOOL` · `ARCHIVED` — archived IaC security scanner
 - [twintproject/twint](https://github.com/twintproject/twint) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived Twitter/X OSINT project
-
-#### Identity Attack Paths
-
-- [SpecterOps/BloodHound](https://github.com/SpecterOps/BloodHound) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — identity/Active Directory attack-path analysis
-- [SpecterOps/SharpHound](https://github.com/SpecterOps/SharpHound) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — BloodHound data collection
 
 #### Malware Analysis Reverse Engineering
 
@@ -151,15 +130,6 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [WerWolv/ImHex](https://github.com/WerWolv/ImHex) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — hex editor for reverse engineering and binary analysis
 - [x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Windows debugger
 - [ytisf/theZoo](https://github.com/ytisf/theZoo) — `CANONICAL` · `LIVE-MALWARE` · `ACTIVE` — live-malware research repository; isolated-lab handling only
-
-#### Microsoft Kql Hunting
-
-- [FalconForceTeam/FalconFriday](https://github.com/FalconForceTeam/FalconFriday) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — behavior-oriented Microsoft Defender hunting content
-- [GossiTheDog/ThreatHunting](https://github.com/GossiTheDog/ThreatHunting) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Defender Advanced Hunting examples
-- [microsoft/Microsoft-365-Defender-Hunting-Queries](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — Microsoft Defender hunting-query collection
-- [reprise99/Sentinel-Queries](https://github.com/reprise99/Sentinel-Queries) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel query reference
-- [SlimKQL/Detections.AI](https://github.com/SlimKQL/Detections.AI) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — KQL detection collection referenced by the guide
-- [SlimKQL/Hunting-Queries-Detection-Rules](https://github.com/SlimKQL/Hunting-Queries-Detection-Rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel/Defender hunting and detection content
 
 #### Microsoft Security Sentinel Kql
 
@@ -310,6 +280,24 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [crytic/slither](https://github.com/crytic/slither) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Solidity static analyzer
 - [OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — security-focused smart-contract library
 - [trailofbits/manticore](https://github.com/trailofbits/manticore) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — symbolic execution for binaries and smart contracts
+
+#### Soc Analyst Field Guide Source Set
+
+- [BishopFox/sliver](https://github.com/BishopFox/sliver) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Sliver C2 framework
+- [elastic/detection-rules](https://github.com/elastic/detection-rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Elastic detection rules
+- [FalconForceTeam/FalconFriday](https://github.com/FalconForceTeam/FalconFriday) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — behavior-oriented Microsoft Defender hunting content
+- [GossiTheDog/ThreatHunting](https://github.com/GossiTheDog/ThreatHunting) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Defender Advanced Hunting examples
+- [HavocFramework/Havoc](https://github.com/HavocFramework/Havoc) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ARCHIVED` — Havoc C2 framework
+- [its-a-feature/Mythic](https://github.com/its-a-feature/Mythic) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Mythic C2 framework
+- [magicsword-io/LOLDrivers](https://github.com/magicsword-io/LOLDrivers) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — vulnerable and malicious driver reference data
+- [microsoft/Microsoft-365-Defender-Hunting-Queries](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — Microsoft Defender hunting-query collection
+- [reprise99/Sentinel-Queries](https://github.com/reprise99/Sentinel-Queries) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel query reference
+- [SlimKQL/Detections.AI](https://github.com/SlimKQL/Detections.AI) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — KQL detection collection referenced by the field guide
+- [SlimKQL/Hunting-Queries-Detection-Rules](https://github.com/SlimKQL/Hunting-Queries-Detection-Rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel/Defender hunting and detection content referenced by the field guide
+- [SpecterOps/BloodHound](https://github.com/SpecterOps/BloodHound) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — current BloodHound identity and Active Directory attack-path platform
+- [SpecterOps/SharpHound](https://github.com/SpecterOps/SharpHound) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — BloodHound data collection
+- [splunk/security_content](https://github.com/splunk/security_content) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Splunk Security Content
+- [THORCollective/HEARTH](https://github.com/THORCollective/HEARTH) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — HEARTH and the PEAK hunting template referenced by the field guide
 
 #### Threat Hunting Detection Engineering
 
