@@ -1,4 +1,4 @@
-# Security repository catalog
+### Security repository catalog
 
 Generated from `catalog/repos.yaml`. Do not hand-edit this file.
 
@@ -7,7 +7,7 @@ Generated from `catalog/repos.yaml`. Do not hand-edit this file.
 
 Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/ACTIVE-SECURITY-TOOL/OFFENSIVE-DUAL-USE/LIVE-MALWARE/VULNERABLE-LAB`.
 
-## Active Directory Identity Security
+#### Active Directory Identity Security
 
 - [EmpireProject/Empire](https://github.com/EmpireProject/Empire) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ARCHIVED` · aliases: PowerShellEmpire/Empire — adversary-emulation framework
 - [fortra/impacket](https://github.com/fortra/impacket) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Python network protocols used heavily in AD/security research
@@ -17,7 +17,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [NetSPI/PowerUpSQL](https://github.com/NetSPI/PowerUpSQL) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — SQL Server security assessment and AD-adjacent attack-path research
 - [SpecterOps/BloodHound-Legacy](https://github.com/SpecterOps/BloodHound-Legacy) — `LEGACY` · `SAFE-REFERENCE` · `ACTIVE` — historically important BloodHound codebase; legacy naming is explicit
 
-## Ai Llm Security
+#### Ai Llm Security
 
 - [Azure/PyRIT](https://github.com/Azure/PyRIT) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — Python Risk Identification Tool for generative-AI red teaming
 - [NVIDIA/garak](https://github.com/NVIDIA/garak) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — LLM vulnerability scanner/red-team evaluation framework
@@ -25,7 +25,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — LLM evals and red-team testing
 - [protectai/llm-guard](https://github.com/protectai/llm-guard) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — input/output security controls for LLM applications
 
-## Application Security Web Api Security
+#### Application Security Web Api Security
 
 - [digininja/DVWA](https://github.com/digininja/DVWA) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Damn Vulnerable Web Application
 - [ffuf/ffuf](https://github.com/ffuf/ffuf) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — fast web fuzzer
@@ -42,7 +42,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [WebGoat/WebGoat](https://github.com/WebGoat/WebGoat) — `CANONICAL` · `VULNERABLE-LAB` · `ACTIVE` — deliberately insecure app for learning web security
 - [zaproxy/zaproxy](https://github.com/zaproxy/zaproxy) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — OWASP ZAP web application security scanner
 
-## Binary Exploitation Fuzzing
+#### Binary Exploitation Fuzzing
 
 - [AFLplusplus/AFLplusplus](https://github.com/AFLplusplus/AFLplusplus) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — modern AFL-family fuzzer
 - [angr/angr](https://github.com/angr/angr) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — binary analysis and symbolic-execution platform
@@ -51,13 +51,13 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [google/oss-fuzz](https://github.com/google/oss-fuzz) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — continuous fuzzing infrastructure for open source
 - [shellphish/how2heap](https://github.com/shellphish/how2heap) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — heap exploitation techniques and examples
 
-## C2 Adversary Simulation
+#### C2 Adversary Simulation
 
 - [BishopFox/sliver](https://github.com/BishopFox/sliver) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Sliver C2 framework
 - [HavocFramework/Havoc](https://github.com/HavocFramework/Havoc) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ARCHIVED` — Havoc C2 framework
 - [its-a-feature/Mythic](https://github.com/its-a-feature/Mythic) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — Mythic C2 framework
 
-## Cloud Kubernetes Container Security
+#### Cloud Kubernetes Container Security
 
 - [aquasecurity/kube-bench](https://github.com/aquasecurity/kube-bench) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — CIS Kubernetes benchmark checks
 - [aquasecurity/kube-hunter](https://github.com/aquasecurity/kube-hunter) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Kubernetes security assessment
@@ -74,7 +74,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [toniblyx/my-arsenal-of-aws-security-tools](https://github.com/toniblyx/my-arsenal-of-aws-security-tools) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — AWS security tooling index
 - [turbot/steampipe](https://github.com/turbot/steampipe) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — SQL-based cloud/API querying useful for security posture analysis
 
-## Cyber Threat Intelligence
+#### Cyber Threat Intelligence
 
 - [blackorbird/APT_REPORT](https://github.com/blackorbird/APT_REPORT) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — large APT-report research collection
 - [elceef/dnstwist](https://github.com/elceef/dnstwist) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — domain permutation, typosquatting, and phishing reconnaissance
@@ -84,13 +84,13 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — MITRE ATT&CK STIX data
 - [OpenCTI-Platform/opencti](https://github.com/OpenCTI-Platform/opencti) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — cyber threat-intelligence knowledge platform
 
-## Detection Engineering Cross Vendor References
+#### Detection Engineering Cross Vendor References
 
 - [elastic/detection-rules](https://github.com/elastic/detection-rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Elastic detection rules
 - [splunk/security_content](https://github.com/splunk/security_content) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Splunk Security Content
 - [THORCollective/HEARTH](https://github.com/THORCollective/HEARTH) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — HEARTH and the PEAK hunting template referenced by the guide
 
-## Devsecops Software Supply Chain Secret Scanning
+#### Devsecops Software Supply Chain Secret Scanning
 
 - [anchore/grype](https://github.com/anchore/grype) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — vulnerability scanner for container images/filesystems/SBOMs
 - [anchore/syft](https://github.com/anchore/syft) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — SBOM generation
@@ -102,7 +102,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [sottlmarek/DevSecOps](https://github.com/sottlmarek/DevSecOps) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — DevSecOps tools and references
 - [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — secret discovery and verification
 
-## Dfir Incident Response
+#### Dfir Incident Response
 
 - [clong/DetectionLab](https://github.com/clong/DetectionLab) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — historically influential defensive detection lab; verify maintenance before deployment
 - [cugu/awesome-forensics](https://github.com/cugu/awesome-forensics) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — digital-forensics tooling/reference index
@@ -114,11 +114,11 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [Velocidex/velociraptor](https://github.com/Velocidex/velociraptor) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — endpoint visibility, collection, DFIR, and threat hunting
 - [volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — memory forensics framework
 
-## Driver Abuse Byovd
+#### Driver Abuse Byovd
 
 - [magicsword-io/LOLDrivers](https://github.com/magicsword-io/LOLDrivers) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — vulnerable/malicious driver reference data
 
-## Historically Important Legacy References
+#### Historically Important Legacy References
 
 - [michenriksen/aquatone](https://github.com/michenriksen/aquatone) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived attack-surface visual reconnaissance tool
 - [michenriksen/gitrob](https://github.com/michenriksen/gitrob) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived GitHub reconnaissance/secret-discovery project
@@ -127,12 +127,12 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [tenable/terrascan](https://github.com/tenable/terrascan) — `LEGACY` · `ACTIVE-SECURITY-TOOL` · `ARCHIVED` — archived IaC security scanner
 - [twintproject/twint](https://github.com/twintproject/twint) — `LEGACY` · `SAFE-REFERENCE` · `ARCHIVED` — archived Twitter/X OSINT project
 
-## Identity Attack Paths
+#### Identity Attack Paths
 
 - [SpecterOps/BloodHound](https://github.com/SpecterOps/BloodHound) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — identity/Active Directory attack-path analysis
 - [SpecterOps/SharpHound](https://github.com/SpecterOps/SharpHound) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — BloodHound data collection
 
-## Malware Analysis Reverse Engineering
+#### Malware Analysis Reverse Engineering
 
 - [dnSpyEx/dnSpy](https://github.com/dnSpyEx/dnSpy) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — .NET debugger/decompiler
 - [horsicq/Detect-It-Easy](https://github.com/horsicq/Detect-It-Easy) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — file-type, packer, and compiler identification
@@ -152,7 +152,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Windows debugger
 - [ytisf/theZoo](https://github.com/ytisf/theZoo) — `CANONICAL` · `LIVE-MALWARE` · `ACTIVE` — live-malware research repository; isolated-lab handling only
 
-## Microsoft Kql Hunting
+#### Microsoft Kql Hunting
 
 - [FalconForceTeam/FalconFriday](https://github.com/FalconForceTeam/FalconFriday) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — behavior-oriented Microsoft Defender hunting content
 - [GossiTheDog/ThreatHunting](https://github.com/GossiTheDog/ThreatHunting) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Defender Advanced Hunting examples
@@ -161,7 +161,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [SlimKQL/Detections.AI](https://github.com/SlimKQL/Detections.AI) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — KQL detection collection referenced by the guide
 - [SlimKQL/Hunting-Queries-Detection-Rules](https://github.com/SlimKQL/Hunting-Queries-Detection-Rules) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel/Defender hunting and detection content
 
-## Microsoft Security Sentinel Kql
+#### Microsoft Security Sentinel Kql
 
 - [Azure/Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Microsoft Sentinel content, detections, hunting queries, workbooks, connectors, playbooks, and solutions
 - [Azure/Azure-Sentinel-Notebooks](https://github.com/Azure/Azure-Sentinel-Notebooks) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Sentinel investigation and hunting notebooks
@@ -169,7 +169,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [cyb3rmik3/KQL-threat-hunting-queries](https://github.com/cyb3rmik3/KQL-threat-hunting-queries) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — KQL threat-hunting reference queries
 - [rod-trent/SentinelKQL](https://github.com/rod-trent/SentinelKQL) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — large Sentinel KQL reference collection
 
-## Mobile Security
+#### Mobile Security
 
 - [frida/frida](https://github.com/frida/frida) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — dynamic instrumentation toolkit
 - [iBotPeaches/Apktool](https://github.com/iBotPeaches/Apktool) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Android APK reverse engineering
@@ -177,7 +177,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [sensepost/objection](https://github.com/sensepost/objection) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — mobile runtime exploration powered by Frida
 - [skylot/jadx](https://github.com/skylot/jadx) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Android DEX/APK decompiler
 
-## Network Security Telemetry
+#### Network Security Telemetry
 
 - [aircrack-ng/aircrack-ng](https://github.com/aircrack-ng/aircrack-ng) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Wi-Fi security assessment suite
 - [bettercap/bettercap](https://github.com/bettercap/bettercap) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — network reconnaissance and attack/defense framework
@@ -190,7 +190,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [wireshark/wireshark](https://github.com/wireshark/wireshark) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — packet analysis platform
 - [zeek/zeek](https://github.com/zeek/zeek) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — network security monitoring and protocol telemetry
 
-## Offensive Security Pentesting Adversary Simulation
+#### Offensive Security Pentesting Adversary Simulation
 
 - [1N3/Sn1per](https://github.com/1N3/Sn1per) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — automated security assessment framework
 - [bee-san/RustScan](https://github.com/bee-san/RustScan) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — fast port-scanning frontend
@@ -212,7 +212,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [urbanadventurer/WhatWeb](https://github.com/urbanadventurer/WhatWeb) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — web technology fingerprinting
 - [vanhauser-thc/thc-hydra](https://github.com/vanhauser-thc/thc-hydra) — `CANONICAL` · `OFFENSIVE-DUAL-USE` · `ACTIVE` — network authentication testing
 
-## Official Canonical Provider Repositories
+#### Official Canonical Provider Repositories
 
 - [0xDanielLopez/TweetFeed](https://github.com/0xDanielLopez/TweetFeed) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — TweetFeed IOC project
 - [0xDanielLopez/TweetFeed_code](https://github.com/0xDanielLopez/TweetFeed_code) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — associated TweetFeed code repository
@@ -262,7 +262,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [webamon-org/webamon](https://github.com/webamon-org/webamon) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — Webamon project
 - [webamon-org/webamon-cli](https://github.com/webamon-org/webamon-cli) — `OFFICIAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Webamon CLI
 
-## Osint Reconnaissance Attack Surface Discovery
+#### Osint Reconnaissance Attack Surface Discovery
 
 - [Datalux/Osintgram](https://github.com/Datalux/Osintgram) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Instagram-focused OSINT
 - [edoardottt/awesome-hacker-search-engines](https://github.com/edoardottt/awesome-hacker-search-engines) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — specialized security/search-engine index
@@ -282,7 +282,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [sundowndev/phoneinfoga](https://github.com/sundowndev/phoneinfoga) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — phone-number OSINT
 - [yogeshojha/rengine](https://github.com/yogeshojha/rengine) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — automated reconnaissance platform
 
-## Privacy Hardening Defensive Engineering
+#### Privacy Hardening Defensive Engineering
 
 - [drduh/macOS-Security-and-Privacy-Guide](https://github.com/drduh/macOS-Security-and-Privacy-Guide) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — macOS hardening/privacy reference
 - [imthenachoman/How-To-Secure-A-Linux-Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Linux server hardening reference
@@ -292,7 +292,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [veeral-patel/how-to-secure-anything](https://github.com/veeral-patel/how-to-secure-anything) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — broad security-hardening methodology
 - [veracrypt/VeraCrypt](https://github.com/veracrypt/VeraCrypt) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — disk/file-container encryption
 
-## Security Education Reference Labs
+#### Security Education Reference Labs
 
 - [apsdehal/awesome-ctf](https://github.com/apsdehal/awesome-ctf) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — CTF resources and tooling
 - [FallibleInc/security-guide-for-developers](https://github.com/FallibleInc/security-guide-for-developers) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — secure-development reference
@@ -303,7 +303,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [The-Art-of-Hacking/h4cker](https://github.com/The-Art-of-Hacking/h4cker) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — security research and learning reference
 - [trimstray/the-book-of-secret-knowledge](https://github.com/trimstray/the-book-of-secret-knowledge) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — broad technical/security reference notes
 
-## Smart Contract Blockchain Security
+#### Smart Contract Blockchain Security
 
 - [ConsenSysDiligence/mythril](https://github.com/ConsenSysDiligence/mythril) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` · aliases: Consensys/mythril — Ethereum smart-contract security analysis
 - [crytic/echidna](https://github.com/crytic/echidna) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — smart-contract property-based fuzzer
@@ -311,7 +311,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — security-focused smart-contract library
 - [trailofbits/manticore](https://github.com/trailofbits/manticore) — `CANONICAL` · `SAFE-REFERENCE` · `ARCHIVED` — symbolic execution for binaries and smart contracts
 
-## Threat Hunting Detection Engineering
+#### Threat Hunting Detection Engineering
 
 - [0x4D31/awesome-threat-detection](https://github.com/0x4D31/awesome-threat-detection) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — detection-engineering reference collection
 - [LOLBAS-Project/LOLBAS](https://github.com/LOLBAS-Project/LOLBAS) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — Windows living-off-the-land binaries and scripts
@@ -327,7 +327,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [WithSecureLabs/chainsaw](https://github.com/WithSecureLabs/chainsaw) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — rapid Windows forensic artifact hunting
 - [Yamato-Security/hayabusa](https://github.com/Yamato-Security/hayabusa) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Windows event-log hunting and timeline analysis
 
-## Useful Community Clients Integrations Where No Official Provider Sdk Was Verified
+#### Useful Community Clients Integrations Where No Official Provider Sdk Was Verified
 
 - [fortinet-fortisoar/connector-pulsedive](https://github.com/fortinet-fortisoar/connector-pulsedive) — `COMMUNITY` · `SAFE-REFERENCE` · `ACTIVE` — FortiSOAR connector
 - [hakluke/haktrails](https://github.com/hakluke/haktrails) — `COMMUNITY` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — established SecurityTrails-powered reconnaissance CLI

@@ -1,4 +1,4 @@
-# Security policy
+### Security policy
 
 This profile repository is public. It contains profile assets, public documentation, curated security references, and supporting catalog data. It must not contain credentials, API keys, customer data, private infrastructure, unpublished incident evidence, or other sensitive production material.
 

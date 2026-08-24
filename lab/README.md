@@ -1,15 +1,15 @@
-# Threat hunting lab
+### Threat hunting lab
 
 Sanitized, vendor-practical examples of how I structure hunts and CTI-oriented detection work. No customer data, private architecture, production identifiers, or proprietary incident material is included.
 
-## Contents
+#### Contents
 
 - `hunts/suspicious-powershell-encoded-command.kql` — suspicious encoded/obfuscated PowerShell execution.
 - `hunts/device-code-follow-on.kql` — device-code authentication followed by unusual activity.
 - `hunts/rare-outbound-beaconing.kql` — low-volume periodic outbound network behavior.
 - `cti-schema.json` — compact normalization schema for API-driven threat-intelligence enrichment.
 
-## Method
+#### Method
 
 1. State a falsifiable hypothesis.
 2. Name the telemetry required before writing the query.
