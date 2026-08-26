@@ -87,6 +87,8 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub><strong>DETECTION ENGINEERING</strong> — KQL · analytics rules · workbooks · YARA/Sigma · PowerShell · regex.</sub>
 
+<sub><strong>SECURITY & DEVELOPMENT TOOLING</strong> — Snyk · Codex Security · Git · GitHub Actions.</sub>
+
 <sub><strong>INVESTIGATION</strong> — Wireshark/PCAP · sandbox analysis · endpoint, identity, email and cloud correlation.</sub>
 
 <sub><strong>FRAMEWORKS</strong> — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.</sub>
