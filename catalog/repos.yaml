@@ -2,10 +2,9 @@
   "schema": "ger1e-security-catalog/v1",
   "generated_from": [
     "atlas",
-    "soc-manual",
     "api-tools"
   ],
-  "last_verified": "2026-08-23",
+  "last_verified": "2026-08-26",
   "repositories": [
     {
       "repo": "EmpireProject/Empire",
@@ -395,42 +394,6 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "BishopFox/sliver",
-      "url": "https://github.com/BishopFox/sliver",
-      "category": "c2-adversary-simulation",
-      "description": "Sliver C2 framework",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "OFFENSIVE-DUAL-USE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "HavocFramework/Havoc",
-      "url": "https://github.com/HavocFramework/Havoc",
-      "category": "c2-adversary-simulation",
-      "description": "Havoc C2 framework",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "OFFENSIVE-DUAL-USE",
-      "status": "ARCHIVED"
-    },
-    {
-      "repo": "its-a-feature/Mythic",
-      "url": "https://github.com/its-a-feature/Mythic",
-      "category": "c2-adversary-simulation",
-      "description": "Mythic C2 framework",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "OFFENSIVE-DUAL-USE",
-      "status": "ACTIVE"
-    },
-    {
       "repo": "aquasecurity/kube-bench",
       "url": "https://github.com/aquasecurity/kube-bench",
       "category": "cloud-kubernetes-container-security",
@@ -685,42 +648,6 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "elastic/detection-rules",
-      "url": "https://github.com/elastic/detection-rules",
-      "category": "detection-engineering-cross-vendor-references",
-      "description": "Elastic detection rules",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "splunk/security_content",
-      "url": "https://github.com/splunk/security_content",
-      "category": "detection-engineering-cross-vendor-references",
-      "description": "Splunk Security Content",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "THORCollective/HEARTH",
-      "url": "https://github.com/THORCollective/HEARTH",
-      "category": "detection-engineering-cross-vendor-references",
-      "description": "HEARTH and the PEAK hunting template referenced by the guide",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
       "repo": "anchore/grype",
       "url": "https://github.com/anchore/grype",
       "category": "devsecops-software-supply-chain-secret-scanning",
@@ -938,18 +865,6 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "magicsword-io/LOLDrivers",
-      "url": "https://github.com/magicsword-io/LOLDrivers",
-      "category": "driver-abuse-byovd",
-      "description": "vulnerable/malicious driver reference data",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
       "repo": "michenriksen/aquatone",
       "url": "https://github.com/michenriksen/aquatone",
       "category": "historically-important-legacy-references",
@@ -1020,30 +935,6 @@
       "provenance": "LEGACY",
       "risk": "SAFE-REFERENCE",
       "status": "ARCHIVED"
-    },
-    {
-      "repo": "SpecterOps/BloodHound",
-      "url": "https://github.com/SpecterOps/BloodHound",
-      "category": "identity-attack-paths",
-      "description": "identity/Active Directory attack-path analysis",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "SpecterOps/SharpHound",
-      "url": "https://github.com/SpecterOps/SharpHound",
-      "category": "identity-attack-paths",
-      "description": "BloodHound data collection",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
     },
     {
       "repo": "dnSpyEx/dnSpy",
@@ -1251,85 +1142,12 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "FalconForceTeam/FalconFriday",
-      "url": "https://github.com/FalconForceTeam/FalconFriday",
-      "category": "microsoft-kql-hunting",
-      "description": "behavior-oriented Microsoft Defender hunting content",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "GossiTheDog/ThreatHunting",
-      "url": "https://github.com/GossiTheDog/ThreatHunting",
-      "category": "microsoft-kql-hunting",
-      "description": "Defender Advanced Hunting examples",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "microsoft/Microsoft-365-Defender-Hunting-Queries",
-      "url": "https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries",
-      "category": "microsoft-kql-hunting",
-      "description": "Microsoft Defender hunting-query collection",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ARCHIVED"
-    },
-    {
-      "repo": "reprise99/Sentinel-Queries",
-      "url": "https://github.com/reprise99/Sentinel-Queries",
-      "category": "microsoft-kql-hunting",
-      "description": "Sentinel query reference",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "SlimKQL/Detections.AI",
-      "url": "https://github.com/SlimKQL/Detections.AI",
-      "category": "microsoft-kql-hunting",
-      "description": "KQL detection collection referenced by the guide",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "SlimKQL/Hunting-Queries-Detection-Rules",
-      "url": "https://github.com/SlimKQL/Hunting-Queries-Detection-Rules",
-      "category": "microsoft-kql-hunting",
-      "description": "Sentinel/Defender hunting and detection content",
-      "sources": [
-        "soc-manual"
-      ],
-      "provenance": "CANONICAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
       "repo": "Azure/Azure-Sentinel",
       "url": "https://github.com/Azure/Azure-Sentinel",
       "category": "microsoft-security-sentinel-kql",
       "description": "Microsoft Sentinel content, detections, hunting queries, workbooks, connectors, playbooks, and solutions",
       "sources": [
-        "atlas",
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1365,8 +1183,7 @@
       "category": "microsoft-security-sentinel-kql",
       "description": "KQL threat-hunting reference queries",
       "sources": [
-        "atlas",
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -2804,6 +2621,186 @@
       "status": "ARCHIVED"
     },
     {
+      "repo": "BishopFox/sliver",
+      "url": "https://github.com/BishopFox/sliver",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Sliver C2 framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "elastic/detection-rules",
+      "url": "https://github.com/elastic/detection-rules",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Elastic detection rules",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "FalconForceTeam/FalconFriday",
+      "url": "https://github.com/FalconForceTeam/FalconFriday",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "behavior-oriented Microsoft Defender hunting content",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GossiTheDog/ThreatHunting",
+      "url": "https://github.com/GossiTheDog/ThreatHunting",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Defender Advanced Hunting examples",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "HavocFramework/Havoc",
+      "url": "https://github.com/HavocFramework/Havoc",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Havoc C2 framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "its-a-feature/Mythic",
+      "url": "https://github.com/its-a-feature/Mythic",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Mythic C2 framework",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "magicsword-io/LOLDrivers",
+      "url": "https://github.com/magicsword-io/LOLDrivers",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "vulnerable and malicious driver reference data",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "microsoft/Microsoft-365-Defender-Hunting-Queries",
+      "url": "https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Microsoft Defender hunting-query collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "reprise99/Sentinel-Queries",
+      "url": "https://github.com/reprise99/Sentinel-Queries",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Sentinel query reference",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SlimKQL/Detections.AI",
+      "url": "https://github.com/SlimKQL/Detections.AI",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "KQL detection collection referenced by the field guide",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SlimKQL/Hunting-Queries-Detection-Rules",
+      "url": "https://github.com/SlimKQL/Hunting-Queries-Detection-Rules",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Sentinel/Defender hunting and detection content referenced by the field guide",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SpecterOps/BloodHound",
+      "url": "https://github.com/SpecterOps/BloodHound",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "current BloodHound identity and Active Directory attack-path platform",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "SpecterOps/SharpHound",
+      "url": "https://github.com/SpecterOps/SharpHound",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "BloodHound data collection",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "splunk/security_content",
+      "url": "https://github.com/splunk/security_content",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "Splunk Security Content",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "THORCollective/HEARTH",
+      "url": "https://github.com/THORCollective/HEARTH",
+      "category": "soc-analyst-field-guide-source-set",
+      "description": "HEARTH and the PEAK hunting template referenced by the field guide",
+      "sources": [
+        "atlas"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
       "repo": "0x4D31/awesome-threat-detection",
       "url": "https://github.com/0x4D31/awesome-threat-detection",
       "category": "threat-hunting-detection-engineering",
@@ -2905,8 +2902,7 @@
       "category": "threat-hunting-detection-engineering",
       "description": "vendor-agnostic detection and hunting rules",
       "sources": [
-        "atlas",
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
