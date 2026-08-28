@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-28  
 **Owner:** ger1e  
-**Status:** Approved direction; implementation pending spec review
+**Status:** Approved; implementation in progress
 
 ## Objective
 
