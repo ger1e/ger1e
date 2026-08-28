@@ -29,10 +29,10 @@ jobs:
 
           required=(
             'README.md'
-            'assets/profile-banner-v2.svg'
-            'assets/signal-strip.svg'
-            'assets/operator-console.svg'
-            'assets/threat-radar.svg'
+            'assets/profile-banner-v10.svg'
+            'assets/operator-console-v9.svg'
+            'assets/threat-radar-v7.svg'
+            'assets/footer-terminal-v8.svg'
             '.github/CODEOWNERS'
           )
 
@@ -53,8 +53,30 @@ jobs:
             exit 1
           }
 
-          grep -Fq 'ger1e/cti-enrichment-gateway' README.md || {
-            echo '::error file=README.md::CTI enrichment gateway must remain part of the public signal.'
+          obsolete=(
+            'ger1e/cti-enrichment-gateway'
+            'cti-enrichment-gateway.vercel.app'
+          )
+
+          for value in "${obsolete[@]}"; do
+            if grep -Fq "$value" README.md; then
+              echo "::error file=README.md::Obsolete PARA11AX compatibility surface remains: $value"
+              exit 1
+            fi
+          done
+
+          grep -Fq 'https://github.com/ger1e/para11ax' README.md || {
+            echo '::error file=README.md::Canonical PARA11AX repository must remain part of the public signal.'
+            exit 1
+          }
+
+          grep -Fq 'https://para11ax.vercel.app/' README.md || {
+            echo '::error file=README.md::Canonical PARA11AX production URL must remain part of the public signal.'
+            exit 1
+          }
+
+          grep -Fq '/api/para11ax/meta' README.md || {
+            echo '::error file=README.md::Canonical PARA11AX API base must remain documented.'
             exit 1
           }
 
@@ -116,10 +138,10 @@ jobs:
           import xml.etree.ElementTree as ET
 
           files = [
-              Path('assets/profile-banner-v2.svg'),
-              Path('assets/signal-strip.svg'),
-              Path('assets/operator-console.svg'),
-              Path('assets/threat-radar.svg'),
+              Path('assets/profile-banner-v10.svg'),
+              Path('assets/operator-console-v9.svg'),
+              Path('assets/threat-radar-v7.svg'),
+              Path('assets/footer-terminal-v8.svg'),
           ]
           for path in files:
               ET.parse(path)
