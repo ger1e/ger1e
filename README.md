@@ -6,7 +6,7 @@
   <a href="https://gergoilly.hu/">SITE</a> ·
   <a href="https://www.linkedin.com/in/gergoilly">LI</a> ·
   <a href="https://www.credly.com/users/gergoilly">CREDLY</a> ·
-  <a href="https://github.com/ger1e/cti-enrichment-gateway">CTI</a> ·
+  <a href="https://github.com/ger1e/para11ax">CTI</a> ·
   <a href="https://github.com/ger1e/threat-hunting-lab">LAB</a>
 </sub></p>
 
@@ -27,14 +27,20 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub><strong>02 // PUBLIC SIGNAL</strong></sub>
 
-**[cti-enrichment-gateway](https://github.com/ger1e/cti-enrichment-gateway)** — read-only CTI enrichment gateway with fixed provider profiles, evidence-v2 provenance, typed correlation, deterministic reporting, explicit coverage failures, and fail-closed egress.
+**[PARA11AX](https://github.com/ger1e/para11ax)** — read-only CTI evidence gateway with fixed provider profiles, Evidence v2 provenance, typed correlation, deterministic reporting, explicit coverage failures, and fail-closed egress.
 
-<sub>[ARCHITECTURE](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/cti-enrichment-gateway/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/cti-enrichment-gateway/blob/main/SECURITY.md)</sub>
+<sub>[LIVE](https://para11ax.vercel.app/) · [ARCHITECTURE](https://github.com/ger1e/para11ax/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/para11ax/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/para11ax/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/para11ax/blob/main/SECURITY.md)</sub>
+
+**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting content built around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
+
+<sub>[HUNTING METHODOLOGY](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [CTI NORMALIZATION](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [CONTRIBUTION CONTRACT](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)</sub>
+
+**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): a static-first personal security site with restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
 
 <details>
-<summary><strong>CTI Gateway coverage — 6 API endpoints / 37 active providers</strong></summary>
+<summary><strong>PARA11AX coverage — 6 API endpoints / 37 configured sources</strong></summary>
 
-**Gateway endpoints:** GET /api/meta · GET /api/health · GET /api/status · POST /api/enrich · POST /api/batch · POST /api/stix
+**Gateway endpoints:** GET /api/para11ax/meta · GET /api/para11ax/health · GET /api/para11ax/status · POST /api/para11ax/enrich · POST /api/para11ax/batch · POST /api/para11ax/stix
 
 **Network identity, routing & exposure:** IPinfo · RDAP · RIPEstat · Shodan · Censys · Modat Magnify · Cloudflare Radar · Tor Exit List · Spamhaus DROP / ASN-DROP
 
@@ -49,12 +55,6 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 <sub>Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR. Fixed fast, standard and full profiles control provider execution; callers cannot select arbitrary upstreams.</sub>
 
 </details>
-
-**[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting content built around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
-
-<sub>[HUNTING METHODOLOGY](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [CTI NORMALIZATION](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [CONTRIBUTION CONTRACT](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)</sub>
-
-**[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): a static-first personal security site with restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
 
 **[security intelligence catalog](CATALOG.md)** — curated index of security tooling and upstream projects with provenance, lifecycle state, provider mapping and automated health checks.
 
