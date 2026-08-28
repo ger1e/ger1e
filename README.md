@@ -31,8 +31,6 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub>[LIVE](https://para11ax.vercel.app/) · [ARCHITECTURE](https://github.com/ger1e/para11ax/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/para11ax/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/para11ax/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/para11ax/blob/main/SECURITY.md)</sub>
 
-
-
 **[threat-hunting-lab](https://github.com/ger1e/threat-hunting-lab)** — sanitized Defender XDR / Sentinel hunting content built around falsifiable hypotheses, telemetry readiness, ATT&CK context, investigation value, false-positive analysis and tuning guidance.
 
 <sub>[HUNTING METHODOLOGY](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/HUNTING-METHODOLOGY.md) · [CTI NORMALIZATION](https://github.com/ger1e/threat-hunting-lab/blob/main/docs/CTI-NORMALIZATION.md) · [CONTRIBUTION CONTRACT](https://github.com/ger1e/threat-hunting-lab/blob/main/CONTRIBUTING.md)</sub>
