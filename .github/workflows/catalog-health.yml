@@ -76,12 +76,21 @@ jobs:
           git commit -m 'chore: refresh security catalogs'
           git push --force-with-lease --set-upstream origin "$branch"
 
-          if gh pr list --base main --head "$branch" --state open --json number --jq 'length' | grep -qx '0'; then
+          pr_count="$(gh pr list --base main --head "$branch" --state open --json number --jq 'length')"
+          if [[ ! "$pr_count" =~ ^[0-9]+$ ]]; then
+            echo "Invalid catalog refresh PR count: $pr_count" >&2
+            exit 1
+          fi
+
+          if [[ "$pr_count" == '0' ]]; then
             gh pr create \
               --base main \
               --head "$branch" \
               --title 'chore: refresh security catalogs' \
               --body 'Automated generated-state refresh from the security-catalog workflow. Review and merge through the normal protected-branch path.'
-          else
+          elif [[ "$pr_count" == '1' ]]; then
             echo 'Existing catalog refresh PR updated.'
+          else
+            echo "Expected at most one open catalog refresh PR; found $pr_count." >&2
+            exit 1
           fi
