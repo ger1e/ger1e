@@ -38,7 +38,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 **[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): a static-first personal security site with restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
 
 <details>
-<summary><strong>PARA11AX coverage — 6 API endpoints / 37 configured sources</strong></summary>
+<summary><strong>PARA11AX coverage — 6 API endpoints / 38 configured sources</strong></summary>
 
 **Gateway endpoints:** GET /api/para11ax/meta · GET /api/para11ax/health · GET /api/para11ax/status · POST /api/para11ax/enrich · POST /api/para11ax/batch · POST /api/para11ax/stix
 
