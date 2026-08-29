@@ -123,4 +123,4 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 <sub><strong>HYPOTHESIS</strong> → TELEMETRY → QUERY → EVIDENCE → TUNING<br/>
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE</sub>
 
-<p align="center"><img src="assets/footer-terminal-v8.svg" alt="Detection engineering without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Ad Astra Per Aspera." width="100%"></p>
+<p align="center"><img src="assets/footer-terminal-v8.svg" alt="Detection engineering without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Per Aspera Ad Astra." width="100%"></p>
