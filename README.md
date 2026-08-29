@@ -19,9 +19,9 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 <strong>STANDARD</strong> — telemetry first · provenance preserved · inference explicit</sub>
 
 <details>
-<summary><b>Operator console</b></summary>
+<summary><b>Operator profile</b></summary>
 
-<p align="center"><img src="assets/operator-console-v9.svg" alt="Public cobalt operator console showing experience, investigation surfaces, operating model and core stack" width="100%"></p>
+<p align="center"><img src="assets/operator-console-v9.svg" alt="Public cobalt operator profile showing experience, investigation surfaces, operating model and core stack" width="100%"></p>
 
 </details>
 
@@ -73,7 +73,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 **INCIDENT RESPONSE** — attack-path reconstruction · scoping · evidence correlation · confidence bounds · remediation.
 
 <details>
-<summary><b>Radar visual</b></summary>
+<summary><b>Investigation surface</b></summary>
 
 <p align="center"><img src="assets/threat-radar-v7.svg" alt="Slow cyan cobalt threat radar and bounded signal-fusion path from telemetry and CTI to hunting and detection engineering" width="100%"></p>
 
