@@ -29,10 +29,11 @@ jobs:
 
           required=(
             'README.md'
-            'assets/profile-banner-v10.svg'
-            'assets/operator-console-v9.svg'
+            'assets/profile-banner-v11.svg'
+            'assets/operator-console-v10.svg'
             'assets/threat-radar-v7.svg'
-            'assets/footer-terminal-v8.svg'
+            'assets/career-vector-v7.svg'
+            'assets/footer-terminal-v9.svg'
             '.github/CODEOWNERS'
           )
 
@@ -158,21 +159,39 @@ jobs:
               raise SystemExit('\n'.join(failures))
           print('Immutable Action refs: PASS')
 
-      - name: Validate SVG assets
+      - name: Validate SVG assets and mobile text budget
         shell: python
         run: |
           from pathlib import Path
+          import re
           import xml.etree.ElementTree as ET
 
           files = [
-              Path('assets/profile-banner-v10.svg'),
-              Path('assets/operator-console-v9.svg'),
+              Path('assets/profile-banner-v11.svg'),
+              Path('assets/operator-console-v10.svg'),
               Path('assets/threat-radar-v7.svg'),
-              Path('assets/footer-terminal-v8.svg'),
+              Path('assets/career-vector-v7.svg'),
+              Path('assets/footer-terminal-v9.svg'),
           ]
+          text_pattern = re.compile(r'<text\b([^>]*)>(.*?)</text>', re.I | re.S)
+          tag_pattern = re.compile(r'<[^>]+>')
+          size_pattern = re.compile(r'font-size=["\']([\d.]+)["\']', re.I)
+
           for path in files:
               ET.parse(path)
-              print(f'{path}: XML PASS')
+              svg = path.read_text(encoding='utf-8')
+              for attrs, body in text_pattern.findall(svg):
+                  size_match = size_pattern.search(attrs)
+                  if not size_match:
+                      continue
+                  size = float(size_match.group(1))
+                  if size < 15 or size >= 90:
+                      continue
+                  visible = tag_pattern.sub('', body)
+                  visible = visible.replace('&amp;', '&').replace('&quot;', '"').replace('&#39;', "'").strip()
+                  if len(visible) > 52:
+                      raise SystemExit(f'{path}: mobile-risk text row ({len(visible)} > 52): {visible}')
+              print(f'{path}: XML + mobile text PASS')
 
       - name: Parse PowerShell without executing account writes
         shell: pwsh
