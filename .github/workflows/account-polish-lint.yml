@@ -44,6 +44,32 @@ jobs:
             fi
           done
 
+          active_assets=(
+            'assets/profile-banner-v11.svg'
+            'assets/operator-console-v10.svg'
+            'assets/threat-radar-v7.svg'
+            'assets/career-vector-v7.svg'
+            'assets/footer-terminal-v9.svg'
+          )
+          for asset in "${active_assets[@]}"; do
+            grep -Fq "$asset" README.md || {
+              echo "::error file=README.md::Active mobile-safe profile asset is not referenced: $asset"
+              exit 1
+            }
+          done
+
+          stale_assets=(
+            'assets/profile-banner-v10.svg'
+            'assets/operator-console-v9.svg'
+            'assets/footer-terminal-v8.svg'
+          )
+          for asset in "${stale_assets[@]}"; do
+            if grep -Fq "$asset" README.md; then
+              echo "::error file=README.md::Stale cache-prone profile asset remains referenced: $asset"
+              exit 1
+            fi
+          done
+
           grep -Fq 'https://gergoilly.hu/' README.md || {
             echo '::error file=README.md::Profile must link the canonical personal site.'
             exit 1
