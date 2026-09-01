@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/profile-banner-v10.svg" alt="GER1E — threat hunting, CTI, incident response and detection engineering signal banner with dense Matrix rain and John Kiriakou quote" width="100%">
+  <img src="assets/profile-banner-v11.svg" alt="GER1E — threat hunting, CTI, incident response and detection engineering signal banner with dense Matrix rain and John Kiriakou quote" width="100%">
 </p>
 
 <p align="center"><sub>
@@ -21,7 +21,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 <details>
 <summary><b>Operator profile</b></summary>
 
-<p align="center"><img src="assets/operator-console-v9.svg" alt="Public cobalt operator profile showing experience, investigation surfaces, operating model and core stack" width="100%"></p>
+<p align="center"><img src="assets/operator-console-v10.svg" alt="Public cobalt operator profile showing experience, investigation surfaces, operating model and core stack" width="100%"></p>
 
 </details>
 
@@ -123,4 +123,4 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 <sub><strong>HYPOTHESIS</strong> → TELEMETRY → QUERY → EVIDENCE → TUNING<br/>
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE</sub>
 
-<p align="center"><img src="assets/footer-terminal-v8.svg" alt="Detection engineering without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Per Aspera Ad Astra." width="100%"></p>
+<p align="center"><img src="assets/footer-terminal-v9.svg" alt="Detection engineering without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Per Aspera Ad Astra." width="100%"></p>
