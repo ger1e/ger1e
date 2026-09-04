@@ -260,10 +260,10 @@ def render_catalog(catalog: dict) -> str:
         title = category.replace("-", " ").title()
         lines += doc_section(number, title) + [""]
         for item in sorted(groups[category], key=lambda x: x["repo"].lower()):
-  meta = f"`{item['provenance']}` · `{item['risk']}` · `{item['status']}`"
-  desc = f" — {item['description']}" if item.get("description") else ""
-  aliases = f" · aliases: {', '.join(item['aliases'])}" if item.get("aliases") else ""
-  lines.append(f"- [{item['repo']}]({item['url']}) — {meta}{aliases}{desc}")
+            meta = f"`{item['provenance']}` · `{item['risk']}` · `{item['status']}`"
+            desc = f" — {item['description']}" if item.get("description") else ""
+            aliases = f" · aliases: {', '.join(item['aliases'])}" if item.get("aliases") else ""
+            lines.append(f"- [{item['repo']}]({item['url']}) — {meta}{aliases}{desc}")
         lines.append("")
     lines += doc_footer()
     return "\n".join(lines).rstrip() + "\n"
@@ -315,20 +315,20 @@ def render_provider_catalog(catalog: dict) -> str:
         number += 1
         lines += doc_section(number, role.replace("-", " ").title()) + [""]
         for item in sorted(groups[role], key=lambda x: x["name"].lower()):
-  number += 1
-  lines += doc_section(number, item["name"])
-  lines.append(f"- API: {item.get('api_base_url') or 'not separately published'}")
-  lines.append(f"- Docs: {item.get('docs_url') or 'not separately published'}")
-  lines.append(f"- Auth: `{item['auth']}`" + (f" · env `{item['env_var']}`" if item.get("env_var") else ""))
-  lines.append(f"- Access: `{item['access']}` · provenance `{item['provenance']}`")
-  capabilities = ", ".join(item.get("capabilities", []))
-  if capabilities:
-      lines.append(f"- Capabilities: {capabilities}")
-  if item.get("official_repositories"):
-      lines.append("- Official repos: " + ", ".join(item["official_repositories"]))
-  if item.get("community_integrations"):
-      lines.append("- Verified integrations: " + ", ".join(item["community_integrations"]))
-  lines.append("")
+            number += 1
+            lines += doc_section(number, item["name"])
+            lines.append(f"- API: {item.get('api_base_url') or 'not separately published'}")
+            lines.append(f"- Docs: {item.get('docs_url') or 'not separately published'}")
+            lines.append(f"- Auth: `{item['auth']}`" + (f" · env `{item['env_var']}`" if item.get("env_var") else ""))
+            lines.append(f"- Access: `{item['access']}` · provenance `{item['provenance']}`")
+            capabilities = ", ".join(item.get("capabilities", []))
+            if capabilities:
+                lines.append(f"- Capabilities: {capabilities}")
+            if item.get("official_repositories"):
+                lines.append("- Official repos: " + ", ".join(item["official_repositories"]))
+            if item.get("community_integrations"):
+                lines.append("- Verified integrations: " + ", ".join(item["community_integrations"]))
+            lines.append("")
     lines += doc_footer()
     return "\n".join(lines).rstrip() + "\n"
 
@@ -395,7 +395,7 @@ def render_health(catalog: dict, checked: list[dict]) -> str:
     if exceptions:
         lines += doc_section(1, "Exceptions") + [""]
         for row in exceptions:
-  lines.append(f"- `{row['repo']}` — `{row['status']}`")
+            lines.append(f"- `{row['repo']}` — `{row['status']}`")
         lines.append("")
     lines += doc_footer()
     return "\n".join(lines).rstrip() + "\n"
