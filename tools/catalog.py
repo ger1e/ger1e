@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from collections import defaultdict
@@ -341,13 +342,40 @@ def github_repo_state(repo: str, token: str | None):
             **({"Authorization": f"Bearer {token}"} if token else {}),
         },
     )
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.load(resp)
-    except urllib.error.HTTPError as exc:
-        if exc.code == 404:
-            return {"status": "MISSING"}
-        raise
+    transient_http = {429, 500, 502, 503, 504}
+    max_attempts = 3
+    data = None
+    for attempt in range(max_attempts):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.load(resp)
+            break
+        except urllib.error.HTTPError as exc:
+            if exc.code == 404:
+                return {"status": "MISSING"}
+            retry_after = exc.headers.get("Retry-After") if exc.headers else None
+            rate_limited = exc.code == 403 and (
+                retry_after is not None
+                or (exc.headers and exc.headers.get("X-RateLimit-Remaining") == "0")
+            )
+            if exc.code not in transient_http and not rate_limited:
+                raise
+            if attempt == max_attempts - 1:
+                raise
+            delay = min(30.0, 2.0 ** attempt)
+            if retry_after is not None:
+                try:
+                    delay = min(30.0, max(0.0, float(retry_after)))
+                except (TypeError, ValueError):
+                    pass
+            time.sleep(delay)
+        except urllib.error.URLError:
+            if attempt == max_attempts - 1:
+                raise
+            time.sleep(min(30.0, 2.0 ** attempt))
+
+    if data is None:
+        raise RuntimeError(f"GitHub repository lookup failed without a response: {repo}")
     status = "ARCHIVED" if data.get("archived") else "ACTIVE"
     if data.get("private"):
         status = "PRIVATE"
