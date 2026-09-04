@@ -9,6 +9,9 @@ from tools.catalog import (
     merge_entries,
     normalize_repo_url,
     reconcile_catalog,
+    render_catalog,
+    render_health,
+    render_provider_catalog,
     validate_catalog,
     validate_provider_catalog,
 )
@@ -26,6 +29,18 @@ class CatalogTests(unittest.TestCase):
         rows = extract_repositories(md, source="atlas")
         self.assertEqual(rows[0]["category"], "threat-hunting-detection-engineering")
         self.assertEqual(rows[1]["repo"], "ytisf/theZoo")
+
+    def test_extract_repositories_understands_compact_ger1e_schema(self):
+        md = (
+            "<!-- GER1E-DOC-SCHEMA: v1 -->\n"
+            "<sub><strong>01 // Threat hunting / detection engineering</strong></sub>\n"
+            "- [SigmaHQ/sigma](https://github.com/SigmaHQ/sigma) — rules.\n\n"
+            "<sub><strong>02 // Malware analysis / reverse engineering</strong></sub>\n"
+            "- [ytisf/theZoo](https://github.com/ytisf/theZoo) — live malware.\n"
+        )
+        rows = extract_repositories(md, source="atlas")
+        self.assertEqual(rows[0]["category"], "threat-hunting-detection-engineering")
+        self.assertEqual(rows[1]["category"], "malware-analysis-reverse-engineering")
 
     def test_api_tools_community_heading_sets_community_provenance(self):
         md = "## Useful community clients / integrations\n- [OpenCTI connectors](https://github.com/OpenCTI-Platform/connectors/tree/master/internal-enrichment/modat-enrichment) — Modat enrichment.\n"
@@ -111,6 +126,50 @@ class CatalogTests(unittest.TestCase):
             ]
         }
         self.assertEqual(validate_provider_catalog(catalog), [])
+
+    def test_generated_markdown_uses_mobile_aware_ger1e_schema(self):
+        repo_catalog = {
+            "last_verified": "2026-09-04",
+            "repositories": [
+                {
+                    "repo": "SigmaHQ/sigma",
+                    "url": "https://github.com/SigmaHQ/sigma",
+                    "category": "detection",
+                    "description": "rules",
+                    "provenance": "CANONICAL",
+                    "risk": "SAFE-REFERENCE",
+                    "status": "ACTIVE",
+                }
+            ],
+        }
+        provider_catalog = {
+            "last_verified": "2026-09-04",
+            "providers": [
+                {
+                    "id": "example",
+                    "name": "Example",
+                    "role": "enrichment",
+                    "api_base_url": "https://example.com/",
+                    "docs_url": "https://example.com/docs",
+                    "auth": "NONE",
+                    "access": "OPEN",
+                    "provenance": "OFFICIAL",
+                    "capabilities": ["lookup"],
+                }
+            ],
+        }
+        checked = [{"repo": "SigmaHQ/sigma", "status": "ARCHIVED"}]
+        for rendered in (
+            render_catalog(repo_catalog),
+            render_provider_catalog(provider_catalog),
+            render_health(repo_catalog, checked),
+        ):
+            self.assertTrue(rendered.startswith("<!-- GER1E-DOC-SCHEMA: v1 -->\n"))
+            self.assertIn("<div align=\"center\">", rendered)
+            self.assertIn("<sub><strong>01 //", rendered)
+            self.assertIn("GER1E // GER1E // MOBILE-SAFE DOCUMENTATION", rendered)
+            self.assertNotIn("### ", rendered)
+            self.assertNotIn("#### ", rendered)
 
 
 if __name__ == "__main__":
