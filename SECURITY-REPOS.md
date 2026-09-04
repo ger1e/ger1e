@@ -1,8 +1,16 @@
-### Security repository atlas
+<!-- GER1E-DOC-SCHEMA: v1 -->
+<a id="security-repository-atlas"></a>
+<div align="center">
+
+<strong>Security repository atlas</strong><br/>
+<sub>GER1E // GER1E // DOCUMENTATION</sub>
+
+</div>
 
 A curated index of established, high-signal public security repositories across threat hunting, detection engineering, CTI, DFIR, malware analysis, reverse engineering, offensive security, application security, identity, cloud/container security, software supply chain, OSINT, privacy/hardening, and AI security.
 
-#### Selection model
+<a id="selection-model"></a>
+<sub><strong>01 // Selection model</strong></sub>
 
 This is not a raw GitHub search dump.
 
@@ -16,7 +24,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 
 ---
 
-#### Threat hunting / detection engineering
+<a id="threat-hunting-detection-engineering"></a>
+<sub><strong>02 // Threat hunting / detection engineering</strong></sub>
 
 - [SigmaHQ/sigma](https://github.com/SigmaHQ/sigma) — vendor-agnostic detection and hunting rules.
 - [OTRF/ThreatHunter-Playbook](https://github.com/OTRF/ThreatHunter-Playbook) — threat-hunting playbooks and research.
@@ -32,7 +41,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [Security-Onion-Solutions/securityonion](https://github.com/Security-Onion-Solutions/securityonion) — current Security Onion platform repository.
 - [Neo23x0/Loki](https://github.com/Neo23x0/Loki) — IOC/YARA-based endpoint scanner.
 
-#### Microsoft security / Sentinel / KQL
+<a id="microsoft-security-sentinel-kql"></a>
+<sub><strong>03 // Microsoft security / Sentinel / KQL</strong></sub>
 
 - [Azure/Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) — Microsoft Sentinel content, detections, hunting queries, workbooks, connectors, playbooks, and solutions.
 - [Azure/Azure-Sentinel-Notebooks](https://github.com/Azure/Azure-Sentinel-Notebooks) — Sentinel investigation and hunting notebooks.
@@ -40,7 +50,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [Bert-JanP/Hunting-Queries-Detection-Rules](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules) — practical Defender/Sentinel hunting and detection content.
 - [cyb3rmik3/KQL-threat-hunting-queries](https://github.com/cyb3rmik3/KQL-threat-hunting-queries) — KQL threat-hunting reference queries.
 
-#### Network security / telemetry
+<a id="network-security-telemetry"></a>
+<sub><strong>04 // Network security / telemetry</strong></sub>
 
 - [zeek/zeek](https://github.com/zeek/zeek) — network security monitoring and protocol telemetry.
 - [OISF/suricata](https://github.com/OISF/suricata) — IDS/IPS and network security monitoring engine.
@@ -53,7 +64,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [OpenVPN/openvpn](https://github.com/OpenVPN/openvpn) — major open-source VPN implementation.
 - [slackhq/nebula](https://github.com/slackhq/nebula) — overlay networking with certificate-based trust.
 
-#### Cyber threat intelligence
+<a id="cyber-threat-intelligence"></a>
+<sub><strong>05 // Cyber threat intelligence</strong></sub>
 
 - [MISP/MISP](https://github.com/MISP/MISP) — threat-intelligence sharing and correlation platform.
 - [intelowlproject/IntelOwl](https://github.com/intelowlproject/IntelOwl) — scalable IOC/threat-intelligence enrichment.
@@ -63,7 +75,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [OpenCTI-Platform/opencti](https://github.com/OpenCTI-Platform/opencti) — cyber threat-intelligence knowledge platform.
 - [mitre-attack/attack-stix-data](https://github.com/mitre-attack/attack-stix-data) — MITRE ATT&CK STIX data.
 
-#### DFIR / incident response
+<a id="dfir-incident-response"></a>
+<sub><strong>06 // DFIR / incident response</strong></sub>
 
 - [google/grr](https://github.com/google/grr) — remote live forensics and incident-response framework.
 - [google/timesketch](https://github.com/google/timesketch) — collaborative forensic timeline analysis.
@@ -75,7 +88,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [cugu/awesome-forensics](https://github.com/cugu/awesome-forensics) — digital-forensics tooling/reference index.
 - [clong/DetectionLab](https://github.com/clong/DetectionLab) — historically influential defensive detection lab; verify maintenance before deployment.
 
-#### Malware analysis / reverse engineering
+<a id="malware-analysis-reverse-engineering"></a>
+<sub><strong>07 // Malware analysis / reverse engineering</strong></sub>
 
 - [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) — software reverse-engineering framework.
 - [x64dbg/x64dbg](https://github.com/x64dbg/x64dbg) — Windows debugger.
@@ -95,7 +109,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [ytisf/theZoo](https://github.com/ytisf/theZoo) — live-malware research repository; isolated-lab handling only.
 - [mytechnotalent/Reverse-Engineering](https://github.com/mytechnotalent/Reverse-Engineering) — large reverse-engineering learning/reference repository.
 
-#### Binary exploitation / fuzzing
+<a id="binary-exploitation-fuzzing"></a>
+<sub><strong>08 // Binary exploitation / fuzzing</strong></sub>
 
 - [Gallopsled/pwntools](https://github.com/Gallopsled/pwntools) — CTF/exploit-development framework.
 - [shellphish/how2heap](https://github.com/shellphish/how2heap) — heap exploitation techniques and examples.
@@ -104,7 +119,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [google/honggfuzz](https://github.com/google/honggfuzz) — security-oriented fuzzer.
 - [angr/angr](https://github.com/angr/angr) — binary analysis and symbolic-execution platform.
 
-#### Offensive security / pentesting / adversary simulation
+<a id="offensive-security-pentesting-adversary-simulation"></a>
+<sub><strong>09 // Offensive security / pentesting / adversary simulation</strong></sub>
 
 - [rapid7/metasploit-framework](https://github.com/rapid7/metasploit-framework) — penetration-testing and exploit-development framework.
 - [HackTricks-wiki/hacktricks](https://github.com/HackTricks-wiki/hacktricks) — extensive pentesting/red-team technique reference.
@@ -126,7 +142,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [1N3/Sn1per](https://github.com/1N3/Sn1per) — automated security assessment framework.
 - [Hack-with-Github/Awesome-Hacking](https://github.com/Hack-with-Github/Awesome-Hacking) — broad offensive-security reference index.
 
-#### Active Directory / identity security
+<a id="active-directory-identity-security"></a>
+<sub><strong>10 // Active Directory / identity security</strong></sub>
 
 - [SpecterOps/BloodHound-Legacy](https://github.com/SpecterOps/BloodHound-Legacy) — historically important BloodHound codebase; legacy naming is explicit.
 - [fortra/impacket](https://github.com/fortra/impacket) — Python network protocols used heavily in AD/security research.
@@ -136,7 +153,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [PowerShellEmpire/Empire](https://github.com/PowerShellEmpire/Empire) — adversary-emulation framework.
 - [NetSPI/PowerUpSQL](https://github.com/NetSPI/PowerUpSQL) — SQL Server security assessment and AD-adjacent attack-path research.
 
-#### Application security / web / API security
+<a id="application-security-web-api-security"></a>
+<sub><strong>11 // Application security / web / API security</strong></sub>
 
 - [OWASP/CheatSheetSeries](https://github.com/OWASP/CheatSheetSeries) — application-security guidance.
 - [OWASP/ASVS](https://github.com/OWASP/ASVS) — application security verification standard.
@@ -153,7 +171,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [digininja/DVWA](https://github.com/digininja/DVWA) — Damn Vulnerable Web Application.
 - [qazbnm456/awesome-web-security](https://github.com/qazbnm456/awesome-web-security) — web-security reference collection.
 
-#### Mobile security
+<a id="mobile-security"></a>
+<sub><strong>12 // Mobile security</strong></sub>
 
 - [MobSF/Mobile-Security-Framework-MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) — automated mobile application security testing.
 - [OWASP/mastg](https://github.com/OWASP/mastg) — OWASP mobile security testing guidance.
@@ -162,7 +181,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [frida/frida](https://github.com/frida/frida) — dynamic instrumentation toolkit.
 - [sensepost/objection](https://github.com/sensepost/objection) — mobile runtime exploration powered by Frida.
 
-#### Cloud / Kubernetes / container security
+<a id="cloud-kubernetes-container-security"></a>
+<sub><strong>13 // Cloud / Kubernetes / container security</strong></sub>
 
 - [prowler-cloud/prowler](https://github.com/prowler-cloud/prowler) — multi-cloud security posture assessment.
 - [aquasecurity/trivy](https://github.com/aquasecurity/trivy) — vulnerability, misconfiguration, secret, and SBOM scanning.
@@ -179,7 +199,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [bunkerity/bunkerweb](https://github.com/bunkerity/bunkerweb) — security-focused web server/WAF platform.
 - [toniblyx/my-arsenal-of-aws-security-tools](https://github.com/toniblyx/my-arsenal-of-aws-security-tools) — AWS security tooling index.
 
-#### DevSecOps / software supply chain / secret scanning
+<a id="devsecops-software-supply-chain-secret-scanning"></a>
+<sub><strong>14 // DevSecOps / software supply chain / secret scanning</strong></sub>
 
 - [gitleaks/gitleaks](https://github.com/gitleaks/gitleaks) — secret scanning for Git and filesystems.
 - [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog) — secret discovery and verification.
@@ -192,7 +213,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [bridgecrewio/checkov](https://github.com/bridgecrewio/checkov) — IaC and cloud configuration security scanning.
 - [sottlmarek/DevSecOps](https://github.com/sottlmarek/DevSecOps) — DevSecOps tools and references.
 
-#### OSINT / reconnaissance / attack-surface discovery
+<a id="osint-reconnaissance-attack-surface-discovery"></a>
+<sub><strong>15 // OSINT / reconnaissance / attack-surface discovery</strong></sub>
 
 - [jivoi/awesome-osint](https://github.com/jivoi/awesome-osint) — broad OSINT reference index.
 - [lockfale/OSINT-Framework](https://github.com/lockfale/OSINT-Framework) — OSINT resource navigator.
@@ -215,7 +237,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [j3ssie/osmedeus](https://github.com/j3ssie/osmedeus) — automated reconnaissance framework.
 - [edoardottt/awesome-hacker-search-engines](https://github.com/edoardottt/awesome-hacker-search-engines) — specialized security/search-engine index.
 
-#### Privacy / hardening / defensive engineering
+<a id="privacy-hardening-defensive-engineering"></a>
+<sub><strong>16 // Privacy / hardening / defensive engineering</strong></sub>
 
 - [drduh/macOS-Security-and-Privacy-Guide](https://github.com/drduh/macOS-Security-and-Privacy-Guide) — macOS hardening/privacy reference.
 - [imthenachoman/How-To-Secure-A-Linux-Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server) — Linux server hardening reference.
@@ -226,7 +249,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [trimstray/nginx-admins-handbook](https://github.com/trimstray/nginx-admins-handbook) — NGINX operations/hardening reference.
 - [veeral-patel/how-to-secure-anything](https://github.com/veeral-patel/how-to-secure-anything) — broad security-hardening methodology.
 
-#### AI / LLM security
+<a id="ai-llm-security"></a>
+<sub><strong>17 // AI / LLM security</strong></sub>
 
 - [openai/codex-security](https://github.com/openai/codex-security) — security-oriented agentic/code security project.
 - [NVIDIA/garak](https://github.com/NVIDIA/garak) — LLM vulnerability scanner/red-team evaluation framework.
@@ -234,7 +258,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) — LLM evals and red-team testing.
 - [protectai/llm-guard](https://github.com/protectai/llm-guard) — input/output security controls for LLM applications.
 
-#### Smart-contract / blockchain security
+<a id="smart-contract-blockchain-security"></a>
+<sub><strong>18 // Smart-contract / blockchain security</strong></sub>
 
 - [OpenZeppelin/openzeppelin-contracts](https://github.com/OpenZeppelin/openzeppelin-contracts) — security-focused smart-contract library.
 - [crytic/slither](https://github.com/crytic/slither) — Solidity static analyzer.
@@ -242,7 +267,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [Consensys/mythril](https://github.com/Consensys/mythril) — Ethereum smart-contract security analysis.
 - [trailofbits/manticore](https://github.com/trailofbits/manticore) — symbolic execution for binaries and smart contracts.
 
-#### Security education / reference / labs
+<a id="security-education-reference-labs"></a>
+<sub><strong>19 // Security education / reference / labs</strong></sub>
 
 - [sbilly/awesome-security](https://github.com/sbilly/awesome-security) — long-running security resource collection.
 - [The-Art-of-Hacking/h4cker](https://github.com/The-Art-of-Hacking/h4cker) — security research and learning reference.
@@ -255,7 +281,8 @@ High stars are a discovery signal, not a quality guarantee. Validate current mai
 - [FallibleInc/security-guide-for-developers](https://github.com/FallibleInc/security-guide-for-developers) — secure-development reference.
 - [Tencent/secguide](https://github.com/Tencent/secguide) — secure coding/security engineering guidance.
 
-#### Historically important / legacy references
+<a id="historically-important-legacy-references"></a>
+<sub><strong>20 // Historically important / legacy references</strong></sub>
 
 These remain worth knowing but should not be mistaken for the preferred current upstream when a successor exists.
 
@@ -267,11 +294,13 @@ These remain worth knowing but should not be mistaken for the preferred current 
 - [michenriksen/aquatone](https://github.com/michenriksen/aquatone) — archived attack-surface visual reconnaissance tool.
 - [twintproject/twint](https://github.com/twintproject/twint) — archived Twitter/X OSINT project.
 
-#### SOC Analyst Field Guide source set
+<a id="soc-analyst-field-guide-source-set"></a>
+<sub><strong>21 // SOC Analyst Field Guide source set</strong></sub>
 
 The following repositories were extracted from embedded GitHub links in `SOC_Analyst_Field_Guide_IBM_FutureNow_ULTIMATE_FINAL_PRO_MASTER_v15_LOGO_TRULY_UNIFORM.pdf`. The source contained 18 unique repository roots. Three were already present elsewhere in this atlas (`Azure/Azure-Sentinel`, `SigmaHQ/sigma`, and `cyb3rmik3/KQL-threat-hunting-queries`); the 15 additional roots are consolidated here without duplication.
 
-##### Microsoft / KQL / hunting
+<a id="microsoft-kql-hunting"></a>
+<sub><strong>22 // Microsoft / KQL / hunting</strong></sub>
 
 - [SlimKQL/Hunting-Queries-Detection-Rules](https://github.com/SlimKQL/Hunting-Queries-Detection-Rules) — Sentinel/Defender hunting and detection content referenced by the field guide.
 - [SlimKQL/Detections.AI](https://github.com/SlimKQL/Detections.AI) — KQL detection collection referenced by the field guide.
@@ -280,28 +309,33 @@ The following repositories were extracted from embedded GitHub links in `SOC_Ana
 - [reprise99/Sentinel-Queries](https://github.com/reprise99/Sentinel-Queries) — Sentinel query reference.
 - [microsoft/Microsoft-365-Defender-Hunting-Queries](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries) — Microsoft Defender hunting-query collection.
 
-##### Detection engineering / cross-vendor
+<a id="detection-engineering-cross-vendor"></a>
+<sub><strong>23 // Detection engineering / cross-vendor</strong></sub>
 
 - [elastic/detection-rules](https://github.com/elastic/detection-rules) — Elastic detection rules.
 - [splunk/security_content](https://github.com/splunk/security_content) — Splunk Security Content.
 - [THORCollective/HEARTH](https://github.com/THORCollective/HEARTH) — HEARTH and the PEAK hunting template referenced by the field guide.
 
-##### C2 / adversary simulation
+<a id="c2-adversary-simulation"></a>
+<sub><strong>24 // C2 / adversary simulation</strong></sub>
 
 - [BishopFox/sliver](https://github.com/BishopFox/sliver) — Sliver C2 framework.
 - [HavocFramework/Havoc](https://github.com/HavocFramework/Havoc) — Havoc C2 framework.
 - [its-a-feature/Mythic](https://github.com/its-a-feature/Mythic) — Mythic C2 framework.
 
-##### Identity / attack paths
+<a id="identity-attack-paths"></a>
+<sub><strong>25 // Identity / attack paths</strong></sub>
 
 - [SpecterOps/BloodHound](https://github.com/SpecterOps/BloodHound) — current BloodHound identity and Active Directory attack-path platform.
 - [SpecterOps/SharpHound](https://github.com/SpecterOps/SharpHound) — BloodHound data collection.
 
-##### Driver abuse / BYOVD
+<a id="driver-abuse-byovd"></a>
+<sub><strong>26 // Driver abuse / BYOVD</strong></sub>
 
 - [magicsword-io/LOLDrivers](https://github.com/magicsword-io/LOLDrivers) — vulnerable and malicious driver reference data.
 
-#### Handling notes
+<a id="handling-notes"></a>
+<sub><strong>27 // Handling notes</strong></sub>
 
 - Prefer upstream repositories over forks.
 - Verify release signatures/checksums where available.
@@ -310,3 +344,5 @@ The following repositories were extracted from embedded GitHub links in `SOC_Ana
 - Offensive tooling belongs in authorized labs and assessments.
 - Do not equate GitHub popularity with security, correctness, or maintenance quality.
 - For production selection, check recent releases, recent commits, open security advisories, issue velocity, maintainer activity, dependency health, and provenance.
+
+<p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>

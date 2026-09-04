@@ -1,14 +1,23 @@
-# GitHub Credibility MAX Design
+<!-- GER1E-DOC-SCHEMA: v1 -->
+<a id="github-credibility-max-design"></a>
+<div align="center">
+
+<strong>GitHub Credibility MAX Design</strong><br/>
+<sub>GER1E // GER1E // DOCUMENTATION</sub>
+
+</div>
 
 **Date:** 2026-08-28  
 **Owner:** ger1e  
 **Status:** Approved; implementation in progress
 
-## Objective
+<a id="objective"></a>
+<sub><strong>01 // Objective</strong></sub>
 
 Turn the public GitHub account into a credibility-first threat-hunting and CTI portfolio while preserving its cobalt/cyberpunk identity. The account must communicate senior operator value within ten seconds, expose three strong proof surfaces, eliminate PARA11AX rename drift, and make repository governance support—not contradict—the engineering claims.
 
-## Evidence from the audit
+<a id="evidence-from-the-audit"></a>
+<sub><strong>02 // Evidence from the audit</strong></sub>
 
 - The profile README still links to `ger1e/cti-enrichment-gateway` and documents the pre-rename API paths.
 - `ger1e/para11ax` has the correct repository name but its GitHub homepage still points to `https://cti-enrichment-gateway.vercel.app`, its description is generic, and it has no topics.
@@ -19,7 +28,8 @@ Turn the public GitHub account into a credibility-first threat-hunting and CTI p
 - `landing-pages` describes itself as an archive but remains active and still advertises the legacy deployment.
 - PARA11AX, the personal site, and the hunting lab currently have successful primary CI runs.
 
-## Portfolio architecture
+<a id="portfolio-architecture"></a>
+<sub><strong>03 // Portfolio architecture</strong></sub>
 
 The profile repository is the single front door. Its first screen will contain:
 
@@ -33,7 +43,8 @@ The profile repository is the single front door. Its first screen will contain:
 
 Detailed provider coverage, career history, repository catalogs, and large visuals remain available below the fold or in collapsible sections. The cobalt visual system stays; it must not dominate the evidence hierarchy.
 
-## Repository roles
+<a id="repository-roles"></a>
+<sub><strong>04 // Repository roles</strong></sub>
 
 | Repository | Role | Intended state |
 |---|---|---|
@@ -45,7 +56,8 @@ Detailed provider coverage, career history, repository catalogs, and large visua
 | `ger1e/godot` | Historical fork | Remain archived |
 | `ger1e/learning-bash-scripting-3212393` | Historical coursework | Remain archived |
 
-## PARA11AX identity contract
+<a id="para11ax-identity-contract"></a>
+<sub><strong>05 // PARA11AX identity contract</strong></sub>
 
 Every current GitHub-controlled surface must use:
 
@@ -62,9 +74,11 @@ The profile quality gate will require the canonical values and reject:
 
 GitHub redirect compatibility is not treated as canonical branding.
 
-## Content changes
+<a id="content-changes"></a>
+<sub><strong>06 // Content changes</strong></sub>
 
-### Profile
+<a id="profile"></a>
+<sub><strong>07 // Profile</strong></sub>
 
 - Rewrite the upper README into a compact operator statement and three-project proof hierarchy.
 - Replace all obsolete CTI repository, documentation, and endpoint links with PARA11AX equivalents.
@@ -72,7 +86,8 @@ GitHub redirect compatibility is not treated as canonical branding.
 - Preserve credential claims without adding new claims. No credential is upgraded, inferred, or described as verified without a public verification target.
 - Update the profile quality workflow to validate the current README and current visual assets rather than stale versioned assets.
 
-### PARA11AX
+<a id="para11ax"></a>
+<sub><strong>08 // PARA11AX</strong></sub>
 
 - Set a precise description focused on evidence-preserving, read-only CTI enrichment.
 - Set the homepage to `https://para11ax.vercel.app/`.
@@ -80,27 +95,32 @@ GitHub redirect compatibility is not treated as canonical branding.
 - Audit repository text for old product names, old URLs, old API routes, and compatibility language.
 - Preserve the current no-license state. No OSS license will be invented.
 
-### Personal site
+<a id="personal-site"></a>
+<sub><strong>09 // Personal site</strong></sub>
 
 - Tighten the description and remove the trailing-space quality defect.
 - Keep `https://gergoilly.hu/` as the homepage.
 - Preserve the current QA and privacy/security posture.
 
-### Hunting lab
+<a id="hunting-lab"></a>
+<sub><strong>10 // Hunting lab</strong></sub>
 
 - Add `https://gergoilly.hu/` as the repository homepage.
 - Preserve the MIT license, citation file, contribution contract, and quality gate.
 - Keep examples explicitly sanitized and method-led.
 
-### Landing-pages archive
+<a id="landing-pages-archive"></a>
+<sub><strong>11 // Landing-pages archive</strong></sub>
 
 - Replace the legacy deployment homepage with the canonical personal site.
 - Confirm the README points to `personal-site-lp`.
 - Disable unused interactive surfaces, then archive the repository.
 
-## CI and automation
+<a id="ci-and-automation"></a>
+<sub><strong>12 // CI and automation</strong></sub>
 
-### Profile quality gate
+<a id="profile-quality-gate"></a>
+<sub><strong>13 // Profile quality gate</strong></sub>
 
 The gate will:
 
@@ -111,11 +131,13 @@ The gate will:
 - preserve immutable GitHub Action references;
 - parse the account-maintenance PowerShell without executing writes.
 
-### Security catalog
+<a id="security-catalog"></a>
+<sub><strong>14 // Security catalog</strong></sub>
 
 The catalog workflow will retain validation, generation, and health refresh. Its PR step will use a stable `automation/catalog-refresh` branch and update an existing refresh PR when present instead of creating a new branch on every run. GitHub Actions will be permitted to create pull requests for this repository. Existing orphaned refresh branches will be removed after their unique commits are confirmed as generated catalog state.
 
-### Required checks
+<a id="required-checks"></a>
+<sub><strong>15 // Required checks</strong></sub>
 
 | Repository | Required deterministic check |
 |---|---|
@@ -126,7 +148,8 @@ The catalog workflow will retain validation, generation, and health refresh. Its
 
 CodeQL remains enabled for PARA11AX but is not substituted for functional verification.
 
-## Repository governance
+<a id="repository-governance"></a>
+<sub><strong>16 // Repository governance</strong></sub>
 
 For active proof repositories:
 
@@ -144,7 +167,8 @@ For active proof repositories:
 
 Settings changes will be made only after repository content and CI names are aligned, preventing a required-check deadlock.
 
-## Pinning and public metadata
+<a id="pinning-and-public-metadata"></a>
+<sub><strong>17 // Pinning and public metadata</strong></sub>
 
 The preferred pin order is:
 
@@ -154,7 +178,8 @@ The preferred pin order is:
 
 Archived repositories will not be pinned. Repository descriptions, homepages, and topics will use consistent terminology without duplicating the entire README.
 
-## Error handling and safety
+<a id="error-handling-and-safety"></a>
+<sub><strong>18 // Error handling and safety</strong></sub>
 
 - All content work occurs on reviewable branches.
 - Existing files are fetched immediately before update so blob SHAs are current.
@@ -164,7 +189,8 @@ Archived repositories will not be pinned. Repository descriptions, homepages, an
 - Branch deletion is limited to the three identified stale branches after commit inspection.
 - If a protected-branch rule cannot be read or written through the connected integration, the exact unresolved control is reported rather than assumed.
 
-## Verification
+<a id="verification"></a>
+<sub><strong>19 // Verification</strong></sub>
 
 Completion requires fresh evidence for all of the following:
 
@@ -179,9 +205,12 @@ Completion requires fresh evidence for all of the following:
 9. Active repo merge settings and unused-feature settings match this design.
 10. The public profile renders with PARA11AX first and no archived repo pinned.
 
-## Non-goals
+<a id="non-goals"></a>
+<sub><strong>20 // Non-goals</strong></sub>
 
 - Changing Vercel project configuration beyond verifying the GitHub-advertised production URL.
 - Adding new products, hunt content, provider integrations, credential claims, or certifications.
 - Rewriting the PARA11AX architecture.
 - Rebranding away from the existing cobalt/cyberpunk identity.
+
+<p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>

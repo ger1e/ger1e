@@ -1,3 +1,4 @@
+<!-- GER1E-DOC-SCHEMA: v1 -->
 <p align="center">
   <img src="assets/profile-banner-v11.svg" alt="GER1E — threat hunting, CTI, incident response and detection engineering signal banner with dense Matrix rain and John Kiriakou quote" width="100%">
 </p>
@@ -124,3 +125,5 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 <strong>SOURCE</strong> → PROVENANCE → CONTEXT → CORRELATION → CONFIDENCE</sub>
 
 <p align="center"><img src="assets/footer-terminal-v9.svg" alt="Detection engineering without telemetry is a wish. Intelligence without provenance is a rumor. Automation without context is faster wrongness. Per Aspera Ad Astra." width="100%"></p>
+
+<p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>
