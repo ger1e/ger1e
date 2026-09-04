@@ -1,0 +1,185 @@
+name: persist-catalog-markdown-schema
+
+on:
+  push:
+    branches:
+      - fix/markdown-schema-generator
+    paths:
+      - '.github/workflows/catalog-schema-persist.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: fix/markdown-schema-generator
+          fetch-depth: 0
+
+      - name: Persist compact Markdown schema in catalog tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('tools/catalog.py')
+          src = path.read_text(encoding='utf-8')
+
+          needle = 'LINK_RE = re.compile(r"\\[([^\\]]+)\\]\\((https://github\\.com/[^)]+)\\)(?:\\s+[—-]\\s+(.+))?")\n'
+          replacement = needle + 'COMPACT_SECTION_RE = re.compile(r"<sub><strong>\\s*\\d{2}\\s*//\\s*(.+?)\\s*</strong></sub>", re.IGNORECASE)\n'
+          if 'COMPACT_SECTION_RE' not in src:
+              if needle not in src:
+                  raise SystemExit('LINK_RE insertion point not found')
+              src = src.replace(needle, replacement, 1)
+
+          old = '''        if line.startswith("#### "):\n            category = slugify(line[5:].strip())\n            continue\n        match = LINK_RE.search(line)\n'''
+          new = '''        if line.startswith("#### "):\n            category = slugify(line[5:].strip())\n            continue\n        compact = COMPACT_SECTION_RE.fullmatch(line)\n        if compact:\n            category = slugify(compact.group(1).strip())\n            continue\n        match = LINK_RE.search(line)\n'''
+          if old not in src:
+              raise SystemExit('extract_repositories patch point not found')
+          src = src.replace(old, new, 1)
+
+          def replace_block(text, start_marker, end_marker, block):
+              start = text.index(start_marker)
+              end = text.index(end_marker, start)
+              return text[:start] + block.rstrip() + '\n\n' + text[end:]
+
+          catalog_block = r'''def doc_slug(value: str) -> str:
+    value = re.sub(r"<[^>]+>", "", value)
+    value = re.sub(r"[`*_~]", "", value).lower()
+    value = re.sub(r"[^a-z0-9\s-]", "", value)
+    return re.sub(r"[\s-]+", "-", value).strip("-") or "section"
+
+
+def doc_header(title: str) -> list[str]:
+    return [
+        "<!-- GER1E-DOC-SCHEMA: v1 -->",
+        f'<a id="{doc_slug(title)}"></a>',
+        '<div align="center">',
+        "",
+        f"<strong>{title}</strong><br/>",
+        "<sub>GER1E // GER1E // DOCUMENTATION</sub>",
+        "",
+        "</div>",
+        "",
+    ]
+
+
+def doc_section(number: int, title: str) -> list[str]:
+    return [
+        f'<a id="{doc_slug(title)}"></a>',
+        f"<sub><strong>{number:02d} // {title}</strong></sub>",
+    ]
+
+
+def doc_footer() -> list[str]:
+    return ["", '<p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>']
+
+
+def render_catalog(catalog: dict) -> str:
+    groups = defaultdict(list)
+    for item in catalog.get("repositories", []):
+        groups[item["category"]].append(item)
+    lines = doc_header("Security repository catalog") + [
+        "Generated from `catalog/repos.yaml`. Do not hand-edit this file.",
+        "",
+        f"**Repositories:** {len(catalog.get('repositories', []))}",
+        f"**Last verified:** {catalog.get('last_verified') or 'not yet verified'}",
+        "",
+        "Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/ACTIVE-SECURITY-TOOL/OFFENSIVE-DUAL-USE/LIVE-MALWARE/VULNERABLE-LAB`.",
+        "",
+    ]
+    for number, category in enumerate(sorted(groups), start=1):
+        title = category.replace("-", " ").title()
+        lines += doc_section(number, title) + [""]
+        for item in sorted(groups[category], key=lambda x: x["repo"].lower()):
+            meta = f"`{item['provenance']}` · `{item['risk']}` · `{item['status']}`"
+            desc = f" — {item['description']}" if item.get("description") else ""
+            aliases = f" · aliases: {', '.join(item['aliases'])}" if item.get("aliases") else ""
+            lines.append(f"- [{item['repo']}]({item['url']}) — {meta}{aliases}{desc}")
+        lines.append("")
+    lines += doc_footer()
+    return "\n".join(lines).rstrip() + "\n"'''
+          src = replace_block(src, 'def render_catalog(catalog: dict) -> str:', 'def validate_provider_catalog(catalog: dict):', catalog_block)
+
+          provider_block = r'''def render_provider_catalog(catalog: dict) -> str:
+    groups = defaultdict(list)
+    for item in catalog.get("providers", []):
+        groups[item.get("role", "uncategorized")].append(item)
+    lines = doc_header("API / intelligence provider registry") + [
+        "Generated from `catalog/providers.yaml`. Provider metadata is kept separate from GitHub repository provenance.",
+        "",
+        f"**Providers:** {len(catalog.get('providers', []))}",
+        f"**Last verified:** {catalog.get('last_verified') or 'not yet verified'}",
+        "",
+    ]
+    number = 0
+    for role in sorted(groups):
+        number += 1
+        lines += doc_section(number, role.replace("-", " ").title()) + [""]
+        for item in sorted(groups[role], key=lambda x: x["name"].lower()):
+            number += 1
+            lines += doc_section(number, item["name"])
+            lines.append(f"- API: {item.get('api_base_url') or 'not separately published'}")
+            lines.append(f"- Docs: {item.get('docs_url') or 'not separately published'}")
+            lines.append(f"- Auth: `{item['auth']}`" + (f" · env `{item['env_var']}`" if item.get("env_var") else ""))
+            lines.append(f"- Access: `{item['access']}` · provenance `{item['provenance']}`")
+            capabilities = ", ".join(item.get("capabilities", []))
+            if capabilities:
+                lines.append(f"- Capabilities: {capabilities}")
+            if item.get("official_repositories"):
+                lines.append("- Official repos: " + ", ".join(item["official_repositories"]))
+            if item.get("community_integrations"):
+                lines.append("- Verified integrations: " + ", ".join(item["community_integrations"]))
+            lines.append("")
+    lines += doc_footer()
+    return "\n".join(lines).rstrip() + "\n"'''
+          src = replace_block(src, 'def render_provider_catalog(catalog: dict) -> str:', 'def github_repo_state(repo: str, token: str | None):', provider_block)
+
+          health_block = r'''def render_health(catalog: dict, checked: list[dict]) -> str:
+    counts = defaultdict(int)
+    for row in checked:
+        counts[row["status"]] += 1
+    date = catalog.get("last_verified") or dt.date.today().isoformat()
+    lines = doc_header("Repository health") + [
+        f"**Atlas verification:** {date}",
+        f"**Repositories checked:** {len(checked)}",
+        f"**Healthy:** {counts['ACTIVE']}",
+        f"**Archived:** {counts['ARCHIVED']}",
+        f"**Missing:** {counts['MISSING']}",
+        f"**Private:** {counts['PRIVATE']}",
+        "",
+        "Generated by `tools/catalog.py`. Exact star counts are intentionally excluded.",
+        "",
+    ]
+    exceptions = [r for r in checked if r["status"] != "ACTIVE"]
+    if exceptions:
+        lines += doc_section(1, "Exceptions") + [""]
+        for row in exceptions:
+            lines.append(f"- `{row['repo']}` — `{row['status']}`")
+        lines.append("")
+    lines += doc_footer()
+    return "\n".join(lines).rstrip() + "\n"'''
+          src = replace_block(src, 'def render_health(catalog: dict, checked: list[dict]) -> str:', 'def cmd_validate(args):', health_block)
+
+          path.write_text(src, encoding='utf-8')
+
+          tests = Path('tests/test_catalog.py')
+          test_src = tests.read_text(encoding='utf-8')
+          test_src = test_src.replace(
+              'checked = [{"repo": "SigmaHQ/sigma", "status": "ACTIVE"}]',
+              'checked = [{"repo": "SigmaHQ/sigma", "status": "ARCHIVED"}]',
+              1,
+          )
+          tests.write_text(test_src, encoding='utf-8')
+          PY
+
+          git rm -f .github/workflows/catalog-schema-persist.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tools/catalog.py tests/test_catalog.py .github/workflows/catalog-schema-persist.yml
+          git commit -m 'fix: preserve markdown schema in catalog tooling'
+          git push origin HEAD:fix/markdown-schema-generator
