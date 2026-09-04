@@ -158,7 +158,7 @@ class CatalogTests(unittest.TestCase):
                 }
             ],
         }
-        checked = [{"repo": "SigmaHQ/sigma", "status": "ACTIVE"}]
+        checked = [{"repo": "SigmaHQ/sigma", "status": "ARCHIVED"}]
         for rendered in (
             render_catalog(repo_catalog),
             render_provider_catalog(provider_catalog),

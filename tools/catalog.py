@@ -12,6 +12,7 @@ from typing import Iterable
 
 GITHUB_RE = re.compile(r"https://github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)")
 LINK_RE = re.compile(r"\[([^\]]+)\]\((https://github\.com/[^)]+)\)(?:\s+[—-]\s+(.+))?")
+COMPACT_SECTION_RE = re.compile(r"<sub><strong>\s*\d{2}\s*//\s*(.+?)\s*</strong></sub>", re.IGNORECASE)
 VALID_PROVENANCE = {"OFFICIAL", "CANONICAL", "COMMUNITY", "LEGACY", "TRAINING-LAB"}
 VALID_RISK = {"SAFE-REFERENCE", "ACTIVE-SECURITY-TOOL", "OFFENSIVE-DUAL-USE", "LIVE-MALWARE", "VULNERABLE-LAB"}
 VALID_STATUS = {"ACTIVE", "ARCHIVED", "MISSING", "PRIVATE", "RENAMED", "UNKNOWN"}
@@ -82,6 +83,10 @@ def extract_repositories(markdown: str, source: str):
             continue
         if line.startswith("#### "):
             category = slugify(line[5:].strip())
+            continue
+        compact = COMPACT_SECTION_RE.fullmatch(line)
+        if compact:
+            category = slugify(compact.group(1).strip())
             continue
         match = LINK_RE.search(line)
         if not match:
@@ -206,13 +211,43 @@ def reconcile_catalog(root: Path, current: dict):
     }
 
 
+def doc_slug(value: str) -> str:
+    value = re.sub(r"<[^>]+>", "", value)
+    value = re.sub(r"[`*_~]", "", value).lower()
+    value = re.sub(r"[^a-z0-9\s-]", "", value)
+    return re.sub(r"[\s-]+", "-", value).strip("-") or "section"
+
+
+def doc_header(title: str) -> list[str]:
+    return [
+        "<!-- GER1E-DOC-SCHEMA: v1 -->",
+        f'<a id="{doc_slug(title)}"></a>',
+        '<div align="center">',
+        "",
+        f"<strong>{title}</strong><br/>",
+        "<sub>GER1E // GER1E // DOCUMENTATION</sub>",
+        "",
+        "</div>",
+        "",
+    ]
+
+
+def doc_section(number: int, title: str) -> list[str]:
+    return [
+        f'<a id="{doc_slug(title)}"></a>',
+        f"<sub><strong>{number:02d} // {title}</strong></sub>",
+    ]
+
+
+def doc_footer() -> list[str]:
+    return ["", '<p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>']
+
+
 def render_catalog(catalog: dict) -> str:
     groups = defaultdict(list)
     for item in catalog.get("repositories", []):
         groups[item["category"]].append(item)
-    lines = [
-        "### Security repository catalog",
-        "",
+    lines = doc_header("Security repository catalog") + [
         "Generated from `catalog/repos.yaml`. Do not hand-edit this file.",
         "",
         f"**Repositories:** {len(catalog.get('repositories', []))}",
@@ -221,16 +256,17 @@ def render_catalog(catalog: dict) -> str:
         "Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/ACTIVE-SECURITY-TOOL/OFFENSIVE-DUAL-USE/LIVE-MALWARE/VULNERABLE-LAB`.",
         "",
     ]
-    for category in sorted(groups):
-        lines += [f"#### {category.replace('-', ' ').title()}", ""]
+    for number, category in enumerate(sorted(groups), start=1):
+        title = category.replace("-", " ").title()
+        lines += doc_section(number, title) + [""]
         for item in sorted(groups[category], key=lambda x: x["repo"].lower()):
-            meta = f"`{item['provenance']}` · `{item['risk']}` · `{item['status']}`"
-            desc = f" — {item['description']}" if item.get("description") else ""
-            aliases = f" · aliases: {', '.join(item['aliases'])}" if item.get("aliases") else ""
-            lines.append(f"- [{item['repo']}]({item['url']}) — {meta}{aliases}{desc}")
+  meta = f"`{item['provenance']}` · `{item['risk']}` · `{item['status']}`"
+  desc = f" — {item['description']}" if item.get("description") else ""
+  aliases = f" · aliases: {', '.join(item['aliases'])}" if item.get("aliases") else ""
+  lines.append(f"- [{item['repo']}]({item['url']}) — {meta}{aliases}{desc}")
         lines.append("")
+    lines += doc_footer()
     return "\n".join(lines).rstrip() + "\n"
-
 
 def validate_provider_catalog(catalog: dict):
     errors = []
@@ -267,33 +303,34 @@ def render_provider_catalog(catalog: dict) -> str:
     groups = defaultdict(list)
     for item in catalog.get("providers", []):
         groups[item.get("role", "uncategorized")].append(item)
-    lines = [
-        "### API / intelligence provider registry",
-        "",
+    lines = doc_header("API / intelligence provider registry") + [
         "Generated from `catalog/providers.yaml`. Provider metadata is kept separate from GitHub repository provenance.",
         "",
         f"**Providers:** {len(catalog.get('providers', []))}",
         f"**Last verified:** {catalog.get('last_verified') or 'not yet verified'}",
         "",
     ]
+    number = 0
     for role in sorted(groups):
-        lines += [f"#### {role.replace('-', ' ').title()}", ""]
+        number += 1
+        lines += doc_section(number, role.replace("-", " ").title()) + [""]
         for item in sorted(groups[role], key=lambda x: x["name"].lower()):
-            lines.append(f"##### {item['name']}")
-            lines.append(f"- API: {item.get('api_base_url') or 'not separately published'}")
-            lines.append(f"- Docs: {item.get('docs_url') or 'not separately published'}")
-            lines.append(f"- Auth: `{item['auth']}`" + (f" · env `{item['env_var']}`" if item.get("env_var") else ""))
-            lines.append(f"- Access: `{item['access']}` · provenance `{item['provenance']}`")
-            capabilities = ", ".join(item.get("capabilities", []))
-            if capabilities:
-                lines.append(f"- Capabilities: {capabilities}")
-            if item.get("official_repositories"):
-                lines.append("- Official repos: " + ", ".join(item["official_repositories"]))
-            if item.get("community_integrations"):
-                lines.append("- Verified integrations: " + ", ".join(item["community_integrations"]))
-            lines.append("")
+  number += 1
+  lines += doc_section(number, item["name"])
+  lines.append(f"- API: {item.get('api_base_url') or 'not separately published'}")
+  lines.append(f"- Docs: {item.get('docs_url') or 'not separately published'}")
+  lines.append(f"- Auth: `{item['auth']}`" + (f" · env `{item['env_var']}`" if item.get("env_var") else ""))
+  lines.append(f"- Access: `{item['access']}` · provenance `{item['provenance']}`")
+  capabilities = ", ".join(item.get("capabilities", []))
+  if capabilities:
+      lines.append(f"- Capabilities: {capabilities}")
+  if item.get("official_repositories"):
+      lines.append("- Official repos: " + ", ".join(item["official_repositories"]))
+  if item.get("community_integrations"):
+      lines.append("- Verified integrations: " + ", ".join(item["community_integrations"]))
+  lines.append("")
+    lines += doc_footer()
     return "\n".join(lines).rstrip() + "\n"
-
 
 def github_repo_state(repo: str, token: str | None):
     req = urllib.request.Request(
@@ -343,9 +380,7 @@ def render_health(catalog: dict, checked: list[dict]) -> str:
     for row in checked:
         counts[row["status"]] += 1
     date = catalog.get("last_verified") or dt.date.today().isoformat()
-    lines = [
-        "### Repository health",
-        "",
+    lines = doc_header("Repository health") + [
         f"**Atlas verification:** {date}",
         f"**Repositories checked:** {len(checked)}",
         f"**Healthy:** {counts['ACTIVE']}",
@@ -358,12 +393,12 @@ def render_health(catalog: dict, checked: list[dict]) -> str:
     ]
     exceptions = [r for r in checked if r["status"] != "ACTIVE"]
     if exceptions:
-        lines += ["#### Exceptions", ""]
+        lines += doc_section(1, "Exceptions") + [""]
         for row in exceptions:
-            lines.append(f"- `{row['repo']}` — `{row['status']}`")
+  lines.append(f"- `{row['repo']}` — `{row['status']}`")
         lines.append("")
-    return "\n".join(lines)
-
+    lines += doc_footer()
+    return "\n".join(lines).rstrip() + "\n"
 
 def cmd_validate(args):
     catalog = load_catalog(Path(args.catalog))
