@@ -1,4 +1,11 @@
-### GitHub account polish
+<!-- GER1E-DOC-SCHEMA: v1 -->
+<a id="github-account-polish"></a>
+<div align="center">
+
+<strong>GitHub account polish</strong><br/>
+<sub>GER1E // GER1E // DOCUMENTATION</sub>
+
+</div>
 
 Most profile/site work in this repository is automated through GitHub Actions. A few account-level mutations are not exposed by the connected GitHub integration used to maintain this repository.
 
@@ -11,7 +18,8 @@ Most profile/site work in this repository is automated through GitHub Actions. A
 - refuses to run from a clone located under Windows `System32`;
 - verifies the authenticated GitHub account and repository origin before writing.
 
-#### Run
+<a id="run"></a>
+<sub><strong>01 // Run</strong></sub>
 
 From a normal clone of `ger1e/ger1e` outside `System32`:
 
@@ -26,7 +34,8 @@ To keep the old Bash training repository unarchived:
 pwsh -NoProfile -File .\tools\pimp-github.ps1 -ArchiveOldBashTraining:$false
 ```
 
-#### Pins
+<a id="pins"></a>
+<sub><strong>02 // Pins</strong></sub>
 
 GitHub documents user-profile pins as a profile UI setting. After the script finishes, open `https://github.com/ger1e`, choose **Customize your pins**, and pin:
 
@@ -35,3 +44,5 @@ GitHub documents user-profile pins as a profile UI setting. After the script fin
 3. `ger1e`
 
 Leave `godot`, training repositories, and experimental/archive repositories unpinned. Up to six items are supported, but empty slots are preferable to filler.
+
+<p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>

@@ -1,4 +1,11 @@
-# GitHub Credibility MAX Implementation Plan
+<!-- GER1E-DOC-SCHEMA: v1 -->
+<a id="github-credibility-max-implementation-plan"></a>
+<div align="center">
+
+<strong>GitHub Credibility MAX Implementation Plan</strong><br/>
+<sub>GER1E // GER1E // DOCUMENTATION</sub>
+
+</div>
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -10,7 +17,8 @@
 
 **Spec:** `docs/superpowers/specs/2026-08-28-github-credibility-max-design.md`
 
-## Global Constraints
+<a id="global-constraints"></a>
+<sub><strong>01 // Global Constraints</strong></sub>
 
 - Canonical repository: `https://github.com/ger1e/para11ax`.
 - Canonical production homepage: `https://para11ax.vercel.app/`.
@@ -28,7 +36,8 @@
 
 ---
 
-### Task 1: Canonicalize and tighten the public profile
+<a id="task-1-canonicalize-and-tighten-the-public-profile"></a>
+<sub><strong>02 // Task 1: Canonicalize and tighten the public profile</strong></sub>
 
 **Files:**
 - Modify: `README.md`
@@ -125,7 +134,8 @@ docs: make PARA11AX the primary public proof
 
 Run the PR checks again. Expected: `profile-quality-gates` passes, the README contains all three proof repositories, and neither obsolete string appears.
 
-### Task 2: Repair catalog automation without branch litter
+<a id="task-2-repair-catalog-automation-without-branch-litter"></a>
+<sub><strong>03 // Task 2: Repair catalog automation without branch litter</strong></sub>
 
 **Files:**
 - Modify: `.github/workflows/catalog-health.yml`
@@ -182,7 +192,8 @@ Merge by squash only after `profile-quality-gates` and `security-catalog` both p
 
 In `ger1e/ger1e → Settings → Actions → General → Workflow permissions`, enable **Allow GitHub Actions to create and approve pull requests**. Dispatch `security-catalog` or wait for the post-merge push run. Expected: the workflow either reports generated state current or opens/updates exactly one `automation/catalog-refresh` PR without a 403.
 
-### Task 3: Complete PARA11AX GitHub identity and metadata
+<a id="task-3-complete-para11ax-github-identity-and-metadata"></a>
+<sub><strong>04 // Task 3: Complete PARA11AX GitHub identity and metadata</strong></sub>
 
 **Files:**
 - Audit: all UTF-8 text files returned by `git/trees/main?recursive=1`
@@ -244,7 +255,8 @@ Keep the repository public. Keep Issues enabled. Disable Projects and Wiki. Keep
 
 Confirm `https://para11ax.vercel.app/` responds and identifies PARA11AX. Do not change Vercel configuration in this task.
 
-### Task 4: Rationalize supporting repositories
+<a id="task-4-rationalize-supporting-repositories"></a>
+<sub><strong>05 // Task 4: Rationalize supporting repositories</strong></sub>
 
 **Files:**
 - Verify: `ger1e/personal-site-lp/README.md`
@@ -277,7 +289,8 @@ Confirm its README links to `ger1e/personal-site-lp` and `https://gergoilly.hu/`
 
 Confirm `ger1e/godot` and `ger1e/learning-bash-scripting-3212393` remain archived. Do not alter their content.
 
-### Task 5: Apply consistent merge and branch governance
+<a id="task-5-apply-consistent-merge-and-branch-governance"></a>
+<sub><strong>06 // Task 5: Apply consistent merge and branch governance</strong></sub>
 
 **Files:**
 - Verify: each repository's workflow filenames and current successful check contexts
@@ -329,7 +342,8 @@ For each active proof repo, inspect Security settings and enable Dependabot aler
 
 Read each branch/ruleset page after saving. Confirm `main` is protected, the exact required contexts are present, force-push and deletion are blocked, and administrator enforcement is active.
 
-### Task 6: Pins, stale branches, and final verification
+<a id="task-6-pins-stale-branches-and-final-verification"></a>
+<sub><strong>07 // Task 6: Pins, stale branches, and final verification</strong></sub>
 
 **Files:**
 - No repository content changes expected
@@ -398,3 +412,5 @@ Load the public profile in an authenticated browser and at a narrow/mobile viewp
 - [ ] **Step 7: Produce the handoff**
 
 Report completed changes, fresh check results, exact remaining limitations, and direct GitHub links. Do not use `done`, `fixed`, or `passing` for any item without evidence gathered in this task.
+
+<p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>
