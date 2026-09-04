@@ -2,11 +2,58 @@
   "schema": "ger1e-security-catalog/v1",
   "generated_from": [
     "atlas",
-    "soc-manual",
     "api-tools"
   ],
-  "last_verified": "2026-08-23",
+  "last_verified": "2026-09-04",
   "repositories": [
+    {
+      "repo": "abusech/MalwareBazaar",
+      "url": "https://github.com/abusech/MalwareBazaar",
+      "category": "abuse-ch",
+      "description": "MalwareBazaar",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "abusech/ThreatFox",
+      "url": "https://github.com/abusech/ThreatFox",
+      "category": "abuse-ch",
+      "description": "ThreatFox",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "abusech/URLhaus",
+      "url": "https://github.com/abusech/URLhaus",
+      "category": "abuse-ch",
+      "description": "URLhaus",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "kristuff/abuseipdb-cli",
+      "url": "https://github.com/kristuff/abuseipdb-cli",
+      "category": "abuseipdb",
+      "description": "community CLI/API client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
     {
       "repo": "EmpireProject/Empire",
       "url": "https://github.com/EmpireProject/Empire",
@@ -153,6 +200,30 @@
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
       "status": "ARCHIVED"
+    },
+    {
+      "repo": "AlienVault-OTX/OTX-Python-SDK",
+      "url": "https://github.com/AlienVault-OTX/OTX-Python-SDK",
+      "category": "alienvault-otx",
+      "description": "OTX Python SDK",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "anyrun/anyrun-sdk",
+      "url": "https://github.com/anyrun/anyrun-sdk",
+      "category": "any-run",
+      "description": "official ANY.RUN SDK",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
     },
     {
       "repo": "digininja/DVWA",
@@ -400,7 +471,7 @@
       "category": "c2-adversary-simulation",
       "description": "Sliver C2 framework",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "OFFENSIVE-DUAL-USE",
@@ -412,7 +483,7 @@
       "category": "c2-adversary-simulation",
       "description": "Havoc C2 framework",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "OFFENSIVE-DUAL-USE",
@@ -424,10 +495,46 @@
       "category": "c2-adversary-simulation",
       "description": "Mythic C2 framework",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "OFFENSIVE-DUAL-USE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "censys/censys-python",
+      "url": "https://github.com/censys/censys-python",
+      "category": "censys",
+      "description": "established Censys Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "censys/censys-sdk-python",
+      "url": "https://github.com/censys/censys-sdk-python",
+      "category": "censys",
+      "description": "current Censys Python SDK line",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "cisagov/kev-data",
+      "url": "https://github.com/cisagov/kev-data",
+      "category": "cisa-known-exploited-vulnerabilities",
+      "description": "official CISA KEV data repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
     {
@@ -599,6 +706,18 @@
       "status": "ACTIVE"
     },
     {
+      "repo": "cloudflare/cloudflare-python",
+      "url": "https://github.com/cloudflare/cloudflare-python",
+      "category": "cloudflare-radar-adjacent-api-use",
+      "description": "current official Cloudflare Python API SDK; useful for Cloudflare API automation, including supported Radar endpoints exposed through the API",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
       "repo": "blackorbird/APT_REPORT",
       "url": "https://github.com/blackorbird/APT_REPORT",
       "category": "cyber-threat-intelligence",
@@ -655,7 +774,7 @@
         "api-tools",
         "atlas"
       ],
-      "provenance": "OFFICIAL",
+      "provenance": "CANONICAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -687,10 +806,10 @@
     {
       "repo": "elastic/detection-rules",
       "url": "https://github.com/elastic/detection-rules",
-      "category": "detection-engineering-cross-vendor-references",
+      "category": "detection-engineering-cross-vendor",
       "description": "Elastic detection rules",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -699,10 +818,10 @@
     {
       "repo": "splunk/security_content",
       "url": "https://github.com/splunk/security_content",
-      "category": "detection-engineering-cross-vendor-references",
+      "category": "detection-engineering-cross-vendor",
       "description": "Splunk Security Content",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -711,10 +830,10 @@
     {
       "repo": "THORCollective/HEARTH",
       "url": "https://github.com/THORCollective/HEARTH",
-      "category": "detection-engineering-cross-vendor-references",
-      "description": "HEARTH and the PEAK hunting template referenced by the guide",
+      "category": "detection-engineering-cross-vendor",
+      "description": "HEARTH and the PEAK hunting template referenced by the field guide",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -789,7 +908,7 @@
         "api-tools",
         "atlas"
       ],
-      "provenance": "OFFICIAL",
+      "provenance": "CANONICAL",
       "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
@@ -941,11 +1060,131 @@
       "repo": "magicsword-io/LOLDrivers",
       "url": "https://github.com/magicsword-io/LOLDrivers",
       "category": "driver-abuse-byovd",
-      "description": "vulnerable/malicious driver reference data",
+      "description": "vulnerable and malicious driver reference data",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "FIRSTdotorg/epss",
+      "url": "https://github.com/FIRSTdotorg/epss",
+      "category": "first-epss",
+      "description": "official EPSS repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "FIRSTdotorg/epss-vendors",
+      "url": "https://github.com/FIRSTdotorg/epss-vendors",
+      "category": "first-epss",
+      "description": "EPSS vendor/product mapping support",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/api.greynoise.io",
+      "url": "https://github.com/GreyNoise-Intelligence/api.greynoise.io",
+      "category": "greynoise",
+      "description": "GreyNoise API repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/GNQL",
+      "url": "https://github.com/GreyNoise-Intelligence/GNQL",
+      "category": "greynoise",
+      "description": "GreyNoise Query Language resources",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/greynoise-mcp-server",
+      "url": "https://github.com/GreyNoise-Intelligence/greynoise-mcp-server",
+      "category": "greynoise",
+      "description": "official MCP integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "GreyNoise-Intelligence/pygreynoise",
+      "url": "https://github.com/GreyNoise-Intelligence/pygreynoise",
+      "category": "greynoise",
+      "description": "Python SDK / CLI for GreyNoise",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hashlookup/hashlookup-forensic-analyser",
+      "url": "https://github.com/hashlookup/hashlookup-forensic-analyser",
+      "category": "hashlookup",
+      "description": "forensic-analysis client/tooling",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hashlookup/hashlookup-server",
+      "url": "https://github.com/hashlookup/hashlookup-server",
+      "category": "hashlookup",
+      "description": "hashlookup server/API implementation",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hashlookup/PyHashlookup",
+      "url": "https://github.com/hashlookup/PyHashlookup",
+      "category": "hashlookup",
+      "description": "Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hatching/triage",
+      "url": "https://github.com/hatching/triage",
+      "category": "hatching-triage",
+      "description": "official Triage command-line/API tooling",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1022,12 +1261,36 @@
       "status": "ARCHIVED"
     },
     {
+      "repo": "turbot/steampipe-plugin-hudsonrock",
+      "url": "https://github.com/turbot/steampipe-plugin-hudsonrock",
+      "category": "hudson-rock",
+      "description": "Steampipe plugin for Hudson Rock data; third-party integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "CrowdStrike/falconpy",
+      "url": "https://github.com/CrowdStrike/falconpy",
+      "category": "hybrid-analysis-crowdstrike-falcon-sandbox",
+      "description": "official CrowdStrike Python SDK; contains FalconX Sandbox API endpoints and samples relevant to Falcon Sandbox / Hybrid Analysis workflows",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
       "repo": "SpecterOps/BloodHound",
       "url": "https://github.com/SpecterOps/BloodHound",
       "category": "identity-attack-paths",
-      "description": "identity/Active Directory attack-path analysis",
+      "description": "current BloodHound identity and Active Directory attack-path platform",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "ACTIVE-SECURITY-TOOL",
@@ -1039,9 +1302,81 @@
       "category": "identity-attack-paths",
       "description": "BloodHound data collection",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "ipinfo/python",
+      "url": "https://github.com/ipinfo/python",
+      "category": "ipinfo",
+      "description": "official Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "malpedia/malpedia-flossed",
+      "url": "https://github.com/malpedia/malpedia-flossed",
+      "category": "malpedia",
+      "description": "FLOSS-derived Malpedia dataset tooling",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "malpedia/malpediaclient",
+      "url": "https://github.com/malpedia/malpediaclient",
+      "category": "malpedia",
+      "description": "Malpedia API client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "malpedia/signator-rules",
+      "url": "https://github.com/malpedia/signator-rules",
+      "category": "malpedia",
+      "description": "Malpedia Signator rules",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "MaltegoTech/maltego-trx",
+      "url": "https://github.com/MaltegoTech/maltego-trx",
+      "category": "maltego",
+      "description": "official TRX framework; **archived/legacy**, retained because it is directly relevant to existing transform workflows",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "LEGACY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ARCHIVED"
+    },
+    {
+      "repo": "MaltegoTech/maltego-trx-examples",
+      "url": "https://github.com/MaltegoTech/maltego-trx-examples",
+      "category": "maltego",
+      "description": "official transform examples",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1210,7 +1545,7 @@
         "api-tools",
         "atlas"
       ],
-      "provenance": "OFFICIAL",
+      "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
@@ -1256,7 +1591,7 @@
       "category": "microsoft-kql-hunting",
       "description": "behavior-oriented Microsoft Defender hunting content",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1268,7 +1603,7 @@
       "category": "microsoft-kql-hunting",
       "description": "Defender Advanced Hunting examples",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1280,7 +1615,7 @@
       "category": "microsoft-kql-hunting",
       "description": "Microsoft Defender hunting-query collection",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1292,7 +1627,7 @@
       "category": "microsoft-kql-hunting",
       "description": "Sentinel query reference",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1302,9 +1637,9 @@
       "repo": "SlimKQL/Detections.AI",
       "url": "https://github.com/SlimKQL/Detections.AI",
       "category": "microsoft-kql-hunting",
-      "description": "KQL detection collection referenced by the guide",
+      "description": "KQL detection collection referenced by the field guide",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1314,9 +1649,9 @@
       "repo": "SlimKQL/Hunting-Queries-Detection-Rules",
       "url": "https://github.com/SlimKQL/Hunting-Queries-Detection-Rules",
       "category": "microsoft-kql-hunting",
-      "description": "Sentinel/Defender hunting and detection content",
+      "description": "Sentinel/Defender hunting and detection content referenced by the field guide",
       "sources": [
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1328,8 +1663,7 @@
       "category": "microsoft-security-sentinel-kql",
       "description": "Microsoft Sentinel content, detections, hunting queries, workbooks, connectors, playbooks, and solutions",
       "sources": [
-        "atlas",
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1365,8 +1699,7 @@
       "category": "microsoft-security-sentinel-kql",
       "description": "KQL threat-hunting reference queries",
       "sources": [
-        "atlas",
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -1382,6 +1715,30 @@
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "MISP/PyMISP",
+      "url": "https://github.com/MISP/PyMISP",
+      "category": "misp",
+      "description": "official Python API client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "intelthreat/attackcti",
+      "url": "https://github.com/intelthreat/attackcti",
+      "category": "mitre-att-ck-data-taxii-adjacent-automation",
+      "description": "widely used Python ATT&CK client built around STIX/TAXII data access; community-maintained rather than a MITRE upstream",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
     {
@@ -1442,6 +1799,18 @@
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "OpenCTI-Platform/connectors",
+      "url": "https://github.com/OpenCTI-Platform/connectors",
+      "category": "modat-magnify",
+      "description": "OpenCTI internal-enrichment connector for Modat Magnify; verified present in the upstream connector repository on 2026-08-22",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
     {
@@ -1793,570 +2162,6 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "0xDanielLopez/TweetFeed",
-      "url": "https://github.com/0xDanielLopez/TweetFeed",
-      "category": "official-canonical-provider-repositories",
-      "description": "TweetFeed IOC project",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "0xDanielLopez/TweetFeed_code",
-      "url": "https://github.com/0xDanielLopez/TweetFeed_code",
-      "category": "official-canonical-provider-repositories",
-      "description": "associated TweetFeed code repository",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "abusech/MalwareBazaar",
-      "url": "https://github.com/abusech/MalwareBazaar",
-      "category": "official-canonical-provider-repositories",
-      "description": "MalwareBazaar",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "abusech/ThreatFox",
-      "url": "https://github.com/abusech/ThreatFox",
-      "category": "official-canonical-provider-repositories",
-      "description": "ThreatFox",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "abusech/URLhaus",
-      "url": "https://github.com/abusech/URLhaus",
-      "category": "official-canonical-provider-repositories",
-      "description": "URLhaus",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "achillean/shodan-python",
-      "url": "https://github.com/achillean/shodan-python",
-      "category": "official-canonical-provider-repositories",
-      "description": "canonical Shodan Python library and CLI",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "AlienVault-OTX/OTX-Python-SDK",
-      "url": "https://github.com/AlienVault-OTX/OTX-Python-SDK",
-      "category": "official-canonical-provider-repositories",
-      "description": "OTX Python SDK",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "anyrun/anyrun-sdk",
-      "url": "https://github.com/anyrun/anyrun-sdk",
-      "category": "official-canonical-provider-repositories",
-      "description": "official ANY.RUN SDK",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "censys/censys-python",
-      "url": "https://github.com/censys/censys-python",
-      "category": "official-canonical-provider-repositories",
-      "description": "established Censys Python client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "censys/censys-sdk-python",
-      "url": "https://github.com/censys/censys-sdk-python",
-      "category": "official-canonical-provider-repositories",
-      "description": "current Censys Python SDK line",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "cisagov/kev-data",
-      "url": "https://github.com/cisagov/kev-data",
-      "category": "official-canonical-provider-repositories",
-      "description": "official CISA KEV data repository",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "cloudflare/cloudflare-python",
-      "url": "https://github.com/cloudflare/cloudflare-python",
-      "category": "official-canonical-provider-repositories",
-      "description": "current official Cloudflare Python API SDK; useful for Cloudflare API automation, including supported Radar endpoints exposed through the API",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "CrowdStrike/falconpy",
-      "url": "https://github.com/CrowdStrike/falconpy",
-      "category": "official-canonical-provider-repositories",
-      "description": "official CrowdStrike Python SDK; contains FalconX Sandbox API endpoints and samples relevant to Falcon Sandbox / Hybrid Analysis workflows",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "FIRSTdotorg/epss",
-      "url": "https://github.com/FIRSTdotorg/epss",
-      "category": "official-canonical-provider-repositories",
-      "description": "official EPSS repository",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "FIRSTdotorg/epss-vendors",
-      "url": "https://github.com/FIRSTdotorg/epss-vendors",
-      "category": "official-canonical-provider-repositories",
-      "description": "EPSS vendor/product mapping support",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "getsentry/sentry-python",
-      "url": "https://github.com/getsentry/sentry-python",
-      "category": "official-canonical-provider-repositories",
-      "description": "official Python SDK",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "google/osv.dev",
-      "url": "https://github.com/google/osv.dev",
-      "category": "official-canonical-provider-repositories",
-      "description": "OSV.dev service and ecosystem",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "GreyNoise-Intelligence/api.greynoise.io",
-      "url": "https://github.com/GreyNoise-Intelligence/api.greynoise.io",
-      "category": "official-canonical-provider-repositories",
-      "description": "GreyNoise API repository",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "GreyNoise-Intelligence/GNQL",
-      "url": "https://github.com/GreyNoise-Intelligence/GNQL",
-      "category": "official-canonical-provider-repositories",
-      "description": "GreyNoise Query Language resources",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "GreyNoise-Intelligence/greynoise-mcp-server",
-      "url": "https://github.com/GreyNoise-Intelligence/greynoise-mcp-server",
-      "category": "official-canonical-provider-repositories",
-      "description": "official MCP integration",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "GreyNoise-Intelligence/pygreynoise",
-      "url": "https://github.com/GreyNoise-Intelligence/pygreynoise",
-      "category": "official-canonical-provider-repositories",
-      "description": "Python SDK / CLI for GreyNoise",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "hashlookup/hashlookup-forensic-analyser",
-      "url": "https://github.com/hashlookup/hashlookup-forensic-analyser",
-      "category": "official-canonical-provider-repositories",
-      "description": "forensic-analysis client/tooling",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "hashlookup/hashlookup-server",
-      "url": "https://github.com/hashlookup/hashlookup-server",
-      "category": "official-canonical-provider-repositories",
-      "description": "hashlookup server/API implementation",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "hashlookup/PyHashlookup",
-      "url": "https://github.com/hashlookup/PyHashlookup",
-      "category": "official-canonical-provider-repositories",
-      "description": "Python client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "hatching/triage",
-      "url": "https://github.com/hatching/triage",
-      "category": "official-canonical-provider-repositories",
-      "description": "official Triage command-line/API tooling",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "intelthreat/attackcti",
-      "url": "https://github.com/intelthreat/attackcti",
-      "category": "official-canonical-provider-repositories",
-      "description": "widely used Python ATT&CK client built around STIX/TAXII data access; community-maintained rather than a MITRE upstream",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "COMMUNITY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "ipinfo/python",
-      "url": "https://github.com/ipinfo/python",
-      "category": "official-canonical-provider-repositories",
-      "description": "official Python client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "JMousqueton/ransomware.live",
-      "url": "https://github.com/JMousqueton/ransomware.live",
-      "category": "official-canonical-provider-repositories",
-      "description": "canonical ransomware.live project/data repository",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "malpedia/malpedia-flossed",
-      "url": "https://github.com/malpedia/malpedia-flossed",
-      "category": "official-canonical-provider-repositories",
-      "description": "FLOSS-derived Malpedia dataset tooling",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "malpedia/malpediaclient",
-      "url": "https://github.com/malpedia/malpediaclient",
-      "category": "official-canonical-provider-repositories",
-      "description": "Malpedia API client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "malpedia/signator-rules",
-      "url": "https://github.com/malpedia/signator-rules",
-      "category": "official-canonical-provider-repositories",
-      "description": "Malpedia Signator rules",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "MaltegoTech/maltego-trx",
-      "url": "https://github.com/MaltegoTech/maltego-trx",
-      "category": "official-canonical-provider-repositories",
-      "description": "official TRX framework; **archived/legacy**, retained because it is directly relevant to existing transform workflows",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "LEGACY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ARCHIVED"
-    },
-    {
-      "repo": "MaltegoTech/maltego-trx-examples",
-      "url": "https://github.com/MaltegoTech/maltego-trx-examples",
-      "category": "official-canonical-provider-repositories",
-      "description": "official transform examples",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "MISP/PyMISP",
-      "url": "https://github.com/MISP/PyMISP",
-      "category": "official-canonical-provider-repositories",
-      "description": "official Python API client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "RansomLook/doc",
-      "url": "https://github.com/RansomLook/doc",
-      "category": "official-canonical-provider-repositories",
-      "description": "RansomLook documentation repository",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "RansomLook/RansomLook",
-      "url": "https://github.com/RansomLook/RansomLook",
-      "category": "official-canonical-provider-repositories",
-      "description": "canonical RansomLook project",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "RIPE-NCC/ripestat-text",
-      "url": "https://github.com/RIPE-NCC/ripestat-text",
-      "category": "official-canonical-provider-repositories",
-      "description": "official RIPE NCC RIPEstat text client; **archived/legacy**",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "LEGACY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ARCHIVED"
-    },
-    {
-      "repo": "urlscan/urlscan-cli",
-      "url": "https://github.com/urlscan/urlscan-cli",
-      "category": "official-canonical-provider-repositories",
-      "description": "official CLI",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "urlscan/urlscan-python",
-      "url": "https://github.com/urlscan/urlscan-python",
-      "category": "official-canonical-provider-repositories",
-      "description": "official Python client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "VirusTotal/vt-cli",
-      "url": "https://github.com/VirusTotal/vt-cli",
-      "category": "official-canonical-provider-repositories",
-      "description": "VirusTotal command-line client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "VirusTotal/vt-py",
-      "url": "https://github.com/VirusTotal/vt-py",
-      "category": "official-canonical-provider-repositories",
-      "description": "Python client for the VirusTotal API",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "vulnerability-lookup/PyVulnerabilityLookup",
-      "url": "https://github.com/vulnerability-lookup/PyVulnerabilityLookup",
-      "category": "official-canonical-provider-repositories",
-      "description": "Python client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "vulnerability-lookup/vulnerability-lookup",
-      "url": "https://github.com/vulnerability-lookup/vulnerability-lookup",
-      "category": "official-canonical-provider-repositories",
-      "description": "Vulnerability-Lookup platform",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "vulnerability-lookup/VulnMCP",
-      "url": "https://github.com/vulnerability-lookup/VulnMCP",
-      "category": "official-canonical-provider-repositories",
-      "description": "MCP integration",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "webamon-org/MISP-Connector",
-      "url": "https://github.com/webamon-org/MISP-Connector",
-      "category": "official-canonical-provider-repositories",
-      "description": "Webamon MISP integration",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "webamon-org/webamon",
-      "url": "https://github.com/webamon-org/webamon",
-      "category": "official-canonical-provider-repositories",
-      "description": "Webamon project",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "webamon-org/webamon-cli",
-      "url": "https://github.com/webamon-org/webamon-cli",
-      "category": "official-canonical-provider-repositories",
-      "description": "Webamon CLI",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "OFFICIAL",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
       "repo": "Datalux/Osintgram",
       "url": "https://github.com/Datalux/Osintgram",
       "category": "osint-reconnaissance-attack-surface-discovery",
@@ -2561,6 +2366,18 @@
       "status": "ACTIVE"
     },
     {
+      "repo": "google/osv.dev",
+      "url": "https://github.com/google/osv.dev",
+      "category": "osv-dev",
+      "description": "OSV.dev service and ecosystem",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
       "repo": "drduh/macOS-Security-and-Privacy-Guide",
       "url": "https://github.com/drduh/macOS-Security-and-Privacy-Guide",
       "category": "privacy-hardening-defensive-engineering",
@@ -2643,6 +2460,78 @@
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
+    },
+    {
+      "repo": "fortinet-fortisoar/connector-pulsedive",
+      "url": "https://github.com/fortinet-fortisoar/connector-pulsedive",
+      "category": "pulsedive",
+      "description": "FortiSOAR connector",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "pberba/pulsedive-py",
+      "url": "https://github.com/pberba/pulsedive-py",
+      "category": "pulsedive",
+      "description": "community Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "RansomLook/doc",
+      "url": "https://github.com/RansomLook/doc",
+      "category": "ransomlook",
+      "description": "RansomLook documentation repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "RansomLook/RansomLook",
+      "url": "https://github.com/RansomLook/RansomLook",
+      "category": "ransomlook",
+      "description": "canonical RansomLook project",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "JMousqueton/ransomware.live",
+      "url": "https://github.com/JMousqueton/ransomware.live",
+      "category": "ransomware-live",
+      "description": "canonical ransomware.live project/data repository",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "RIPE-NCC/ripestat-text",
+      "url": "https://github.com/RIPE-NCC/ripestat-text",
+      "category": "ripestat",
+      "description": "official RIPE NCC RIPEstat text client; **archived/legacy**",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "LEGACY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ARCHIVED"
     },
     {
       "repo": "apsdehal/awesome-ctf",
@@ -2738,6 +2627,54 @@
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "hakluke/haktrails",
+      "url": "https://github.com/hakluke/haktrails",
+      "category": "securitytrails",
+      "description": "established SecurityTrails-powered reconnaissance CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "secops4thewin/securitytrails-python",
+      "url": "https://github.com/secops4thewin/securitytrails-python",
+      "category": "securitytrails",
+      "description": "community Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "COMMUNITY",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "getsentry/sentry-python",
+      "url": "https://github.com/getsentry/sentry-python",
+      "category": "sentry",
+      "description": "official Python SDK",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "achillean/shodan-python",
+      "url": "https://github.com/achillean/shodan-python",
+      "category": "shodan",
+      "description": "canonical Shodan Python library and CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     },
     {
@@ -2905,8 +2842,7 @@
       "category": "threat-hunting-detection-engineering",
       "description": "vendor-agnostic detection and hunting rules",
       "sources": [
-        "atlas",
-        "soc-manual"
+        "atlas"
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
@@ -2961,87 +2897,147 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "fortinet-fortisoar/connector-pulsedive",
-      "url": "https://github.com/fortinet-fortisoar/connector-pulsedive",
-      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
-      "description": "FortiSOAR connector",
+      "repo": "0xDanielLopez/TweetFeed",
+      "url": "https://github.com/0xDanielLopez/TweetFeed",
+      "category": "tweetfeed",
+      "description": "TweetFeed IOC project",
       "sources": [
         "api-tools"
       ],
-      "provenance": "COMMUNITY",
+      "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
       "status": "ACTIVE"
     },
     {
-      "repo": "hakluke/haktrails",
-      "url": "https://github.com/hakluke/haktrails",
-      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
-      "description": "established SecurityTrails-powered reconnaissance CLI",
+      "repo": "0xDanielLopez/TweetFeed_code",
+      "url": "https://github.com/0xDanielLopez/TweetFeed_code",
+      "category": "tweetfeed",
+      "description": "associated TweetFeed code repository",
       "sources": [
         "api-tools"
       ],
-      "provenance": "COMMUNITY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "kristuff/abuseipdb-cli",
-      "url": "https://github.com/kristuff/abuseipdb-cli",
-      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
-      "description": "community CLI/API client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "COMMUNITY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "OpenCTI-Platform/connectors",
-      "url": "https://github.com/OpenCTI-Platform/connectors",
-      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
-      "description": "OpenCTI internal-enrichment connector for Modat Magnify; verified present in the upstream connector repository on 2026-08-22",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "COMMUNITY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "pberba/pulsedive-py",
-      "url": "https://github.com/pberba/pulsedive-py",
-      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
-      "description": "community Python client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "COMMUNITY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "secops4thewin/securitytrails-python",
-      "url": "https://github.com/secops4thewin/securitytrails-python",
-      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
-      "description": "community Python client",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "COMMUNITY",
-      "risk": "ACTIVE-SECURITY-TOOL",
-      "status": "ACTIVE"
-    },
-    {
-      "repo": "turbot/steampipe-plugin-hudsonrock",
-      "url": "https://github.com/turbot/steampipe-plugin-hudsonrock",
-      "category": "useful-community-clients-integrations-where-no-official-provider-sdk-was-verified",
-      "description": "Steampipe plugin for Hudson Rock data; third-party integration",
-      "sources": [
-        "api-tools"
-      ],
-      "provenance": "COMMUNITY",
+      "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "urlscan/urlscan-cli",
+      "url": "https://github.com/urlscan/urlscan-cli",
+      "category": "urlscan-io",
+      "description": "official CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "urlscan/urlscan-python",
+      "url": "https://github.com/urlscan/urlscan-python",
+      "category": "urlscan-io",
+      "description": "official Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "OFFICIAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "VirusTotal/vt-cli",
+      "url": "https://github.com/VirusTotal/vt-cli",
+      "category": "virustotal",
+      "description": "VirusTotal command-line client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "VirusTotal/vt-py",
+      "url": "https://github.com/VirusTotal/vt-py",
+      "category": "virustotal",
+      "description": "Python client for the VirusTotal API",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "vulnerability-lookup/PyVulnerabilityLookup",
+      "url": "https://github.com/vulnerability-lookup/PyVulnerabilityLookup",
+      "category": "vulnerability-lookup",
+      "description": "Python client",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "vulnerability-lookup/vulnerability-lookup",
+      "url": "https://github.com/vulnerability-lookup/vulnerability-lookup",
+      "category": "vulnerability-lookup",
+      "description": "Vulnerability-Lookup platform",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "vulnerability-lookup/VulnMCP",
+      "url": "https://github.com/vulnerability-lookup/VulnMCP",
+      "category": "vulnerability-lookup",
+      "description": "MCP integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "webamon-org/MISP-Connector",
+      "url": "https://github.com/webamon-org/MISP-Connector",
+      "category": "webamon",
+      "description": "Webamon MISP integration",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "webamon-org/webamon",
+      "url": "https://github.com/webamon-org/webamon",
+      "category": "webamon",
+      "description": "Webamon project",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "SAFE-REFERENCE",
+      "status": "ACTIVE"
+    },
+    {
+      "repo": "webamon-org/webamon-cli",
+      "url": "https://github.com/webamon-org/webamon-cli",
+      "category": "webamon",
+      "description": "Webamon CLI",
+      "sources": [
+        "api-tools"
+      ],
+      "provenance": "CANONICAL",
+      "risk": "ACTIVE-SECURITY-TOOL",
       "status": "ACTIVE"
     }
   ]
