@@ -241,6 +241,11 @@ Set-Repo 'ger1e/personal-site-lp' `
     'https://gergoilly.hu/' `
     @('personal-site','cybersecurity','threat-hunting','cti','static-site','vercel','cyberpunk')
 
+Set-Repo 'ger1e/user-scanner' `
+    'Security-hardening fork of kaifcodec/user-scanner with CI, network-boundary, MCP, and reporting controls.' `
+    'https://github.com/kaifcodec/user-scanner' `
+    @('osint','cybersecurity','threat-intelligence','python','mcp','security-hardening')
+
 Set-Repo 'ger1e/landing-pages' `
     'Experimental and historical landing-page lab; non-production.' `
     '' `
@@ -309,7 +314,8 @@ if ($ConfigureGovernance) {
         'ger1e/ger1e',
         'ger1e/para11ax',
         'ger1e/personal-site-lp',
-        'ger1e/threat-hunting-lab'
+        'ger1e/threat-hunting-lab',
+        'ger1e/user-scanner'
     )
 
     foreach ($repo in $activeRepos) {
@@ -320,11 +326,18 @@ if ($ConfigureGovernance) {
     Set-WorkflowPolicy 'ger1e/para11ax' $false
     Set-WorkflowPolicy 'ger1e/personal-site-lp' $false
     Set-WorkflowPolicy 'ger1e/threat-hunting-lab' $false
+    Set-WorkflowPolicy 'ger1e/user-scanner' $false
 
     Set-BranchProtection 'ger1e/ger1e' @('validate','catalog')
     Set-BranchProtection 'ger1e/para11ax' @('Tooling smoke')
     Set-BranchProtection 'ger1e/personal-site-lp' @('static-site-qa')
     Set-BranchProtection 'ger1e/threat-hunting-lab' @('validate')
+    Set-BranchProtection 'ger1e/user-scanner' @(
+        'Lint & types (ruff + mypy)',
+        'Test (pytest + coverage) — 3.10',
+        'Test (pytest + coverage) — 3.12',
+        'Test (pytest + coverage) — 3.14'
+    )
 }
 
 if ($FollowRelevantProfiles) {
