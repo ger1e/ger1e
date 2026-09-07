@@ -9,8 +9,7 @@ on:
     - cron: '23 4 * * 1'
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: security-catalog-${{ github.ref }}
@@ -18,8 +17,40 @@ concurrency:
 
 jobs:
   catalog:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Parse reconciliation
+        run: python tools/catalog.py reconcile
+      - name: Validate repository catalog
+        run: python tools/catalog.py validate
+      - name: Validate provider registry
+        run: python tools/catalog.py providers-validate
+      - name: Final validation
+        run: |
+          python -m py_compile tools/catalog.py
+          python -c "import json; json.load(open('catalog/repos.yaml', encoding='utf-8')); json.load(open('catalog/providers.yaml', encoding='utf-8'))"
+          git diff --check
+
+  refresh:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -30,25 +61,16 @@ jobs:
       - name: Unit tests
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Reconcile source Markdown into canonical repository catalog
-        if: github.event_name != 'pull_request'
         run: python tools/catalog.py reconcile --write
-      - name: Parse reconciliation on pull requests
-        if: github.event_name == 'pull_request'
-        run: python tools/catalog.py reconcile
       - name: Validate and generate repository catalog
         run: |
           python tools/catalog.py validate
-          if [ "${{ github.event_name }}" != "pull_request" ]; then
-            python tools/catalog.py build
-          fi
+          python tools/catalog.py build
       - name: Validate and generate provider registry
         run: |
           python tools/catalog.py providers-validate
-          if [ "${{ github.event_name }}" != "pull_request" ]; then
-            python tools/catalog.py providers-build
-          fi
+          python tools/catalog.py providers-build
       - name: Refresh repository health
-        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: python tools/catalog.py health --token "$GH_TOKEN" --write
@@ -58,7 +80,6 @@ jobs:
           python -c "import json; json.load(open('catalog/repos.yaml', encoding='utf-8')); json.load(open('catalog/providers.yaml', encoding='utf-8'))"
           git diff --check
       - name: Open catalog refresh PR
-        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
