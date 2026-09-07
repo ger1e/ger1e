@@ -231,10 +231,10 @@ Set-Repo 'ger1e/ger1e' `
     'https://gergoilly.hu/' `
     @('threat-hunting','cti','detection-engineering','kql','microsoft-sentinel','defender-xdr','cybersecurity')
 
-Set-Repo 'ger1e/cti-enrichment-gateway' `
-    'Bounded read-only CTI enrichment gateway with evidence-v2 provenance, STIX 2.1, Maltego and deterministic reporting.' `
-    'https://gergoilly.hu/' `
-    @('cybersecurity','cti','threat-intelligence','threat-hunting','osint','stix','maltego','detection-engineering','nodejs','vercel')
+Set-Repo 'ger1e/para11ax' `
+    'Read-only CTI evidence gateway with fixed-source enrichment, provenance-preserving correlation, STIX 2.1 export, and fail-closed egress.' `
+    'https://para11ax.vercel.app/' `
+    @('cti','detection-engineering','maltego','nodejs','osint','stix','threat-hunting','threat-intelligence')
 
 Set-Repo 'ger1e/personal-site-lp' `
     'Static-first security portfolio for threat hunting, CTI and detection engineering — gergoilly.hu.' `
@@ -307,7 +307,7 @@ if ($ArchiveOldBashTraining) { Archive-Repo 'ger1e/learning-bash-scripting-32123
 if ($ConfigureGovernance) {
     $activeRepos = @(
         'ger1e/ger1e',
-        'ger1e/cti-enrichment-gateway',
+        'ger1e/para11ax',
         'ger1e/personal-site-lp',
         'ger1e/threat-hunting-lab'
     )
@@ -317,12 +317,12 @@ if ($ConfigureGovernance) {
     }
 
     Set-WorkflowPolicy 'ger1e/ger1e' $true
-    Set-WorkflowPolicy 'ger1e/cti-enrichment-gateway' $false
+    Set-WorkflowPolicy 'ger1e/para11ax' $false
     Set-WorkflowPolicy 'ger1e/personal-site-lp' $false
     Set-WorkflowPolicy 'ger1e/threat-hunting-lab' $false
 
     Set-BranchProtection 'ger1e/ger1e' @('validate','catalog')
-    Set-BranchProtection 'ger1e/cti-enrichment-gateway' @('Tooling smoke')
+    Set-BranchProtection 'ger1e/para11ax' @('Tooling smoke')
     Set-BranchProtection 'ger1e/personal-site-lp' @('static-site-qa')
     Set-BranchProtection 'ger1e/threat-hunting-lab' @('validate')
 }
@@ -333,7 +333,7 @@ if ($FollowRelevantProfiles) {
 
 Write-Host ''
 Write-Host 'MAXX GitHub account finalization complete.'
-Write-Host 'Recommended profile pins: cti-enrichment-gateway, threat-hunting-lab, personal-site-lp, ger1e.'
+Write-Host 'Recommended profile pins: para11ax, threat-hunting-lab, personal-site-lp, ger1e.'
 Write-Host 'Relevant GitHub profiles are derived from active canonical catalog entries and provider integration repositories.'
 Write-Host 'Legacy repositories should remain archived and unpinned.'
 Write-Host 'Profile: https://github.com/ger1e'
