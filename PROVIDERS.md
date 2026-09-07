@@ -87,4 +87,5 @@ Generated from `catalog/providers.yaml`. Provider metadata is kept separate from
 - Capabilities: URL submission, scan result retrieval, historical search, DOM/screenshot/resource retrieval
 - Official repos: urlscan/urlscan-python, urlscan/urlscan-cli
 
+
 <p align="center"><sub>GER1E // GER1E // MOBILE-SAFE DOCUMENTATION</sub></p>
