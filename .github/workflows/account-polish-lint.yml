@@ -125,6 +125,10 @@ jobs:
             '/api/para11ax/enrich'
             '/api/para11ax/batch'
             '/api/para11ax/stix'
+            '/api/para11ax/user-scanner'
+            '/api/para11ax/shodan'
+            '/api/para11ax/swarm'
+            '/api/para11ax/provider'
           )
 
           for route in "${canonical_routes[@]}"; do

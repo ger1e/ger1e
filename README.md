@@ -28,7 +28,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub><strong>02 // PUBLIC SIGNAL</strong></sub>
 
-**[PARA11AX](https://github.com/ger1e/para11ax)** — read-only CTI evidence gateway with fixed provider profiles, Evidence v2 provenance, typed correlation, deterministic reporting, explicit coverage failures, and fail-closed egress.
+**[PARA11AX](https://github.com/ger1e/para11ax)** — provenance-first CTI and investigation workbench with fixed provider profiles, Evidence v2, deterministic analysis/reporting, Investigation Workspace v2, explicit coverage failures, and fail-closed egress.
 
 <sub>[LIVE](https://para11ax.vercel.app/) · [ARCHITECTURE](https://github.com/ger1e/para11ax/blob/main/docs/ARCHITECTURE.md) · [THREAT MODEL](https://github.com/ger1e/para11ax/blob/main/docs/THREAT-MODEL.md) · [PROVIDERS](https://github.com/ger1e/para11ax/blob/main/docs/PROVIDERS.md) · [SECURITY](https://github.com/ger1e/para11ax/blob/main/SECURITY.md)</sub>
 
@@ -39,9 +39,11 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 **[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): a static-first personal security site with restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
 
 <details>
-<summary><strong>PARA11AX coverage — 6 API endpoints / 38 configured sources</strong></summary>
+<summary><strong>PARA11AX coverage — 10 API endpoints / 38 configured sources</strong></summary>
 
-**Gateway endpoints:** GET /api/para11ax/meta · GET /api/para11ax/health · GET /api/para11ax/status · POST /api/para11ax/enrich · POST /api/para11ax/batch · POST /api/para11ax/stix
+**Gateway endpoints:** GET /api/para11ax/meta · GET /api/para11ax/health · GET /api/para11ax/status · POST /api/para11ax/enrich · POST /api/para11ax/batch · POST /api/para11ax/stix · POST /api/para11ax/user-scanner · POST /api/para11ax/shodan · POST /api/para11ax/swarm · POST /api/para11ax/provider
+
+**Bounded operator surfaces:** GreyNoise Project Swarm · native Shodan · isolated User Scanner. These remain separate from automatic Evidence v2 promotion.
 
 **Network identity, routing & exposure:** IPinfo · RDAP · RIPEstat · Shodan · Censys · Modat Magnify · Cloudflare Radar · Tor Exit List · Spamhaus DROP / ASN-DROP
 
@@ -53,7 +55,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 **Ransomware intelligence:** RansomLook · Ransomware.live API-PRO
 
-<sub>Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR. Fixed fast, standard and full profiles control provider execution; callers cannot select arbitrary upstreams.</sub>
+<sub>Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR · certificate. Fixed fast, standard and full profiles control provider execution; callers cannot select arbitrary upstreams.</sub>
 
 </details>
 
