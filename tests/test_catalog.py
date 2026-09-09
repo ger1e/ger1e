@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -14,6 +15,7 @@ from tools.catalog import (
     render_provider_catalog,
     validate_catalog,
     validate_provider_catalog,
+    verify_generated_outputs,
 )
 
 
@@ -170,6 +172,59 @@ class CatalogTests(unittest.TestCase):
             self.assertIn("GER1E // GER1E // MOBILE-SAFE DOCUMENTATION", rendered)
             self.assertNotIn("### ", rendered)
             self.assertNotIn("#### ", rendered)
+
+    def test_verify_generated_outputs_rejects_stale_markdown(self):
+        repo_catalog = {
+            "last_verified": "2026-09-09",
+            "repositories": [
+                {
+                    "repo": "SigmaHQ/sigma",
+                    "url": "https://github.com/SigmaHQ/sigma",
+                    "category": "detection",
+                    "description": "rules",
+                    "sources": ["atlas"],
+                    "provenance": "CANONICAL",
+                    "risk": "SAFE-REFERENCE",
+                    "status": "ACTIVE",
+                }
+            ],
+        }
+        provider_catalog = {
+            "last_verified": "2026-09-09",
+            "providers": [
+                {
+                    "id": "example",
+                    "name": "Example",
+                    "role": "enrichment",
+                    "api_base_url": "https://example.com/",
+                    "docs_url": "https://example.com/docs",
+                    "auth": "NONE",
+                    "access": "OPEN",
+                    "provenance": "OFFICIAL",
+                    "capabilities": ["lookup"],
+                }
+            ],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo_source = root / "repos.json"
+            provider_source = root / "providers.json"
+            repo_output = root / "CATALOG.md"
+            provider_output = root / "PROVIDERS.md"
+            repo_source.write_text(json.dumps(repo_catalog), encoding="utf-8")
+            provider_source.write_text(json.dumps(provider_catalog), encoding="utf-8")
+            repo_output.write_text(render_catalog(repo_catalog), encoding="utf-8")
+            provider_output.write_text(render_provider_catalog(provider_catalog), encoding="utf-8")
+
+            self.assertEqual(
+                verify_generated_outputs(repo_source, repo_output, provider_source, provider_output),
+                [],
+            )
+            repo_output.write_text("stale\n", encoding="utf-8")
+            self.assertEqual(
+                verify_generated_outputs(repo_source, repo_output, provider_source, provider_output),
+                [f"{repo_output} is stale; regenerate it from {repo_source}"],
+            )
 
 
 if __name__ == "__main__":

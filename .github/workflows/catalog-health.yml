@@ -38,6 +38,8 @@ jobs:
         run: python tools/catalog.py validate
       - name: Validate provider registry
         run: python tools/catalog.py providers-validate
+      - name: Verify generated catalogs
+        run: python tools/catalog.py verify-generated
       - name: Final validation
         run: |
           python -m py_compile tools/catalog.py
@@ -62,18 +64,19 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Reconcile source Markdown into canonical repository catalog
         run: python tools/catalog.py reconcile --write
-      - name: Validate and generate repository catalog
-        run: |
-          python tools/catalog.py validate
-          python tools/catalog.py build
-      - name: Validate and generate provider registry
-        run: |
-          python tools/catalog.py providers-validate
-          python tools/catalog.py providers-build
+      - name: Validate repository catalog
+        run: python tools/catalog.py validate
+      - name: Validate provider registry
+        run: python tools/catalog.py providers-validate
       - name: Refresh repository health
         env:
           GH_TOKEN: ${{ github.token }}
         run: python tools/catalog.py health --token "$GH_TOKEN" --write
+      - name: Generate and verify final catalogs
+        run: |
+          python tools/catalog.py build
+          python tools/catalog.py providers-build
+          python tools/catalog.py verify-generated
       - name: Final validation
         run: |
           python -m py_compile tools/catalog.py

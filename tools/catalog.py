@@ -333,6 +333,33 @@ def render_provider_catalog(catalog: dict) -> str:
     lines += doc_footer()
     return "\n".join(lines).rstrip() + "\n"
 
+
+def verify_generated_outputs(
+    repository_catalog_path: Path,
+    repository_output_path: Path,
+    provider_catalog_path: Path,
+    provider_output_path: Path,
+) -> list[str]:
+    repository_catalog = load_catalog(repository_catalog_path)
+    provider_catalog = load_catalog(provider_catalog_path)
+    errors = validate_catalog(repository_catalog)
+    errors.extend(validate_provider_catalog(provider_catalog))
+    if errors:
+        return errors
+
+    expected_outputs = (
+        (repository_output_path, repository_catalog_path, render_catalog(repository_catalog)),
+        (provider_output_path, provider_catalog_path, render_provider_catalog(provider_catalog)),
+    )
+    for output_path, source_path, expected in expected_outputs:
+        try:
+            actual = output_path.read_text(encoding="utf-8")
+        except OSError:
+            actual = None
+        if actual != expected:
+            errors.append(f"{output_path} is stale; regenerate it from {source_path}")
+    return errors
+
 def github_repo_state(repo: str, token: str | None):
     req = urllib.request.Request(
         f"https://api.github.com/repos/{repo}",
@@ -502,6 +529,20 @@ def cmd_providers_build(args):
     return 0
 
 
+def cmd_verify_generated(args):
+    errors = verify_generated_outputs(
+        Path(args.catalog),
+        Path(args.output),
+        Path(args.providers_catalog),
+        Path(args.providers_output),
+    )
+    if errors:
+        print("\n".join(errors), file=sys.stderr)
+        return 1
+    print("generated catalog outputs are current")
+    return 0
+
+
 def cmd_health(args):
     path = Path(args.catalog)
     catalog = load_catalog(path)
@@ -534,6 +575,7 @@ def main():
     p = sub.add_parser("reconcile"); p.add_argument("--root", default="."); p.add_argument("--catalog", default="catalog/repos.yaml"); p.add_argument("--write", action="store_true"); p.set_defaults(func=cmd_reconcile)
     p = sub.add_parser("providers-validate"); p.add_argument("--catalog", default="catalog/providers.yaml"); p.set_defaults(func=cmd_providers_validate)
     p = sub.add_parser("providers-build"); p.add_argument("--catalog", default="catalog/providers.yaml"); p.add_argument("--output", default="PROVIDERS.md"); p.set_defaults(func=cmd_providers_build)
+    p = sub.add_parser("verify-generated"); p.add_argument("--catalog", default="catalog/repos.yaml"); p.add_argument("--output", default="CATALOG.md"); p.add_argument("--providers-catalog", default="catalog/providers.yaml"); p.add_argument("--providers-output", default="PROVIDERS.md"); p.set_defaults(func=cmd_verify_generated)
     p = sub.add_parser("health"); p.add_argument("--catalog", default="catalog/repos.yaml"); p.add_argument("--report", default="LAST-VERIFIED.md"); p.add_argument("--token"); p.add_argument("--write", action="store_true"); p.set_defaults(func=cmd_health)
     args = parser.parse_args()
     raise SystemExit(args.func(args))

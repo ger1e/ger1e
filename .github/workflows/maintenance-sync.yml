@@ -28,15 +28,17 @@ jobs:
         run: |
           python tools/catalog.py reconcile --write
           python tools/catalog.py validate
-          python tools/catalog.py build
       - name: Validate provider registry
-        run: |
-          python tools/catalog.py providers-validate
-          python tools/catalog.py providers-build
+        run: python tools/catalog.py providers-validate
       - name: Refresh repository health
         env:
           GH_TOKEN: ${{ github.token }}
         run: python tools/catalog.py health --token "$GH_TOKEN" --write
+      - name: Generate and verify final catalogs
+        run: |
+          python tools/catalog.py build
+          python tools/catalog.py providers-build
+          python tools/catalog.py verify-generated
       - name: Fetch CySA+ from Credly
         run: |
           set -euo pipefail
