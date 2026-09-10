@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import datetime as dt
+import http.client
 import json
 import re
 import sys
@@ -396,7 +397,7 @@ def github_repo_state(repo: str, token: str | None):
                 except (TypeError, ValueError):
                     pass
             time.sleep(delay)
-        except urllib.error.URLError:
+        except (urllib.error.URLError, http.client.RemoteDisconnected):
             if attempt == max_attempts - 1:
                 raise
             time.sleep(min(30.0, 2.0 ** attempt))
