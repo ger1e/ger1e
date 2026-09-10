@@ -1,3 +1,4 @@
+import http.client
 import io
 import json
 import urllib.error
@@ -91,6 +92,24 @@ class CatalogNetworkTests(unittest.TestCase):
                 github_repo_state("owner/repo", None)
         self.assertEqual(urlopen.call_count, 3)
         self.assertEqual([call.args[0] for call in sleep.call_args_list], [1.0, 2.0])
+
+    def test_remote_disconnect_retries_then_succeeds(self):
+        error = http.client.RemoteDisconnected("remote closed without a response")
+        payload = {
+            "archived": False,
+            "private": False,
+            "full_name": "owner/repo",
+            "default_branch": "main",
+            "html_url": "https://github.com/owner/repo",
+        }
+        with mock.patch(
+            "tools.catalog.urllib.request.urlopen",
+            side_effect=[error, _Response(payload)],
+        ) as urlopen, mock.patch("tools.catalog.time.sleep") as sleep:
+            state = github_repo_state("owner/repo", None)
+        self.assertEqual(state["status"], "ACTIVE")
+        self.assertEqual(urlopen.call_count, 2)
+        sleep.assert_called_once_with(1.0)
 
 
 if __name__ == "__main__":
