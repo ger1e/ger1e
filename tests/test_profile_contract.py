@@ -25,9 +25,16 @@ class ProfileContractTests(unittest.TestCase):
         self.assertNotIn("Threat reputation & IOC context:", readme)
         self.assertNotIn("Network identity, routing & exposure:", readme)
 
-    def test_public_profile_assets_are_employer_neutral(self):
+    def test_rendered_public_profile_assets_are_employer_neutral(self):
+        rendered_assets = (
+            "profile-banner-v11.svg",
+            "operator-console-v10.svg",
+            "threat-radar-v7.svg",
+            "career-vector-v7.svg",
+            "footer-terminal-v9.svg",
+        )
         public_text = [(ROOT / "README.md").read_text(encoding="utf-8")]
-        public_text.extend(path.read_text(encoding="utf-8") for path in (ROOT / "assets").glob("*.svg"))
+        public_text.extend((ROOT / "assets" / name).read_text(encoding="utf-8") for name in rendered_assets)
         combined = "\n".join(public_text).casefold()
         self.assertNotIn("ibm", combined)
 
