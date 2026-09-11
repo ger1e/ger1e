@@ -92,22 +92,6 @@ jobs:
             fi
           done
 
-          legacy_routes=(
-            '/api/meta'
-            '/api/health'
-            '/api/status'
-            '/api/enrich'
-            '/api/batch'
-            '/api/stix'
-          )
-
-          for route in "${legacy_routes[@]}"; do
-            if grep -Fq "$route" README.md; then
-              echo "::error file=README.md::Legacy unprefixed PARA11AX route remains: $route"
-              exit 1
-            fi
-          done
-
           grep -Fq 'https://github.com/ger1e/para11ax' README.md || {
             echo '::error file=README.md::Canonical PARA11AX repository must remain part of the public signal.'
             exit 1
@@ -118,24 +102,28 @@ jobs:
             exit 1
           }
 
-          canonical_routes=(
-            '/api/para11ax/meta'
-            '/api/para11ax/health'
-            '/api/para11ax/status'
-            '/api/para11ax/enrich'
-            '/api/para11ax/batch'
-            '/api/para11ax/stix'
-            '/api/para11ax/user-scanner'
-            '/api/para11ax/shodan'
-            '/api/para11ax/swarm'
-            '/api/para11ax/provider'
-          )
-
-          for route in "${canonical_routes[@]}"; do
-            grep -Fq "$route" README.md || {
-              echo "::error file=README.md::Canonical PARA11AX route missing: $route"
+          for doc in docs/ARCHITECTURE.md docs/THREAT-MODEL.md docs/PROVIDERS.md SECURITY.md; do
+            grep -Fq "$doc" README.md || {
+              echo "::error file=README.md::Canonical PARA11AX documentation link missing: $doc"
               exit 1
             }
+          done
+
+          if grep -Fq '/api/para11ax/' README.md; then
+            echo '::error file=README.md::Do not duplicate PARA11AX API-route inventory on the public profile landing page.'
+            exit 1
+          fi
+
+          if grep -Fqi 'IBM' README.md; then
+            echo '::error file=README.md::Public profile must remain employer-neutral.'
+            exit 1
+          fi
+
+          for asset in "${active_assets[@]}"; do
+            if grep -Fqi 'IBM' "$asset"; then
+              echo "::error file=$asset::Rendered public profile asset must remain employer-neutral."
+              exit 1
+            fi
           done
 
           if grep -Fq '/hunts/' README.md; then

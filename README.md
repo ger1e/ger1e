@@ -39,23 +39,15 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 **[personal-site-lp](https://github.com/ger1e/personal-site-lp)** — canonical source for [gergoilly.hu](https://gergoilly.hu/): a static-first personal security site with restrictive browser policy, custom HTTP error handling, reduced-motion support and privacy-conscious telemetry.
 
 <details>
-<summary><strong>PARA11AX coverage — 10 API endpoints / 38 configured sources</strong></summary>
+<summary><strong>PARA11AX public capability overview</strong></summary>
 
-**Gateway endpoints:** GET /api/para11ax/meta · GET /api/para11ax/health · GET /api/para11ax/status · POST /api/para11ax/enrich · POST /api/para11ax/batch · POST /api/para11ax/stix · POST /api/para11ax/user-scanner · POST /api/para11ax/shodan · POST /api/para11ax/swarm · POST /api/para11ax/provider
+**Evidence pipeline:** bounded CTI enrichment with deterministic normalization, provenance, confidence, explicit coverage failures, and controlled promotion into Evidence v2.
 
-**Bounded operator surfaces:** GreyNoise Project Swarm · native Shodan · isolated User Scanner. These remain separate from automatic Evidence v2 promotion.
+**Operator surfaces:** GreyNoise Project Swarm, native Shodan, and an isolated User Scanner remain bounded analyst utilities rather than automatic evidence promotion paths.
 
-**Network identity, routing & exposure:** IPinfo · RDAP · RIPEstat · Shodan · Censys · Modat Magnify · Cloudflare Radar · Tor Exit List · Spamhaus DROP / ASN-DROP
+**Coverage classes:** network identity and exposure, threat reputation, malware and file intelligence, vulnerability/ATT&CK context, and ransomware intelligence.
 
-**Threat reputation & IOC context:** DShield · Feodo Tracker · ThreatMiner · CIRCL MISP OSINT · Botvrij MISP OSINT · GreyNoise · AbuseIPDB · VirusTotal · AlienVault / LevelBlue OTX · ThreatFox · urlscan.io · Webamon · Pulsedive · OpenPhish · URLhaus · TweetFeed.live
-
-**File & malware intelligence:** CIRCL Hashlookup · MalwareBazaar · Malpedia · Hybrid Analysis
-
-**Vulnerability & ATT&CK knowledge:** CISA KEV · FIRST EPSS · CIRCL Vulnerability-Lookup · NVD · OSV · MITRE ATT&CK TAXII
-
-**Ransomware intelligence:** RansomLook · Ransomware.live API-PRO
-
-<sub>Supported classes: IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR · certificate. Fixed fast, standard and full profiles control provider execution; callers cannot select arbitrary upstreams.</sub>
+<sub>Supported observables include IP · domain · URL · hash · CVE · ATT&CK ID · ASN · CIDR · certificate. Detailed runtime/provider information belongs in the repository documentation rather than this profile landing page.</sub>
 
 </details>
 
@@ -86,7 +78,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub><strong>PRIMARY STACK</strong> — Microsoft Sentinel · Defender XDR · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · KQL.</sub>
 
-<sub><strong>INTELLIGENCE</strong> — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · certificate/ASN pivots.</sub>
+<sub><strong>INTELLIGENCE</strong> — Microsoft Threat Intelligence · Recorded Future · OpenCTI · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · certificate/ASN pivots.</sub>
 
 <sub><strong>DETECTION ENGINEERING</strong> — KQL · analytics rules · workbooks · YARA/Sigma · PowerShell · regex.</sub>
 
@@ -96,7 +88,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub><strong>FRAMEWORKS</strong> — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.</sub>
 
-<sub><strong>ADJACENT EXPERIENCE</strong> — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic · Tenable · Qualys · AWS · Linux · Windows · macOS.</sub>
+<sub><strong>ADJACENT EXPERIENCE</strong> — Splunk/SPL · QRadar/AQL · CrowdStrike Falcon/FQL · Elastic · Tenable · Qualys · AWS · Linux · Windows · macOS.</sub>
 
 <sub><strong>05 // CERTIFICATIONS & RECOGNITION</strong></sub>
 
@@ -107,15 +99,15 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 </p>
 
 <sub><strong>CORE CREDENTIALS</strong> — INE eCTHP · CompTIA CySA+ · TryHackMe SAL2 · INE ICCA.<br/>
-<strong>ADDITIONAL CREDENTIALS</strong> — MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.<br/>
-<strong>RECOGNITION</strong> — TryHackMe SAL2 Founding Operator · TryHackMe Top 1% · IBM Mentor · Credly Top Badge Earner.</sub>
+<strong>ADDITIONAL CREDENTIALS</strong> — MCRTA · CAP · CNSP · Google Cybersecurity Professional Certificate V2.<br/>
+<strong>RECOGNITION</strong> — TryHackMe SAL2 Founding Operator · TryHackMe Top 1% · Credly Top Badge Earner.</sub>
 
 <sub><strong>06 // CAREER VECTOR</strong></sub>
 
 <details>
 <summary><b>Career timeline</b></summary>
 
-<p align="center"><img src="assets/career-vector-v7.svg" alt="Vertical career timeline from Citibank Europe to IBM Consulting" width="100%"></p>
+<p align="center"><img src="assets/career-vector-v7.svg" alt="Vertical career timeline across information security, technical success, SOC operations and threat hunting" width="100%"></p>
 
 </details>
 
