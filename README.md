@@ -78,7 +78,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub><strong>PRIMARY STACK</strong> — Microsoft Sentinel · Defender XDR · Defender for Endpoint · Defender for Office 365 · Entra ID · Conditional Access · KQL.</sub>
 
-<sub><strong>INTELLIGENCE</strong> — IBM X-Force · Microsoft Threat Intelligence · Recorded Future · OpenCTI · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · certificate/ASN pivots.</sub>
+<sub><strong>INTELLIGENCE</strong> — Microsoft Threat Intelligence · Recorded Future · OpenCTI · CISA KEV · VirusTotal · urlscan.io · ANY.RUN · Shodan · Censys · passive DNS · certificate/ASN pivots.</sub>
 
 <sub><strong>DETECTION ENGINEERING</strong> — KQL · analytics rules · workbooks · YARA/Sigma · PowerShell · regex.</sub>
 
@@ -88,7 +88,7 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 
 <sub><strong>FRAMEWORKS</strong> — MITRE ATT&CK · ATT&CK Navigator · MITRE ATLAS · Diamond Model · PEAK · HITS · Cyber Kill Chain · Pyramid of Pain · NIST CSF.</sub>
 
-<sub><strong>ADJACENT EXPERIENCE</strong> — Splunk/SPL · IBM QRadar/AQL · CrowdStrike Falcon/FQL · Elastic · Tenable · Qualys · AWS · Linux · Windows · macOS.</sub>
+<sub><strong>ADJACENT EXPERIENCE</strong> — Splunk/SPL · QRadar/AQL · CrowdStrike Falcon/FQL · Elastic · Tenable · Qualys · AWS · Linux · Windows · macOS.</sub>
 
 <sub><strong>05 // CERTIFICATIONS & RECOGNITION</strong></sub>
 
@@ -99,15 +99,15 @@ Cyber Threat Hunter with eight years across enterprise security, IAM, SOC operat
 </p>
 
 <sub><strong>CORE CREDENTIALS</strong> — INE eCTHP · CompTIA CySA+ · TryHackMe SAL2 · INE ICCA.<br/>
-<strong>ADDITIONAL CREDENTIALS</strong> — MCRTA · CAP · CNSP · IBM Cybersecurity Specialist · Google Cybersecurity Professional Certificate V2.<br/>
-<strong>RECOGNITION</strong> — TryHackMe SAL2 Founding Operator · TryHackMe Top 1% · IBM Mentor · Credly Top Badge Earner.</sub>
+<strong>ADDITIONAL CREDENTIALS</strong> — MCRTA · CAP · CNSP · Google Cybersecurity Professional Certificate V2.<br/>
+<strong>RECOGNITION</strong> — TryHackMe SAL2 Founding Operator · TryHackMe Top 1% · Credly Top Badge Earner.</sub>
 
 <sub><strong>06 // CAREER VECTOR</strong></sub>
 
 <details>
 <summary><b>Career timeline</b></summary>
 
-<p align="center"><img src="assets/career-vector-v7.svg" alt="Vertical career timeline from Citibank Europe to IBM Consulting" width="100%"></p>
+<p align="center"><img src="assets/career-vector-v7.svg" alt="Vertical career timeline across information security, technical success, SOC operations and threat hunting" width="100%"></p>
 
 </details>
 
