@@ -10,7 +10,7 @@
 Generated from `catalog/repos.yaml`. Do not hand-edit this file.
 
 **Repositories:** 252
-**Last verified:** 2026-09-10
+**Last verified:** 2026-09-21
 
 Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/ACTIVE-SECURITY-TOOL/OFFENSIVE-DUAL-USE/LIVE-MALWARE/VULNERABLE-LAB`.
 
@@ -242,7 +242,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 <sub><strong>29 // Maltego</strong></sub>
 
 - [MaltegoTech/maltego-trx](https://github.com/MaltegoTech/maltego-trx) — `LEGACY` · `ACTIVE-SECURITY-TOOL` · `ARCHIVED` — official TRX framework; **archived/legacy**, retained because it is directly relevant to existing transform workflows
-- [MaltegoTech/maltego-trx-examples](https://github.com/MaltegoTech/maltego-trx-examples) — `OFFICIAL` · `SAFE-REFERENCE` · `ACTIVE` — official transform examples
+- [MaltegoTech/maltego-trx-examples](https://github.com/MaltegoTech/maltego-trx-examples) — `OFFICIAL` · `SAFE-REFERENCE` · `ARCHIVED` — official transform examples
 
 <a id="malware-analysis-reverse-engineering"></a>
 <sub><strong>30 // Malware Analysis Reverse Engineering</strong></sub>
@@ -455,7 +455,7 @@ Legend: `OFFICIAL/CANONICAL/COMMUNITY/LEGACY/TRAINING-LAB` · `SAFE-REFERENCE/AC
 - [SigmaHQ/sigma](https://github.com/SigmaHQ/sigma) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — vendor-agnostic detection and hunting rules
 - [SwiftOnSecurity/sysmon-config](https://github.com/SwiftOnSecurity/sysmon-config) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — established Sysmon configuration baseline
 - [wazuh/wazuh](https://github.com/wazuh/wazuh) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — open-source security monitoring/XDR platform
-- [WithSecureLabs/chainsaw](https://github.com/WithSecureLabs/chainsaw) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` — rapid Windows forensic artifact hunting
+- [WithSecureOpenSource/chainsaw](https://github.com/WithSecureOpenSource/chainsaw) — `CANONICAL` · `SAFE-REFERENCE` · `ACTIVE` · aliases: WithSecureLabs/chainsaw — rapid Windows forensic artifact hunting
 - [Yamato-Security/hayabusa](https://github.com/Yamato-Security/hayabusa) — `CANONICAL` · `ACTIVE-SECURITY-TOOL` · `ACTIVE` — Windows event-log hunting and timeline analysis
 
 <a id="tweetfeed"></a>
