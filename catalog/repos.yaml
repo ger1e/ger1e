@@ -4,7 +4,7 @@
     "atlas",
     "api-tools"
   ],
-  "last_verified": "2026-09-10",
+  "last_verified": "2026-09-21",
   "repositories": [
     {
       "repo": "abusech/MalwareBazaar",
@@ -1378,7 +1378,7 @@
       ],
       "provenance": "OFFICIAL",
       "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
+      "status": "ARCHIVED"
     },
     {
       "repo": "dnSpyEx/dnSpy",
@@ -2873,8 +2873,8 @@
       "status": "ACTIVE"
     },
     {
-      "repo": "WithSecureLabs/chainsaw",
-      "url": "https://github.com/WithSecureLabs/chainsaw",
+      "repo": "WithSecureOpenSource/chainsaw",
+      "url": "https://github.com/WithSecureOpenSource/chainsaw",
       "category": "threat-hunting-detection-engineering",
       "description": "rapid Windows forensic artifact hunting",
       "sources": [
@@ -2882,7 +2882,10 @@
       ],
       "provenance": "CANONICAL",
       "risk": "SAFE-REFERENCE",
-      "status": "ACTIVE"
+      "status": "ACTIVE",
+      "aliases": [
+        "WithSecureLabs/chainsaw"
+      ]
     },
     {
       "repo": "Yamato-Security/hayabusa",
